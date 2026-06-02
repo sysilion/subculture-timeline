@@ -1,0 +1,34 @@
+{
+  "siteTitle": "Subculture Game Timeline",
+  "siteSubtitle": "Banners · Events · Version Schedule",
+  "filterLabel": "Games:",
+  "legendBanner": "Banner",
+  "legendEvent": "Event",
+  "legendVersion": "Version",
+  "legendTentative": "Tentative",
+  "legendToday": "Today",
+  "rangeOptions": {
+    "14,45": "-14d ~ +45d",
+    "30,60": "-30d ~ +60d",
+    "60,90": "-60d ~ +90d",
+    "90,120": "-90d ~ +120d"
+  },
+  "rangeLabel": "Range:",
+  "tooltipStart": "Start:",
+  "tooltipEnd": "End:",
+  "tooltipDuration": "Duration",
+  "tooltipDays": "days",
+  "tooltipVersion": "Version",
+  "tooltipTentative": "⚠ Tentative schedule (may change)",
+  "tooltipSource": "Source:",
+  "tooltipStatus": {
+    "ended": "days ago",
+    "upcoming": "days until start",
+    "ongoing": "Ongoing —",
+    "remaining": "days left"
+  },
+  "footerNote": "Schedule based on official announcements or community tracking. Tentative (⚠) dates may change.",
+  "footerDataSource": "Edit data:",
+  "dataUpdated": "Data as of:",
+  "dragHint": "Drag game rows to reorder"
+}

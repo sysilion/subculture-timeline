@@ -5,12 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>서브컬쳐 게임 타임라인</title>
   <meta name="description" content="원신·스타레일·명조·젠레스·엔드필드·이환·몬길 등 서브컬쳐 게임 배너·이벤트 일정을 한눈에 비교하는 타임라인 사이트" />
-
-  <!-- 구글 폰트 (Noto Sans KR) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -20,33 +17,33 @@
   <!-- ── 헤더 ── -->
   <header id="header">
     <h1>
-      🎮 서브컬쳐 게임 타임라인
-      <span>뽑기 배너 · 이벤트 · 버전 일정 통합</span>
+      🎮 <span data-i18n="siteTitle">서브컬쳐 게임 타임라인</span>
+      <span data-i18n="siteSubtitle">뽑기 배너 · 이벤트 · 버전 일정 통합</span>
     </h1>
 
     <!-- 범례 -->
     <div id="legend">
       <div class="legend-item">
-        <div class="legend-dot type-banner"></div>뽑기 배너
+        <div class="legend-dot type-banner"></div><span data-i18n="legendBanner">뽑기 배너</span>
       </div>
       <div class="legend-item">
-        <div class="legend-dot type-event"></div>이벤트
+        <div class="legend-dot type-event"></div><span data-i18n="legendEvent">이벤트</span>
       </div>
       <div class="legend-item">
-        <div class="legend-dot type-version"></div>버전 기간
+        <div class="legend-dot type-version"></div><span data-i18n="legendVersion">버전 기간</span>
       </div>
       <div class="legend-item">
-        <div class="legend-dot tentative"></div>미확정
+        <div class="legend-dot tentative"></div><span data-i18n="legendTentative">미확정</span>
       </div>
       <div class="legend-item" style="margin-left:4px;">
         <div style="width:2px;height:14px;background:#f44336;border-radius:1px;"></div>
-        <span style="margin-left:4px;">오늘</span>
+        <span style="margin-left:4px;" data-i18n="legendToday">오늘</span>
       </div>
     </div>
 
-    <!-- 날짜 범위 선택 -->
+    <!-- 날짜 범위 -->
     <div id="range-controls">
-      <label for="range-select">표시 범위:</label>
+      <label for="range-select" data-i18n="rangeLabel">표시 범위:</label>
       <select id="range-select">
         <option value="14,45">-14일 ~ +45일</option>
         <option value="30,60" selected>-30일 ~ +60일</option>
@@ -55,30 +52,29 @@
       </select>
     </div>
 
-    <!-- 데이터 날짜 -->
-    <div id="last-updated">데이터 로딩 중...</div>
+    <!-- 언어 전환 -->
+    <div id="lang-switcher">
+      <button class="lang-btn active" data-lang="ko">한국어</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <div id="last-updated">로딩 중...</div>
   </header>
 
   <!-- ── 게임 필터 ── -->
   <div id="filter-bar">
-    <span class="filter-label">게임 표시:</span>
-    <!-- JS에서 동적 생성 -->
+    <span class="filter-label" data-i18n="filterLabel">게임 표시:</span>
   </div>
 
   <!-- ── 타임라인 ── -->
   <div id="timeline-wrapper">
     <div id="timeline-scroll">
       <div id="timeline-canvas">
-
-        <!-- 날짜 눈금자 -->
         <div id="ruler">
-          <div id="ruler-spacer">날짜</div>
+          <div id="ruler-spacer"></div>
           <div id="ruler-dates"></div>
         </div>
-
-        <!-- 게임 행 (JS에서 동적 생성) -->
         <div id="game-rows"></div>
-
       </div>
     </div>
   </div>
@@ -86,23 +82,25 @@
   <!-- ── 푸터 ── -->
   <footer id="footer">
     <div>
-      배너 일정은 공식 발표 또는 커뮤니티 추적 기준이며, 미확정(⚠) 일정은 변동될 수 있습니다. |
-      참고:
+      <span data-i18n="footerNote">배너 일정은 공식 발표 또는 커뮤니티 추적 기준이며, 미확정(⚠) 일정은 변동될 수 있습니다.</span>
+      |
       <a href="https://paimon.moe/timeline" target="_blank">paimon.moe</a> ·
       <a href="https://wuwatracker.com/ko/timeline" target="_blank">wuwatracker</a> ·
       <a href="https://zzz.rng.moe/en/timeline" target="_blank">zzz.rng.moe</a> ·
       <a href="https://www.subgamecals.com/" target="_blank">subgamecals</a>
     </div>
     <div>
-      데이터 수정: <code>data/games.json</code>
+      <span data-i18n="footerDataSource">데이터 수정:</span> <code>data/games.json</code>
     </div>
   </footer>
 
 </div>
 
-<!-- 툴팁 -->
 <div id="tooltip"><div class="tooltip-inner"></div></div>
 
+<!-- SortableJS (drag-to-reorder) -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/timeline.js"></script>
 </body>
 </html>

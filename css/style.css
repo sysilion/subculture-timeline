@@ -119,6 +119,37 @@ html, body {
   white-space: nowrap;
 }
 
+/* 언어 전환 버튼 */
+#lang-switcher {
+  display: flex;
+  gap: 4px;
+  margin-left: 4px;
+}
+.lang-btn {
+  background: var(--surface2);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+.lang-btn.active {
+  background: var(--text-muted);
+  color: var(--bg);
+  border-color: var(--text-muted);
+}
+
+/* 필터 칩 아이콘 img */
+.chip-icon-img {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 /* ═══════════════════════════════════════
    필터 바
 ═══════════════════════════════════════ */
@@ -278,7 +309,7 @@ html, body {
   position: relative;
 }
 
-/* 게임 이름 라벨 (sticky left) */
+/* 게임 이름 라벨 (sticky left + 배경 이미지) */
 .game-label {
   width: var(--label-w);
   min-width: var(--label-w);
@@ -287,30 +318,77 @@ html, body {
   left: 0;
   z-index: 20;
   background: var(--surface);
+  background-size: cover;
+  background-position: center;
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 6px 8px;
-  cursor: default;
-  transition: background 0.15s;
+  justify-content: flex-end;
+  padding: 0;
+  cursor: grab;
+  overflow: hidden;
+  transition: filter 0.15s;
 }
-.game-section:hover .game-label {
-  background: var(--surface2);
+.game-label:active { cursor: grabbing; }
+.game-section:hover .game-label { filter: brightness(1.15); }
+
+/* 배경 이미지 위 반투명 그라디언트 오버레이 */
+.game-label-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(10, 12, 20, 0.55) 50%,
+    rgba(10, 12, 20, 0.88) 100%
+  );
+  pointer-events: none;
 }
 
-.game-label-icon { font-size: 16px; line-height: 1; margin-bottom: 2px; }
+/* 게임 라벨 텍스트 (오버레이 위) */
+.game-label-content {
+  position: relative;
+  z-index: 1;
+  padding: 5px 8px 5px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+/* 게임 아이콘 img */
+.game-label-icon-img {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  object-fit: contain;
+  z-index: 1;
+  opacity: 0.9;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.7));
+}
+
 .game-label-name {
   font-size: 11px;
   font-weight: 700;
-  color: var(--text);
+  color: #fff;
   line-height: 1.2;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.game-label-dev  {
+.game-label-dev {
   font-size: 9px;
-  color: var(--text-dim);
-  margin-top: 1px;
+  color: rgba(255,255,255,0.55);
+  margin-top: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
 }
+
+/* 드래그 중 */
+.game-section.sortable-ghost { opacity: 0.4; }
+.game-section.sortable-drag  { opacity: 0.95; box-shadow: 0 4px 20px rgba(0,0,0,0.6); }
 
 /* 배너 행 컨테이너 */
 .game-entries {

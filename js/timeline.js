@@ -78,7 +78,8 @@ const Timeline = (() => {
     // 마지막 업데이트 표시
     const luEl = document.getElementById('last-updated');
     if (luEl && data.meta) {
-      luEl.textContent = `데이터 기준: ${data.meta.lastUpdated}`;
+      const prefix = (typeof I18n !== 'undefined') ? I18n.t('dataUpdated') : '데이터 기준:';
+      luEl.textContent = `${prefix} ${data.meta.lastUpdated}`;
     }
 
     buildFilters();
@@ -86,6 +87,7 @@ const Timeline = (() => {
     renderGames();
     renderTodayLine();
     setupTooltip();
+    setupSortable();
     updateCSSVars();
   }
 
@@ -113,17 +115,21 @@ const Timeline = (() => {
   /* ── 필터 (게임 on/off) ── */
   function buildFilters() {
     const bar = document.getElementById('filter-bar');
-    bar.innerHTML = '<span class="filter-label">게임 표시:</span>';
+    // 필터 라벨 유지, 칩만 초기화
+    const existing = bar.querySelectorAll('.game-chip');
+    existing.forEach(el => el.remove());
 
     data.games.forEach(game => {
       const chip = document.createElement('button');
       chip.className = 'game-chip active';
       chip.dataset.gameId = game.id;
       chip.style.setProperty('--chip-color', game.color);
-      chip.innerHTML = `
-        <span class="chip-icon">${game.icon}</span>
-        <span class="chip-name">${game.name}</span>
-      `;
+
+      const iconHtml = game.iconUrl
+        ? `<img class="chip-icon-img" src="${game.iconUrl}" alt="${game.name}" onerror="this.style.display='none'">`
+        : `<span class="chip-icon">${game.icon}</span>`;
+
+      chip.innerHTML = `${iconHtml}<span class="chip-name">${game.nameKo || game.name}</span>`;
       chip.addEventListener('click', () => toggleGame(game.id, chip));
       bar.appendChild(chip);
     });
@@ -279,13 +285,30 @@ const Timeline = (() => {
     const label = document.createElement('div');
     label.className = 'game-label';
     label.style.borderLeft = `3px solid ${game.color}`;
-    label.innerHTML = `
-      <div class="game-label-icon">${game.icon}</div>
-      <div class="game-label-name">${game.name}</div>
-      <div class="game-label-dev">${game.developer}</div>
-    `;
-    // 라벨이 전체 섹션 높이를 차지하도록 절대 배치
     label.style.height = (totalRows * CFG.rowH) + 'px';
+
+    // 배경 이미지
+    if (game.bgUrl) {
+      label.style.backgroundImage = `url("${game.bgUrl}")`;
+      label.style.backgroundSize = 'cover';
+      label.style.backgroundPosition = 'center';
+    } else {
+      // bgUrl 없으면 게임 색상 그라디언트
+      label.style.background = `linear-gradient(135deg, ${game.color}33, var(--surface))`;
+    }
+
+    const iconHtml = game.iconUrl
+      ? `<img class="game-label-icon-img" src="${game.iconUrl}" alt="${game.name}" onerror="this.remove()">`
+      : '';
+
+    label.innerHTML = `
+      <div class="game-label-overlay"></div>
+      ${iconHtml}
+      <div class="game-label-content">
+        <div class="game-label-name">${game.nameKo || game.name}</div>
+        <div class="game-label-dev">${game.developer}</div>
+      </div>
+    `;
 
     const entriesWrapper = document.createElement('div');
     entriesWrapper.className = 'game-entries';
@@ -481,12 +504,54 @@ const Timeline = (() => {
     });
   }
 
+  /* ── Sortable 드래그 (게임 순서 변경) ── */
+  function setupSortable() {
+    if (typeof Sortable === 'undefined') return;
+    const container = document.getElementById('game-rows');
+    Sortable.create(container, {
+      draggable: '.game-section',
+      handle: '.game-label',
+      ghostClass: 'sortable-ghost',
+      dragClass: 'sortable-drag',
+      animation: 150,
+      onEnd(evt) {
+        // data.games 배열 순서 동기화
+        const newOrder = [...container.querySelectorAll('.game-section[data-id]')]
+          .map(el => el.dataset.id);
+        data.games.sort((a, b) => newOrder.indexOf(a.id) - newOrder.indexOf(b.id));
+        // 필터 칩도 순서 맞추기
+        buildFilters();
+        restoreFilters();
+        saveOrder(newOrder);
+      }
+    });
+    restoreOrder();
+  }
+
+  function saveOrder(order) {
+    try { localStorage.setItem('tl-order', JSON.stringify(order)); } catch(e) {}
+  }
+
+  function restoreOrder() {
+    let order;
+    try { order = JSON.parse(localStorage.getItem('tl-order')); } catch(e) {}
+    if (!order || !order.length) return;
+    data.games.sort((a, b) => {
+      const ai = order.indexOf(a.id), bi = order.indexOf(b.id);
+      if (ai === -1) return 1;
+      if (bi === -1) return -1;
+      return ai - bi;
+    });
+  }
+
   /* ── Public API ── */
   return { init, setupRangeControl };
 
 })();
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  // i18n 먼저 로드 (언어 버튼 + 텍스트)
+  if (typeof I18n !== 'undefined') await I18n.init();
   Timeline.init();
   Timeline.setupRangeControl();
 });
