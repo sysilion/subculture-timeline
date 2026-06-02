@@ -1,0 +1,542 @@
+/* ─────────────────────────────────────────────
+   서브컬쳐 게임 타임라인 — 스타일시트
+   ───────────────────────────────────────────── */
+
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface2: #22263a;
+  --border: #2e3250;
+  --text: #e8eaf6;
+  --text-muted: #7986cb;
+  --text-dim: #4a5080;
+  --today-line: #f44336;
+  --tentative-stripe: rgba(255,255,255,0.05);
+  --tooltip-bg: #1e2340;
+  --row-hover: rgba(255,255,255,0.04);
+  --scrollbar-thumb: #333755;
+  --label-w: 120px;
+  --row-h: 44px;
+  --ruler-h: 52px;
+  --day-px: 28px;          /* 1일 = 28px */
+  --corner-r: 6px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans KR', 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ── 스크롤바 ── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 4px; }
+::-webkit-scrollbar-corner { background: var(--bg); }
+
+/* ═══════════════════════════════════════
+   헤더
+═══════════════════════════════════════ */
+#header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 100;
+}
+
+#header h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+#header h1 span { color: var(--text-muted); font-weight: 400; font-size: 12px; margin-left: 8px; }
+
+/* 범례 */
+#legend {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.legend-dot {
+  width: 10px; height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.legend-dot.type-banner  { background: #5c7cfa; }
+.legend-dot.type-event   { background: rgba(100,220,150,0.7); border: 1px solid #66bb6a; }
+.legend-dot.type-version { background: #37474f; border: 1px solid #546e7a; }
+.legend-dot.tentative    { background: repeating-linear-gradient(45deg,#444,#444 4px,#222 4px,#222 8px); border: 1px dashed #888; }
+
+/* 날짜 범위 컨트롤 */
+#range-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+#range-controls label {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+#range-controls select {
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* 업데이트 날짜 */
+#last-updated {
+  font-size: 10px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════
+   필터 바
+═══════════════════════════════════════ */
+#filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.filter-label {
+  font-size: 11px;
+  color: var(--text-dim);
+  white-space: nowrap;
+  margin-right: 4px;
+}
+
+.game-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 11px;
+  user-select: none;
+  transition: opacity 0.15s, border-color 0.15s;
+}
+.game-chip.active {
+  border-color: var(--chip-color, #5c7cfa);
+  background: color-mix(in srgb, var(--chip-color, #5c7cfa) 12%, var(--surface));
+}
+.game-chip.inactive { opacity: 0.4; }
+.game-chip .chip-icon { font-size: 13px; }
+.game-chip .chip-name { color: var(--text); }
+
+/* ═══════════════════════════════════════
+   메인 타임라인 영역
+═══════════════════════════════════════ */
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#timeline-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 가로 스크롤 컨테이너 */
+#timeline-scroll {
+  overflow-x: auto;
+  overflow-y: auto;
+  flex: 1;
+  position: relative;
+}
+
+/* 실제 타임라인 캔버스 (너비는 JS에서 계산) */
+#timeline-canvas {
+  position: relative;
+  min-height: 100%;
+}
+
+/* ── 날짜 눈금자 ── */
+#ruler {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  height: var(--ruler-h);
+  display: flex;
+}
+
+#ruler-spacer {
+  width: var(--label-w);
+  flex-shrink: 0;
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky;
+  left: 0;
+  z-index: 51;
+  display: flex;
+  align-items: flex-end;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+#ruler-dates {
+  position: relative;
+  flex: 1;
+}
+
+.ruler-month {
+  position: absolute;
+  top: 4px;
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.ruler-day {
+  position: absolute;
+  bottom: 4px;
+  font-size: 10px;
+  color: var(--text-dim);
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.ruler-day.today-label {
+  color: var(--today-line);
+  font-weight: 700;
+}
+
+.ruler-week-tick {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  height: 6px;
+  background: var(--border);
+  pointer-events: none;
+}
+
+/* ── 게임 행 ── */
+/* position: relative 필수 — today-line, grid-lines의 absolute 기준점 */
+#game-rows {
+  position: relative;
+}
+
+.game-section {
+  border-bottom: 1px solid var(--border);
+  transition: opacity 0.2s;
+}
+.game-section.hidden { display: none; }
+
+.game-header-row {
+  display: flex;
+  align-items: stretch;
+  min-height: var(--row-h);
+  position: relative;
+}
+
+/* 게임 이름 라벨 (sticky left) */
+.game-label {
+  width: var(--label-w);
+  min-width: var(--label-w);
+  flex-shrink: 0;
+  position: sticky;
+  left: 0;
+  z-index: 20;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px 8px;
+  cursor: default;
+  transition: background 0.15s;
+}
+.game-section:hover .game-label {
+  background: var(--surface2);
+}
+
+.game-label-icon { font-size: 16px; line-height: 1; margin-bottom: 2px; }
+.game-label-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+.game-label-dev  {
+  font-size: 9px;
+  color: var(--text-dim);
+  margin-top: 1px;
+}
+
+/* 배너 행 컨테이너 */
+.game-entries {
+  flex: 1;
+  position: relative;
+}
+
+/* 배너/이벤트 행 */
+.entry-row {
+  display: flex;
+  align-items: center;
+  height: var(--row-h);
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  transition: background 0.1s;
+}
+.entry-row:last-child { border-bottom: none; }
+.entry-row:hover { background: var(--row-hover); }
+
+/* 배너 막대 */
+.entry-bar {
+  position: absolute;
+  height: 28px;
+  border-radius: var(--corner-r);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.1s;
+  white-space: nowrap;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 4px;
+}
+.entry-bar:hover {
+  filter: brightness(1.3);
+  z-index: 10;
+}
+
+.entry-bar.type-version {
+  height: 20px;
+  background: var(--surface2) !important;
+  border: 1px solid;
+  opacity: 0.9;
+}
+
+.entry-bar.type-event {
+  height: 24px;
+  opacity: 0.65;
+  border: 1.5px dashed rgba(255,255,255,0.4);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 5px,
+    rgba(0,0,0,0.15) 5px,
+    rgba(0,0,0,0.15) 10px
+  ) !important;
+}
+
+.entry-bar.tentative {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 4px,
+    rgba(0,0,0,0.2) 4px,
+    rgba(0,0,0,0.2) 8px
+  ) !important;
+  border: 1.5px dashed;
+  opacity: 0.8;
+}
+
+.bar-text {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.92);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  line-height: 1.2;
+}
+.bar-text .bar-subtitle {
+  display: block;
+  font-size: 9px;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+/* ── 오늘 세로선 ── */
+#today-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--today-line);
+  z-index: 30;
+  pointer-events: none;
+}
+#today-line::before {
+  content: '오늘';
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 9px;
+  color: var(--today-line);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ── 수직 격자선 ── */
+.grid-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+  pointer-events: none;
+  z-index: 1;
+}
+.grid-line.month-line {
+  background: rgba(99,120,200,0.25);
+  width: 1px;
+}
+
+/* ═══════════════════════════════════════
+   툴팁
+═══════════════════════════════════════ */
+#tooltip {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s;
+  max-width: 280px;
+}
+#tooltip.visible { opacity: 1; }
+
+.tooltip-inner {
+  background: var(--tooltip-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+.tooltip-game {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.tooltip-color-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.tooltip-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+.tooltip-subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.tooltip-dates {
+  font-size: 11px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tooltip-dates span { color: var(--text-muted); }
+.tooltip-duration {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+.tooltip-tentative {
+  margin-top: 5px;
+  font-size: 10px;
+  color: #ffa726;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.tooltip-source {
+  margin-top: 4px;
+  font-size: 9px;
+  color: var(--text-dim);
+}
+
+/* ═══════════════════════════════════════
+   푸터
+═══════════════════════════════════════ */
+#footer {
+  padding: 6px 16px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+#footer a { color: var(--text-muted); text-decoration: none; }
+#footer a:hover { color: var(--text); }
+
+/* ═══════════════════════════════════════
+   반응형
+═══════════════════════════════════════ */
+@media (max-width: 600px) {
+  :root { --label-w: 80px; --day-px: 20px; }
+  #header h1 { font-size: 14px; }
+  .game-label-name { font-size: 10px; }
+}
+
+/* ── 애니메이션 ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.game-section { animation: fadeIn 0.2s ease; }

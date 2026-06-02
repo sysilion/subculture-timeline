@@ -1,0 +1,729 @@
+{
+  "meta": {
+    "lastUpdated": "2026-06-02",
+    "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조."
+  },
+  "games": [
+    {
+      "id": "genshin",
+      "name": "원신",
+      "fullName": "원신 임팩트 (Genshin Impact)",
+      "color": "#4fc3f7",
+      "icon": "🌸",
+      "developer": "HoYoverse",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "version",
+          "title": "Version 6.6 — Luna VII",
+          "start": "2026-05-21",
+          "end": "2026-07-02",
+          "version": "6.6",
+          "source": "earlygg.com"
+        },
+        {
+          "type": "banner",
+          "title": "Nicole (Debut) + Durin (Rerun)",
+          "subtitle": "Phase 1",
+          "rarity": 5,
+          "start": "2026-05-21",
+          "end": "2026-06-10",
+          "version": "6.6"
+        },
+        {
+          "type": "banner",
+          "title": "Lohen (Debut) + Mavuika (Rerun)",
+          "subtitle": "Phase 2",
+          "rarity": 5,
+          "start": "2026-06-10",
+          "end": "2026-07-02",
+          "version": "6.6"
+        },
+        {
+          "type": "event",
+          "title": "Phantasmal Pals",
+          "subtitle": "Klee & Little Hexenzirkel 미니게임",
+          "start": "2026-05-22",
+          "end": "2026-06-08",
+          "version": "6.6",
+          "source": "gamingonphone.com"
+        },
+        {
+          "type": "event",
+          "title": "Combat Event (Nasha Town)",
+          "subtitle": "나샤 타운 전투 이벤트",
+          "start": "2026-06-08",
+          "end": "2026-06-18",
+          "version": "6.6",
+          "source": "gamingonphone.com"
+        },
+        {
+          "type": "event",
+          "title": "Multiplayer Mini-game",
+          "subtitle": "멀티플레이어 볼 밀기 게임",
+          "start": "2026-06-18",
+          "end": "2026-06-29",
+          "version": "6.6",
+          "source": "gamingonphone.com"
+        },
+        {
+          "type": "event",
+          "title": "Imaginarium Theater — Season 1",
+          "subtitle": "환상 극장 시즌 1",
+          "start": "2026-06-01",
+          "end": "2026-07-01",
+          "version": "6.6",
+          "source": "gamingonphone.com"
+        },
+        {
+          "type": "version",
+          "title": "Version 6.7",
+          "start": "2026-07-09",
+          "end": "2026-08-19",
+          "version": "6.7",
+          "tentative": true,
+          "source": "earlygg.com"
+        },
+        {
+          "type": "banner",
+          "title": "Sandrone (Debut) + Columbina (Rerun)",
+          "subtitle": "Phase 1",
+          "rarity": 5,
+          "start": "2026-07-09",
+          "end": "2026-07-30",
+          "version": "6.7",
+          "tentative": true
+        },
+        {
+          "type": "banner",
+          "title": "Citlali (Rerun) + Raiden Shogun (Rerun)",
+          "subtitle": "Phase 2",
+          "rarity": 5,
+          "start": "2026-07-30",
+          "end": "2026-08-19",
+          "version": "6.7",
+          "tentative": true
+        }
+      ]
+    },
+    {
+      "id": "starrail",
+      "name": "스타레일",
+      "fullName": "붕괴: 스타레일 (Honkai: Star Rail)",
+      "color": "#b39ddb",
+      "icon": "⭐",
+      "developer": "HoYoverse",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "version",
+          "title": "Version 4.3",
+          "start": "2026-06-01",
+          "end": "2026-07-14",
+          "version": "4.3",
+          "source": "game8.co / lootbar.com"
+        },
+        {
+          "type": "banner",
+          "title": "Mortenax Blade (Debut) + Yao Guang (Debut)",
+          "subtitle": "Phase 1",
+          "rarity": 5,
+          "start": "2026-06-01",
+          "end": "2026-06-24",
+          "version": "4.3"
+        },
+        {
+          "type": "banner",
+          "title": "Phainon (Rerun) + Cyrene (Rerun)",
+          "subtitle": "Phase 2",
+          "rarity": 5,
+          "start": "2026-06-24",
+          "end": "2026-07-14",
+          "version": "4.3"
+        },
+        {
+          "type": "event",
+          "title": "Gift of Odyssey",
+          "subtitle": "출석 보상 이벤트",
+          "start": "2026-06-01",
+          "end": "2026-06-21",
+          "version": "4.3",
+          "source": "sportskeeda.com"
+        },
+        {
+          "type": "event",
+          "title": "Pixel Plane Rumble",
+          "subtitle": "메인 이벤트 — 아케이드 도그파이트 미니게임",
+          "start": "2026-06-01",
+          "end": "2026-06-24",
+          "version": "4.3",
+          "source": "sportskeeda.com"
+        },
+        {
+          "type": "event",
+          "title": "Planar Fissure",
+          "subtitle": "플래너 파쇄 이벤트",
+          "start": "2026-06-16",
+          "end": "2026-07-07",
+          "version": "4.3",
+          "source": "sportskeeda.com"
+        },
+        {
+          "type": "event",
+          "title": "Wispae Amusement Park",
+          "subtitle": "Phase 2 이벤트 — 놀이공원 관리 모드",
+          "start": "2026-06-24",
+          "end": "2026-07-14",
+          "version": "4.3",
+          "source": "sportskeeda.com"
+        },
+        {
+          "type": "event",
+          "title": "Realm of the Strange",
+          "subtitle": "기이한 영역 이벤트",
+          "start": "2026-07-03",
+          "end": "2026-07-14",
+          "version": "4.3",
+          "source": "sportskeeda.com"
+        },
+        {
+          "type": "version",
+          "title": "Version 4.4",
+          "start": "2026-07-14",
+          "end": "2026-08-25",
+          "version": "4.4",
+          "tentative": true,
+          "source": "buffhub.com"
+        },
+        {
+          "type": "banner",
+          "title": "Himeko SP (Debut) + Gilgamesh (Debut)",
+          "subtitle": "Phase 1",
+          "rarity": 5,
+          "start": "2026-07-14",
+          "end": "2026-08-04",
+          "version": "4.4",
+          "tentative": true
+        }
+      ]
+    },
+    {
+      "id": "wuwa",
+      "name": "명조",
+      "fullName": "명조: 워더링 웨이브 (Wuthering Waves)",
+      "color": "#80cbc4",
+      "icon": "🌊",
+      "developer": "Kuro Games",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "version",
+          "title": "Version 3.3",
+          "start": "2026-04-30",
+          "end": "2026-06-08",
+          "version": "3.3",
+          "source": "pcgamesn.com"
+        },
+        {
+          "type": "banner",
+          "title": "Hiyuki (Debut)",
+          "subtitle": "Phase 1",
+          "rarity": 5,
+          "start": "2026-04-30",
+          "end": "2026-05-21",
+          "version": "3.3"
+        },
+        {
+          "type": "banner",
+          "title": "Denia (Debut)",
+          "subtitle": "Phase 2",
+          "rarity": 5,
+          "start": "2026-05-21",
+          "end": "2026-06-08",
+          "version": "3.3"
+        },
+        {
+          "type": "version",
+          "title": "Version 3.4 — Cyberpunk: Edgerunners Collab",
+          "start": "2026-06-08",
+          "end": "2026-07-10",
+          "version": "3.4",
+          "source": "pockettactics.com / sportskeeda.com"
+        },
+        {
+          "type": "banner",
+          "title": "Lucy · Lucilla (Debut) + Cyberpunk Collab",
+          "subtitle": "Phase 1",
+          "rarity": 5,
+          "start": "2026-06-08",
+          "end": "2026-06-18",
+          "version": "3.4",
+          "source": "sportskeeda.com"
+        },
+        {
+          "type": "banner",
+          "title": "Cartethyia (Rerun) + Rebecca (Debut, Cyberpunk)",
+          "subtitle": "Phase 2",
+          "rarity": 5,
+          "start": "2026-06-18",
+          "end": "2026-07-10",
+          "version": "3.4",
+          "source": "sportskeeda.com"
+        },
+        {
+          "type": "event",
+          "title": "Cyberpunk Edgerunners Collab — Instant Flashlight",
+          "subtitle": "콜라보 메인 이벤트",
+          "start": "2026-06-08",
+          "end": "2026-07-09",
+          "version": "3.4",
+          "source": "pockettactics.com"
+        },
+        {
+          "type": "event",
+          "title": "Cyberpunk Collab — Night City Roaming",
+          "subtitle": "나이트 시티 탐험 이벤트",
+          "start": "2026-06-08",
+          "end": "2026-07-09",
+          "version": "3.4",
+          "source": "pockettactics.com"
+        },
+        {
+          "type": "event",
+          "title": "Matrix Reform",
+          "subtitle": "매트릭스 개혁 이벤트",
+          "start": "2026-06-25",
+          "end": "2026-07-09",
+          "version": "3.4",
+          "source": "pockettactics.com"
+        }
+      ]
+    },
+    {
+      "id": "zzz",
+      "name": "젠레스",
+      "fullName": "젠레스 존 제로 (Zenless Zone Zero)",
+      "color": "#ffcc80",
+      "icon": "⚡",
+      "developer": "HoYoverse",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "version",
+          "title": "Version 2.8 — Season 2 Final",
+          "start": "2026-05-06",
+          "end": "2026-06-17",
+          "version": "2.8",
+          "source": "game8.co / icy-veins.com"
+        },
+        {
+          "type": "banner",
+          "title": "Promeia (Debut)",
+          "subtitle": "Phase 1",
+          "rarity": "S",
+          "start": "2026-05-06",
+          "end": "2026-05-27",
+          "version": "2.8"
+        },
+        {
+          "type": "banner",
+          "title": "Starlight Billy (Debut) + Orphie & Magus (Rerun)",
+          "subtitle": "Phase 2",
+          "rarity": "S",
+          "start": "2026-05-27",
+          "end": "2026-06-17",
+          "version": "2.8"
+        },
+        {
+          "type": "event",
+          "title": "Operation: Save Bootopia",
+          "subtitle": "부투피아 구출 작전 이벤트",
+          "start": "2026-05-06",
+          "end": "2026-06-15",
+          "version": "2.8",
+          "source": "bittopup.com"
+        },
+        {
+          "type": "version",
+          "title": "Version 3.0 — Season 3 Start",
+          "start": "2026-06-17",
+          "end": "2026-07-29",
+          "version": "3.0",
+          "tentative": true,
+          "source": "pcgamesn.com"
+        },
+        {
+          "type": "banner",
+          "title": "Velina (Wind/Anomaly, Debut)",
+          "subtitle": "Phase 1",
+          "rarity": "S",
+          "start": "2026-06-17",
+          "end": "2026-07-08",
+          "version": "3.0",
+          "tentative": true
+        },
+        {
+          "type": "banner",
+          "title": "Norma (Fire/Stun, Debut)",
+          "subtitle": "Phase 2",
+          "rarity": "S",
+          "start": "2026-07-08",
+          "end": "2026-07-29",
+          "version": "3.0",
+          "tentative": true
+        }
+      ]
+    },
+    {
+      "id": "endfield",
+      "name": "엔드필드",
+      "fullName": "명일방주: 엔드필드 (Arknights: Endfield)",
+      "color": "#ef9a9a",
+      "icon": "🔴",
+      "developer": "Hypergryph",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "version",
+          "title": "Version 1.2 — At the Wake of Spring",
+          "start": "2026-04-17",
+          "end": "2026-06-05",
+          "version": "1.2",
+          "source": "endfield.wiki.gg / game8.co"
+        },
+        {
+          "type": "banner",
+          "title": "Zhuang Fangyi (Thunder of Renewal, Debut)",
+          "subtitle": "Phase 1",
+          "rarity": 6,
+          "start": "2026-04-17",
+          "end": "2026-05-22",
+          "version": "1.2"
+        },
+        {
+          "type": "banner",
+          "title": "Fest of Brilliance — Pogranichnik · Gilberta · Laevatain · Ardelia",
+          "subtitle": "Phase 2 Special Banner (Phase 1과 병행)",
+          "rarity": 6,
+          "start": "2026-05-14",
+          "end": "2026-05-22",
+          "version": "1.2",
+          "tentative": true,
+          "source": "game8.co — Phase 1 기간 내 병행 운영"
+        },
+        {
+          "type": "event",
+          "title": "AIC Support: Palm-Top Savior",
+          "subtitle": "AIC 생산 이벤트",
+          "start": "2026-04-28",
+          "end": "2026-05-13",
+          "version": "1.2",
+          "source": "endfield.wiki.gg"
+        },
+        {
+          "type": "version",
+          "title": "Version 1.3 — Sketches of Lost Heirlooms",
+          "start": "2026-06-05",
+          "end": "2026-07-17",
+          "version": "1.3",
+          "source": "endfieldhub.org / gamsgo.com"
+        },
+        {
+          "type": "banner",
+          "title": "Mi Fu (Debut)",
+          "subtitle": "Phase 1",
+          "rarity": 6,
+          "start": "2026-06-05",
+          "end": "2026-06-26",
+          "version": "1.3",
+          "source": "endfieldhub.org"
+        },
+        {
+          "type": "banner",
+          "title": "Camille (Debut)",
+          "subtitle": "Phase 2",
+          "rarity": 6,
+          "start": "2026-06-26",
+          "end": "2026-07-17",
+          "version": "1.3",
+          "source": "endfieldhub.org"
+        },
+        {
+          "type": "event",
+          "title": "Contingency Contract (수탁계약)",
+          "subtitle": "v1.3 첫 도입 — 기간 한정 도전 모드",
+          "start": "2026-06-05",
+          "end": "2026-07-17",
+          "version": "1.3",
+          "source": "gamsgo.com"
+        }
+      ]
+    },
+    {
+      "id": "nte",
+      "name": "이환",
+      "fullName": "이환 / Neverness to Everness (NTE)",
+      "color": "#ce93d8",
+      "icon": "🃏",
+      "developer": "Infold Games",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "version",
+          "title": "Version 1.0 — 출시",
+          "start": "2026-04-29",
+          "end": "2026-06-03",
+          "version": "1.0",
+          "source": "buffhub.com / neverness.gg"
+        },
+        {
+          "type": "banner",
+          "title": "Nanali (Debut)",
+          "subtitle": "출시 배너",
+          "rarity": "S",
+          "start": "2026-04-29",
+          "end": "2026-05-13",
+          "version": "1.0"
+        },
+        {
+          "type": "banner",
+          "title": "Hotori — Misty Tipsy Style (Debut)",
+          "subtitle": "Phase 2",
+          "rarity": "S",
+          "start": "2026-05-13",
+          "end": "2026-06-03",
+          "version": "1.0"
+        },
+        {
+          "type": "version",
+          "title": "Version 1.1",
+          "start": "2026-06-03",
+          "end": "2026-07-08",
+          "version": "1.1",
+          "source": "neverness.gg / ntebuild.com"
+        },
+        {
+          "type": "banner",
+          "title": "Lacrimosa (Debut)",
+          "subtitle": "Phase 1",
+          "rarity": "S",
+          "start": "2026-06-03",
+          "end": "2026-06-24",
+          "version": "1.1"
+        },
+        {
+          "type": "banner",
+          "title": "Chaos (Debut)",
+          "subtitle": "Phase 2",
+          "rarity": "S",
+          "start": "2026-06-24",
+          "end": "2026-07-08",
+          "version": "1.1"
+        },
+        {
+          "type": "event",
+          "title": "Nocturne Special",
+          "subtitle": "야상곡 스페셜 이벤트",
+          "start": "2026-06-03",
+          "end": "2026-06-24",
+          "version": "1.1",
+          "source": "ntebuild.com"
+        },
+        {
+          "type": "event",
+          "title": "이환 × Porsche 콜라보레이션",
+          "subtitle": "포르쉐 공식 콜라보 이벤트",
+          "start": "2026-06-03",
+          "end": "2026-07-08",
+          "version": "1.1",
+          "source": "ntebuild.com"
+        },
+        {
+          "type": "event",
+          "title": "Pursuit Special",
+          "subtitle": "추격 스페셜 이벤트",
+          "start": "2026-06-24",
+          "end": "2026-07-08",
+          "version": "1.1",
+          "source": "ntebuild.com"
+        },
+        {
+          "type": "version",
+          "title": "Version 1.2 — Exe",
+          "start": "2026-07-08",
+          "end": "2026-08-12",
+          "version": "1.2",
+          "tentative": true,
+          "source": "wotpack.ru"
+        }
+      ]
+    },
+    {
+      "id": "mongil",
+      "name": "몬길",
+      "fullName": "몬길: STAR DIVE",
+      "color": "#a5d6a7",
+      "icon": "🐾",
+      "developer": "Netmarble",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "version",
+          "title": "Version 1.0 — 출시 (2026-04-15)",
+          "start": "2026-04-15",
+          "end": "2026-05-27",
+          "version": "1.0",
+          "source": "mongilstardive.wiki / game8.co"
+        },
+        {
+          "type": "banner",
+          "title": "Mina — Fate-Touched Fox Maiden (Debut)",
+          "subtitle": "Limited Banner",
+          "rarity": 5,
+          "start": "2026-04-29",
+          "end": "2026-05-26",
+          "version": "1.0"
+        },
+        {
+          "type": "event",
+          "title": "Mina 이벤트 스토리",
+          "subtitle": "Mina 캐릭터 스토리 이벤트",
+          "start": "2026-04-29",
+          "end": "2026-05-26",
+          "version": "1.0",
+          "source": "kaiden.gg"
+        },
+        {
+          "type": "event",
+          "title": "Monster Defeat Mission",
+          "subtitle": "몬스터 격파 미션",
+          "start": "2026-05-20",
+          "end": "2026-05-26",
+          "version": "1.0",
+          "source": "kaiden.gg"
+        },
+        {
+          "type": "version",
+          "title": "Version 1.1",
+          "start": "2026-05-27",
+          "end": "2026-07-01",
+          "version": "1.1",
+          "source": "mongilstardive.wiki / kaiden.gg"
+        },
+        {
+          "type": "banner",
+          "title": "Narae (Debut) — Mina의 여동생",
+          "subtitle": "Limited Banner",
+          "rarity": 5,
+          "start": "2026-05-27",
+          "end": "2026-06-23",
+          "version": "1.1"
+        },
+        {
+          "type": "event",
+          "title": "Narae 이벤트 스토리",
+          "subtitle": "Narae 캐릭터 스토리 이벤트",
+          "start": "2026-05-27",
+          "end": "2026-06-16",
+          "version": "1.1",
+          "source": "game8.co"
+        },
+        {
+          "type": "event",
+          "title": "7일 출석 로그인 이벤트",
+          "subtitle": "v1.1 출석 보상",
+          "start": "2026-05-27",
+          "end": "2026-06-16",
+          "version": "1.1",
+          "source": "kaiden.gg"
+        },
+        {
+          "type": "event",
+          "title": "An Invitation to Break the Ice",
+          "subtitle": "파티 초대 이벤트",
+          "start": "2026-06-10",
+          "end": "2026-06-16",
+          "version": "1.1",
+          "source": "kaiden.gg"
+        },
+        {
+          "type": "version",
+          "title": "Version 1.2 — Summer Update",
+          "start": "2026-07-01",
+          "end": "2026-08-01",
+          "version": "1.2",
+          "tentative": true,
+          "source": "mongilstardive.wiki"
+        },
+        {
+          "type": "banner",
+          "title": "Version 1.2 신규 캐릭터 (미공개)",
+          "subtitle": "Limited Banner",
+          "rarity": 5,
+          "start": "2026-07-01",
+          "end": "2026-07-28",
+          "version": "1.2",
+          "tentative": true
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "bluearchive",
+      "name": "블루 아카이브 (Blue Archive)",
+      "developer": "Nexon / Yostar",
+      "note": "데이터 미포함 — 추후 추가 예정",
+      "links": ["https://bluearchive.nexon.com"]
+    },
+    {
+      "id": "nikke",
+      "name": "승리의 여신: 니케 (NIKKE)",
+      "developer": "Level Infinite / Shift Up",
+      "note": "데이터 미포함 — 추후 추가 예정",
+      "links": []
+    },
+    {
+      "id": "gfl2",
+      "name": "소녀전선 2: 망명 (Girls' Frontline 2: Exilium)",
+      "developer": "Sunborn",
+      "note": "데이터 미포함 — 추후 추가 예정",
+      "links": []
+    },
+    {
+      "id": "reverse1999",
+      "name": "리버스: 1999 (Reverse: 1999)",
+      "developer": "Bluepoch",
+      "note": "데이터 미포함 — 추후 추가 예정",
+      "links": []
+    },
+    {
+      "id": "limbus",
+      "name": "림버스 컴퍼니 (Limbus Company)",
+      "developer": "Project Moon",
+      "note": "데이터 미포함 — 추후 추가 예정",
+      "links": []
+    },
+    {
+      "id": "trickcal",
+      "name": "트릭컬 RE:VIVE",
+      "developer": "Dexter Studio",
+      "note": "데이터 미포함 — 추후 추가 예정",
+      "links": []
+    },
+    {
+      "id": "starlightsoiree",
+      "name": "스텔라 소라 (Stella Soiree)",
+      "developer": "Papaya Studio",
+      "note": "데이터 미포함 — 추후 추가 예정",
+      "links": []
+    },
+    {
+      "id": "loveanddepspace",
+      "name": "러브 앤 딥스페이스 (Love and Deepspace)",
+      "developer": "InfoldGames",
+      "note": "데이터 미포함 — 추후 추가 예정",
+      "links": []
+    }
+  ]
+}
