@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-03",
+    "lastUpdated": "2026-06-07",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-06-03"
+    "autoUpdated": "2026-06-07"
   },
   "games": [
     {
@@ -1357,9 +1357,39 @@
         },
         {
           "type": "event",
+          "title": "Good Morning, Roscaelifer",
+          "start": "2026-06-06",
+          "end": "2026-06-17",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Data Bounty - Combat Simulation",
           "start": "2026-06-10",
           "end": "2026-06-15",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Duration",
+          "start": "2026-06-17",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Duration",
+          "start": "2026-07-08",
+          "end": "2026-07-28",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -1583,6 +1613,56 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Expunger of Sin (Ver. 1.3 Phase 2) 06/26/2026 - 07/16/2026",
+          "start": "2026-06-05",
+          "end": "2026-06-26",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Search for Sword Vault Dale (Version 1.3)",
+          "start": "2026-06-05",
+          "end": "2026-06-26",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "One with Her Fists Sign-In (Version 1.3)",
+          "start": "2026-06-05",
+          "end": "2026-06-26",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Period:",
+          "start": "2026-06-12",
+          "end": "2026-06-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Expunger of Sin (Ver. 1.3 Phase 2)",
+          "start": "2026-06-26",
+          "end": "2026-07-16",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
         }
       ],
       "iconUrl": "https://web.hycdn.cn/favicon.ico",
@@ -1730,12 +1810,132 @@
         },
         {
           "type": "event",
+          "title": "Market Opening Rehersal",
+          "start": "2026-06-03",
+          "end": "2026-06-24",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Circle Gift",
+          "start": "2026-06-03",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Daydream Perks",
+          "start": "2026-06-03",
+          "end": "2026-06-24",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Everdriving Mystery Box",
+          "start": "2026-06-03",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Underground Circuit",
+          "start": "2026-06-03",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "What's Baking",
+          "start": "2026-06-03",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Sunward Travelogue",
+          "start": "2026-06-03",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Long Dream",
+          "start": "2026-06-03",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Fons Rush",
+          "start": "2026-06-08",
+          "end": "2026-06-15",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Hunter's Crucible",
+          "start": "2026-06-18",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Pursuit Special",
           "subtitle": "추격 스페셜 이벤트",
           "start": "2026-06-24",
           "end": "2026-07-08",
           "version": "1.1",
           "source": "ntebuild.com"
+        },
+        {
+          "type": "event",
+          "title": "Fight Championship",
+          "start": "2026-06-24",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Pixel Surge",
+          "start": "2026-06-26",
+          "end": "2026-07-03",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
         }
       ],
       "iconUrl": "https://nte.perfectworld.com/public/images/icon.png",
