@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-07",
+    "lastUpdated": "2026-06-08",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-06-07"
+    "autoUpdated": "2026-06-08"
   },
   "games": [
     {
@@ -881,6 +881,16 @@
         },
         {
           "type": "banner",
+          "title": "Startorch Racing, Rerun!",
+          "start": "2026-06-11",
+          "end": "2026-06-25",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Cartethyia (Rerun) + Rebecca (Debut, Cyberpunk)",
           "subtitle": "Phase 2",
           "rarity": 5,
@@ -1179,6 +1189,76 @@
         },
         {
           "type": "event",
+          "title": "Ascendant Aces",
+          "start": "2026-06-08",
+          "end": "2026-07-09",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "3.4 Depths of Illusive Realm: Dreamchasers",
+          "start": "2026-06-08",
+          "end": "2026-07-09",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Event Duration",
+          "start": "2026-06-08",
+          "end": "2026-07-09",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Event Duration",
+          "start": "2026-06-11",
+          "end": "2026-06-25",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Bountiful Crescendo",
+          "start": "2026-06-15",
+          "end": "2026-06-22",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Dream of Azure Sky",
+          "start": "2026-06-18",
+          "end": "2026-07-09",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Event Duration",
+          "start": "2026-06-18",
+          "end": "2026-07-09",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Matrix Reform",
           "subtitle": "매트릭스 개혁 이벤트",
           "start": "2026-06-25",
@@ -1190,6 +1270,16 @@
           "type": "event",
           "title": "Matrix Reform",
           "start": "2026-06-25",
+          "end": "2026-07-09",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Chord Cleansing",
+          "start": "2026-07-02",
           "end": "2026-07-09",
           "version": "",
           "tentative": false,
