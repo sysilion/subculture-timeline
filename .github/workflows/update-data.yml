@@ -36,14 +36,13 @@ jobs:
         run: python scripts/update_data.py
 
       - name: Commit if changed
+        id: auto-commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: auto-update banner/event schedule (${{ env.TODAY }})"
+          commit_message: "chore: auto-update banner/event schedule"
           file_pattern: "data/games.json"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
-        env:
-          TODAY: ${{ steps.date.outputs.date }}
 
       - name: Trigger Pages deploy if data changed
         if: steps.auto-commit.outputs.changes_detected == 'true'

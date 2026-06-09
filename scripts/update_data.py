@@ -30,13 +30,15 @@ def merge_entries(existing: list, fresh: list) -> tuple[list, int]:
     - 자동 항목은 title+start 키로 dedupe, 새 것으로 교체
     - 90일 이상 지난 자동 항목 제거
     """
-    manual = [e for e in existing if not e.get("_auto")]
     auto_fresh = {f"{e['title']}|{e['start']}": e for e in fresh}
 
     kept = []
     for e in existing:
         if not e.get("_auto"):
             kept.append(e)  # 수동 항목은 항상 유지
+            # 수동 항목과 같은 키의 fresh 항목이 있다면 중복 방지를 위해 제거
+            key = f"{e['title']}|{e['start']}"
+            auto_fresh.pop(key, None)
             continue
         key = f"{e['title']}|{e['start']}"
         if key in auto_fresh:

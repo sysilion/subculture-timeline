@@ -49,6 +49,10 @@ def _infer_year(html: str) -> int:
 def _clean_name(s: str) -> str:
     s = re.sub(r'^[◆●・▶\-–—\s◇\*]+', '', s)
     s = re.sub(r'\s+', ' ', s).strip()
+    # 레이블/헤더 문자열 제거
+    label = s.lower().rstrip(':').strip()
+    if label in ("duration", "event duration", "start", "end", "event", "availability"):
+        return ""
     return s[:120]
 
 def _is_banner(name: str) -> bool:
@@ -212,6 +216,9 @@ def parse(game_id: str, urls: list[str], version_hint: str = "") -> list[dict]:
                         return '/'.join(parts)
                     start = _parse_date(fix_yr(s_str), ref_year)
                     end = _parse_date(fix_yr(e_str), ref_year)
+                    # 이름에 날짜 문자열이 포함되어 있으면 제거
+                    name_raw = re.sub(r'\s*\d{1,2}/\d{1,2}/\d{2,4}\s*[-–]\s*\d{1,2}/\d{1,2}/\d{2,4}.*$', '', name_raw)
+                    name_raw = re.sub(r'\s*-\s*TBD.*$', '', name_raw)
                     _add_entry(all_entries, seen, game_id, name_raw, start, end, version_hint)
 
     print(f"  [{game_id}] 파싱 완료: {len(all_entries)}개")

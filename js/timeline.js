@@ -82,12 +82,14 @@ const Timeline = (() => {
       luEl.textContent = `${prefix} ${data.meta.lastUpdated}`;
     }
 
+    restoreOrder();
     buildFilters();
     renderRuler();
     renderGames();
     renderTodayLine();
     setupTooltip();
     setupSortable();
+    setupDetailPanel();
     updateCSSVars();
   }
 
@@ -303,11 +305,13 @@ const Timeline = (() => {
 
     label.innerHTML = `
       <div class="game-label-overlay"></div>
+      <div class="game-label-drag" title="드래그하여 순서 변경"></div>
       ${iconHtml}
       <div class="game-label-content">
         <div class="game-label-name">${game.nameKo || game.name}</div>
         <div class="game-label-dev">${game.developer}</div>
       </div>
+      <div class="game-label-hint">상세보기</div>
     `;
 
     const entriesWrapper = document.createElement('div');
@@ -319,6 +323,14 @@ const Timeline = (() => {
       const rowEl = document.createElement('div');
       rowEl.className = 'entry-row';
       rowEl.style.height = CFG.rowH + 'px';
+
+      // 행 타입 레이블
+      const labelText = rowGroup.kind === 'versions' ? '버전'
+        : rowGroup.kind === 'banners' ? '배너' : '이벤트';
+      const label = document.createElement('div');
+      label.className = 'entry-row-label';
+      label.textContent = labelText;
+      rowEl.appendChild(label);
 
       rowGroup.items.forEach(entry => {
         const bar = buildBar(entry, game);
@@ -510,7 +522,7 @@ const Timeline = (() => {
     const container = document.getElementById('game-rows');
     Sortable.create(container, {
       draggable: '.game-section',
-      handle: '.game-label',
+      handle: '.game-label-drag',
       ghostClass: 'sortable-ghost',
       dragClass: 'sortable-drag',
       animation: 150,
@@ -541,6 +553,95 @@ const Timeline = (() => {
       if (ai === -1) return 1;
       if (bi === -1) return -1;
       return ai - bi;
+    });
+  }
+
+  /* ── 게임 상세 패널 ── */
+  let currentDetailGame = null;
+
+  function openDetail(game) {
+    currentDetailGame = game;
+    const panel = document.getElementById('detail-panel');
+    const overlay = document.getElementById('detail-overlay');
+    const titleEl = panel.querySelector('.detail-panel-title');
+    const content = document.getElementById('detail-panel-content');
+
+    titleEl.innerHTML = `${game.icon || ''} ${game.fullName || game.name}`;
+    content.innerHTML = '';
+
+    // 타입별 분리 후 정렬 (최신순)
+    const sorted = [...game.entries].sort((a, b) => {
+      const d = b.start.localeCompare(a.start);
+      return d;
+    });
+
+    sorted.forEach(entry => {
+      const start = D.parse(entry.start);
+      const end = D.parse(entry.end);
+      const dur = D.diffDays(start, end);
+
+      let statusText = '';
+      const nowDiff = D.diffDays(today, end);
+      const startDiff = D.diffDays(today, start);
+      if (nowDiff < 0) {
+        statusText = `<span style="color:#ef5350">종료 (${Math.abs(nowDiff)}일 전)</span>`;
+      } else if (startDiff > 0) {
+        statusText = `<span style="color:#ffa726">${startDiff}일 후 시작</span>`;
+      } else {
+        statusText = `<span style="color:#66bb6a">진행중 · ${nowDiff}일 남음</span>`;
+      }
+
+      const item = document.createElement('div');
+      item.className = 'detail-entry';
+      item.innerHTML = `
+        <div class="detail-entry-type type-${entry.type}">${entry.type}</div>
+        <div class="detail-entry-body">
+          <div class="detail-entry-title">${entry.title}</div>
+          ${entry.subtitle ? `<div class="detail-entry-subtitle">${entry.subtitle}</div>` : ''}
+          <div class="detail-entry-meta">
+            <span>시작:</span> ${D.fmt(start)} &nbsp; <span>종료:</span> ${D.fmt(end)}
+            &nbsp; | 기간: ${dur}일
+            ${entry.version ? `&nbsp; | v${entry.version}` : ''}
+          </div>
+          <div class="detail-entry-status">${statusText}</div>
+          ${entry.tentative ? '<div class="detail-entry-tentative">⚠ 미확정 (변동 가능)</div>' : ''}
+        </div>
+      `;
+      content.appendChild(item);
+    });
+
+    panel.classList.add('open');
+    overlay.classList.add('open');
+  }
+
+  function closeDetail() {
+    document.getElementById('detail-panel').classList.remove('open');
+    document.getElementById('detail-overlay').classList.remove('open');
+    currentDetailGame = null;
+  }
+
+  function setupDetailPanel() {
+    // 게임 라벨 클릭으로 상세 패널 열기 (드래그 핸들 제외)
+    document.getElementById('game-rows').addEventListener('click', (e) => {
+      const label = e.target.closest('.game-label');
+      if (!label) return;
+      // 드래그 핸들 클릭은 무시
+      if (e.target.closest('.game-label-drag')) return;
+      const section = label.closest('.game-section');
+      if (!section) return;
+      const gid = section.dataset.id;
+      const game = data.games.find(g => g.id === gid);
+      if (game) openDetail(game);
+    });
+
+    document.getElementById('detail-panel-close').addEventListener('click', closeDetail);
+    document.getElementById('detail-overlay').addEventListener('click', closeDetail);
+
+    // ESC 키
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.getElementById('detail-panel').classList.contains('open')) {
+        closeDetail();
+      }
     });
   }
 
