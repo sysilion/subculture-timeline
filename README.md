@@ -18,12 +18,40 @@ npx serve .
 
 ```
 .
-├── index.html          # 메인 페이지
-├── css/style.css       # 다크 테마 + 간트 레이아웃
-├── js/timeline.js      # 타임라인 렌더링 엔진
-├── data/games.json     # 📝 게임·배너 일정 데이터 (여기만 편집)
+├── index.html              # 메인 페이지
+├── css/style.css           # 다크 테마 + 간트 레이아웃
+├── js/
+│   ├── timeline.js         # 타임라인 렌더링 엔진
+│   └── i18n.js             # 언어 지원 (한국어/영어)
+├── data/
+│   ├── games.json          # 📝 게임·배너 일정 데이터 (여기만 편집)
+│   └── i18n/               # 번역 JSON 파일
+├── scripts/
+│   ├── update_data.py      # 배너/이벤트 자동 갱신 스크립트
+│   ├── requirements.txt    # Python 의존성
+│   └── parsers/
+│       ├── base.py         # 공통 유틸리티
+│       ├── game8.py        # Game8 범용 파서 (6개 게임)
+│       └── genshin.py      # 원신 paimon.moe 파서
+├── .github/workflows/
+│   ├── update-data.yml     # 매일 자동 데이터 갱신 (cron)
+│   └── deploy.yml          # GitHub Pages 배포
 └── README.md
 ```
+
+## 기능
+
+- **게임 순서 드래그 & localStorage 저장** — 게임 라벨 좌측 `⋯` 핸들로 순서 변경, 새로고침해도 유지됨
+- **게임 상세 패널** — 게임 이름 클릭 시 우측 패널에서 전체 배너/이벤트 목록 확인 (ESC/배경 클릭으로 닫힘)
+- **타입별 행 구분** — 각 행에 `버전` / `배너` / `이벤트` 레이블 표시
+- **언어 전환** — 한국어/영어 지원 (헤더 우측 버튼)
+- **표시 범위 조절** — 과거/미래 일수 선택 가능
+- **게임 필터** — 각 게임 on/off 토글
+
+## 자동 데이터 갱신
+
+GitHub Actions가 매일 UTC 00:00 (KST 09:00)에 실행되어 Game8 / paimon.moe에서 배너·이벤트 일정을 파싱합니다.
+미확정(tentative) 일정은 커뮤니티 추적/리크 기반이며 변동될 수 있습니다.
 
 ## 게임 일정 추가/수정
 
