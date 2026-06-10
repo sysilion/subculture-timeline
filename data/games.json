@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-08",
+    "lastUpdated": "2026-06-10",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-06-08"
+    "autoUpdated": "2026-06-10"
   },
   "games": [
     {
@@ -159,6 +159,30 @@
           "start": "2026-05-21",
           "end": "2026-06-10",
           "version": "6.6"
+        },
+        {
+          "type": "banner",
+          "title": "Frostedge Nocturne",
+          "subtitle": "Lohen, Mavuika",
+          "rarity": 5,
+          "start": "2026-06-09",
+          "end": "2026-06-30",
+          "version": "6.6",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Epitome Invocation",
+          "subtitle": "Disaster_And_Remorse, A_Thousand_Blazing_Suns",
+          "rarity": 5,
+          "start": "2026-06-09",
+          "end": "2026-06-30",
+          "version": "6.6",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
         },
         {
           "type": "banner",
@@ -541,12 +565,72 @@
         },
         {
           "type": "event",
+          "title": "As All Falls to Emptiness",
+          "start": "2026-05-20",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Angel's Reverie - Nicole Banner",
+          "start": "2026-05-20",
+          "end": "2026-06-09",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Rubedo, of White Stone Born - Durin Banner",
+          "start": "2026-05-20",
+          "end": "2026-06-09",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Epitome Invocation - Weapon Banner",
+          "start": "2026-05-20",
+          "end": "2026-06-09",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Battle Pass - Gift of Splendor",
+          "start": "2026-05-20",
+          "end": "2026-06-29",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Phantasmal Pals",
           "subtitle": "Klee & Little Hexenzirkel 미니게임",
           "start": "2026-05-22",
           "end": "2026-06-08",
           "version": "6.6",
           "source": "gamingonphone.com"
+        },
+        {
+          "type": "event",
+          "title": "Stygian Onslaught",
+          "start": "2026-05-27",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
         },
         {
           "type": "event",
@@ -559,6 +643,16 @@
         },
         {
           "type": "event",
+          "title": "Imaginarium Theater",
+          "start": "2026-06-01",
+          "end": "2026-07-01",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Combat Event (Nasha Town)",
           "subtitle": "나샤 타운 전투 이벤트",
           "start": "2026-06-08",
@@ -568,12 +662,62 @@
         },
         {
           "type": "event",
+          "title": "Trials of the Brave Warrior",
+          "start": "2026-06-08",
+          "end": "2026-06-18",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Frostedge Nocturne - Lohen Banner",
+          "start": "2026-06-09",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Ancient Flame Ablaze - Mavuika Banner",
+          "start": "2026-06-09",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Epitome Invocation - Weapon Banner",
+          "start": "2026-06-09",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Multiplayer Mini-game",
           "subtitle": "멀티플레이어 볼 밀기 게임",
           "start": "2026-06-18",
           "end": "2026-06-29",
           "version": "6.6",
           "source": "gamingonphone.com"
+        },
+        {
+          "type": "event",
+          "title": "Kaleidoscopic Color Chase",
+          "start": "2026-06-18",
+          "end": "2026-06-29",
+          "version": "",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
         }
       ],
       "iconUrl": "https://genshin.hoyoverse.com/favicon.ico",
