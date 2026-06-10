@@ -22,6 +22,22 @@
   --corner-r: 6px;
 }
 
+/* WCAG 대비 색상 */
+.entry-bar.type-banner  { background: #5c7cfa; color: white; }
+.entry-bar.type-event   { background: rgba(100,220,150,0.7); border: 1px solid #66bb6a; color: #1a1d27; }
+.entry-bar.type-version { background: #37474f; border: 1px solid #546e7a; color: white; }
+
+.game-label-name { color: white; }
+.game-label-dev { color: rgba(255,255,255,0.8); }
+
+.tooltip-inner { background: var(--tooltip-bg); color: var(--text); }
+.tooltip-title { color: white; }
+.tooltip-subtitle { color: var(--text-muted); }
+.tooltip-dates span { color: var(--text-muted); }
+.tooltip-duration { color: var(--text-dim); }
+.tooltip-tentative { color: #ffa726; }
+.tooltip-source { color: var(--text-dim); }
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
@@ -163,6 +179,50 @@ html, body {
   flex-shrink: 0;
   overflow-x: auto;
   flex-wrap: nowrap;
+  position: relative;
+}
+
+#search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+}
+
+#game-search {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 11px;
+  width: 150px;
+  transition: width 0.2s;
+}
+
+#game-search:focus {
+  width: 200px;
+  outline: none;
+  border-color: var(--text-muted);
+}
+
+#clear-search {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 4px;
+  margin-left: 4px;
+  display: none;
+}
+
+#clear-search:hover {
+  color: var(--text);
+}
+
+#game-search:not(:placeholder-shown) ~ #clear-search {
+  display: block;
 }
 
 .filter-label {
@@ -211,7 +271,34 @@ html, body {
   flex-direction: column;
 }
 
-/* 가로 스크롤 컨테이너 */
+#view-toggle {
+  display: flex;
+  gap: 4px;
+  padding: 4px 8px;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.view-btn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+
+.view-btn:hover {
+  color: var(--text);
+}
+
+.view-btn.active {
+  color: var(--text);
+  background: var(--surface);
+}
+
 #timeline-scroll {
   overflow-x: auto;
   overflow-y: auto;
@@ -466,6 +553,12 @@ html, body {
   top: 50%;
   transform: translateY(-50%);
   min-width: 4px;
+}
+
+.entry-bar.highlight {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3), 0 0 0 4px var(--chip-color);
+  z-index: 20;
+  transform: translateY(-50%) scale(1.02);
 }
 .entry-bar:hover {
   filter: brightness(1.3);
