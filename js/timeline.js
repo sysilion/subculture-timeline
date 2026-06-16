@@ -378,14 +378,14 @@ function saveFilters() {
 
     rows.forEach(rowGroup => {
       const rowEl = document.createElement('div');
-      rowEl.className = 'entry-row';
+      rowEl.className = `entry-row entry-row-${rowGroup.kind}`;
       rowEl.style.height = CFG.rowH + 'px';
 
       // 행 타입 레이블
       const labelText = rowGroup.kind === 'versions' ? '버전'
         : rowGroup.kind === 'banners' ? '배너' : '이벤트';
       const label = document.createElement('div');
-      label.className = 'entry-row-label';
+      label.className = `entry-row-label label-${rowGroup.kind}`;
       label.textContent = labelText;
       rowEl.appendChild(label);
 
@@ -667,47 +667,69 @@ function openDetail(game) {
   const titleEl = panel.querySelector('.detail-panel-title');
   const content = document.getElementById('detail-panel-content');
 
-  titleEl.innerHTML = `${game.icon || ''} ${game.fullName || game.name}`;
+  const iconHtml = game.iconUrl
+    ? `<img src="${game.iconUrl}" alt="${game.name}" style="width:20px;height:20px;border-radius:4px;object-fit:contain;">`
+    : (game.icon || '');
+  titleEl.innerHTML = `<span class="detail-modal-icon">${iconHtml}</span>${game.fullName || game.name}`;
+
   content.innerHTML = '';
 
-  // 타입별 분리 후 정렬 (최신순)
+  // 타입 순서: version → banner → event, 같은 타입 내 최신순
+  const typeOrder = { version: 0, banner: 1, event: 2 };
   const sorted = [...game.entries].sort((a, b) => {
-    const d = b.start.localeCompare(a.start);
-    return d;
+    const ta = typeOrder[a.type] ?? 9;
+    const tb = typeOrder[b.type] ?? 9;
+    if (ta !== tb) return ta - tb;
+    return b.start.localeCompare(a.start);
   });
 
+  let lastType = null;
   sorted.forEach(entry => {
     const start = D.parse(entry.start);
     const end = D.parse(entry.end);
     const dur = D.diffDays(start, end);
 
-    let statusText = '';
     const nowDiff = D.diffDays(today, end);
     const startDiff = D.diffDays(today, start);
+    let statusClass = '', statusLabel = '';
     if (nowDiff < 0) {
-      statusText = `<span style="color:#ef5350">종료 (${Math.abs(nowDiff)}일 전)</span>`;
+      statusClass = 'status-ended';
+      statusLabel = `종료 (${Math.abs(nowDiff)}일 전)`;
     } else if (startDiff > 0) {
-      statusText = `<span style="color:#ffa726">${startDiff}일 후 시작</span>`;
+      statusClass = 'status-upcoming';
+      statusLabel = `${startDiff}일 후 시작`;
     } else {
-      statusText = `<span style="color:#66bb6a">진행중 · ${nowDiff}일 남음</span>`;
+      statusClass = 'status-active';
+      statusLabel = `진행중 · ${nowDiff}일 남음`;
+    }
+
+    // 타입 구분선
+    if (entry.type !== lastType) {
+      const sep = document.createElement('div');
+      const typeLabel = entry.type === 'version' ? '버전' : entry.type === 'banner' ? '뽑기 배너' : '이벤트';
+      sep.className = `detail-type-sep sep-${entry.type}`;
+      sep.textContent = typeLabel;
+      content.appendChild(sep);
+      lastType = entry.type;
     }
 
     const item = document.createElement('div');
-    item.className = 'detail-entry';
-    item.dataset.entryId = entry.id; // 고유 ID 추가
+    item.className = `detail-entry detail-entry-${entry.type}`;
+    item.dataset.entryId = entry.id || '';
     item.innerHTML = `
-      <div class="detail-entry-type type-${entry.type}">${entry.type}</div>
-      <div class="detail-entry-body">
-        <div class="detail-entry-title">${entry.title}</div>
-        ${entry.subtitle ? `<div class="detail-entry-subtitle">${entry.subtitle}</div>` : ''}
-        <div class="detail-entry-meta">
-          <span>시작:</span> ${D.fmt(start)} &nbsp; <span>종료:</span> ${D.fmt(end)}
-          &nbsp; | 기간: ${dur}일
-          ${entry.version ? `&nbsp; | v${entry.version}` : ''}
+      <div class="detail-entry-bar-indicator type-${entry.type}${entry.tentative ? ' tentative' : ''}"></div>
+      <div class="detail-entry-main">
+        <div class="detail-entry-title-row">
+          <span class="detail-entry-title">${entry.title}</span>
+          ${entry.tentative ? '<span class="detail-entry-tentative-badge">⚠ 미확정</span>' : ''}
         </div>
-        <div class="detail-entry-status">${statusText}</div>
-        ${entry.tentative ? '<div class="detail-entry-tentative">⚠ 미확정 (변동 가능)</div>' : ''}
+        ${entry.subtitle ? `<div class="detail-entry-subtitle">${entry.subtitle}</div>` : ''}
       </div>
+      <div class="detail-entry-dates">
+        <span class="detail-date-range">${D.fmtShort(start)} → ${D.fmtShort(end)}</span>
+        <span class="detail-date-dur">${dur}일${entry.version ? ` · v${entry.version}` : ''}</span>
+      </div>
+      <div class="detail-entry-status ${statusClass}">${statusLabel}</div>
     `;
     content.appendChild(item);
   });

@@ -44,9 +44,3 @@ jobs:
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
 
-      - name: Trigger Pages deploy if data changed
-        if: steps.auto-commit.outputs.changes_detected == 'true'
-        run: |
-          gh workflow run deploy.yml
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
