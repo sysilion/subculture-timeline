@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-10",
+    "lastUpdated": "2026-06-17",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-06-10"
+    "autoUpdated": "2026-06-17"
   },
   "games": [
     {
@@ -30,30 +30,6 @@
           "version": "6.7",
           "tentative": true,
           "source": "earlygg.com"
-        },
-        {
-          "type": "banner",
-          "title": "The Northerly Wind's Song of Triumph",
-          "subtitle": "Varka, Flins",
-          "rarity": 5,
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "6.4",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Epitome Invocation",
-          "subtitle": "Gest_Of_The_Mighty_Wolf, Bloodsoaked_Ruins",
-          "rarity": 5,
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "6.4",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
         },
         {
           "type": "banner",
@@ -215,79 +191,9 @@
         },
         {
           "type": "event",
-          "title": "Spiral Abyss",
-          "start": "2026-02-16",
-          "end": "2026-03-16",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Lupus Majoris Chapter",
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "The Northerly Wind's Song of Triumph - Varka Banner",
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "The Lone Light Knocks at Night - Flins Banner",
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Epitome Invocation - Weapon Banner",
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Ode to the Dawn Breeze - Mondstadt Banner",
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Battle Pass - Northerly Winds",
           "start": "2026-02-25",
           "end": "2026-04-06",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Homeward, He Who Caught the Wind",
-          "start": "2026-02-27",
-          "end": "2026-03-16",
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
@@ -1354,6 +1260,26 @@
         {
           "type": "event",
           "title": "Event Duration",
+          "start": "2026-06-08",
+          "end": "2026-07-09",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Milestone Challenge",
+          "start": "2026-06-08",
+          "end": "2026-07-09",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Nightmare Challenge (Adam Smasher)",
           "start": "2026-06-08",
           "end": "2026-07-09",
           "version": "",
@@ -2529,6 +2455,105 @@
       "bgUrl": "https://sgimage.netmarble.com/images/netmarble/monster2/20260305/m3sm1772674620510.jpg",
       "nameKo": "몬길: STAR DIVE",
       "nameEn": "Mongil: STAR DIVE"
+    },
+    {
+      "id": "bluearchive",
+      "name": "블루 아카이브",
+      "fullName": "블루 아카이브 (Blue Archive)",
+      "color": "#4a90d9",
+      "icon": "📘",
+      "developer": "Nexon Games / Yostar",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "banner",
+          "title": "Ichika, Kasumi, Sakurako, Eimi (Swimsuit)",
+          "start": "2026-06-16",
+          "end": "2026-06-23",
+          "tentative": false,
+          "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Yuzu (Armed), Eimi (Armed)",
+          "start": "2026-06-23",
+          "end": "2026-07-07",
+          "tentative": false,
+          "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Momoi (Maid), Midori (Maid), Aris (Maid), Kayoko (New Year)",
+          "start": "2026-07-07",
+          "end": "2026-07-14",
+          "tentative": true,
+          "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Koyuki (Pajamas), Yuuka (Pajamas), Noa (Pajamas), Haruna / Fuuka (New Year)",
+          "start": "2026-07-14",
+          "end": "2026-07-28",
+          "tentative": true,
+          "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Konoka, Rena",
+          "start": "2026-07-28",
+          "end": "2026-08-11",
+          "tentative": true,
+          "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Akane (School), Seia, Asuna (School), Toki (Bunny)",
+          "start": "2026-08-11",
+          "end": "2026-08-25",
+          "tentative": true,
+          "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Hare (Camp), Kotama (Camp), Maki (Camp), Misaki",
+          "start": "2026-08-25",
+          "end": "2026-09-01",
+          "tentative": true,
+          "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Niko, Kurumi",
+          "start": "2026-09-01",
+          "end": "2026-09-15",
+          "tentative": true,
+          "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Sumire (Part-Timer), Rei, Akari / Izumi / Haruka (New Year)",
+          "start": "2026-09-15",
+          "end": "2026-09-29",
+          "tentative": true,
+          "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Erika, Kirara, Tsubaki (Guide), Umika, Pina (Guide)",
+          "start": "2026-09-29",
+          "end": "2026-10-06",
+          "tentative": true,
+          "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Mutsuki / Haruka / Aru / Kayoko / Saori (Dress)",
+          "start": "2026-10-06",
+          "end": "2026-10-20",
+          "tentative": true,
+          "source": "ba.joexyz.online"
+        }
+      ]
     }
   ],
   "candidates": [
