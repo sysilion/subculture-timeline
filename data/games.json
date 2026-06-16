@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-15",
+    "lastUpdated": "2026-06-16",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-06-15"
+    "autoUpdated": "2026-06-16"
   },
   "games": [
     {
@@ -30,30 +30,6 @@
           "version": "6.7",
           "tentative": true,
           "source": "earlygg.com"
-        },
-        {
-          "type": "banner",
-          "title": "The Northerly Wind's Song of Triumph",
-          "subtitle": "Varka, Flins",
-          "rarity": 5,
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "6.4",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Epitome Invocation",
-          "subtitle": "Gest_Of_The_Mighty_Wolf, Bloodsoaked_Ruins",
-          "rarity": 5,
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "6.4",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
         },
         {
           "type": "banner",
@@ -212,56 +188,6 @@
           "end": "2026-08-19",
           "version": "6.7",
           "tentative": true
-        },
-        {
-          "type": "event",
-          "title": "Lupus Majoris Chapter",
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "The Northerly Wind's Song of Triumph - Varka Banner",
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "The Lone Light Knocks at Night - Flins Banner",
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Epitome Invocation - Weapon Banner",
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Ode to the Dawn Breeze - Mondstadt Banner",
-          "start": "2026-02-25",
-          "end": "2026-03-17",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
         },
         {
           "type": "event",
