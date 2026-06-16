@@ -2554,6 +2554,188 @@
           "source": "ba.joexyz.online"
         }
       ]
+    },
+    {
+      "id": "nikke",
+      "name": "니케",
+      "fullName": "승리의 여신: NIKKE",
+      "color": "#e8426a",
+      "icon": "🎯",
+      "developer": "Shift Up / Level Infinite",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "banner",
+          "title": "Ark Ranger Black",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "tentative": false,
+          "source": "nikke.gg"
+        },
+        {
+          "type": "banner",
+          "title": "Summer Selection Rerun",
+          "subtitle": "Anis / Helm / Mary / Neon / Sakura / Rosanna",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "tentative": false,
+          "source": "nikke.gg"
+        },
+        {
+          "type": "event",
+          "title": "ARK RANGER Story Event",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "tentative": false,
+          "source": "nikke.gg"
+        }
+      ]
+    },
+    {
+      "id": "umamusume",
+      "name": "우마무스메",
+      "fullName": "우마무스메 프리티 더비 (Global)",
+      "color": "#f5a623",
+      "icon": "🏇",
+      "developer": "Cygames / Kakao Games",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "banner",
+          "title": "Mejiro Dober & Taiki Shuttle (Camp)",
+          "start": "2026-06-05",
+          "end": "2026-06-19",
+          "tentative": true,
+          "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Air Shakur",
+          "start": "2026-06-19",
+          "end": "2026-07-03",
+          "tentative": true,
+          "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Seiun Sky & Narita Brian",
+          "start": "2026-06-19",
+          "end": "2026-07-03",
+          "tentative": true,
+          "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Gold Ship & Mejiro McQueen (Summer)",
+          "start": "2026-07-03",
+          "end": "2026-07-17",
+          "tentative": true,
+          "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Bamboo Memory",
+          "start": "2026-07-03",
+          "end": "2026-07-17",
+          "tentative": true,
+          "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Smart Falcon (Grand Live)",
+          "start": "2026-07-17",
+          "end": "2026-07-31",
+          "tentative": true,
+          "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Winning Ticket & Narita Taishin (Steampunk)",
+          "start": "2026-07-17",
+          "end": "2026-07-31",
+          "tentative": true,
+          "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Yukino Bijin",
+          "start": "2026-08-04",
+          "end": "2026-08-18",
+          "tentative": true,
+          "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Agnes Digital & Meisho Doto (Halloween)",
+          "start": "2026-08-18",
+          "end": "2026-09-01",
+          "tentative": true,
+          "source": "gamerant.com"
+        }
+      ]
+    },
+    {
+      "id": "limbus",
+      "name": "림버스 컴퍼니",
+      "fullName": "림버스 컴퍼니 (Limbus Company)",
+      "color": "#c2185b",
+      "icon": "🔥",
+      "developer": "Project Moon",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "version",
+          "title": "Season 6 — Zàng Huā Yín",
+          "start": "2025-05-15",
+          "end": "2025-12-31",
+          "version": "S6",
+          "source": "limbuscompany.wiki.gg"
+        },
+        {
+          "type": "version",
+          "title": "Season 7 — Kumo no ito · oti on akA",
+          "start": "2025-12-31",
+          "end": "2026-08-31",
+          "version": "S7",
+          "tentative": true,
+          "source": "limbuscompany.wiki.gg"
+        }
+      ]
+    },
+    {
+      "id": "trickcal",
+      "name": "트릭컬 RE:VIVE",
+      "fullName": "트릭컬 RE:VIVE (Trickcal Revive)",
+      "color": "#7c4dff",
+      "icon": "✨",
+      "developer": "Epidgames",
+      "enabled": true,
+      "entries": [
+        {
+          "type": "banner",
+          "title": "키샤 픽업",
+          "start": "2026-06-04",
+          "end": "2026-06-18",
+          "tentative": false,
+          "source": "ruliweb.com"
+        },
+        {
+          "type": "banner",
+          "title": "엘다인 사도 실비아 픽업",
+          "start": "2026-06-18",
+          "end": "2026-07-16",
+          "tentative": false,
+          "source": "ruliweb.com"
+        },
+        {
+          "type": "banner",
+          "title": "다음 픽업",
+          "start": "2026-07-16",
+          "end": "2026-08-13",
+          "tentative": true,
+          "source": "ruliweb.com"
+        }
+      ]
     }
   ],
   "candidates": [
