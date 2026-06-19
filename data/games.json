@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-16",
+    "lastUpdated": "2026-06-19",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-06-16"
+    "autoUpdated": "2026-06-19"
   },
   "games": [
     {
@@ -1547,9 +1547,129 @@
         },
         {
           "type": "event",
+          "title": "Celestial Nexus Intelligence Dossier",
+          "start": "2026-06-17",
+          "end": "2026-07-29",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Bangbang The Genius and Miracle Chip",
+          "start": "2026-06-17",
+          "end": "2026-07-29",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "All-New Program",
+          "start": "2026-06-17",
+          "end": "2026-07-29",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Final Callback",
+          "start": "2026-06-17",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Gleaming Shadow Team Battle",
+          "start": "2026-06-19",
+          "end": "2026-07-13",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Assemble Mock Exam Comeback Plan",
+          "start": "2026-06-26",
+          "end": "2026-07-27",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Advanced Bounty - Area Patrol",
+          "start": "2026-07-02",
+          "end": "2026-07-07",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Tales of the Hobbling Crow",
+          "start": "2026-07-03",
+          "end": "2026-07-20",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Duration",
           "start": "2026-07-08",
           "end": "2026-07-28",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Commemorative Gift",
+          "start": "2026-07-08",
+          "end": "2026-07-27",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Art is Bangboo",
+          "start": "2026-07-08",
+          "end": "2026-07-27",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "En-Nah Into Your Lap",
+          "start": "2026-07-08",
+          "end": "2026-07-28",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Data Bounty - Combat Simulation",
+          "start": "2026-07-22",
+          "end": "2026-07-27",
           "version": "",
           "tentative": false,
           "source": "game8.co",
