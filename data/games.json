@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-22",
+    "lastUpdated": "2026-06-25",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-06-22"
+    "autoUpdated": "2026-06-25"
   },
   "games": [
     {
@@ -214,16 +214,6 @@
           "title": "Stygian Onslaught",
           "start": "2026-03-04",
           "end": "2026-04-07",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Sightseeing With Friends",
-          "start": "2026-03-16",
-          "end": "2026-03-26",
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
