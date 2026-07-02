@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-01",
+    "lastUpdated": "2026-07-02",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-07-01"
+    "autoUpdated": "2026-07-02"
   },
   "games": [
     {
@@ -171,6 +171,30 @@
         },
         {
           "type": "banner",
+          "title": "To the Looking-Glass the Mademoiselle Said",
+          "subtitle": "Sandrone, Citlali",
+          "rarity": 5,
+          "start": "2026-07-01",
+          "end": "2026-07-21",
+          "version": "6.7",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Epitome Invocation",
+          "subtitle": "A_Teaspoon_Of_Transcendence, Starcallers_Watch",
+          "rarity": 5,
+          "start": "2026-07-01",
+          "end": "2026-07-21",
+          "version": "6.7",
+          "tentative": false,
+          "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Sandrone (Debut) + Columbina (Rerun)",
           "subtitle": "Phase 1",
           "rarity": 5,
@@ -244,16 +268,6 @@
           "title": "Epitome Invocation - Weapon Banner",
           "start": "2026-03-17",
           "end": "2026-04-07",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Operation Stronghold Defense",
-          "start": "2026-03-23",
-          "end": "2026-04-02",
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
