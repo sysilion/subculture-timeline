@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-04",
+    "lastUpdated": "2026-07-06",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-07-04"
+    "autoUpdated": "2026-07-06"
   },
   "games": [
     {
@@ -215,16 +215,6 @@
         },
         {
           "type": "event",
-          "title": "Battle Pass - Northerly Winds",
-          "start": "2026-02-25",
-          "end": "2026-04-06",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Stygian Onslaught",
           "start": "2026-03-04",
           "end": "2026-04-07",
@@ -268,16 +258,6 @@
           "title": "Epitome Invocation - Weapon Banner",
           "start": "2026-03-17",
           "end": "2026-04-07",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Overflowing Abundance",
-          "start": "2026-03-30",
-          "end": "2026-04-06",
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
