@@ -15,7 +15,7 @@ ROOT = Path(__file__).parent.parent
 DATA_FILE = ROOT / "data" / "games.json"
 
 sys.path.insert(0, str(Path(__file__).parent))
-from parsers import genshin, game8 as g8
+from parsers import genshin, game8 as g8, hoyoverse, nikke as nikke_parser
 
 
 def load_games() -> dict:
@@ -76,7 +76,17 @@ def run():
 
         try:
             if gid == "genshin":
-                fresh = genshin.parse()
+                # api.ennead.cc 우선, 실패 시 paimon.moe fallback
+                fresh = hoyoverse.parse("genshin")
+                if not fresh:
+                    fresh = genshin.parse()
+            elif gid == "starrail":
+                fresh = hoyoverse.parse(gid)
+            elif gid == "zzz":
+                # api.ennead.cc에 ZZZ calendar 없음 → game8 fallback
+                fresh = g8.parse(gid, g8.GAME8_URLS[gid]) if gid in g8.GAME8_URLS else []
+            elif gid == "nikke":
+                fresh = nikke_parser.parse()
             elif gid in g8.GAME8_URLS:
                 fresh = g8.parse(gid, g8.GAME8_URLS[gid])
             else:

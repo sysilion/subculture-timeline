@@ -162,6 +162,42 @@
         },
         {
           "type": "banner",
+          "title": "캐릭터 기원",
+          "subtitle": "로엔, 미카, 향릉",
+          "rarity": 5,
+          "start": "2026-06-09",
+          "end": "2026-06-30",
+          "version": "6.6",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원 2",
+          "subtitle": "마비카, 미카, 향릉",
+          "rarity": 5,
+          "start": "2026-06-09",
+          "end": "2026-06-30",
+          "version": "6.6",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "무기 기원",
+          "subtitle": "재앙, 타오르는 천 개의 태양",
+          "rarity": 5,
+          "start": "2026-06-09",
+          "end": "2026-06-30",
+          "version": "6.6",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Lohen (Debut) + Mavuika (Rerun)",
           "subtitle": "Phase 2",
           "rarity": 5,
@@ -471,6 +507,16 @@
         },
         {
           "type": "event",
+          "title": "수련의 방·공격 전략",
+          "start": "2026-05-19",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "As All Falls to Emptiness",
           "start": "2026-05-20",
           "end": "2026-06-30",
@@ -540,6 +586,26 @@
         },
         {
           "type": "event",
+          "title": "지맥 제압전",
+          "start": "2026-05-27",
+          "end": "2026-06-29",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "현실 속 환상극",
+          "start": "2026-05-31",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Imaginarium Theater — Season 1",
           "subtitle": "환상 극장 시즌 1",
           "start": "2026-06-01",
@@ -559,6 +625,16 @@
         },
         {
           "type": "event",
+          "title": "격투 모드: 빠른 기책",
+          "start": "2026-06-06",
+          "end": "2026-06-21",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Combat Event (Nasha Town)",
           "subtitle": "나샤 타운 전투 이벤트",
           "start": "2026-06-08",
@@ -574,6 +650,16 @@
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "검술 교류 대회",
+          "start": "2026-06-08",
+          "end": "2026-06-17",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -604,6 +690,16 @@
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "연월 나선",
+          "start": "2026-06-15",
+          "end": "2026-07-15",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -688,6 +784,30 @@
         },
         {
           "type": "banner",
+          "title": "천야•블레이드",
+          "subtitle": "천야•블레이드, 효광, 삼포",
+          "rarity": 5,
+          "start": "2026-06-01",
+          "end": "2026-06-24",
+          "version": "4.3",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "연옥을 불사른 새로운 몸",
+          "subtitle": "연옥을 불사른 새로운 몸, 그녀가 보기로 결심했을 때",
+          "rarity": 5,
+          "start": "2026-06-01",
+          "end": "2026-06-24",
+          "version": "4.3",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Phainon (Rerun) + Cyrene (Rerun)",
           "subtitle": "Phase 2",
           "rarity": 5,
@@ -713,6 +833,30 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "키레네",
+          "subtitle": "키레네, 파이논, Mar. 7th",
+          "rarity": 5,
+          "start": "2026-06-24",
+          "end": "2026-07-14",
+          "version": "4.3",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "이 순간처럼 영원한 사랑",
+          "subtitle": "이 순간처럼 영원한 사랑, 이와 같이 타오르는 여명",
+          "rarity": 5,
+          "start": "2026-06-24",
+          "end": "2026-07-14",
+          "version": "4.3",
+          "tentative": false,
+          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -743,6 +887,56 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "형상을 통한 이론 설립",
+          "start": "2026-05-11",
+          "end": "2026-06-22",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "당직 작전",
+          "start": "2026-05-25",
+          "end": "2026-07-06",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "별의 선물",
+          "start": "2026-05-31",
+          "end": "2026-07-14",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "픽셀 비행기 대난투",
+          "start": "2026-05-31",
+          "end": "2026-07-14",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "웃음 같은 날갯짓",
+          "start": "2026-05-31",
+          "end": "2026-07-14",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -785,6 +979,16 @@
         },
         {
           "type": "event",
+          "title": "망각과 한풍",
+          "start": "2026-06-08",
+          "end": "2026-07-20",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Planar Fissure",
           "subtitle": "플래너 파쇄 이벤트",
           "start": "2026-06-16",
@@ -810,6 +1014,26 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "차원 분열",
+          "start": "2026-06-17",
+          "end": "2026-06-29",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "허세의 역설",
+          "start": "2026-06-22",
+          "end": "2026-08-03",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -843,6 +1067,16 @@
         },
         {
           "type": "event",
+          "title": "진령 놀이공원",
+          "start": "2026-06-24",
+          "end": "2026-07-14",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Realm of the Strange",
           "subtitle": "기이한 영역 이벤트",
           "start": "2026-07-03",
@@ -868,6 +1102,26 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "기묘한 영역",
+          "start": "2026-07-03",
+          "end": "2026-07-13",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "학원괴담",
+          "start": "2026-07-06",
+          "end": "2026-08-17",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
           "_auto": true
         }
       ],
@@ -2566,6 +2820,17 @@
       "entries": [
         {
           "type": "banner",
+          "title": "Special Recruit",
+          "subtitle": "",
+          "start": "2026-05-28",
+          "end": "2026-06-11",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Ark Ranger Black",
           "start": "2026-06-11",
           "end": "2026-07-02",
@@ -2582,12 +2847,434 @@
           "source": "nikke.gg"
         },
         {
+          "type": "banner",
+          "title": "Special Recruit: Ark Ranger Black, a member of the TV hero series Ark Rangers,",
+          "subtitle": "Ark Ranger Black, a member of the TV hero series Ark Rangers,",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Special Recruit",
+          "subtitle": "",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Event",
+          "start": "2026-05-28",
+          "end": "2026-06-11",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "BITTER SPICE",
+          "start": "2026-05-28",
+          "end": "2026-06-11",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "7-Day Login Event – TWINKLE GREEN STAR",
+          "start": "2026-05-28",
+          "end": "2026-06-11",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "New character packages will be available after the May 28, 2026 maintenance.",
+          "start": "2026-05-28",
+          "end": "2026-06-11",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "SSR Prika",
+          "start": "2026-05-28",
+          "end": "2026-06-11",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Archives – OVER THE HORIZON",
+          "start": "2026-05-28",
+          "end": "2026-06-11",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "June Mission Pass",
+          "start": "2026-06-01",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Added new titles.",
+          "start": "2026-06-01",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "COOL PAPRIKA PASS",
+          "start": "2026-06-01",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Event",
+          "start": "2026-06-05",
+          "end": "2026-06-07",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
           "type": "event",
           "title": "ARK RANGER Story Event",
           "start": "2026-06-11",
           "end": "2026-07-02",
           "tentative": false,
           "source": "nikke.gg"
+        },
+        {
+          "type": "event",
+          "title": "Event",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Limited Costume: Sugar – Wild Backyard",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Limited Costume: Leona – Zoo Keeper",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "ARK RANGER",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Mini Game: FIGHT! ARK RANGER!",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "14 Days Login Event – ARK RANGER THE MOVIE: COMING SOON",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Skill Reset",
+          "start": "2026-06-11",
+          "end": "2026-06-18",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Costume Gacha: Moran – King of Flowers",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "JUNKYARD PASS",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "New character packages will be available after the June 11, 2026 maintenance.",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "SSR Ark Ranger Black",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "SSR Anis: Sparkling Summer",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "SSR Helm: Aquamarine",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "SSR Mary: Bay Goddess",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "SSR Neon: Blue Ocean",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "SSR Sakura: Bloom in Summer",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "SSR Rosanna: Chic Ocean",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Archives – BOOM! THE GHOST!",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Story Line – ARK RANGER",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Added a batch skill level up function.",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Improved convenience of the Consumables tab.",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Added the mini game BFG CLEAN UP! to the Arcade.",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Added new profile card objects to Profile Decoration.",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Added new titles.",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Added new Lobby Backgrounds.",
+          "start": "2026-06-11",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Skill Reset",
+          "start": "2026-06-12",
+          "end": "2026-06-18",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Event",
+          "start": "2026-06-18",
+          "end": "2026-07-02",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Event",
+          "start": "2026-06-19",
+          "end": "2026-06-21",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Event",
+          "start": "2026-06-30",
+          "end": "2026-09-22",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "July Mission Pass",
+          "start": "2026-07-01",
+          "end": "2026-07-31",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
         }
       ]
     },
