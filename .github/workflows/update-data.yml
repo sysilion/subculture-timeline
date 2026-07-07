@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # deploy.yml workflow_dispatch 트리거에 필요
 
 jobs:
   update:
@@ -43,4 +44,11 @@ jobs:
           file_pattern: "data/games.json"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
+
+      # GITHUB_TOKEN 푸시는 push 이벤트 워크플로우를 트리거하지 않으므로 명시적으로 배포 실행
+      - name: Trigger Pages deploy if data changed
+        if: steps.auto-commit.outputs.changes_detected == 'true'
+        run: gh workflow run deploy.yml
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
