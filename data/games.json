@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-17",
+    "lastUpdated": "2026-07-08",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-06-17"
+    "autoUpdated": "2026-07-08"
   },
   "games": [
     {
@@ -30,30 +30,6 @@
           "version": "6.7",
           "tentative": true,
           "source": "earlygg.com"
-        },
-        {
-          "type": "banner",
-          "title": "Void Star's Advent",
-          "subtitle": "Skirk, Escoffier",
-          "rarity": 5,
-          "start": "2026-03-17",
-          "end": "2026-04-07",
-          "version": "6.4",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Epitome Invocation",
-          "subtitle": "Azurelight, Symphonist_Of_Scents",
-          "rarity": 5,
-          "start": "2026-03-17",
-          "end": "2026-04-07",
-          "version": "6.4",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
         },
         {
           "type": "banner",
@@ -207,6 +183,54 @@
         },
         {
           "type": "banner",
+          "title": "캐릭터 기원",
+          "subtitle": "산드로네, 북두, 디오나",
+          "rarity": 5,
+          "start": "2026-06-30",
+          "end": "2026-07-21",
+          "version": "6.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원 2",
+          "subtitle": "시틀라리, 북두, 디오나",
+          "rarity": 5,
+          "start": "2026-06-30",
+          "end": "2026-07-21",
+          "version": "6.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "무기 기원",
+          "subtitle": "초월의 열쇠, 별지기의 시선",
+          "rarity": 5,
+          "start": "2026-06-30",
+          "end": "2026-07-21",
+          "version": "6.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "묶음 기원/귀환 기원",
+          "subtitle": "유메미즈키 미즈키, 라이오슬리, 사이노",
+          "rarity": 5,
+          "start": "2026-06-30",
+          "end": "2026-07-21",
+          "version": "6.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Sandrone (Debut) + Columbina (Rerun)",
           "subtitle": "Phase 1",
           "rarity": 5,
@@ -227,99 +251,9 @@
         },
         {
           "type": "event",
-          "title": "Battle Pass - Northerly Winds",
-          "start": "2026-02-25",
-          "end": "2026-04-06",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Imaginarium Theater",
-          "start": "2026-03-01",
-          "end": "2026-04-01",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Stygian Onslaught",
-          "start": "2026-03-04",
-          "end": "2026-04-07",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Sightseeing With Friends",
-          "start": "2026-03-16",
-          "end": "2026-03-26",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Spiral Abyss",
           "start": "2026-03-16",
           "end": "2026-04-16",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Void Star's Advent - Skirk Banner",
-          "start": "2026-03-17",
-          "end": "2026-04-07",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "La Chanson Cerise - Escoffier Banner",
-          "start": "2026-03-17",
-          "end": "2026-04-07",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Epitome Invocation - Weapon Banner",
-          "start": "2026-03-17",
-          "end": "2026-04-07",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Operation Stronghold Defense",
-          "start": "2026-03-23",
-          "end": "2026-04-02",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Overflowing Abundance",
-          "start": "2026-03-30",
-          "end": "2026-04-06",
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
@@ -720,6 +654,36 @@
           "tentative": false,
           "source": "paimon.moe",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "여름! 귀향? 폰티날리아 축제!",
+          "start": "2026-06-30",
+          "end": "2026-08-10",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "수련의 방·무한 시련",
+          "start": "2026-06-30",
+          "end": "2026-08-11",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "현실 속 환상극",
+          "start": "2026-06-30",
+          "end": "2026-07-31",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
         }
       ],
       "iconUrl": "https://genshin.hoyoverse.com/favicon.ico",
@@ -877,6 +841,78 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "스파키",
+          "subtitle": "스파키, 단항•등황, 에버나이트",
+          "rarity": 5,
+          "start": "2026-07-15",
+          "end": "2026-08-05",
+          "version": "4.4",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "히메코•노바",
+          "subtitle": "히메코•노바, 맥택, 한아",
+          "rarity": 5,
+          "start": "2026-07-15",
+          "end": "2026-08-25",
+          "version": "4.4",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "눈부신 파키의 세상",
+          "subtitle": "눈부신 파키의 세상, 끝없는 산과 강을 거치더라도",
+          "rarity": 5,
+          "start": "2026-07-15",
+          "end": "2026-08-05",
+          "version": "4.4",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "별이 밤하늘을 밝힐 때",
+          "subtitle": "별이 밤하늘을 밝힐 때, 조화가 침묵한 후",
+          "rarity": 5,
+          "start": "2026-07-15",
+          "end": "2026-08-25",
+          "version": "4.4",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "케리드라",
+          "subtitle": "케리드라, 아낙사, 어벤츄린",
+          "rarity": 5,
+          "start": "2026-08-05",
+          "end": "2026-08-25",
+          "version": "4.4",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "황금 피가 새긴 시대",
+          "subtitle": "황금 피가 새긴 시대, 생명은 불태워야 하는 것",
+          "rarity": 5,
+          "start": "2026-08-05",
+          "end": "2026-08-25",
+          "version": "4.4",
+          "tentative": false,
+          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -1609,6 +1645,16 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Gifts of Starpath",
+          "start": "2026-07-10",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
         }
       ],
       "iconUrl": "https://wutheringwaves.kurogames.com/website-preface/favicon.ico",
@@ -1801,9 +1847,129 @@
         },
         {
           "type": "event",
+          "title": "Celestial Nexus Intelligence Dossier",
+          "start": "2026-06-17",
+          "end": "2026-07-29",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Bangbang The Genius and Miracle Chip",
+          "start": "2026-06-17",
+          "end": "2026-07-29",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "All-New Program",
+          "start": "2026-06-17",
+          "end": "2026-07-29",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Final Callback",
+          "start": "2026-06-17",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Gleaming Shadow Team Battle",
+          "start": "2026-06-19",
+          "end": "2026-07-13",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Assemble Mock Exam Comeback Plan",
+          "start": "2026-06-26",
+          "end": "2026-07-27",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Advanced Bounty - Area Patrol",
+          "start": "2026-07-02",
+          "end": "2026-07-07",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Tales of the Hobbling Crow",
+          "start": "2026-07-03",
+          "end": "2026-07-20",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Duration",
           "start": "2026-07-08",
           "end": "2026-07-28",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Commemorative Gift",
+          "start": "2026-07-08",
+          "end": "2026-07-27",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Art is Bangboo",
+          "start": "2026-07-08",
+          "end": "2026-07-27",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "En-Nah Into Your Lap",
+          "start": "2026-07-08",
+          "end": "2026-07-28",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Data Bounty - Combat Simulation",
+          "start": "2026-07-22",
+          "end": "2026-07-27",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -2070,8 +2236,38 @@
         },
         {
           "type": "event",
+          "title": "Trial Algorithmics (Version 1.3)",
+          "start": "2026-06-12",
+          "end": "2026-07-16",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Expunger of Sin (Ver. 1.3 Phase 2)",
           "start": "2026-06-26",
+          "end": "2026-07-16",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Peacekeeper's Nocturne Sign-In (Version 1.3)",
+          "start": "2026-06-26",
+          "end": "2026-07-16",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Carly's Fairytale of Wuling (Version 1.3)",
+          "start": "2026-07-02",
           "end": "2026-07-16",
           "version": "",
           "tentative": false,
@@ -2334,6 +2530,26 @@
         {
           "type": "event",
           "title": "Fight Championship",
+          "start": "2026-06-24",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Market Opening Rehersal",
+          "start": "2026-06-24",
+          "end": "2026-07-08",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Fogshroud Perks",
           "start": "2026-06-24",
           "end": "2026-07-08",
           "version": "",
