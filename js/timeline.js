@@ -84,13 +84,23 @@ const Timeline = (() => {
 
     restoreOrder();
     buildFilters();
+    setupSearch();
+    setupBulkFilters();
     renderRuler();
     renderGames();
     renderTodayLine();
     setupTooltip();
     setupSortable();
     setupDetailPanel();
+    setupViewToggle();
+    setupTodayButton();
     updateCSSVars();
+    scrollToToday(false);
+
+    // 언어 전환 시 리스트 뷰 텍스트 갱신
+    document.addEventListener('tl-langchange', () => {
+      if (currentView === 'list') renderListView();
+    });
   }
 
   /* ── CSS 변수 갱신 ── */
@@ -112,6 +122,16 @@ const Timeline = (() => {
     renderGames();
     renderTodayLine();
     restoreFilters();
+    if (currentView === 'list') renderListView();
+  }
+
+  /* ── i18n 헬퍼 (미로드 시 fallback) ── */
+  function t(key, fallback) {
+    if (typeof I18n !== 'undefined') {
+      const v = I18n.t(key);
+      if (v !== key) return v;
+    }
+    return fallback;
   }
 
   /* ── 필터 (게임 on/off) ── */
@@ -136,25 +156,47 @@ function buildFilters() {
     bar.appendChild(chip);
   });
 
-  // 검색 기능 추가
+  // 칩 재구성 후 현재 검색어 재적용
+  applySearch(document.getElementById('game-search').value);
+}
+
+/* ── 게임 검색 ── */
+function applySearch(term) {
+  const searchTerm = term.trim().toLowerCase();
+  document.querySelectorAll('.game-chip').forEach(chip => {
+    const gameName = chip.querySelector('.chip-name').textContent.toLowerCase();
+    chip.style.display = gameName.includes(searchTerm) ? 'inline-flex' : 'none';
+  });
+}
+
+function setupSearch() {
   const searchInput = document.getElementById('game-search');
   const clearButton = document.getElementById('clear-search');
 
-  searchInput.addEventListener('input', () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    document.querySelectorAll('.game-chip').forEach(chip => {
-      const gameName = chip.querySelector('.chip-name').textContent.toLowerCase();
-      const shouldShow = gameName.includes(searchTerm);
-      chip.style.display = shouldShow ? 'inline-flex' : 'none';
-    });
-  });
+  searchInput.addEventListener('input', () => applySearch(searchInput.value));
 
   clearButton.addEventListener('click', () => {
     searchInput.value = '';
-    document.querySelectorAll('.game-chip').forEach(chip => {
-      chip.style.display = 'inline-flex';
-    });
+    applySearch('');
+    searchInput.focus();
   });
+}
+
+/* ── 필터 전체 켜기/끄기 ── */
+function setAllGames(active) {
+  document.querySelectorAll('.game-chip').forEach(chip => {
+    chip.classList.toggle('active', active);
+    chip.classList.toggle('inactive', !active);
+    const section = document.querySelector(`.game-section[data-id="${chip.dataset.gameId}"]`);
+    if (section) section.classList.toggle('hidden', !active);
+  });
+  saveFilters();
+  if (currentView === 'list') renderListView();
+}
+
+function setupBulkFilters() {
+  document.getElementById('filter-all').addEventListener('click', () => setAllGames(true));
+  document.getElementById('filter-none').addEventListener('click', () => setAllGames(false));
 }
 
   function toggleGame(id, chip) {
@@ -165,6 +207,7 @@ function buildFilters() {
     chip.classList.toggle('inactive', isActive);
     section.classList.toggle('hidden', isActive);
     saveFilters();
+    if (currentView === 'list') renderListView();
   }
 
 function showToast(message) {
@@ -343,6 +386,9 @@ function saveFilters() {
 
     const label = document.createElement('div');
     label.className = 'game-label';
+    label.tabIndex = 0;
+    label.setAttribute('role', 'button');
+    label.setAttribute('aria-label', `${game.nameKo || game.name} 상세보기`);
     label.style.borderLeft = `3px solid ${game.color}`;
     label.style.height = (totalRows * CFG.rowH) + 'px';
 
@@ -461,6 +507,11 @@ function buildBar(entry, game) {
   };
   bar.dataset.entry = JSON.stringify(entryData);
 
+  // 키보드 접근성: Tab으로 포커스 → 툴팁 표시
+  bar.tabIndex = 0;
+  bar.setAttribute('aria-label',
+    `${game.nameKo || game.name} — ${entry.title} (${entry.start} ~ ${entry.end})`);
+
   return bar;
 }
 
@@ -525,18 +576,16 @@ function setupTooltip() {
     tooltip.classList.remove('visible');
   }, { signal });
 
-  // 키보드 접근성 추가
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab') {
-      const focused = document.activeElement;
-      const bar = focused.closest('.entry-bar');
-      if (bar && bar.dataset.entry) {
-        currentBar = bar;
-        showTooltip(bar, tooltip, {
-          clientX: bar.getBoundingClientRect().left + bar.offsetWidth / 2,
-          clientY: bar.getBoundingClientRect().top + bar.offsetHeight / 2
-        });
-      }
+  // 키보드 접근성: 포커스 이동 시 툴팁 표시
+  document.addEventListener('focusin', (e) => {
+    const bar = e.target.closest ? e.target.closest('.entry-bar') : null;
+    if (bar && bar.dataset.entry) {
+      currentBar = bar;
+      const rect = bar.getBoundingClientRect();
+      showTooltip(bar, tooltip, {
+        clientX: rect.left + rect.width / 2,
+        clientY: rect.top + rect.height / 2
+      });
     }
   }, { signal });
 
@@ -715,6 +764,7 @@ function openDetail(game) {
 
     const item = document.createElement('div');
     item.className = `detail-entry detail-entry-${entry.type}`;
+    item.tabIndex = 0;
     item.dataset.entryId = entry.id || '';
     item.innerHTML = `
       <div class="detail-entry-bar-indicator type-${entry.type}${entry.tentative ? ' tentative' : ''}"></div>
@@ -748,6 +798,9 @@ function openDetail(game) {
 }
 
 function highlightTimelineEntry(gameId, entryId) {
+  // 리스트 뷰에서는 간트로 전환해야 하이라이트가 보임
+  if (currentView !== 'gantt') setView('gantt');
+
   // 기존 하이라이트 제거
   document.querySelectorAll('.entry-bar.highlight').forEach(el => {
     el.classList.remove('highlight');
@@ -864,6 +917,138 @@ function setupDetailPanel() {
     }
   });
 }
+
+  /* ── 뷰 전환 (간트 ↔ 리스트) ── */
+  let currentView = 'gantt';
+  try { currentView = localStorage.getItem('tl-view') || 'gantt'; } catch(e) {}
+
+  function setView(view) {
+    currentView = view;
+    try { localStorage.setItem('tl-view', view); } catch(e) {}
+    const isList = view === 'list';
+    document.getElementById('timeline-scroll').style.display = isList ? 'none' : '';
+    document.getElementById('list-scroll').hidden = !isList;
+    document.getElementById('gantt-view').classList.toggle('active', !isList);
+    document.getElementById('list-view').classList.toggle('active', isList);
+    if (isList) renderListView();
+  }
+
+  function setupViewToggle() {
+    document.getElementById('gantt-view').addEventListener('click', () => setView('gantt'));
+    document.getElementById('list-view').addEventListener('click', () => setView('list'));
+    if (currentView === 'list') setView('list');
+  }
+
+  /* ── 엔트리 상태 계산 ── */
+  function entryStatus(start, end) {
+    const endDiff = D.diffDays(today, end);
+    const startDiff = D.diffDays(today, start);
+    if (endDiff < 0)   return { cls: 'status-ended',    label: `${t('listEnded','종료')} (${Math.abs(endDiff)}${t('tooltipDays','일')} ${t('statusAgo','전')})` };
+    if (startDiff > 0) return { cls: 'status-upcoming', label: `${startDiff}${t('tooltipDays','일')} ${t('statusUntilStart','후 시작')}` };
+    return { cls: 'status-active', label: `${t('listOngoing','진행중')} · ${endDiff}${t('tooltipDays','일')} ${t('statusRemaining','남음')}` };
+  }
+
+  /* ── 리스트 뷰 렌더링 ── */
+  function renderListView() {
+    const container = document.getElementById('list-container');
+    container.innerHTML = '';
+    if (!data) return;
+
+    const rangeEnd = D.addDays(startDate, totalDays);
+    const activeIds = new Set(
+      [...document.querySelectorAll('.game-chip.active')].map(c => c.dataset.gameId)
+    );
+
+    const items = [];
+    data.games.forEach(game => {
+      if (!activeIds.has(game.id)) return;
+      game.entries.forEach(entry => {
+        const s = D.parse(entry.start);
+        const e = D.parse(entry.end);
+        if (e <= startDate || s >= rangeEnd) return; // 표시 범위 밖 제외
+        items.push({ game, entry, s, e });
+      });
+    });
+
+    const groups = [
+      { key: 'ongoing',  title: t('listOngoing', '진행중'),
+        items: items.filter(it => it.s <= today && it.e >= today).sort((a, b) => a.e - b.e) },
+      { key: 'upcoming', title: t('listUpcoming', '예정'),
+        items: items.filter(it => it.s > today).sort((a, b) => a.s - b.s) },
+      { key: 'ended',    title: t('listEnded', '종료'),
+        items: items.filter(it => it.e < today).sort((a, b) => b.e - a.e) },
+    ];
+
+    if (items.length === 0) {
+      const empty = document.createElement('div');
+      empty.className = 'list-empty';
+      empty.textContent = t('listEmpty', '표시할 일정이 없습니다.');
+      container.appendChild(empty);
+      return;
+    }
+
+    groups.forEach(group => {
+      if (group.items.length === 0) return;
+
+      const titleEl = document.createElement('div');
+      titleEl.className = `list-section-title list-sec-${group.key}`;
+      titleEl.textContent = `${group.title} (${group.items.length})`;
+      container.appendChild(titleEl);
+
+      group.items.forEach(({ game, entry, s, e }) => {
+        const dur = D.diffDays(s, e);
+        const status = entryStatus(s, e);
+
+        const iconHtml = game.iconUrl
+          ? `<img class="chip-icon-img" src="${game.iconUrl}" alt="" onerror="this.style.display='none'">`
+          : `<span class="chip-icon">${game.icon || ''}</span>`;
+
+        const item = document.createElement('div');
+        item.className = 'list-entry';
+        item.tabIndex = 0;
+        item.setAttribute('role', 'button');
+        item.innerHTML = `
+          <div class="detail-entry-bar-indicator type-${entry.type}${entry.tentative ? ' tentative' : ''}"></div>
+          <div class="list-entry-game" style="--chip-color:${game.color}">
+            ${iconHtml}<span class="list-entry-game-name">${game.nameKo || game.name}</span>
+          </div>
+          <div class="detail-entry-main">
+            <div class="detail-entry-title-row">
+              <span class="detail-entry-title">${entry.title}</span>
+              ${entry.tentative ? `<span class="detail-entry-tentative-badge">⚠ ${t('legendTentative','미확정')}</span>` : ''}
+            </div>
+            ${entry.subtitle ? `<div class="detail-entry-subtitle">${entry.subtitle}</div>` : ''}
+          </div>
+          <div class="detail-entry-dates">
+            <span class="detail-date-range">${D.fmtShort(s)} → ${D.fmtShort(e)}</span>
+            <span class="detail-date-dur">${dur}${t('tooltipDays','일')}${entry.version ? ` · v${entry.version}` : ''}</span>
+          </div>
+          <div class="detail-entry-status ${status.cls}">${status.label}</div>
+        `;
+        const open = () => openDetail(game);
+        item.addEventListener('click', open);
+        item.addEventListener('keydown', (ev) => {
+          if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); open(); }
+        });
+        container.appendChild(item);
+      });
+    });
+  }
+
+  /* ── 오늘 위치로 스크롤 ── */
+  function scrollToToday(smooth = true) {
+    const scroll = document.getElementById('timeline-scroll');
+    const x = CFG.labelW + dateToX(today);
+    const target = Math.max(0, x - scroll.clientWidth * 0.35);
+    scroll.scrollTo({ left: target, behavior: smooth ? 'smooth' : 'auto' });
+  }
+
+  function setupTodayButton() {
+    document.getElementById('today-btn').addEventListener('click', () => {
+      if (currentView !== 'gantt') setView('gantt');
+      scrollToToday(true);
+    });
+  }
 
   /* ── Public API ── */
   return { init, setupRangeControl };

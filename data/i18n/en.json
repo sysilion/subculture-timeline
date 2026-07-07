@@ -30,5 +30,16 @@
   "footerNote": "Schedule based on official announcements or community tracking. Tentative (⚠) dates may change.",
   "footerDataSource": "Edit data:",
   "dataUpdated": "Data as of:",
-  "dragHint": "Drag game rows to reorder"
+  "dragHint": "Drag game rows to reorder",
+  "searchPlaceholder": "Search games...",
+  "todayBtn": "Today",
+  "showAll": "All",
+  "hideAll": "None",
+  "listOngoing": "Ongoing",
+  "listUpcoming": "Upcoming",
+  "listEnded": "Ended",
+  "listEmpty": "No entries in the selected range.",
+  "statusAgo": "ago",
+  "statusUntilStart": "until start",
+  "statusRemaining": "left"
 }

@@ -11,6 +11,7 @@ const I18n = (() => {
     localStorage.setItem('tl-lang', lang);
     apply();
     document.documentElement.lang = lang;
+    document.dispatchEvent(new CustomEvent('tl-langchange', { detail: { lang } }));
   }
 
   function t(key) {
@@ -21,6 +22,10 @@ const I18n = (() => {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (strings[key]) el.textContent = strings[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (strings[key]) el.placeholder = strings[key];
     });
     // range option 텍스트 갱신
     const opts = strings.rangeOptions || {};

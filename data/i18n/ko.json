@@ -30,5 +30,16 @@
   "footerNote": "배너 일정은 공식 발표 또는 커뮤니티 추적 기준이며, 미확정(⚠) 일정은 변동될 수 있습니다.",
   "footerDataSource": "데이터 수정:",
   "dataUpdated": "데이터 기준:",
-  "dragHint": "게임 행을 드래그하여 순서 변경"
+  "dragHint": "게임 행을 드래그하여 순서 변경",
+  "searchPlaceholder": "게임 검색...",
+  "todayBtn": "오늘",
+  "showAll": "전체",
+  "hideAll": "해제",
+  "listOngoing": "진행중",
+  "listUpcoming": "예정",
+  "listEnded": "종료",
+  "listEmpty": "표시할 일정이 없습니다.",
+  "statusAgo": "전",
+  "statusUntilStart": "후 시작",
+  "statusRemaining": "남음"
 }

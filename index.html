@@ -64,8 +64,10 @@
   <!-- ── 게임 필터 및 검색 ── -->
   <div id="filter-bar">
     <span class="filter-label" data-i18n="filterLabel">게임 표시:</span>
+    <button id="filter-all" class="filter-bulk-btn" data-i18n="showAll">전체</button>
+    <button id="filter-none" class="filter-bulk-btn" data-i18n="hideAll">해제</button>
     <div id="search-container">
-      <input type="text" id="game-search" placeholder="게임 검색..." aria-label="게임 검색">
+      <input type="text" id="game-search" placeholder="게임 검색..." data-i18n-placeholder="searchPlaceholder" aria-label="게임 검색">
       <button id="clear-search" aria-label="검색 초기화">&times;</button>
     </div>
   </div>
@@ -88,6 +90,7 @@
           <line x1="3" y1="18" x2="21" y2="18" stroke-width="2"/>
         </svg>
       </button>
+      <button id="today-btn" data-i18n="todayBtn">오늘</button>
     </div>
     <div id="timeline-scroll">
       <div id="timeline-canvas">
@@ -97,6 +100,9 @@
         </div>
         <div id="game-rows"></div>
       </div>
+    </div>
+    <div id="list-scroll" hidden>
+      <div id="list-container"></div>
     </div>
   </div>
 
