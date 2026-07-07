@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-06",
+    "lastUpdated": "2026-07-07",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-07-06"
+    "autoUpdated": "2026-07-07"
   },
   "games": [
     {
@@ -30,30 +30,6 @@
           "version": "6.7",
           "tentative": true,
           "source": "earlygg.com"
-        },
-        {
-          "type": "banner",
-          "title": "Void Star's Advent",
-          "subtitle": "Skirk, Escoffier",
-          "rarity": 5,
-          "start": "2026-03-17",
-          "end": "2026-04-07",
-          "version": "6.4",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Epitome Invocation",
-          "subtitle": "Azurelight, Symphonist_Of_Scents",
-          "rarity": 5,
-          "start": "2026-03-17",
-          "end": "2026-04-07",
-          "version": "6.4",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
         },
         {
           "type": "banner",
@@ -215,49 +191,9 @@
         },
         {
           "type": "event",
-          "title": "Stygian Onslaught",
-          "start": "2026-03-04",
-          "end": "2026-04-07",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Spiral Abyss",
           "start": "2026-03-16",
           "end": "2026-04-16",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Void Star's Advent - Skirk Banner",
-          "start": "2026-03-17",
-          "end": "2026-04-07",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "La Chanson Cerise - Escoffier Banner",
-          "start": "2026-03-17",
-          "end": "2026-04-07",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Epitome Invocation - Weapon Banner",
-          "start": "2026-03-17",
-          "end": "2026-04-07",
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
