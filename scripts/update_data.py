@@ -7,7 +7,7 @@
   pip install requests beautifulsoup4 lxml
   python scripts/update_data.py
 """
-import json, sys, os
+import json, sys, os, re
 from datetime import date
 from pathlib import Path
 
@@ -23,6 +23,12 @@ def load_games() -> dict:
         return json.load(f)
 
 
+def sanitize_text(s: str) -> str:
+    if not s:
+        return ""
+    return re.sub(r'<[^>]+>', '', s).strip()
+
+
 def merge_entries(existing: list, fresh: list) -> tuple[list, int]:
     """
     기존 entries와 새로 파싱한 entries를 병합.
@@ -30,6 +36,21 @@ def merge_entries(existing: list, fresh: list) -> tuple[list, int]:
     - 자동 항목은 title+start 키로 dedupe, 새 것으로 교체
     - 90일 이상 지난 자동 항목 제거
     """
+    # fresh 항목 위생화
+    for e in fresh:
+        if "title" in e:
+            e["title"] = sanitize_text(e["title"])
+        if "subtitle" in e:
+            e["subtitle"] = sanitize_text(e["subtitle"])
+
+    # existing 항목 위생화 (기존 _auto 항목 내 잔존 태그 제거)
+    for e in existing:
+        if e.get("_auto"):
+            if "title" in e:
+                e["title"] = sanitize_text(e["title"])
+            if "subtitle" in e:
+                e["subtitle"] = sanitize_text(e["subtitle"])
+
     auto_fresh = {f"{e['title']}|{e['start']}": e for e in fresh}
 
     kept = []

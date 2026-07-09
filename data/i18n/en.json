@@ -39,7 +39,13 @@
   "listUpcoming": "Upcoming",
   "listEnded": "Ended",
   "listEmpty": "No entries in the selected range.",
-  "statusAgo": "ago",
-  "statusUntilStart": "until start",
-  "statusRemaining": "left"
+  "statusEndedFmt": "Ended ({n}d ago)",
+  "statusUpcomingFmt": "Starts in {n}d",
+  "statusOngoingFmt": "Ongoing · {n}d left",
+  "durationFmt": "{n} days",
+  "rowVersions": "Version",
+  "rowBanners": "Banner",
+  "rowEvents": "Event",
+  "detailHint": "Details",
+  "icsBtn": "📅 .ics"
 }

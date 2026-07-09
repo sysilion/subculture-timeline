@@ -39,7 +39,13 @@
   "listUpcoming": "예정",
   "listEnded": "종료",
   "listEmpty": "표시할 일정이 없습니다.",
-  "statusAgo": "전",
-  "statusUntilStart": "후 시작",
-  "statusRemaining": "남음"
+  "statusEndedFmt": "종료 ({n}일 전)",
+  "statusUpcomingFmt": "{n}일 후 시작",
+  "statusOngoingFmt": "진행중 · {n}일 남음",
+  "durationFmt": "{n}일",
+  "rowVersions": "버전",
+  "rowBanners": "배너",
+  "rowEvents": "이벤트",
+  "detailHint": "상세보기",
+  "icsBtn": "📅 .ics"
 }

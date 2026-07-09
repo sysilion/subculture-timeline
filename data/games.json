@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-08",
+    "lastUpdated": "2026-07-09",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-07-08"
+    "autoUpdated": "2026-07-09"
   },
   "games": [
     {
@@ -680,6 +680,16 @@
           "title": "현실 속 환상극",
           "start": "2026-06-30",
           "end": "2026-07-31",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "지맥 제압전",
+          "start": "2026-07-08",
+          "end": "2026-08-10",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -1967,6 +1977,16 @@
         },
         {
           "type": "event",
+          "title": "The Final Callback",
+          "start": "2026-07-08",
+          "end": "2026-07-28",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Data Bounty - Combat Simulation",
           "start": "2026-07-22",
           "end": "2026-07-27",
@@ -2562,6 +2582,16 @@
           "title": "Pixel Surge",
           "start": "2026-06-26",
           "end": "2026-07-03",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Circle Gift",
+          "start": "2026-07-08",
+          "end": "2026-07-29",
           "version": "",
           "tentative": false,
           "source": "game8.co",

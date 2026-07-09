@@ -317,6 +317,23 @@ html, body {
   background: rgba(244, 67, 54, 0.08);
 }
 
+/* 캘린더 내보내기 버튼 */
+#ics-btn {
+  margin-left: 6px;
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+#ics-btn:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
 /* 필터 전체 켜기/끄기 버튼 */
 .filter-bulk-btn {
   background: var(--surface);
@@ -505,6 +522,7 @@ html, body {
   transition: opacity 0.2s;
 }
 .game-section.hidden { display: none; }
+.game-section.search-hidden { display: none; }
 
 .game-header-row {
   display: flex;
@@ -750,7 +768,7 @@ html, body {
   pointer-events: none;
 }
 #today-line::before {
-  content: '오늘';
+  content: attr(data-label);
   position: absolute;
   top: 2px;
   left: 4px;

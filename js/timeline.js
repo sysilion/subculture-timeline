@@ -82,8 +82,10 @@ const Timeline = (() => {
       luEl.textContent = `${prefix} ${data.meta.lastUpdated}`;
     }
 
+    applyHashState();
     restoreOrder();
     buildFilters();
+    applyHashFilters();
     setupSearch();
     setupBulkFilters();
     renderRuler();
@@ -94,13 +96,28 @@ const Timeline = (() => {
     setupDetailPanel();
     setupViewToggle();
     setupTodayButton();
+    setupIcsExport();
     updateCSSVars();
     scrollToToday(false);
 
-    // 언어 전환 시 리스트 뷰 텍스트 갱신
+    // 언어 전환 시 렌더 텍스트 갱신 (행 레이블·오늘선·리스트 뷰)
     document.addEventListener('tl-langchange', () => {
+      renderGames();
+      renderTodayLine();
       if (currentView === 'list') renderListView();
     });
+  }
+
+  /* ── 해시의 hide= 필터를 1회 적용 후 localStorage에 반영 ── */
+  function applyHashFilters() {
+    if (!hashHiddenGames) return;
+    document.querySelectorAll('.game-chip').forEach(chip => {
+      const active = !hashHiddenGames.has(chip.dataset.gameId);
+      chip.classList.toggle('active', active);
+      chip.classList.toggle('inactive', !active);
+    });
+    saveFilters();
+    hashHiddenGames = null;
   }
 
   /* ── CSS 변수 갱신 ── */
@@ -123,6 +140,7 @@ const Timeline = (() => {
     renderTodayLine();
     restoreFilters();
     if (currentView === 'list') renderListView();
+    updateHash();
   }
 
   /* ── i18n 헬퍼 (미로드 시 fallback) ── */
@@ -132,6 +150,44 @@ const Timeline = (() => {
       if (v !== key) return v;
     }
     return fallback;
+  }
+
+  /* ── HTML 이스케이프 (파서가 외부 사이트에서 수집한 문자열 무해화) ── */
+  function esc(s) {
+    return String(s ?? '').replace(/[&<>"']/g, c =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  /* ── URL 해시 상태 (뷰·범위·숨긴 게임 공유) ── */
+  let hashHiddenGames = null; // 최초 로드 시 해시의 hide= 값 (1회 적용 후 해제)
+
+  function applyHashState() {
+    const params = new URLSearchParams(location.hash.slice(1));
+    if (params.get('view') === 'list') currentView = 'list';
+    const range = (params.get('range') || '').split(',').map(Number);
+    if (range.length === 2 && range[0] > 0 && range[1] > 0) {
+      CFG.pastDays = range[0];
+      CFG.futureDays = range[1];
+      const sel = document.getElementById('range-select');
+      if (sel && [...sel.options].some(o => o.value === `${range[0]},${range[1]}`)) {
+        sel.value = `${range[0]},${range[1]}`;
+      }
+    }
+    const hide = params.get('hide');
+    if (hide) hashHiddenGames = new Set(hide.split(','));
+  }
+
+  function updateHash() {
+    const params = new URLSearchParams();
+    if (currentView !== 'gantt') params.set('view', currentView);
+    if (CFG.pastDays !== 30 || CFG.futureDays !== 60) {
+      params.set('range', `${CFG.pastDays},${CFG.futureDays}`);
+    }
+    const hidden = [...document.querySelectorAll('.game-chip.inactive')]
+      .map(c => c.dataset.gameId);
+    if (hidden.length) params.set('hide', hidden.join(','));
+    const s = params.toString();
+    history.replaceState(null, '', s ? '#' + s : location.pathname + location.search);
   }
 
   /* ── 필터 (게임 on/off) ── */
@@ -148,10 +204,10 @@ function buildFilters() {
     chip.style.setProperty('--chip-color', game.color);
 
     const iconHtml = game.iconUrl
-      ? `<img class="chip-icon-img" src="${game.iconUrl}" alt="${game.name}" onerror="this.style.display='none'">`
-      : `<span class="chip-icon">${game.icon}</span>`;
+      ? `<img class="chip-icon-img" src="${esc(game.iconUrl)}" alt="${esc(game.name)}" onerror="this.style.display='none'">`
+      : `<span class="chip-icon">${esc(game.icon)}</span>`;
 
-    chip.innerHTML = `${iconHtml}<span class="chip-name">${game.nameKo || game.name}</span>`;
+    chip.innerHTML = `${iconHtml}<span class="chip-name">${esc(game.nameKo || game.name)}</span>`;
     chip.addEventListener('click', () => toggleGame(game.id, chip));
     bar.appendChild(chip);
   });
@@ -160,13 +216,25 @@ function buildFilters() {
   applySearch(document.getElementById('game-search').value);
 }
 
-/* ── 게임 검색 ── */
+/* ── 게임 검색 (칩 + 타임라인 행 + 리스트 뷰 연동) ── */
+let searchTerm = '';
+
+function gameMatchesSearch(game) {
+  if (!searchTerm) return true;
+  return [game.nameKo, game.name, game.fullName]
+    .some(n => n && n.toLowerCase().includes(searchTerm));
+}
+
 function applySearch(term) {
-  const searchTerm = term.trim().toLowerCase();
-  document.querySelectorAll('.game-chip').forEach(chip => {
-    const gameName = chip.querySelector('.chip-name').textContent.toLowerCase();
-    chip.style.display = gameName.includes(searchTerm) ? 'inline-flex' : 'none';
+  searchTerm = term.trim().toLowerCase();
+  data.games.forEach(game => {
+    const match = gameMatchesSearch(game);
+    const chip = document.querySelector(`.game-chip[data-game-id="${game.id}"]`);
+    if (chip) chip.style.display = match ? 'inline-flex' : 'none';
+    const section = document.querySelector(`.game-section[data-id="${game.id}"]`);
+    if (section) section.classList.toggle('search-hidden', !match);
   });
+  if (currentView === 'list') renderListView();
 }
 
 function setupSearch() {
@@ -191,6 +259,7 @@ function setAllGames(active) {
     if (section) section.classList.toggle('hidden', !active);
   });
   saveFilters();
+  updateHash();
   if (currentView === 'list') renderListView();
 }
 
@@ -207,6 +276,7 @@ function setupBulkFilters() {
     chip.classList.toggle('inactive', isActive);
     section.classList.toggle('hidden', isActive);
     saveFilters();
+    updateHash();
     if (currentView === 'list') renderListView();
   }
 
@@ -360,6 +430,7 @@ function saveFilters() {
     });
 
     restoreFilters();
+    applySearch(document.getElementById('game-search').value);
   }
 
   function buildGameSection(game) {
@@ -403,18 +474,18 @@ function saveFilters() {
     }
 
     const iconHtml = game.iconUrl
-      ? `<img class="game-label-icon-img" src="${game.iconUrl}" alt="${game.name}" onerror="this.remove()">`
+      ? `<img class="game-label-icon-img" src="${esc(game.iconUrl)}" alt="${esc(game.name)}" onerror="this.remove()">`
       : '';
 
     label.innerHTML = `
       <div class="game-label-overlay"></div>
-      <div class="game-label-drag" title="드래그하여 순서 변경"></div>
+      <div class="game-label-drag" title="${esc(t('dragHint', '드래그하여 순서 변경'))}"></div>
       ${iconHtml}
       <div class="game-label-content">
-        <div class="game-label-name">${game.nameKo || game.name}</div>
-        <div class="game-label-dev">${game.developer}</div>
+        <div class="game-label-name">${esc(game.nameKo || game.name)}</div>
+        <div class="game-label-dev">${esc(game.developer)}</div>
       </div>
-      <div class="game-label-hint">상세보기</div>
+      <div class="game-label-hint">${esc(t('detailHint', '상세보기'))}</div>
     `;
 
     const entriesWrapper = document.createElement('div');
@@ -428,8 +499,8 @@ function saveFilters() {
       rowEl.style.height = CFG.rowH + 'px';
 
       // 행 타입 레이블
-      const labelText = rowGroup.kind === 'versions' ? '버전'
-        : rowGroup.kind === 'banners' ? '배너' : '이벤트';
+      const labelText = rowGroup.kind === 'versions' ? t('rowVersions', '버전')
+        : rowGroup.kind === 'banners' ? t('rowBanners', '배너') : t('rowEvents', '이벤트');
       const label = document.createElement('div');
       label.className = `entry-row-label label-${rowGroup.kind}`;
       label.textContent = labelText;
@@ -488,7 +559,7 @@ function buildBar(entry, game) {
     if (entry.type === 'version') {
       textEl.textContent = entry.title;
     } else {
-      textEl.innerHTML = `${entry.title}${entry.subtitle ? `<span class="bar-subtitle">${entry.subtitle}</span>` : ''}`;
+      textEl.innerHTML = `${esc(entry.title)}${entry.subtitle ? `<span class="bar-subtitle">${esc(entry.subtitle)}</span>` : ''}`;
     }
     // version이 없을 경우 텍스트 렌더링 생략
     if (entry.type !== 'version' || entry.version) {
@@ -525,6 +596,7 @@ function buildBar(entry, game) {
     }
     const x = CFG.labelW + dateToX(today);
     line.style.left = x + 'px';
+    line.dataset.label = t('legendToday', '오늘');
   }
 
   /* ── 툴팁 ── */
@@ -596,6 +668,33 @@ function setupTooltip() {
       tooltip.classList.remove('visible');
     }
   }, { signal });
+
+  // 터치 기기: 탭으로 툴팁 토글 (hover 불가 환경)
+  scroll.addEventListener('click', (e) => {
+    if (!window.matchMedia('(hover: none)').matches) return;
+    const bar = e.target.closest('.entry-bar');
+    if (!bar || !bar.dataset.entry) return;
+    if (bar === currentBar && tooltip.classList.contains('visible')) {
+      currentBar = null;
+      tooltip.classList.remove('visible');
+      return;
+    }
+    currentBar = bar;
+    const rect = bar.getBoundingClientRect();
+    showTooltip(bar, tooltip, {
+      clientX: rect.left + rect.width / 2,
+      clientY: rect.bottom + 4
+    });
+  }, { signal });
+
+  // 터치 기기: 바 바깥 탭으로 툴팁 닫기
+  document.addEventListener('click', (e) => {
+    if (!window.matchMedia('(hover: none)').matches) return;
+    if (!e.target.closest('.entry-bar')) {
+      currentBar = null;
+      tooltip.classList.remove('visible');
+    }
+  }, { signal });
 }
 
   function showTooltip(bar, tooltip, e) {
@@ -606,32 +705,26 @@ function setupTooltip() {
     const end   = D.parse(entry.end);
     const dur   = D.diffDays(start, end);
 
-    const nowDiff = D.diffDays(today, end);
-    let statusText = '';
-    if (nowDiff < 0) {
-      statusText = `<div class="tooltip-duration">⏹ ${Math.abs(nowDiff)}일 전 종료</div>`;
-    } else if (D.diffDays(today, start) > 0) {
-      statusText = `<div class="tooltip-duration">🔜 ${D.diffDays(today, start)}일 후 시작</div>`;
-    } else {
-      statusText = `<div class="tooltip-duration" style="color:#66bb6a">▶ 진행중 — ${nowDiff}일 남음</div>`;
-    }
+    const status = entryStatus(start, end);
+    const icon = status.cls === 'status-ended' ? '⏹' : status.cls === 'status-upcoming' ? '🔜' : '▶';
+    const statusText = `<div class="tooltip-duration"${status.cls === 'status-active' ? ' style="color:#66bb6a"' : ''}>${icon} ${esc(status.label)}</div>`;
 
     tooltip.innerHTML = `
       <div class="tooltip-inner">
         <div class="tooltip-game">
-          <span class="tooltip-color-dot" style="background:${entry.gameColor}"></span>
-          ${entry.gameIcon} ${entry.gameFullName}
+          <span class="tooltip-color-dot" style="background:${esc(entry.gameColor)}"></span>
+          ${esc(entry.gameIcon)} ${esc(entry.gameFullName)}
         </div>
-        <div class="tooltip-title">${entry.title}</div>
-        ${entry.subtitle ? `<div class="tooltip-subtitle">${entry.subtitle}</div>` : ''}
+        <div class="tooltip-title">${esc(entry.title)}</div>
+        ${entry.subtitle ? `<div class="tooltip-subtitle">${esc(entry.subtitle)}</div>` : ''}
         <div class="tooltip-dates">
-          <div><span>시작:</span> ${D.fmt(start)}</div>
-          <div><span>종료:</span> ${D.fmt(end)}</div>
+          <div><span>${esc(t('tooltipStart', '시작:'))}</span> ${D.fmt(start)}</div>
+          <div><span>${esc(t('tooltipEnd', '종료:'))}</span> ${D.fmt(end)}</div>
         </div>
         ${statusText}
-        <div class="tooltip-duration">기간: ${dur}일 · v${entry.version || '?'}</div>
-        ${entry.tentative ? '<div class="tooltip-tentative">⚠ 미확정 일정 (변동 가능)</div>' : ''}
-        ${entry.source ? `<div class="tooltip-source">출처: ${entry.source}</div>` : ''}
+        <div class="tooltip-duration">${esc(t('tooltipDuration', '기간'))}: ${esc(fmtDuration(dur))} · v${esc(entry.version || '?')}</div>
+        ${entry.tentative ? `<div class="tooltip-tentative">${esc(t('tooltipTentative', '⚠ 미확정 일정 (변동 가능)'))}</div>` : ''}
+        ${entry.source ? `<div class="tooltip-source">${esc(t('tooltipSource', '출처:'))} ${esc(entry.source)}</div>` : ''}
       </div>
     `;
 
@@ -708,6 +801,7 @@ function saveOrder(order) {
 
   /* ── 게임 상세 패널 ── */
   let currentDetailGame = null;
+  let lastFocusedBeforeDetail = null;
 
 function openDetail(game) {
   currentDetailGame = game;
@@ -717,9 +811,9 @@ function openDetail(game) {
   const content = document.getElementById('detail-panel-content');
 
   const iconHtml = game.iconUrl
-    ? `<img src="${game.iconUrl}" alt="${game.name}" style="width:20px;height:20px;border-radius:4px;object-fit:contain;">`
-    : (game.icon || '');
-  titleEl.innerHTML = `<span class="detail-modal-icon">${iconHtml}</span>${game.fullName || game.name}`;
+    ? `<img src="${esc(game.iconUrl)}" alt="${esc(game.name)}" style="width:20px;height:20px;border-radius:4px;object-fit:contain;">`
+    : esc(game.icon || '');
+  titleEl.innerHTML = `<span class="detail-modal-icon">${iconHtml}</span>${esc(game.fullName || game.name)}`;
 
   content.innerHTML = '';
 
@@ -738,24 +832,13 @@ function openDetail(game) {
     const end = D.parse(entry.end);
     const dur = D.diffDays(start, end);
 
-    const nowDiff = D.diffDays(today, end);
-    const startDiff = D.diffDays(today, start);
-    let statusClass = '', statusLabel = '';
-    if (nowDiff < 0) {
-      statusClass = 'status-ended';
-      statusLabel = `종료 (${Math.abs(nowDiff)}일 전)`;
-    } else if (startDiff > 0) {
-      statusClass = 'status-upcoming';
-      statusLabel = `${startDiff}일 후 시작`;
-    } else {
-      statusClass = 'status-active';
-      statusLabel = `진행중 · ${nowDiff}일 남음`;
-    }
+    const status = entryStatus(start, end);
 
     // 타입 구분선
     if (entry.type !== lastType) {
       const sep = document.createElement('div');
-      const typeLabel = entry.type === 'version' ? '버전' : entry.type === 'banner' ? '뽑기 배너' : '이벤트';
+      const typeLabel = entry.type === 'version' ? t('rowVersions', '버전')
+        : entry.type === 'banner' ? t('legendBanner', '뽑기 배너') : t('rowEvents', '이벤트');
       sep.className = `detail-type-sep sep-${entry.type}`;
       sep.textContent = typeLabel;
       content.appendChild(sep);
@@ -770,22 +853,26 @@ function openDetail(game) {
       <div class="detail-entry-bar-indicator type-${entry.type}${entry.tentative ? ' tentative' : ''}"></div>
       <div class="detail-entry-main">
         <div class="detail-entry-title-row">
-          <span class="detail-entry-title">${entry.title}</span>
-          ${entry.tentative ? '<span class="detail-entry-tentative-badge">⚠ 미확정</span>' : ''}
+          <span class="detail-entry-title">${esc(entry.title)}</span>
+          ${entry.tentative ? `<span class="detail-entry-tentative-badge">⚠ ${esc(t('legendTentative', '미확정'))}</span>` : ''}
         </div>
-        ${entry.subtitle ? `<div class="detail-entry-subtitle">${entry.subtitle}</div>` : ''}
+        ${entry.subtitle ? `<div class="detail-entry-subtitle">${esc(entry.subtitle)}</div>` : ''}
       </div>
       <div class="detail-entry-dates">
         <span class="detail-date-range">${D.fmtShort(start)} → ${D.fmtShort(end)}</span>
-        <span class="detail-date-dur">${dur}일${entry.version ? ` · v${entry.version}` : ''}</span>
+        <span class="detail-date-dur">${esc(fmtDuration(dur))}${entry.version ? ` · v${esc(entry.version)}` : ''}</span>
       </div>
-      <div class="detail-entry-status ${statusClass}">${statusLabel}</div>
+      <div class="detail-entry-status ${status.cls}">${esc(status.label)}</div>
     `;
     content.appendChild(item);
   });
 
   panel.classList.add('open');
   overlay.classList.add('open');
+
+  // 포커스 관리: 열릴 때 닫기 버튼으로 이동, 닫힐 때 복원
+  lastFocusedBeforeDetail = document.activeElement;
+  document.getElementById('detail-panel-close').focus();
 
   // 상세 패널에서 타임라인 동기화
   document.querySelectorAll('.detail-entry').forEach(entryEl => {
@@ -849,6 +936,10 @@ function highlightTimelineEntry(gameId, entryId) {
     document.getElementById('detail-panel').classList.remove('open');
     document.getElementById('detail-overlay').classList.remove('open');
     currentDetailGame = null;
+    if (lastFocusedBeforeDetail && document.contains(lastFocusedBeforeDetail)) {
+      lastFocusedBeforeDetail.focus();
+    }
+    lastFocusedBeforeDetail = null;
   }
 
 function setupDetailPanel() {
@@ -893,6 +984,23 @@ function setupDetailPanel() {
     }
   });
 
+  // 포커스 트랩: Tab 순환을 패널 내부로 제한
+  document.getElementById('detail-panel').addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    const panel = document.getElementById('detail-panel');
+    const focusables = panel.querySelectorAll('button, [tabindex="0"]');
+    if (focusables.length === 0) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+
   // 상세 패널 내 키보드 탐색
   document.getElementById('detail-panel-content').addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
@@ -931,6 +1039,7 @@ function setupDetailPanel() {
     document.getElementById('gantt-view').classList.toggle('active', !isList);
     document.getElementById('list-view').classList.toggle('active', isList);
     if (isList) renderListView();
+    updateHash();
   }
 
   function setupViewToggle() {
@@ -943,9 +1052,20 @@ function setupDetailPanel() {
   function entryStatus(start, end) {
     const endDiff = D.diffDays(today, end);
     const startDiff = D.diffDays(today, start);
-    if (endDiff < 0)   return { cls: 'status-ended',    label: `${t('listEnded','종료')} (${Math.abs(endDiff)}${t('tooltipDays','일')} ${t('statusAgo','전')})` };
-    if (startDiff > 0) return { cls: 'status-upcoming', label: `${startDiff}${t('tooltipDays','일')} ${t('statusUntilStart','후 시작')}` };
-    return { cls: 'status-active', label: `${t('listOngoing','진행중')} · ${endDiff}${t('tooltipDays','일')} ${t('statusRemaining','남음')}` };
+    if (endDiff < 0) {
+      return { cls: 'status-ended',
+        label: t('statusEndedFmt', '종료 ({n}일 전)').replace('{n}', Math.abs(endDiff)) };
+    }
+    if (startDiff > 0) {
+      return { cls: 'status-upcoming',
+        label: t('statusUpcomingFmt', '{n}일 후 시작').replace('{n}', startDiff) };
+    }
+    return { cls: 'status-active',
+      label: t('statusOngoingFmt', '진행중 · {n}일 남음').replace('{n}', endDiff) };
+  }
+
+  function fmtDuration(days) {
+    return t('durationFmt', '{n}일').replace('{n}', days);
   }
 
   /* ── 리스트 뷰 렌더링 ── */
@@ -1000,8 +1120,8 @@ function setupDetailPanel() {
         const status = entryStatus(s, e);
 
         const iconHtml = game.iconUrl
-          ? `<img class="chip-icon-img" src="${game.iconUrl}" alt="" onerror="this.style.display='none'">`
-          : `<span class="chip-icon">${game.icon || ''}</span>`;
+          ? `<img class="chip-icon-img" src="${esc(game.iconUrl)}" alt="" onerror="this.style.display='none'">`
+          : `<span class="chip-icon">${esc(game.icon || '')}</span>`;
 
         const item = document.createElement('div');
         item.className = 'list-entry';
@@ -1009,19 +1129,19 @@ function setupDetailPanel() {
         item.setAttribute('role', 'button');
         item.innerHTML = `
           <div class="detail-entry-bar-indicator type-${entry.type}${entry.tentative ? ' tentative' : ''}"></div>
-          <div class="list-entry-game" style="--chip-color:${game.color}">
-            ${iconHtml}<span class="list-entry-game-name">${game.nameKo || game.name}</span>
+          <div class="list-entry-game" style="--chip-color:${esc(game.color)}">
+            ${iconHtml}<span class="list-entry-game-name">${esc(game.nameKo || game.name)}</span>
           </div>
           <div class="detail-entry-main">
             <div class="detail-entry-title-row">
-              <span class="detail-entry-title">${entry.title}</span>
-              ${entry.tentative ? `<span class="detail-entry-tentative-badge">⚠ ${t('legendTentative','미확정')}</span>` : ''}
+              <span class="detail-entry-title">${esc(entry.title)}</span>
+              ${entry.tentative ? `<span class="detail-entry-tentative-badge">⚠ ${esc(t('legendTentative', '미확정'))}</span>` : ''}
             </div>
-            ${entry.subtitle ? `<div class="detail-entry-subtitle">${entry.subtitle}</div>` : ''}
+            ${entry.subtitle ? `<div class="detail-entry-subtitle">${esc(entry.subtitle)}</div>` : ''}
           </div>
           <div class="detail-entry-dates">
             <span class="detail-date-range">${D.fmtShort(s)} → ${D.fmtShort(e)}</span>
-            <span class="detail-date-dur">${dur}${t('tooltipDays','일')}${entry.version ? ` · v${entry.version}` : ''}</span>
+            <span class="detail-date-dur">${esc(fmtDuration(dur))}${entry.version ? ` · v${esc(entry.version)}` : ''}</span>
           </div>
           <div class="detail-entry-status ${status.cls}">${status.label}</div>
         `;
@@ -1047,6 +1167,73 @@ function setupDetailPanel() {
     document.getElementById('today-btn').addEventListener('click', () => {
       if (currentView !== 'gantt') setView('gantt');
       scrollToToday(true);
+    });
+  }
+
+  /* ── iCalendar(.ics) 내보내기 ── */
+  function icsEscape(s) {
+    return String(s ?? '')
+      .replace(/\\/g, '\\\\')
+      .replace(/;/g, '\\;')
+      .replace(/,/g, '\\,')
+      .replace(/\r?\n/g, '\\n');
+  }
+
+  function icsDate(d) {
+    return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
+  }
+
+  function buildIcs() {
+    const activeIds = new Set(
+      [...document.querySelectorAll('.game-chip.active')].map(c => c.dataset.gameId)
+    );
+    const lines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//subculture-timeline//KO',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+    ];
+    const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+Z/, 'Z');
+    let seq = 0;
+
+    data.games.forEach(game => {
+      if (!activeIds.has(game.id)) return;
+      game.entries.forEach(entry => {
+        const end = D.parse(entry.end);
+        if (end < today) return; // 종료된 일정은 제외
+        const start = D.parse(entry.start);
+        const gameName = game.nameKo || game.name;
+        const descParts = [];
+        if (entry.subtitle) descParts.push(entry.subtitle);
+        if (entry.tentative) descParts.push(t('tooltipTentative', '⚠ 미확정 일정 (변동 가능)'));
+        if (entry.source) descParts.push(`${t('tooltipSource', '출처:')} ${entry.source}`);
+        lines.push(
+          'BEGIN:VEVENT',
+          `UID:${game.id}-${entry.id || seq++}-${entry.start}@subculture-timeline`,
+          `DTSTAMP:${stamp}`,
+          `DTSTART;VALUE=DATE:${icsDate(start)}`,
+          `DTEND;VALUE=DATE:${icsDate(D.addDays(end, 1))}`, // DTEND는 exclusive
+          `SUMMARY:${icsEscape(`[${gameName}] ${entry.title}`)}`,
+          descParts.length ? `DESCRIPTION:${icsEscape(descParts.join('\n'))}` : null,
+          'END:VEVENT'
+        );
+      });
+    });
+
+    lines.push('END:VCALENDAR');
+    return lines.filter(Boolean).join('\r\n');
+  }
+
+  function setupIcsExport() {
+    document.getElementById('ics-btn').addEventListener('click', () => {
+      const blob = new Blob([buildIcs()], { type: 'text/calendar;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'subculture-timeline.ics';
+      a.click();
+      URL.revokeObjectURL(url);
     });
   }
 

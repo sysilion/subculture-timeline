@@ -91,6 +91,7 @@
         </svg>
       </button>
       <button id="today-btn" data-i18n="todayBtn">오늘</button>
+      <button id="ics-btn" data-i18n="icsBtn" title="표시 중인 게임의 예정/진행중 일정을 캘린더 파일로 저장">📅 .ics</button>
     </div>
     <div id="timeline-scroll">
       <div id="timeline-canvas">
@@ -126,7 +127,7 @@
 <div id="tooltip"><div class="tooltip-inner"></div></div>
 
 <!-- ── 게임 상세 패널 ── -->
-<div id="detail-panel" class="detail-panel">
+<div id="detail-panel" class="detail-panel" role="dialog" aria-modal="true" aria-label="게임 상세">
   <div class="detail-panel-header">
     <div class="detail-panel-title"></div>
     <button class="detail-panel-close" id="detail-panel-close">&times;</button>
@@ -135,8 +136,8 @@
 </div>
 <div id="detail-overlay" class="detail-overlay"></div>
 
-<!-- SortableJS (drag-to-reorder) -->
-<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
+<!-- SortableJS (drag-to-reorder, CDN 의존 제거를 위해 로컬 번들) -->
+<script src="js/vendor/Sortable.min.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/timeline.js"></script>
 </body>
