@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-13",
+    "lastUpdated": "2026-07-15",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-07-13"
+    "autoUpdated": "2026-07-15"
   },
   "games": [
     {
@@ -1165,6 +1165,106 @@
           "title": "학원괴담",
           "start": "2026-07-06",
           "end": "2026-08-17",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "반부패 「전문가」",
+          "start": "2026-07-13",
+          "end": "2026-08-25",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "별의 선물",
+          "start": "2026-07-14",
+          "end": "2026-08-25",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "속세의 두루마리",
+          "start": "2026-07-14",
+          "end": "2026-08-25",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "창날과 기사",
+          "start": "2026-07-20",
+          "end": "2026-08-31",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "환조: 성배전쟁",
+          "start": "2026-07-24",
+          "end": "2026-08-25",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "운명의 계약•재개",
+          "start": "2026-07-24",
+          "end": "2026-11-10",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "차원 분열",
+          "start": "2026-07-27",
+          "end": "2026-08-10",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "허구 비즈니스",
+          "start": "2026-08-03",
+          "end": "2026-09-14",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "꽃 피는 정원",
+          "start": "2026-08-14",
+          "end": "2026-08-24",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "폭풍 소탕",
+          "start": "2026-08-17",
+          "end": "2026-09-28",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
