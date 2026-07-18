@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-16",
+    "lastUpdated": "2026-07-18",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-07-16"
+    "autoUpdated": "2026-07-18"
   },
   "games": [
     {
@@ -690,6 +690,16 @@
           "title": "연월 나선",
           "start": "2026-07-15",
           "end": "2026-08-15",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "티바트 저격왕",
+          "start": "2026-07-17",
+          "end": "2026-07-26",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
