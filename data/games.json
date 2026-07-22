@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-20",
+    "lastUpdated": "2026-07-22",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-07-20"
+    "autoUpdated": "2026-07-22"
   },
   "games": [
     {
@@ -238,6 +238,42 @@
           "end": "2026-07-30",
           "version": "6.7",
           "tentative": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원",
+          "subtitle": "콜롬비나, 야호다, 올로룬",
+          "rarity": 5,
+          "start": "2026-07-21",
+          "end": "2026-08-11",
+          "version": "6.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원 2",
+          "subtitle": "라이덴 쇼군, 야호다, 올로룬",
+          "rarity": 5,
+          "start": "2026-07-21",
+          "end": "2026-08-11",
+          "version": "6.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "무기 기원",
+          "subtitle": "막간의 야상곡, 예초의 번개",
+          "rarity": 5,
+          "start": "2026-07-21",
+          "end": "2026-08-11",
+          "version": "6.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
         },
         {
           "type": "banner",
