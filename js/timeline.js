@@ -18,6 +18,7 @@ const Timeline = (() => {
   };
 
   let data = null;
+  let _barIdCounter = 0;
   let today = null;
   let startDate = null;
   let totalDays = 0;
@@ -59,11 +60,16 @@ const Timeline = (() => {
 
   /* ── 초기화 ── */
   async function init() {
+    // 스켈레톤 표시
+    const skeleton = document.getElementById('skeleton-container');
+    if (skeleton) skeleton.classList.remove('hidden');
+
     try {
       const res = await fetch('data/games.json');
       data = await res.json();
     } catch (e) {
       console.error('games.json 로드 실패:', e);
+      if (skeleton) skeleton.classList.add('hidden');
       return;
     }
 
@@ -99,6 +105,12 @@ const Timeline = (() => {
     setupIcsExport();
     updateCSSVars();
     scrollToToday(false);
+
+    // 렌더 완료 후 스켈레톤 숨김
+    if (skeleton) {
+      skeleton.classList.add('hidden');
+      setTimeout(() => { skeleton.style.display = 'none'; }, 300);
+    }
 
     // 언어 전환 시 렌더 텍스트 갱신 (행 레이블·오늘선·리스트 뷰)
     document.addEventListener('tl-langchange', () => {
@@ -207,7 +219,8 @@ function buildFilters() {
       ? `<img class="chip-icon-img" src="${esc(game.iconUrl)}" alt="${esc(game.name)}" onerror="this.style.display='none'">`
       : `<span class="chip-icon">${esc(game.icon)}</span>`;
 
-    chip.innerHTML = `${iconHtml}<span class="chip-name">${esc(game.nameKo || game.name)}</span>`;
+    const entryCount = game.entries.length;
+    chip.innerHTML = `${iconHtml}<span class="chip-name">${esc(game.nameKo || game.name)}</span><span class="chip-count">${entryCount}</span>`;
     chip.addEventListener('click', () => toggleGame(game.id, chip));
     bar.appendChild(chip);
   });
@@ -567,14 +580,14 @@ function buildBar(entry, game) {
     }
   }
 
-  // 툴팁 데이터 (entry.id가 없을 경우 UUID 생성)
+  // 툴팁 데이터 (entry.id가 없을 경우 카운터 기반 ID 생성 — crypto.randomUUID 대체)
   const entryData = {
     gameName: game.name,
     gameFullName: game.fullName,
     gameColor: game.color,
     gameIcon: game.icon,
     ...entry,
-    id: entry.id || crypto.randomUUID()
+    id: entry.id || `bar-${++_barIdCounter}`
   };
   bar.dataset.entry = JSON.stringify(entryData);
 
@@ -600,133 +613,164 @@ function buildBar(entry, game) {
   }
 
   /* ── 툴팁 ── */
-// AbortController를 사용하여 이벤트 리스너 중복 방지
-let tooltipController = null;
+  // AbortController를 사용하여 이벤트 리스너 중복 방지
+  let tooltipController = null;
+  // 툴팁 내용 캐시 (entry.id → HTML 문자열) — IIFE 스코프에서 공유
+  const tooltipCache = new Map();
 
-function setupTooltip() {
-  // 기존 이벤트 리스너 제거
-  if (tooltipController) {
-    tooltipController.abort();
-  }
-  tooltipController = new AbortController();
-  const { signal } = tooltipController;
+  function setupTooltip() {
+    if (tooltipController) tooltipController.abort();
+    tooltipController = new AbortController();
+    const { signal } = tooltipController;
 
-  const tooltip = document.getElementById('tooltip');
-  const scroll  = document.getElementById('timeline-scroll');
+    const tooltip = document.getElementById('tooltip');
+    const scroll  = document.getElementById('timeline-scroll');
 
-  let currentBar = null;
+    let currentBar = null;
+    let hoverDelayTimer = null;
+    let pendingBar = null;
+    const HOVER_DELAY = 200; // ms
 
-  // 마우스 이벤트 리스너
-  scroll.addEventListener('mouseover', (e) => {
-    const bar = e.target.closest('.entry-bar');
-    if (!bar || !bar.dataset.entry) {
-      return;
-    }
-    if (bar === currentBar) return;
-    currentBar = bar;
-    showTooltip(bar, tooltip, e);
-  }, { signal });
+    let rafId = null;
 
-  scroll.addEventListener('mousemove', (e) => {
-    if (!tooltip.classList.contains('visible')) return;
-    positionTooltip(tooltip, e);
-  }, { signal });
-
-  scroll.addEventListener('mouseout', (e) => {
-    const bar = e.target.closest('.entry-bar');
-    if (bar && bar === currentBar) {
-      const related = e.relatedTarget;
-      if (!related || !related.closest('.entry-bar')) {
-        currentBar = null;
-        tooltip.classList.remove('visible');
+    // ── requestAnimationFrame 쓰로틀 ──
+    let lastMouseEvt = null;
+    function schedulePositionUpdate(e) {
+      lastMouseEvt = e;
+      if (rafId === null) {
+        rafId = requestAnimationFrame(() => {
+          rafId = null;
+          if (tooltip.classList.contains('visible') && lastMouseEvt) {
+            positionTooltip(tooltip, lastMouseEvt);
+          }
+        });
       }
     }
-  }, { signal });
 
-  document.addEventListener('mouseleave', () => {
-    currentBar = null;
-    tooltip.classList.remove('visible');
-  }, { signal });
+    function showDelayed(bar) {
+      if (bar === currentBar) return;
+      clearTimeout(hoverDelayTimer);
+      pendingBar = bar;
+      hoverDelayTimer = setTimeout(() => {
+        currentBar = pendingBar;
+        pendingBar = null;
+        showTooltip(bar, tooltip);
+      }, HOVER_DELAY);
+    }
 
-  // 키보드 접근성: 포커스 이동 시 툴팁 표시
-  document.addEventListener('focusin', (e) => {
-    const bar = e.target.closest ? e.target.closest('.entry-bar') : null;
-    if (bar && bar.dataset.entry) {
+    function hideTooltip() {
+      clearTimeout(hoverDelayTimer);
+      pendingBar = null;
+      currentBar = null;
+      tooltip.classList.remove('visible');
+    }
+
+    // 마우스 이벤트 리스너
+    scroll.addEventListener('mouseover', (e) => {
+      const bar = e.target.closest('.entry-bar');
+      if (!bar || !bar.dataset.entry) return;
+      showDelayed(bar);
+    }, { signal });
+
+    scroll.addEventListener('mousemove', (e) => {
+      if (!tooltip.classList.contains('visible')) return;
+      schedulePositionUpdate(e);
+    }, { signal });
+
+    scroll.addEventListener('mouseout', (e) => {
+      const bar = e.target.closest('.entry-bar');
+      if (bar && (bar === currentBar || bar === pendingBar)) {
+        const related = e.relatedTarget;
+        if (!related || !related.closest('.entry-bar')) {
+          hideTooltip();
+        }
+      }
+    }, { signal });
+
+    document.addEventListener('mouseleave', hideTooltip, { signal });
+
+    // 키보드 접근성: 포커스 이동 시 툴팁 즉시 표시 (딜레이 없음)
+    document.addEventListener('focusin', (e) => {
+      const bar = e.target.closest ? e.target.closest('.entry-bar') : null;
+      if (bar && bar.dataset.entry) {
+        clearTimeout(hoverDelayTimer);
+        pendingBar = null;
+        currentBar = bar;
+        const rect = bar.getBoundingClientRect();
+        showTooltip(bar, tooltip, {
+          clientX: rect.left + rect.width / 2,
+          clientY: rect.top + rect.height / 2
+        });
+      }
+    }, { signal });
+
+    document.addEventListener('focusout', (e) => {
+      if (!e.relatedTarget || !e.relatedTarget.closest('.entry-bar')) {
+        hideTooltip();
+      }
+    }, { signal });
+
+    // 터치 기기: 탭으로 툴팁 토글 (hover 불가 환경)
+    scroll.addEventListener('click', (e) => {
+      if (!window.matchMedia('(hover: none)').matches) return;
+      const bar = e.target.closest('.entry-bar');
+      if (!bar || !bar.dataset.entry) return;
+      if (bar === currentBar && tooltip.classList.contains('visible')) {
+        hideTooltip();
+        return;
+      }
+      clearTimeout(hoverDelayTimer);
       currentBar = bar;
       const rect = bar.getBoundingClientRect();
       showTooltip(bar, tooltip, {
         clientX: rect.left + rect.width / 2,
-        clientY: rect.top + rect.height / 2
+        clientY: rect.bottom + 4
       });
-    }
-  }, { signal });
+    }, { signal });
 
-  // 포커스 아웃 시 툴팁 숨기기
-  document.addEventListener('focusout', (e) => {
-    if (!e.relatedTarget || !e.relatedTarget.closest('.entry-bar')) {
-      currentBar = null;
-      tooltip.classList.remove('visible');
-    }
-  }, { signal });
-
-  // 터치 기기: 탭으로 툴팁 토글 (hover 불가 환경)
-  scroll.addEventListener('click', (e) => {
-    if (!window.matchMedia('(hover: none)').matches) return;
-    const bar = e.target.closest('.entry-bar');
-    if (!bar || !bar.dataset.entry) return;
-    if (bar === currentBar && tooltip.classList.contains('visible')) {
-      currentBar = null;
-      tooltip.classList.remove('visible');
-      return;
-    }
-    currentBar = bar;
-    const rect = bar.getBoundingClientRect();
-    showTooltip(bar, tooltip, {
-      clientX: rect.left + rect.width / 2,
-      clientY: rect.bottom + 4
-    });
-  }, { signal });
-
-  // 터치 기기: 바 바깥 탭으로 툴팁 닫기
-  document.addEventListener('click', (e) => {
-    if (!window.matchMedia('(hover: none)').matches) return;
-    if (!e.target.closest('.entry-bar')) {
-      currentBar = null;
-      tooltip.classList.remove('visible');
-    }
-  }, { signal });
-}
-
+    document.addEventListener('click', (e) => {
+      if (!window.matchMedia('(hover: none)').matches) return;
+      if (!e.target.closest('.entry-bar')) hideTooltip();
+    }, { signal });
+  }
   function showTooltip(bar, tooltip, e) {
     let entry;
     try { entry = JSON.parse(bar.dataset.entry); } catch { return; }
 
-    const start = D.parse(entry.start);
-    const end   = D.parse(entry.end);
-    const dur   = D.diffDays(start, end);
+    const entryId = entry.id;
+    const cached = tooltipCache.get(entryId);
+    if (cached) {
+      tooltip.innerHTML = cached;
+    } else {
+      const start = D.parse(entry.start);
+      const end   = D.parse(entry.end);
+      const dur   = D.diffDays(start, end);
 
-    const status = entryStatus(start, end);
-    const icon = status.cls === 'status-ended' ? '⏹' : status.cls === 'status-upcoming' ? '🔜' : '▶';
-    const statusText = `<div class="tooltip-duration"${status.cls === 'status-active' ? ' style="color:#66bb6a"' : ''}>${icon} ${esc(status.label)}</div>`;
+      const status = entryStatus(start, end);
+      const icon = status.cls === 'status-ended' ? '⏹' : status.cls === 'status-upcoming' ? '🔜' : '▶';
+      const statusText = `<div class="tooltip-duration"${status.cls === 'status-active' ? ' style="color:#66bb6a"' : ''}>${icon} ${esc(status.label)}</div>`;
 
-    tooltip.innerHTML = `
-      <div class="tooltip-inner">
-        <div class="tooltip-game">
-          <span class="tooltip-color-dot" style="background:${esc(entry.gameColor)}"></span>
-          ${esc(entry.gameIcon)} ${esc(entry.gameFullName)}
+      const html = `
+        <div class="tooltip-inner">
+          <div class="tooltip-game">
+            <span class="tooltip-color-dot" style="background:${esc(entry.gameColor)}"></span>
+            ${esc(entry.gameIcon)} ${esc(entry.gameFullName)}
+          </div>
+          <div class="tooltip-title">${esc(entry.title)}</div>
+          ${entry.subtitle ? `<div class="tooltip-subtitle">${esc(entry.subtitle)}</div>` : ''}
+          <div class="tooltip-dates">
+            <div><span>${esc(t('tooltipStart', '시작:'))}</span> ${D.fmt(start)}</div>
+            <div><span>${esc(t('tooltipEnd', '종료:'))}</span> ${D.fmt(end)}</div>
+          </div>
+          ${statusText}
+          <div class="tooltip-duration">${esc(t('tooltipDuration', '기간'))}: ${esc(fmtDuration(dur))} · v${esc(entry.version || '?')}</div>
+          ${entry.tentative ? `<div class="tooltip-tentative">${esc(t('tooltipTentative', '⚠ 미확정 일정 (변동 가능)'))}</div>` : ''}
+          ${entry.source ? `<div class="tooltip-source">${esc(t('tooltipSource', '출처:'))} ${esc(entry.source)}</div>` : ''}
         </div>
-        <div class="tooltip-title">${esc(entry.title)}</div>
-        ${entry.subtitle ? `<div class="tooltip-subtitle">${esc(entry.subtitle)}</div>` : ''}
-        <div class="tooltip-dates">
-          <div><span>${esc(t('tooltipStart', '시작:'))}</span> ${D.fmt(start)}</div>
-          <div><span>${esc(t('tooltipEnd', '종료:'))}</span> ${D.fmt(end)}</div>
-        </div>
-        ${statusText}
-        <div class="tooltip-duration">${esc(t('tooltipDuration', '기간'))}: ${esc(fmtDuration(dur))} · v${esc(entry.version || '?')}</div>
-        ${entry.tentative ? `<div class="tooltip-tentative">${esc(t('tooltipTentative', '⚠ 미확정 일정 (변동 가능)'))}</div>` : ''}
-        ${entry.source ? `<div class="tooltip-source">${esc(t('tooltipSource', '출처:'))} ${esc(entry.source)}</div>` : ''}
-      </div>
-    `;
+      `;
+      tooltipCache.set(entryId, html);
+      tooltip.innerHTML = html;
+    }
 
     tooltip.classList.add('visible');
     positionTooltip(tooltip, e);
@@ -1034,11 +1078,30 @@ function setupDetailPanel() {
     currentView = view;
     try { localStorage.setItem('tl-view', view); } catch(e) {}
     const isList = view === 'list';
-    document.getElementById('timeline-scroll').style.display = isList ? 'none' : '';
-    document.getElementById('list-scroll').hidden = !isList;
+    const timelineEl = document.getElementById('timeline-scroll');
+    const listEl = document.getElementById('list-scroll');
+
+    // 페이드 아웃 → 전환 → 페이드 인
+    const fromEl = isList ? timelineEl : listEl;
+    const toEl   = isList ? listEl : timelineEl;
+
+    fromEl.classList.add('view-fade-out');
+
+    setTimeout(() => {
+      fromEl.style.display = isList ? 'none' : '';
+      fromEl.classList.remove('view-fade-out');
+
+      toEl.hidden = false;
+      toEl.classList.add('view-fade-out');
+      // 강제 리플로우 후 페이드 인
+      toEl.offsetHeight;
+      toEl.classList.remove('view-fade-out');
+
+      if (isList) renderListView();
+    }, 200); // CSS transition duration과 일치
+
     document.getElementById('gantt-view').classList.toggle('active', !isList);
     document.getElementById('list-view').classList.toggle('active', isList);
-    if (isList) renderListView();
     updateHash();
   }
 

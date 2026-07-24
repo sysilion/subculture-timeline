@@ -253,6 +253,18 @@ html, body {
 .game-chip.inactive { opacity: 0.4; }
 .game-chip .chip-icon { font-size: 13px; }
 .game-chip .chip-name { color: var(--text); }
+.chip-count {
+  font-size: 10px;
+  min-width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  color: var(--text-dim);
+  margin-left: 4px;
+  flex-shrink: 0;
+}
 
 /* ═══════════════════════════════════════
    메인 타임라인 영역
@@ -683,11 +695,13 @@ html, body {
   padding: 0 8px;
   overflow: hidden;
   cursor: pointer;
-  transition: filter 0.15s, transform 0.1s;
+  transition: box-shadow 0.15s ease, transform 0.1s ease;
   white-space: nowrap;
   top: 50%;
   transform: translateY(-50%);
   min-width: 4px;
+  will-change: transform;
+  contain: layout style;
 }
 
 .entry-bar.highlight {
@@ -696,7 +710,7 @@ html, body {
   transform: translateY(-50%) scale(1.02);
 }
 .entry-bar:hover {
-  filter: brightness(1.3);
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.15), 0 2px 8px rgba(0,0,0,0.3);
   z-index: 10;
 }
 .entry-bar:focus-visible {
@@ -752,12 +766,6 @@ html, body {
 }
 .bar-text .bar-subtitle {
   display: block;
-  font-size: 9px;
-  opacity: 0.7;
-  font-weight: 400;
-}
-
-/* ── 오늘 세로선 ── */
 #today-line {
   position: absolute;
   top: 0;
@@ -766,6 +774,7 @@ html, body {
   background: var(--today-line);
   z-index: 30;
   pointer-events: none;
+  box-shadow: 0 0 6px 1px rgba(244, 67, 54, 0.3), 0 0 12px 2px rgba(244, 67, 54, 0.1);
 }
 #today-line::before {
   content: attr(data-label);
@@ -776,6 +785,7 @@ html, body {
   color: var(--today-line);
   font-weight: 700;
   white-space: nowrap;
+  text-shadow: 0 0 4px rgba(244, 67, 54, 0.4);
 }
 
 /* ── 수직 격자선 ── */
@@ -1149,4 +1159,50 @@ html, body {
 .entry-row-label.label-events {
   color: #81c784;
   background: rgba(102, 187, 106, 0.15);
+}
+
+/* ═══════════════════════════════════════
+   로딩 스켈레톤
+═══════════════════════════════════════ */
+#skeleton-container {
+  padding: 12px 0;
+  transition: opacity 0.3s ease;
+}
+#skeleton-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.skeleton-row {
+  position: relative;
+  left: var(--sk-left, 0);
+  height: 28px;
+  background: linear-gradient(
+    90deg,
+    var(--surface) 25%,
+    var(--surface2) 50%,
+    var(--surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s infinite ease-in-out;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ═══════════════════════════════════════
+   뷰 전환 페이드 트랜지션
+═══════════════════════════════════════ */
+#timeline-scroll,
+#list-scroll {
+  transition: opacity 0.2s ease;
+}
+#timeline-scroll.view-fade-out,
+#list-scroll.view-fade-out {
+  opacity: 0;
 }
