@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-26",
+    "lastUpdated": "2026-07-28",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-07-26"
+    "autoUpdated": "2026-07-28"
   },
   "games": [
     {
@@ -30,30 +30,6 @@
           "version": "6.7",
           "tentative": true,
           "source": "earlygg.com"
-        },
-        {
-          "type": "banner",
-          "title": "Ya-hoho! Compendium",
-          "subtitle": "Linnea, Chasca",
-          "rarity": 5,
-          "start": "2026-04-08",
-          "end": "2026-04-28",
-          "version": "6.5",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Epitome Invocation",
-          "subtitle": "Golden_Frostbound_Oath, Astral_Vultures_Crimson_Plumage",
-          "rarity": 5,
-          "start": "2026-04-08",
-          "end": "2026-04-28",
-          "version": "6.5",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
         },
         {
           "type": "banner",
@@ -338,46 +314,6 @@
           "title": "Imaginarium Theater",
           "start": "2026-04-01",
           "end": "2026-05-01",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Alcyon Chapter",
-          "start": "2026-04-08",
-          "end": "2026-04-28",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Ya-hoho! Compendium - Linnea Banner",
-          "start": "2026-04-08",
-          "end": "2026-04-28",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Piercing Shot's Crimson Wake - Chasca Banner",
-          "start": "2026-04-08",
-          "end": "2026-04-28",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Epitome Invocation - Weapon Banner",
-          "start": "2026-04-08",
-          "end": "2026-04-28",
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
