@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-01",
+    "lastUpdated": "2026-08-03",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-01"
+    "autoUpdated": "2026-08-03"
   },
   "games": [
     {
@@ -730,6 +730,16 @@
           "title": "현실 속 환상극",
           "start": "2026-07-31",
           "end": "2026-08-31",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "지맥의 격류",
+          "start": "2026-08-02",
+          "end": "2026-08-09",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
