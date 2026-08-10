@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-03",
+    "lastUpdated": "2026-08-10",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-03"
+    "autoUpdated": "2026-08-10"
   },
   "games": [
     {
@@ -3455,6 +3455,17 @@
           "_auto": true
         },
         {
+          "type": "banner",
+          "title": "Special Recruit",
+          "subtitle": "",
+          "start": "2026-07-23",
+          "end": "2026-08-12",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
           "type": "event",
           "title": "Event",
           "start": "2026-05-28",
@@ -3857,6 +3868,36 @@
           "title": "July Mission Pass",
           "start": "2026-07-01",
           "end": "2026-07-31",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "PROJECT MATIS",
+          "start": "2026-07-23",
+          "end": "2026-08-12",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Archives – NEW FLAVOR",
+          "start": "2026-07-23",
+          "end": "2026-08-12",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "14 Days Login Event – HERO DAYS",
+          "start": "2026-07-23",
+          "end": "2026-08-12",
           "version": "",
           "tentative": false,
           "source": "nikke.gg",
