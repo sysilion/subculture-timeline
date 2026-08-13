@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-10",
+    "lastUpdated": "2026-08-13",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-10"
+    "autoUpdated": "2026-08-13"
   },
   "games": [
     {
@@ -310,6 +310,42 @@
           "tentative": true
         },
         {
+          "type": "banner",
+          "title": "캐릭터 기원",
+          "subtitle": "오데트, 알료샤, 설탕",
+          "rarity": 5,
+          "start": "2026-08-11",
+          "end": "2026-09-01",
+          "version": "7.0",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원 2",
+          "subtitle": "아를레키노, 알료샤, 설탕",
+          "rarity": 5,
+          "start": "2026-08-11",
+          "end": "2026-09-01",
+          "version": "7.0",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "무기 기원",
+          "subtitle": "백조의 호수, 붉은 달의 형상",
+          "rarity": 5,
+          "start": "2026-08-11",
+          "end": "2026-09-01",
+          "version": "7.0",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
           "type": "event",
           "title": "Battle Pass - Homecoming Chronicle",
           "start": "2026-04-08",
@@ -334,16 +370,6 @@
           "title": "Spiral Abyss",
           "start": "2026-04-16",
           "end": "2026-05-16",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Where Waves Meet the Reef",
-          "start": "2026-04-27",
-          "end": "2026-05-14",
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
@@ -740,6 +766,26 @@
           "title": "지맥의 격류",
           "start": "2026-08-02",
           "end": "2026-08-09",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "초행자 지원·설원 탐험",
+          "start": "2026-08-10",
+          "end": "2026-08-23",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "수련의 방·묘수풀이",
+          "start": "2026-08-11",
+          "end": "2026-09-22",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
