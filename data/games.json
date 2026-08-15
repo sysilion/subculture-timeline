@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-13",
+    "lastUpdated": "2026-08-15",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-13"
+    "autoUpdated": "2026-08-15"
   },
   "games": [
     {
@@ -360,16 +360,6 @@
           "title": "Stygian Onslaught",
           "start": "2026-04-15",
           "end": "2026-05-19",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Spiral Abyss",
-          "start": "2026-04-16",
-          "end": "2026-05-16",
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
@@ -1017,6 +1007,54 @@
           "start": "2026-08-05",
           "end": "2026-08-25",
           "version": "4.4",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "로빈•서머레토",
+          "subtitle": "로빈•서머레토, 히아킨, 단항",
+          "rarity": 5,
+          "start": "2026-08-26",
+          "end": "2026-09-12",
+          "version": "4.5",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "그대는 나아가 노래하리니",
+          "subtitle": "그대는 나아가 노래하리니, 무지개가 영원히 하늘에 머물길",
+          "rarity": 5,
+          "start": "2026-08-26",
+          "end": "2026-09-12",
+          "version": "4.5",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "어벤츄린•웨이브",
+          "subtitle": "어벤츄린•웨이브, 애쉬베일, 삼포",
+          "rarity": 5,
+          "start": "2026-09-12",
+          "end": "2026-09-27",
+          "version": "4.5",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "파도에 내던진 한여름",
+          "subtitle": "파도에 내던진 한여름, 거짓말의 종막",
+          "rarity": 5,
+          "start": "2026-09-12",
+          "end": "2026-09-27",
+          "version": "4.5",
           "tentative": false,
           "source": "api.ennead.cc",
           "_auto": true
