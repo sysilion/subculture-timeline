@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-17",
+    "lastUpdated": "2026-08-18",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-17"
+    "autoUpdated": "2026-08-18"
   },
   "games": [
     {
@@ -30,30 +30,6 @@
           "version": "6.7",
           "tentative": true,
           "source": "earlygg.com"
-        },
-        {
-          "type": "banner",
-          "title": "Moonsong of the Groves",
-          "subtitle": "Lauma, Nefer",
-          "rarity": 5,
-          "start": "2026-04-28",
-          "end": "2026-05-19",
-          "version": "6.5",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Epitome Invocation",
-          "subtitle": "Nightweavers_Looking_Glass, Reliquary_Of_Truth",
-          "rarity": 5,
-          "start": "2026-04-28",
-          "end": "2026-05-19",
-          "version": "6.5",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
         },
         {
           "type": "banner",
@@ -343,56 +319,6 @@
           "version": "7.0",
           "tentative": false,
           "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Stygian Onslaught",
-          "start": "2026-04-15",
-          "end": "2026-05-19",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Moonsong of the Groves - Lauma Banner",
-          "start": "2026-04-28",
-          "end": "2026-05-19",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Temptation of the Crimson Sands - Nefer Banner",
-          "start": "2026-04-28",
-          "end": "2026-05-19",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Epitome Invocation - Weapon Banner",
-          "start": "2026-04-28",
-          "end": "2026-05-19",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Dewlit Tranquility - Fontaine Banner",
-          "start": "2026-04-28",
-          "end": "2026-05-19",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
           "_auto": true
         },
         {
