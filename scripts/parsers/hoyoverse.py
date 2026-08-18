@@ -15,10 +15,24 @@ _SLUG = {
 }
 
 
+# games.json의 날짜는 KST 기준(meta.note 참조).
+# UTC로 변환하면 KST 새벽에 끝나는 일정이 하루 앞당겨 기록된다.
+KST = timezone(timedelta(hours=9))
+
+
+def _top_names(items, limit: int) -> list[str]:
+    """픽업 대상 이름 추출. 최고 등급(5성 / S랭크)이 있으면 그것만 쓴다."""
+    if not items:
+        return []
+    top = [i for i in items if str(i.get("rarity", "")) in ("5", "S")]
+    pool = top or items
+    return [i.get("name", "").strip() for i in pool[:limit] if i.get("name")]
+
+
 def _ts(unix: int | None) -> str | None:
     if not unix:
         return None
-    return datetime.fromtimestamp(unix, tz=timezone.utc).strftime("%Y-%m-%d")
+    return datetime.fromtimestamp(unix, tz=KST).strftime("%Y-%m-%d")
 
 
 def parse(game_id: str) -> list[dict]:
@@ -52,22 +66,19 @@ def parse(game_id: str) -> list[dict]:
         except ValueError:
             continue
 
-        chars   = [c["name"] for c in b.get("characters", [])[:3]]
-        weapons = [w["name"] for w in b.get("weapons", [])[:2]]
-        lc      = [l["name"] for l in b.get("light_cones", [])[:2]]
-        featured = chars or weapons or lc
+        # 게임마다 필드명이 다르다: 원신 characters/weapons,
+        # 스타레일 characters/light_cones, ZZZ agents/w_engines
+        chars = _top_names(b.get("characters") or b.get("agents"), 3)
+        gear  = _top_names(b.get("weapons") or b.get("light_cones") or b.get("w_engines"), 2)
+        featured = chars or gear
         subtitle = ", ".join(featured) if featured else ""
 
-        banner_name = b.get("name") or ""
+        banner_name = (b.get("name") or "").strip()
         if not banner_name:
-            if chars:
-                banner_name = chars[0]
-            elif weapons:
-                banner_name = weapons[0]
-            elif lc:
-                banner_name = lc[0]
-            else:
-                banner_name = "배너"
+            banner_name = featured[0] if featured else "배너"
+        # 제목과 같은 내용을 부제로 반복하지 않는다
+        if subtitle == banner_name:
+            subtitle = ""
 
         entries.append({
             "type":      "banner",

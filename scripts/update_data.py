@@ -15,12 +15,30 @@ ROOT = Path(__file__).parent.parent
 DATA_FILE = ROOT / "data" / "games.json"
 
 sys.path.insert(0, str(Path(__file__).parent))
-from parsers import genshin, game8 as g8, hoyoverse, nikke as nikke_parser
+from parsers import (
+    genshin, game8 as g8, hoyoverse,
+    nikke as nikke_parser, bluearchive as ba_parser,
+    umamusume as uma_parser,
+)
 
 
 def load_games() -> dict:
-    with open(DATA_FILE) as f:
+    # 한글·일본어 제목이 들어가므로 인코딩을 로케일에 맡기지 않는다
+    with open(DATA_FILE, encoding="utf-8") as f:
         return json.load(f)
+
+
+def save_games(data: dict) -> None:
+    """임시 파일에 쓴 뒤 교체 — 도중에 중단되어도 games.json이 깨지지 않는다."""
+    tmp = DATA_FILE.with_name(DATA_FILE.name + ".tmp")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, DATA_FILE)
+
+
+def entry_key(e: dict) -> str:
+    """병합용 키. 수동 항목에 필드가 빠져 있어도 KeyError로 죽지 않게 한다."""
+    return f"{e.get('title', '')}|{e.get('start', '')}"
 
 
 def sanitize_text(s: str) -> str:
@@ -51,23 +69,22 @@ def merge_entries(existing: list, fresh: list) -> tuple[list, int]:
             if "subtitle" in e:
                 e["subtitle"] = sanitize_text(e["subtitle"])
 
-    auto_fresh = {f"{e['title']}|{e['start']}": e for e in fresh}
+    auto_fresh = {entry_key(e): e for e in fresh}
 
     kept = []
     for e in existing:
         if not e.get("_auto"):
             kept.append(e)  # 수동 항목은 항상 유지
             # 수동 항목과 같은 키의 fresh 항목이 있다면 중복 방지를 위해 제거
-            key = f"{e['title']}|{e['start']}"
-            auto_fresh.pop(key, None)
+            auto_fresh.pop(entry_key(e), None)
             continue
-        key = f"{e['title']}|{e['start']}"
+        key = entry_key(e)
         if key in auto_fresh:
             kept.append(auto_fresh.pop(key))  # 갱신
         else:
             # 오래된 자동 항목 제거 (90일 초과)
             try:
-                end = date.fromisoformat(e["end"])
+                end = date.fromisoformat(e.get("end", ""))
                 if (date.today() - end).days <= 90:
                     kept.append(e)
             except Exception:
@@ -84,12 +101,44 @@ def merge_entries(existing: list, fresh: list) -> tuple[list, int]:
     return kept, new_count
 
 
+def report(attempted: list, failed: list, updated: list, total_new: int) -> None:
+    """실행 결과를 콘솔과 GitHub Actions(output/summary)에 남긴다.
+
+    파서가 조용히 0건을 반환해도 워크플로우가 초록불로 끝나던 문제를 막기 위해,
+    실패 목록을 후속 스텝이 읽을 수 있는 형태로 내보낸다.
+    """
+    if failed:
+        print(f"\n⚠ 파싱 실패/무수확 ({len(failed)}/{len(attempted)}): {', '.join(failed)}")
+    else:
+        print(f"\n모든 파서 정상 ({len(attempted)}개)")
+
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:
+        with open(out, "a", encoding="utf-8") as f:
+            f.write(f"failed={','.join(failed)}\n")
+            f.write(f"failed_count={len(failed)}\n")
+            f.write(f"attempted_count={len(attempted)}\n")
+
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as f:
+            f.write("## 배너/이벤트 자동 갱신\n\n")
+            f.write(f"- 파서 실행: **{len(attempted)}개**\n")
+            f.write(f"- 갱신된 게임: **{len(updated)}개** (신규 {total_new}건)\n")
+            if failed:
+                f.write(f"- ⚠ 결과 없음: **{', '.join(failed)}**\n")
+            else:
+                f.write("- ✅ 실패 없음\n")
+
+
 def run():
     print("=== 배너/이벤트 자동 갱신 시작 ===")
     data = load_games()
     today = str(date.today())
     total_new = 0
     updated_games = []
+    failed_games = []
+    attempted_games = []
 
     for game in data["games"]:
         gid = game["id"]
@@ -104,21 +153,30 @@ def run():
             elif gid == "starrail":
                 fresh = hoyoverse.parse(gid)
             elif gid == "zzz":
-                # api.ennead.cc에 ZZZ calendar 없음 → game8 fallback
-                fresh = g8.parse(gid, g8.GAME8_URLS[gid]) if gid in g8.GAME8_URLS else []
+                # api.ennead.cc가 zenless calendar를 한국어로 제공한다 (game8은 fallback)
+                fresh = hoyoverse.parse(gid)
+                if not fresh and gid in g8.GAME8_URLS:
+                    fresh = g8.parse(gid, g8.GAME8_URLS[gid])
             elif gid == "nikke":
                 fresh = nikke_parser.parse()
+            elif gid == "bluearchive":
+                fresh = ba_parser.parse()
+            elif gid == "umamusume":
+                fresh = uma_parser.parse()
             elif gid in g8.GAME8_URLS:
                 fresh = g8.parse(gid, g8.GAME8_URLS[gid])
             else:
                 print(f"  [{gid}] 파서 없음, 건너뜀")
                 continue
+            attempted_games.append(gid)
         except Exception as e:
             print(f"  [{gid}] 파서 예외: {e}")
+            failed_games.append(gid)
             continue
 
         if not fresh:
             print(f"  [{gid}] 결과 없음")
+            failed_games.append(gid)
             continue
 
         new_entries, new_count = merge_entries(game.get("entries", []), fresh)
@@ -128,6 +186,8 @@ def run():
             total_new += new_count
             print(f"  [{gid}] 항목 갱신: 총 {len(new_entries)}개 (+{new_count} 신규)")
 
+    report(attempted_games, failed_games, updated_games, total_new)
+
     if not updated_games:
         print("\n변경 없음. 종료.")
         return False
@@ -135,8 +195,7 @@ def run():
     data["meta"]["lastUpdated"] = today
     data["meta"]["autoUpdated"] = today
 
-    with open(DATA_FILE, "w") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    save_games(data)
 
     print(f"\n=== 갱신 완료: {len(updated_games)}개 게임, {total_new}개 신규 항목 ===")
     print(f"업데이트된 게임: {', '.join(updated_games)}")
@@ -144,5 +203,5 @@ def run():
 
 
 if __name__ == "__main__":
-    changed = run()
-    sys.exit(0 if changed else 0)  # 항상 0 (Actions가 commit 여부 판단)
+    run()  # 종료 코드는 항상 0 — 커밋 여부는 Actions가 git diff로 판단한다
+    sys.exit(0)

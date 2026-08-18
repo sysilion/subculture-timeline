@@ -1,18 +1,47 @@
-"""공통 유틸리티 — 날짜 파싱, Game8 HTML 스크래핑"""
-import re, requests
+"""공통 유틸리티 — HTTP 페치, 날짜 파싱"""
+import re, time, requests
 from datetime import datetime, date, timedelta
 from bs4 import BeautifulSoup
 
-UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124"
+UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
+
+# 일부 사이트(game8 등)는 UA만 보는 요청에 데이터센터 IP 기준으로 다른 응답을 준다.
+# 실제 브라우저와 같은 헤더 세트를 보내 정상 페이지를 받도록 한다.
+BROWSER_HEADERS = {
+    "User-Agent": UA,
+    "Accept": ("text/html,application/xhtml+xml,application/xml;q=0.9,"
+               "image/avif,image/webp,*/*;q=0.8"),
+    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+}
+
 MONTH_MAP = {
     'jan':1,'feb':2,'mar':3,'apr':4,'may':5,'jun':6,
     'jul':7,'aug':8,'sep':9,'oct':10,'nov':11,'dec':12
 }
 
-def fetch(url: str, timeout=20) -> str:
-    r = requests.get(url, headers={"User-Agent": UA}, timeout=timeout)
-    r.raise_for_status()
-    return r.text
+
+def fetch(url: str, timeout=20, retries=2, headers: dict | None = None) -> str:
+    """브라우저 유사 헤더로 GET. 일시적 실패는 지수 백오프로 재시도한다."""
+    hdr = dict(BROWSER_HEADERS)
+    if headers:
+        hdr.update(headers)
+    last_err = None
+    for attempt in range(retries + 1):
+        try:
+            r = requests.get(url, headers=hdr, timeout=timeout)
+            r.raise_for_status()
+            return r.text
+        except Exception as e:
+            last_err = e
+            if attempt < retries:
+                time.sleep(1.5 * (attempt + 1))
+    raise last_err
 
 def soup(html: str) -> BeautifulSoup:
     return BeautifulSoup(html, "lxml")

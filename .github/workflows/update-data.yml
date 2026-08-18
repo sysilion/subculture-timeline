@@ -12,6 +12,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,6 +35,7 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Run update script
+        id: update
         run: python scripts/update_data.py
 
       - name: Commit if changed
@@ -51,4 +53,12 @@ jobs:
         run: gh workflow run deploy.yml
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 파서가 조용히 0건을 반환해도 초록불로 끝나던 문제를 막는다.
+      # 커밋·배포 뒤에 두어, 정상 파서의 결과는 반영하면서 실패만 드러낸다.
+      - name: Fail if any parser returned nothing
+        if: steps.update.outputs.failed_count != '0'
+        run: |
+          echo "::error::파싱 실패/무수확 ${{ steps.update.outputs.failed_count }}개: ${{ steps.update.outputs.failed }}"
+          exit 1
 

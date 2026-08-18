@@ -1,9 +1,9 @@
 """Game8 범용 파서 — 6개 게임에서 공유"""
-import re, requests
+import re
 from datetime import date, timedelta
 from bs4 import BeautifulSoup
 
-UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124"
+from .base import fetch
 
 MONTH_MAP = {
     'jan':1,'january':1,'feb':2,'february':2,'mar':3,'march':3,
@@ -90,9 +90,7 @@ def parse(game_id: str, urls: list[str], version_hint: str = "") -> list[dict]:
 
     for url in urls:
         try:
-            r = requests.get(url, headers={"User-Agent": UA}, timeout=20)
-            r.raise_for_status()
-            html = r.text
+            html = fetch(url)
         except Exception as e:
             print(f"  [{game_id}] fetch 실패 ({url}): {e}")
             continue
@@ -100,6 +98,7 @@ def parse(game_id: str, urls: list[str], version_hint: str = "") -> list[dict]:
         ref_year = _infer_year(html)
         sp = BeautifulSoup(html, "lxml")
         rows = sp.select("tr")
+        before = len(all_entries)
 
         # ── 패턴 A: [날짜범위, 이름] ──
         for row in rows:
@@ -220,6 +219,11 @@ def parse(game_id: str, urls: list[str], version_hint: str = "") -> list[dict]:
                     name_raw = re.sub(r'\s*\d{1,2}/\d{1,2}/\d{2,4}\s*[-–]\s*\d{1,2}/\d{1,2}/\d{2,4}.*$', '', name_raw)
                     name_raw = re.sub(r'\s*-\s*TBD.*$', '', name_raw)
                     _add_entry(all_entries, seen, game_id, name_raw, start, end, version_hint)
+
+        # 0건이면 차단·구조 변경을 구분할 수 있게 응답 상태를 남긴다
+        if len(all_entries) == before:
+            print(f"  [{game_id}] 0건 ({url.rsplit('/', 1)[-1]}): "
+                  f"HTML {len(html)}자, tr {len(rows)}개")
 
     print(f"  [{game_id}] 파싱 완료: {len(all_entries)}개")
     return all_entries

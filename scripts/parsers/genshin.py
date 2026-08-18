@@ -1,47 +1,85 @@
 """원신 파서 — paimon.moe GitHub (banners.js + timeline.js)"""
 import subprocess, json, tempfile, os, re
-from datetime import date, datetime, timezone
+from datetime import date
 
 BANNERS_URL  = "https://raw.githubusercontent.com/MadeBaruna/paimon-moe/main/src/data/banners.js"
 TIMELINE_URL = "https://raw.githubusercontent.com/MadeBaruna/paimon-moe/main/src/data/timeline.js"
 
 _JS_RUNNER = """
 const https = require('https');
+const vm = require('vm');
 const url = process.argv[2];
+const MAX_BYTES = 8 * 1024 * 1024;
+
 https.get(url, res => {
+  if (res.statusCode !== 200) {
+    console.error('HTTP ' + res.statusCode);
+    res.resume();
+    process.exit(1);
+  }
   let raw = '';
-  res.on('data', d => raw += d);
+  res.setEncoding('utf8');
+  res.on('data', d => {
+    raw += d;
+    if (raw.length > MAX_BYTES) {
+      console.error('response too large');
+      res.destroy();
+      process.exit(1);
+    }
+  });
   res.on('end', () => {
-    // export const X = → module.exports.X =
-    raw = raw.replace(/export const (\\w+) =/, 'module.exports.$1 =');
-    const tmp = require('os').tmpdir() + '/paimon_tmp.cjs';
-    require('fs').writeFileSync(tmp, raw);
-    const mod = require(tmp);
-    console.log(JSON.stringify(Object.values(mod)[0]));
+    // 원격 파일을 require()로 실행하지 않는다.
+    // require/process/fs/globalThis가 없는 빈 컨텍스트에서 데이터 리터럴만 평가하므로
+    // 상류 저장소가 침해되어도 파일·네트워크 접근 수단이 없다.
+    const code = raw.replace(/export\\s+const\\s+(\\w+)\\s*=/g, 'exports.$1 =');
+    const sandbox = { exports: Object.create(null) };
+    vm.createContext(sandbox);
+    try {
+      vm.runInContext(code, sandbox, { timeout: 5000, displayErrors: false });
+    } catch (err) {
+      console.error('eval failed: ' + err.message);
+      process.exit(1);
+    }
+    const vals = Object.values(sandbox.exports);
+    if (!vals.length) {
+      console.error('no export found');
+      process.exit(1);
+    }
+    console.log(JSON.stringify(vals[0]));
   });
 }).on('error', e => { console.error(e.message); process.exit(1); });
 """.strip()
 
 def _fetch_js(url: str) -> list | dict | None:
+    """원격 데이터 파일을 Node vm 샌드박스에서 평가해 JSON으로 받는다."""
+    tmp_path = None
     try:
-        tmp_js = tempfile.NamedTemporaryFile(suffix='.cjs', delete=False, mode='w')
-        tmp_js.write(_JS_RUNNER)
-        tmp_js.close()
+        with tempfile.NamedTemporaryFile(
+            suffix=".cjs", delete=False, mode="w", encoding="utf-8"
+        ) as tmp_js:
+            tmp_js.write(_JS_RUNNER)
+            tmp_path = tmp_js.name
         result = subprocess.run(
-            ["node", tmp_js.name, url],
-            capture_output=True, text=True, timeout=30
+            ["node", tmp_path, url],
+            capture_output=True, text=True, timeout=60
         )
-        os.unlink(tmp_js.name)
         if result.returncode != 0:
+            print(f"  [genshin] JS 평가 실패: {result.stderr.strip()[:200]}")
             return None
         return json.loads(result.stdout)
     except Exception as e:
         print(f"  [genshin] JS fetch 실패: {e}")
         return None
+    finally:
+        # timeout 등 예외 경로에서도 임시 파일을 반드시 정리
+        if tmp_path:
+            try:
+                os.unlink(tmp_path)
+            except OSError:
+                pass
+
 
 def parse() -> list[dict]:
-    now = datetime.now(timezone.utc)
-    cutoff = date.fromisoformat(str(now.date())) .replace(year=now.year - 1)  # 1년 전까지
     entries = []
 
     # ── 이벤트 (timeline.js) ──
