@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-20",
+    "lastUpdated": "2026-08-19",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-20"
+    "autoUpdated": "2026-08-19"
   },
   "games": [
     {
@@ -315,6 +315,42 @@
           "subtitle": "백조의 호수, 붉은 달의 형상",
           "rarity": 5,
           "start": "2026-08-11",
+          "end": "2026-09-01",
+          "version": "7.0",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원",
+          "subtitle": "오데트",
+          "rarity": 5,
+          "start": "2026-08-12",
+          "end": "2026-09-01",
+          "version": "7.0",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원 2",
+          "subtitle": "아를레키노",
+          "rarity": 5,
+          "start": "2026-08-12",
+          "end": "2026-09-01",
+          "version": "7.0",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "무기 기원",
+          "subtitle": "백조의 호수, 붉은 달의 형상",
+          "rarity": 5,
+          "start": "2026-08-12",
           "end": "2026-09-01",
           "version": "7.0",
           "tentative": false,
@@ -649,6 +685,16 @@
         },
         {
           "type": "event",
+          "title": "현실 속 환상극",
+          "start": "2026-08-01",
+          "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "지맥의 격류",
           "start": "2026-08-02",
           "end": "2026-08-09",
@@ -679,6 +725,26 @@
         },
         {
           "type": "event",
+          "title": "초행자 지원·설원 탐험",
+          "start": "2026-08-11",
+          "end": "2026-08-24",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "수련의 방·묘수풀이",
+          "start": "2026-08-12",
+          "end": "2026-09-23",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "연월 나선",
           "start": "2026-08-15",
           "end": "2026-09-15",
@@ -689,9 +755,9 @@
         },
         {
           "type": "event",
-          "title": "지맥 제압전",
-          "start": "2026-08-19",
-          "end": "2026-09-21",
+          "title": "연월 나선",
+          "start": "2026-08-16",
+          "end": "2026-09-16",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -870,7 +936,7 @@
         {
           "type": "banner",
           "title": "히메코•노바",
-          "subtitle": "히메코•노바, 맥택, 한아",
+          "subtitle": "",
           "rarity": 5,
           "start": "2026-07-15",
           "end": "2026-08-25",
@@ -894,7 +960,7 @@
         {
           "type": "banner",
           "title": "별이 밤하늘을 밝힐 때",
-          "subtitle": "별이 밤하늘을 밝힐 때, 조화가 침묵한 후",
+          "subtitle": "",
           "rarity": 5,
           "start": "2026-07-15",
           "end": "2026-08-25",
@@ -930,7 +996,7 @@
         {
           "type": "banner",
           "title": "로빈•서머레토",
-          "subtitle": "로빈•서머레토, 히아킨, 단항",
+          "subtitle": "로빈•서머레토, 히아킨",
           "rarity": 5,
           "start": "2026-08-26",
           "end": "2026-09-12",
@@ -954,10 +1020,10 @@
         {
           "type": "banner",
           "title": "어벤츄린•웨이브",
-          "subtitle": "어벤츄린•웨이브, 애쉬베일, 삼포",
+          "subtitle": "어벤츄린•웨이브, 애쉬베일",
           "rarity": 5,
           "start": "2026-09-12",
-          "end": "2026-09-27",
+          "end": "2026-09-28",
           "version": "4.5",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -969,7 +1035,7 @@
           "subtitle": "파도에 내던진 한여름, 거짓말의 종막",
           "rarity": 5,
           "start": "2026-09-12",
-          "end": "2026-09-27",
+          "end": "2026-09-28",
           "version": "4.5",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -1224,7 +1290,7 @@
           "type": "event",
           "title": "반부패 「전문가」",
           "start": "2026-07-13",
-          "end": "2026-08-25",
+          "end": "2026-08-26",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -1252,6 +1318,16 @@
         },
         {
           "type": "event",
+          "title": "속세의 두루마리",
+          "start": "2026-07-15",
+          "end": "2026-08-26",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "창날과 기사",
           "start": "2026-07-20",
           "end": "2026-08-31",
@@ -1264,7 +1340,7 @@
           "type": "event",
           "title": "환조: 성배전쟁",
           "start": "2026-07-24",
-          "end": "2026-08-25",
+          "end": "2026-08-26",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -1274,7 +1350,7 @@
           "type": "event",
           "title": "운명의 계약•재개",
           "start": "2026-07-24",
-          "end": "2026-11-10",
+          "end": "2026-11-11",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -1850,7 +1926,7 @@
           "type": "event",
           "title": "A Glimpse of Xuanfang",
           "start": "2026-07-10",
-          "end": "2027-01-06",
+          "end": "2026-08-19",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -1908,6 +1984,16 @@
         },
         {
           "type": "event",
+          "title": "Ascendant Aces",
+          "start": "2026-07-30",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Lollo Campaign: New Journey",
           "start": "2026-08-06",
           "end": "2026-08-19",
@@ -1921,6 +2007,66 @@
           "title": "Chord Cleansing",
           "start": "2026-08-12",
           "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Gifts of Drifting Mist",
+          "start": "2026-08-20",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Resonance Sim Realm",
+          "start": "2026-08-22",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Second Coming of Solaris: Coded Deception",
+          "start": "2026-08-27",
+          "end": "2026-09-14",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Strings Remember",
+          "start": "2026-09-03",
+          "end": "2026-09-21",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "If Dreams Still Reverberate",
+          "start": "2026-09-10",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "3.6 Wuthering Exploration",
+          "start": "2026-09-17",
+          "end": "2026-09-29",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -1995,6 +2141,102 @@
           "end": "2026-07-29",
           "version": "3.0",
           "tentative": true
+        },
+        {
+          "type": "banner",
+          "title": "레미엘",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-07-29",
+          "end": "2026-09-08",
+          "version": "3.1",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "아리아",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-07-29",
+          "end": "2026-08-19",
+          "version": "3.1",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "실낙원",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-07-29",
+          "end": "2026-09-08",
+          "version": "3.1",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "활기찬 일격",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-07-29",
+          "end": "2026-08-19",
+          "version": "3.1",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "시그리드",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-08-19",
+          "end": "2026-09-08",
+          "version": "3.1",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "다이아린",
+          "subtitle": "다이아린, 유즈하, 하루마사",
+          "rarity": 5,
+          "start": "2026-08-19",
+          "end": "2026-09-08",
+          "version": "3.1",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "배너",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-08-19",
+          "end": "2026-09-08",
+          "version": "3.1",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "7×24",
+          "subtitle": "7×24, 정교한 기교",
+          "rarity": 5,
+          "start": "2026-08-19",
+          "end": "2026-09-08",
+          "version": "3.1",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
         },
         {
           "type": "event",
@@ -2157,6 +2399,16 @@
         },
         {
           "type": "event",
+          "title": "모의 세계 섬멸전",
+          "start": "2026-06-17",
+          "end": "2026-10-21",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Gleaming Shadow Team Battle",
           "start": "2026-06-19",
           "end": "2026-07-13",
@@ -2253,6 +2505,96 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "여름과 함께 온 파도",
+          "start": "2026-07-28",
+          "end": "2026-09-07",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "마르셀 주년 기념 선물",
+          "start": "2026-07-29",
+          "end": "2026-09-09",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "파에톤 연례 대공개",
+          "start": "2026-07-29",
+          "end": "2026-09-09",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "찰칵! 스포트라이트 대결!",
+          "start": "2026-08-07",
+          "end": "2026-08-24",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "시유 방어전",
+          "start": "2026-08-07",
+          "end": "2026-08-21",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "위험한 강습전",
+          "start": "2026-08-14",
+          "end": "2026-08-28",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "바삭바삭 요리 플랜",
+          "start": "2026-08-19",
+          "end": "2026-09-07",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "위험한 수배범과 여유로운 휴가",
+          "start": "2026-08-24",
+          "end": "2026-09-07",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "딩동!\n견습 우체부 배달 중",
+          "start": "2026-08-28",
+          "end": "2026-09-14",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
           "_auto": true
         }
       ],
@@ -2586,6 +2928,16 @@
         },
         {
           "type": "event",
+          "title": "Bedazzled Issue (Ver. 1.4 Phase 2) 08/09/2026 - TBD",
+          "start": "2026-07-16",
+          "end": "2027-01-12",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "North Yearns The Rift Vigile (Ver. 1.4 Phase 1) 07/16/2026 - 08/06/2026",
           "start": "2026-08-06",
           "end": "2026-08-27",
@@ -2618,7 +2970,7 @@
           "type": "event",
           "title": "Bedazzling Dawnstar Sign-In (Version 1.4)",
           "start": "2026-08-09",
-          "end": "2026-08-30",
+          "end": "2026-09-02",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -2629,6 +2981,46 @@
           "title": "Period:",
           "start": "2026-08-09",
           "end": "2026-08-30",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Good Morning From Your Dawnstar (Ver. 1.4 Phase 2)",
+          "start": "2026-08-09",
+          "end": "2026-09-02",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Rooted Realm (Version 1.4)",
+          "start": "2026-08-09",
+          "end": "2026-08-30",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Sanity Supply (Version 1.4)",
+          "start": "2026-08-26",
+          "end": "2026-09-02",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Period:",
+          "start": "2026-08-26",
+          "end": "2026-09-02",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -2709,16 +3101,6 @@
           "start": "2026-06-24",
           "end": "2026-07-08",
           "version": "1.1"
-        },
-        {
-          "type": "event",
-          "title": "Tiger Perks",
-          "start": "2026-04-29",
-          "end": "2026-05-13",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
         },
         {
           "type": "event",
@@ -2931,7 +3313,147 @@
           "type": "event",
           "title": "Circle Gift",
           "start": "2026-07-08",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "999 Nights",
+          "start": "2026-07-08",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Mews Flash",
+          "start": "2026-07-08",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Neon Rift Mystery Box",
+          "start": "2026-07-08",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Resolve Perks",
+          "start": "2026-07-08",
           "end": "2026-07-29",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Stamina Recharge",
+          "start": "2026-07-13",
+          "end": "2026-07-20",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Shadow-n-Seek",
+          "start": "2026-07-17",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Gold Clash",
+          "start": "2026-07-20",
+          "end": "2026-08-03",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Market Opening Rehearsal",
+          "start": "2026-07-29",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Wayfarer Perks",
+          "start": "2026-07-29",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Going, Going, Gone",
+          "start": "2026-07-29",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Pixel Surge",
+          "start": "2026-08-03",
+          "end": "2026-08-10",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Fishing Frenzy",
+          "start": "2026-08-03",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Warren Lucky Flip",
+          "start": "2026-08-05",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Fons Rush",
+          "start": "2026-08-10",
+          "end": "2026-08-17",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -2988,16 +3510,6 @@
         },
         {
           "type": "banner",
-          "title": "An Invitation to Break the Ice",
-          "start": "2026-04-29",
-          "end": "2026-05-05",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "An Invitation to Break the Ice 2",
           "start": "2026-05-20",
           "end": "2026-05-26",
@@ -3034,86 +3546,6 @@
           "end": "2026-07-28",
           "version": "1.2",
           "tentative": true
-        },
-        {
-          "type": "event",
-          "title": "Welcome to the Maid & Clover Inn",
-          "start": "2026-04-15",
-          "end": "2026-05-12",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Calm Before the Storm, Premium Maid Service",
-          "start": "2026-04-15",
-          "end": "2026-05-05",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Maid & Clover Mascot",
-          "start": "2026-04-15",
-          "end": "2026-05-05",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Maid & Clover Mascot (Recruit)",
-          "start": "2026-04-15",
-          "end": "2026-05-05",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Wind-Harboring Broom (Artifact)",
-          "start": "2026-04-15",
-          "end": "2026-05-05",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Anomaly: El Dorado Guardian",
-          "start": "2026-04-22",
-          "end": "2026-05-05",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Capture Event: Monsterling Research Deep Dive!",
-          "start": "2026-04-22",
-          "end": "2026-05-05",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Special Thank You 7-Day Gift Event",
-          "start": "2026-04-28",
-          "end": "2026-05-12",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
         },
         {
           "type": "event",
@@ -3159,16 +3591,6 @@
           "title": "Blazing Kumiho (Artifact)",
           "start": "2026-04-29",
           "end": "2026-05-26",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "May Special Missions",
-          "start": "2026-05-04",
-          "end": "2026-05-19",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -3307,11 +3729,71 @@
       "entries": [
         {
           "type": "banner",
+          "title": "Aru, Eimi, Haruna, Hifumi, Hina, Iori, Maki, Neru, Izumi, Shun, Sumire, Tsurugi, Hibiki, Karin, Saya, Hoshino, Shiroko,",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2025-09-23",
+          "end": "2099-12-30",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Kisaki, Reijo, Yuuka (Sportswear) +1",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-05-12",
+          "end": "2026-05-25",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Rio (Battle), Himari (Battle)",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-05-26",
+          "end": "2026-06-08",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Kei, Arisu (Battle), Hoshino (Battle) +1",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-06-09",
+          "end": "2026-06-15",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Ichika, Kasumi, Sakurako, Eimi (Swimsuit)",
           "start": "2026-06-16",
           "end": "2026-06-23",
           "tentative": false,
           "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Ichika, Kasumi, Sakurako +1",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-06-16",
+          "end": "2026-06-22",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
         },
         {
           "type": "banner",
@@ -3323,11 +3805,35 @@
         },
         {
           "type": "banner",
+          "title": "Yuzu (Battle), Eimi (Battle)",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-06-23",
+          "end": "2026-07-06",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Momoi (Maid), Midori (Maid), Aris (Maid), Kayoko (New Year)",
           "start": "2026-07-07",
           "end": "2026-07-14",
           "tentative": true,
           "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Momoi (Maid), Midori (Maid), Arisu (Maid) +2",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-07-07",
+          "end": "2026-07-13",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
         },
         {
           "type": "banner",
@@ -3339,6 +3845,30 @@
         },
         {
           "type": "banner",
+          "title": "Koyuki (Pajama), Yuuka (Pajama), Noa (Pajama) +2",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-07-14",
+          "end": "2026-07-20",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Konoka, Rena, Hare (Camping) +3",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-07-21",
+          "end": "2026-08-03",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Konoka, Rena",
           "start": "2026-07-28",
           "end": "2026-08-11",
@@ -3347,11 +3877,35 @@
         },
         {
           "type": "banner",
+          "title": "Akane (School Uniform), Seia, Asuna (School Uniform) +1",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-08-04",
+          "end": "2026-08-17",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Akane (School), Seia, Asuna (School), Toki (Bunny)",
           "start": "2026-08-11",
           "end": "2026-08-25",
           "tentative": true,
           "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Niko, Kurumi",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-08-18",
+          "end": "2026-08-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
         },
         {
           "type": "banner",
@@ -3368,6 +3922,18 @@
           "end": "2026-09-15",
           "tentative": true,
           "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Sumire (Part-Timer), Rei, Akari (New Year) +2",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-09-01",
+          "end": "2026-09-07",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
         },
         {
           "type": "banner",
@@ -3392,8 +3958,420 @@
           "end": "2026-10-20",
           "tentative": true,
           "source": "ba.joexyz.online"
+        },
+        {
+          "type": "event",
+          "title": "Permanent",
+          "start": "2023-10-10",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Revolutionary Ivan Kupala: Moustache, Pudding and Red Winter",
+          "start": "2023-10-17",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Summer Sky's Wishlist",
+          "start": "2023-11-21",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Permanent",
+          "start": "2024-01-09",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Playing Tag at Neverland",
+          "start": "2024-01-16",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Hot Springs Resort No. 227 Daily Logs!",
+          "start": "2024-04-16",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Bunny Chasers on Board",
+          "start": "2024-06-18",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "New Year's Rhapsody No. 68",
+          "start": "2024-07-09",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Overtime Guide Task!",
+          "start": "2024-07-23",
+          "end": "2125-12-30",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Schale's Happy ♥ Valentine Patrol",
+          "start": "2024-08-13",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Clumsy Sister and the Magician of the Old Library",
+          "start": "2024-09-17",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "After-School Sweets Story: Sweet Secrets and Shootouts",
+          "start": "2024-10-08",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "An Unconcealed Heart",
+          "start": "2024-11-05",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Abydos Resort Restoration Task Force",
+          "start": "2024-12-03",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Business Trip! Momoyodou Beach Shack Franchise Plan",
+          "start": "2024-12-14",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "On your mark @ Millennium",
+          "start": "2025-06-03",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Get Set, Go! Kivotos Halo Festival!",
+          "start": "2025-06-03",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Permanent",
+          "start": "2025-07-01",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "New Year's Aperitif ~One-and-Done Match~",
+          "start": "2025-08-19",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Cathedral's Merry Christmas: Remedial Knights' Gift",
+          "start": "2025-08-19",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Dragon & Tortoise, Working Together for a Better Future",
+          "start": "2025-09-16",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "A Special Teatime for Honored Guests",
+          "start": "2025-09-23",
+          "end": "2125-12-30",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Permanent",
+          "start": "2025-12-09",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Trinity Extracurriculars: In Search of Hidden Ruins",
+          "start": "2026-03-31",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Academy Club Story: A Finale for Two",
+          "start": "2026-04-07",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Senses Descend",
+          "start": "2026-05-12",
+          "end": "2026-05-25",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Operational Plan: Steel Continent",
+          "start": "2026-05-26",
+          "end": "2026-06-29",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Defense Exercise",
+          "start": "2026-06-09",
+          "end": "2026-06-15",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Trip-Trap-Train",
+          "start": "2026-06-16",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Game Development Department's Cleanup Operation!",
+          "start": "2026-06-30",
+          "end": "2026-07-13",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Valentine's Day Promise",
+          "start": "2026-06-30",
+          "end": "2026-07-13",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Shooting Exercise",
+          "start": "2026-07-07",
+          "end": "2026-07-13",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Secret Midnight Party: The Chimes of Tag",
+          "start": "2026-07-14",
+          "end": "2026-07-20",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Kivotos Unsolved Mysteries ～The Great Tsuchinoko Investigation to Ward Off Evil～",
+          "start": "2026-07-21",
+          "end": "2026-08-03",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Cyber New Year March",
+          "start": "2026-07-21",
+          "end": "2099-12-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Code: BOX - The Shadow Approaching Millennium",
+          "start": "2026-08-04",
+          "end": "2026-08-17",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Assault Exercise",
+          "start": "2026-08-04",
+          "end": "2026-08-10",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "SCHALE Settlement Task with General Student Council",
+          "start": "2026-08-11",
+          "end": "2026-08-17",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Special Mission: Lore Pursuit",
+          "start": "2026-08-18",
+          "end": "2026-08-31",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Pray-Ball! Swing for the Grand Slam!",
+          "start": "2026-09-01",
+          "end": "2026-09-14",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Defense Exercise",
+          "start": "2026-09-01",
+          "end": "2026-09-07",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
         }
-      ]
+      ],
+      "nameKo": "블루 아카이브",
+      "nameEn": "Blue Archive"
     },
     {
       "id": "nikke",
@@ -3903,7 +4881,9 @@
           "source": "nikke.gg",
           "_auto": true
         }
-      ]
+      ],
+      "nameKo": "승리의 여신: 니케",
+      "nameEn": "Goddess of Victory: NIKKE"
     },
     {
       "id": "umamusume",
@@ -3916,11 +4896,41 @@
       "entries": [
         {
           "type": "banner",
+          "title": "Oguri Cap (Guts SR)",
+          "start": "2026-06-04",
+          "end": "2026-06-14",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Mejiro Dober & Taiki Shuttle (Camp)",
           "start": "2026-06-05",
           "end": "2026-06-19",
           "tentative": true,
           "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Matikanetannhauser (Wit SSR)",
+          "start": "2026-06-11",
+          "end": "2026-06-22",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Gold City (Wit SR)",
+          "start": "2026-06-18",
+          "end": "2026-06-27",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
         },
         {
           "type": "banner",
@@ -3940,6 +4950,26 @@
         },
         {
           "type": "banner",
+          "title": "El Condor Pasa (Speed SR)",
+          "start": "2026-06-25",
+          "end": "2026-07-04",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Nakayama Festa (Wit SSR)",
+          "start": "2026-07-02",
+          "end": "2026-07-14",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Gold Ship & Mejiro McQueen (Summer)",
           "start": "2026-07-03",
           "end": "2026-07-17",
@@ -3953,6 +4983,26 @@
           "end": "2026-07-17",
           "tentative": true,
           "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Yukino Bijin (Wit SSR)",
+          "start": "2026-07-07",
+          "end": "2026-07-16",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Seiun Sky (Wit SR)",
+          "start": "2026-07-16",
+          "end": "2026-07-26",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
         },
         {
           "type": "banner",
@@ -3980,13 +5030,115 @@
         },
         {
           "type": "banner",
+          "title": "Smart Falcon (Power SSR) Reruns",
+          "start": "2026-08-05",
+          "end": "2026-08-13",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "K.S. Miracle (Guts SR)",
+          "start": "2026-08-12",
+          "end": "2026-08-21",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Agnes Digital & Meisho Doto (Halloween)",
           "start": "2026-08-18",
           "end": "2026-09-01",
           "tentative": true,
           "source": "gamerant.com"
+        },
+        {
+          "type": "banner",
+          "title": "Daitaku Helios (Speed SSR)",
+          "start": "2026-08-18",
+          "end": "2026-08-30",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Maruzensky (Speed SSR) Reruns",
+          "start": "2026-08-25",
+          "end": "2026-09-02",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Takarazuka Kinen",
+          "start": "2026-06-07",
+          "end": "2026-06-13",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Search! Solve! Summer!",
+          "start": "2026-06-11",
+          "end": "2026-06-22",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Cancer Cup (CM15)",
+          "start": "2026-06-21",
+          "end": "2026-06-30",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Leo Cup 2026 (CM16)",
+          "start": "2026-07-12",
+          "end": "2026-07-21",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Virgo Cup 2026 (CM17)",
+          "start": "2026-08-05",
+          "end": "2026-08-14",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Libra Cup 2026 (CM18)",
+          "start": "2026-08-25",
+          "end": "2026-09-03",
+          "version": "",
+          "tentative": false,
+          "source": "game8.co",
+          "_auto": true
         }
-      ]
+      ],
+      "nameKo": "우마무스메",
+      "nameEn": "Umamusume: Pretty Derby"
     },
     {
       "id": "limbus",
@@ -4014,7 +5166,9 @@
           "tentative": true,
           "source": "limbuscompany.wiki.gg"
         }
-      ]
+      ],
+      "nameKo": "림버스 컴퍼니",
+      "nameEn": "Limbus Company"
     },
     {
       "id": "trickcal",
@@ -4049,7 +5203,9 @@
           "tentative": true,
           "source": "ruliweb.com"
         }
-      ]
+      ],
+      "nameKo": "트릭컬 RE:VIVE",
+      "nameEn": "Trickcal RE:VIVE"
     }
   ],
   "candidates": [
