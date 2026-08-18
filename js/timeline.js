@@ -18,8 +18,12 @@ const Timeline = (() => {
   };
 
   let data = null;
-  let _barIdCounter = 0;
   let today = null;
+
+  // 바 엘리먼트 → { game, entry, key } (DOM에 JSON을 직렬화해 두지 않기 위한 참조 테이블)
+  const barData  = new WeakMap();
+  // 안정 키 → 바 엘리먼트 (상세 패널에서 O(1) 조회)
+  const barIndex = new Map();
   let startDate = null;
   let totalDays = 0;
 
@@ -114,6 +118,8 @@ const Timeline = (() => {
 
     // 언어 전환 시 렌더 텍스트 갱신 (행 레이블·오늘선·리스트 뷰)
     document.addEventListener('tl-langchange', () => {
+      buildFilters();   // 칩 이름도 언어를 따라간다
+      restoreFilters();
       renderGames();
       renderTodayLine();
       if (currentView === 'list') renderListView();
@@ -170,6 +176,28 @@ const Timeline = (() => {
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
 
+  /* ── 언어별 게임 이름 (nameEn/nameKo가 없으면 name으로 폴백) ── */
+  function curLang() {
+    return (typeof I18n !== 'undefined') ? I18n.current() : 'ko';
+  }
+
+  function gameName(game) {
+    return curLang() === 'en'
+      ? (game.nameEn || game.name)
+      : (game.nameKo || game.name);
+  }
+
+  function gameFullName(game) {
+    return curLang() === 'en'
+      ? (game.nameEn || game.fullName || game.name)
+      : (game.fullName || game.name);
+  }
+
+  /* ── 엔트리 안정 키 — 재렌더·언어 전환에도 동일하게 유지된다 ── */
+  function entryKey(game, entry) {
+    return entry.id || `${game.id}|${entry.type}|${entry.start}|${entry.end}|${entry.title}`;
+  }
+
   /* ── URL 해시 상태 (뷰·범위·숨긴 게임 공유) ── */
   let hashHiddenGames = null; // 최초 로드 시 해시의 hide= 값 (1회 적용 후 해제)
 
@@ -216,11 +244,11 @@ function buildFilters() {
     chip.style.setProperty('--chip-color', game.color);
 
     const iconHtml = game.iconUrl
-      ? `<img class="chip-icon-img" src="${esc(game.iconUrl)}" alt="${esc(game.name)}" onerror="this.style.display='none'">`
+      ? `<img class="chip-icon-img" src="${esc(game.iconUrl)}" alt="${esc(gameName(game))}" onerror="this.style.display='none'">`
       : `<span class="chip-icon">${esc(game.icon)}</span>`;
 
     const entryCount = game.entries.length;
-    chip.innerHTML = `${iconHtml}<span class="chip-name">${esc(game.nameKo || game.name)}</span><span class="chip-count">${entryCount}</span>`;
+    chip.innerHTML = `${iconHtml}<span class="chip-name">${esc(gameName(game))}</span><span class="chip-count">${entryCount}</span>`;
     chip.addEventListener('click', () => toggleGame(game.id, chip));
     bar.appendChild(chip);
   });
@@ -234,7 +262,7 @@ let searchTerm = '';
 
 function gameMatchesSearch(game) {
   if (!searchTerm) return true;
-  return [game.nameKo, game.name, game.fullName]
+  return [game.nameKo, game.nameEn, game.name, game.fullName]
     .some(n => n && n.toLowerCase().includes(searchTerm));
 }
 
@@ -435,6 +463,10 @@ function saveFilters() {
     // 기존 섹션 제거 (grid-lines 제외)
     container.querySelectorAll('.game-section').forEach(el => el.remove());
 
+    // 이전 렌더의 바 참조·툴팁 캐시 폐기 (누적되면 메모리 누수)
+    barIndex.clear();
+    tooltipCache.clear();
+
     if (!data) return;
 
     data.games.forEach(game => {
@@ -472,7 +504,7 @@ function saveFilters() {
     label.className = 'game-label';
     label.tabIndex = 0;
     label.setAttribute('role', 'button');
-    label.setAttribute('aria-label', `${game.nameKo || game.name} 상세보기`);
+    label.setAttribute('aria-label', `${gameName(game)} ${t('detailHint', '상세보기')}`);
     label.style.borderLeft = `3px solid ${game.color}`;
     label.style.height = (totalRows * CFG.rowH) + 'px';
 
@@ -495,7 +527,7 @@ function saveFilters() {
       <div class="game-label-drag" title="${esc(t('dragHint', '드래그하여 순서 변경'))}"></div>
       ${iconHtml}
       <div class="game-label-content">
-        <div class="game-label-name">${esc(game.nameKo || game.name)}</div>
+        <div class="game-label-name">${esc(gameName(game))}</div>
         <div class="game-label-dev">${esc(game.developer)}</div>
       </div>
       <div class="game-label-hint">${esc(t('detailHint', '상세보기'))}</div>
@@ -580,21 +612,15 @@ function buildBar(entry, game) {
     }
   }
 
-  // 툴팁 데이터 (entry.id가 없을 경우 카운터 기반 ID 생성 — crypto.randomUUID 대체)
-  const entryData = {
-    gameName: game.name,
-    gameFullName: game.fullName,
-    gameColor: game.color,
-    gameIcon: game.icon,
-    ...entry,
-    id: entry.id || `bar-${++_barIdCounter}`
-  };
-  bar.dataset.entry = JSON.stringify(entryData);
+  // 툴팁·하이라이트용 참조 — DOM에 JSON을 직렬화해 두지 않는다
+  const key = entryKey(game, entry);
+  barData.set(bar, { game, entry, key });
+  barIndex.set(key, bar);
 
   // 키보드 접근성: Tab으로 포커스 → 툴팁 표시
   bar.tabIndex = 0;
   bar.setAttribute('aria-label',
-    `${game.nameKo || game.name} — ${entry.title} (${entry.start} ~ ${entry.end})`);
+    `${gameName(game)} — ${entry.title} (${entry.start} ~ ${entry.end})`);
 
   return bar;
 }
@@ -634,14 +660,14 @@ function buildBar(entry, game) {
     let rafId = null;
 
     // ── requestAnimationFrame 쓰로틀 ──
-    let lastMouseEvt = null;
-    function schedulePositionUpdate(e) {
-      lastMouseEvt = e;
+    // 이벤트 객체는 재사용될 수 있으므로 좌표만 복사해 둔다
+    const lastPos = { clientX: 0, clientY: 0 };
+    function schedulePositionUpdate() {
       if (rafId === null) {
         rafId = requestAnimationFrame(() => {
           rafId = null;
-          if (tooltip.classList.contains('visible') && lastMouseEvt) {
-            positionTooltip(tooltip, lastMouseEvt);
+          if (tooltip.classList.contains('visible')) {
+            positionTooltip(tooltip, lastPos);
           }
         });
       }
@@ -654,7 +680,8 @@ function buildBar(entry, game) {
       hoverDelayTimer = setTimeout(() => {
         currentBar = pendingBar;
         pendingBar = null;
-        showTooltip(bar, tooltip);
+        // 좌표를 넘기지 않으면 positionTooltip에서 TypeError가 난다
+        showTooltip(bar, tooltip, lastPos);
       }, HOVER_DELAY);
     }
 
@@ -668,13 +695,18 @@ function buildBar(entry, game) {
     // 마우스 이벤트 리스너
     scroll.addEventListener('mouseover', (e) => {
       const bar = e.target.closest('.entry-bar');
-      if (!bar || !bar.dataset.entry) return;
+      if (!bar || !barData.has(bar)) return;
+      lastPos.clientX = e.clientX;
+      lastPos.clientY = e.clientY;
       showDelayed(bar);
     }, { signal });
 
     scroll.addEventListener('mousemove', (e) => {
+      // hover 딜레이 중에도 좌표를 최신으로 유지해야 첫 표시 위치가 맞는다
+      lastPos.clientX = e.clientX;
+      lastPos.clientY = e.clientY;
       if (!tooltip.classList.contains('visible')) return;
-      schedulePositionUpdate(e);
+      schedulePositionUpdate();
     }, { signal });
 
     scroll.addEventListener('mouseout', (e) => {
@@ -692,7 +724,7 @@ function buildBar(entry, game) {
     // 키보드 접근성: 포커스 이동 시 툴팁 즉시 표시 (딜레이 없음)
     document.addEventListener('focusin', (e) => {
       const bar = e.target.closest ? e.target.closest('.entry-bar') : null;
-      if (bar && bar.dataset.entry) {
+      if (bar && barData.has(bar)) {
         clearTimeout(hoverDelayTimer);
         pendingBar = null;
         currentBar = bar;
@@ -714,7 +746,7 @@ function buildBar(entry, game) {
     scroll.addEventListener('click', (e) => {
       if (!window.matchMedia('(hover: none)').matches) return;
       const bar = e.target.closest('.entry-bar');
-      if (!bar || !bar.dataset.entry) return;
+      if (!bar || !barData.has(bar)) return;
       if (bar === currentBar && tooltip.classList.contains('visible')) {
         hideTooltip();
         return;
@@ -734,11 +766,13 @@ function buildBar(entry, game) {
     }, { signal });
   }
   function showTooltip(bar, tooltip, e) {
-    let entry;
-    try { entry = JSON.parse(bar.dataset.entry); } catch { return; }
+    const rec = barData.get(bar);
+    if (!rec) return;
+    const { game, entry, key } = rec;
 
-    const entryId = entry.id;
-    const cached = tooltipCache.get(entryId);
+    // 캐시를 언어별로 분리 — 언어 전환 후 이전 언어 툴팁이 남는 것을 막는다
+    const cacheKey = `${key}|${curLang()}`;
+    const cached = tooltipCache.get(cacheKey);
     if (cached) {
       tooltip.innerHTML = cached;
     } else {
@@ -753,8 +787,8 @@ function buildBar(entry, game) {
       const html = `
         <div class="tooltip-inner">
           <div class="tooltip-game">
-            <span class="tooltip-color-dot" style="background:${esc(entry.gameColor)}"></span>
-            ${esc(entry.gameIcon)} ${esc(entry.gameFullName)}
+            <span class="tooltip-color-dot" style="background:${esc(game.color)}"></span>
+            ${esc(game.icon)} ${esc(gameFullName(game))}
           </div>
           <div class="tooltip-title">${esc(entry.title)}</div>
           ${entry.subtitle ? `<div class="tooltip-subtitle">${esc(entry.subtitle)}</div>` : ''}
@@ -768,7 +802,7 @@ function buildBar(entry, game) {
           ${entry.source ? `<div class="tooltip-source">${esc(t('tooltipSource', '출처:'))} ${esc(entry.source)}</div>` : ''}
         </div>
       `;
-      tooltipCache.set(entryId, html);
+      tooltipCache.set(cacheKey, html);
       tooltip.innerHTML = html;
     }
 
@@ -819,7 +853,6 @@ function buildBar(entry, game) {
         saveOrder(newOrder);
       }
     });
-    restoreOrder();
   }
 
 function saveOrder(order) {
@@ -857,7 +890,7 @@ function openDetail(game) {
   const iconHtml = game.iconUrl
     ? `<img src="${esc(game.iconUrl)}" alt="${esc(game.name)}" style="width:20px;height:20px;border-radius:4px;object-fit:contain;">`
     : esc(game.icon || '');
-  titleEl.innerHTML = `<span class="detail-modal-icon">${iconHtml}</span>${esc(game.fullName || game.name)}`;
+  titleEl.innerHTML = `<span class="detail-modal-icon">${iconHtml}</span>${esc(gameFullName(game))}`;
 
   content.innerHTML = '';
 
@@ -892,7 +925,7 @@ function openDetail(game) {
     const item = document.createElement('div');
     item.className = `detail-entry detail-entry-${entry.type}`;
     item.tabIndex = 0;
-    item.dataset.entryId = entry.id || '';
+    item.dataset.entryId = entryKey(game, entry);
     item.innerHTML = `
       <div class="detail-entry-bar-indicator type-${entry.type}${entry.tentative ? ' tentative' : ''}"></div>
       <div class="detail-entry-main">
@@ -921,14 +954,12 @@ function openDetail(game) {
   // 상세 패널에서 타임라인 동기화
   document.querySelectorAll('.detail-entry').forEach(entryEl => {
     entryEl.addEventListener('click', () => {
-      const entryId = entryEl.dataset.entryId;
-      const gameId = currentDetailGame.id;
-      highlightTimelineEntry(gameId, entryId);
+      highlightTimelineEntry(entryEl.dataset.entryId);
     });
   });
 }
 
-function highlightTimelineEntry(gameId, entryId) {
+function highlightTimelineEntry(entryKeyStr) {
   // 리스트 뷰에서는 간트로 전환해야 하이라이트가 보임
   if (currentView !== 'gantt') setView('gantt');
 
@@ -937,32 +968,17 @@ function highlightTimelineEntry(gameId, entryId) {
     el.classList.remove('highlight');
   });
 
-  // 해당 게임 섹션 찾기
-  const gameSection = document.querySelector(`.game-section[data-id="${gameId}"]`);
-  if (!gameSection) return;
-
-  // 해당 엔트리 찾기 (JSON 파싱으로 안전하게 검색)
-  const entryBars = gameSection.querySelectorAll('.entry-bar');
-  let targetBar = null;
-  for (const bar of entryBars) {
-    try {
-      const entry = JSON.parse(bar.dataset.entry);
-      if (entry.id === entryId) {
-        targetBar = bar;
-        break;
-      }
-    } catch (e) {
-      console.error('Failed to parse entry data:', e);
-    }
-  }
+  // 안정 키로 바로 조회 (표시 범위 밖 엔트리는 바가 없어 undefined)
+  const targetBar = barIndex.get(entryKeyStr);
   if (!targetBar) return;
+  const gameSection = targetBar.closest('.game-section');
+  if (!gameSection) return;
 
   // 하이라이트 적용
   targetBar.classList.add('highlight');
 
   // 타임라인 스크롤 위치 조정
   const timelineScroll = document.getElementById('timeline-scroll');
-  const entryRect = targetBar.getBoundingClientRect();
   const scrollRect = timelineScroll.getBoundingClientRect();
 
   // 수직 스크롤 (게임 섹션이 보이도록)
@@ -1193,7 +1209,7 @@ function setupDetailPanel() {
         item.innerHTML = `
           <div class="detail-entry-bar-indicator type-${entry.type}${entry.tentative ? ' tentative' : ''}"></div>
           <div class="list-entry-game" style="--chip-color:${esc(game.color)}">
-            ${iconHtml}<span class="list-entry-game-name">${esc(game.nameKo || game.name)}</span>
+            ${iconHtml}<span class="list-entry-game-name">${esc(gameName(game))}</span>
           </div>
           <div class="detail-entry-main">
             <div class="detail-entry-title-row">
@@ -1206,7 +1222,7 @@ function setupDetailPanel() {
             <span class="detail-date-range">${D.fmtShort(s)} → ${D.fmtShort(e)}</span>
             <span class="detail-date-dur">${esc(fmtDuration(dur))}${entry.version ? ` · v${esc(entry.version)}` : ''}</span>
           </div>
-          <div class="detail-entry-status ${status.cls}">${status.label}</div>
+          <div class="detail-entry-status ${status.cls}">${esc(status.label)}</div>
         `;
         const open = () => openDetail(game);
         item.addEventListener('click', open);
@@ -1266,7 +1282,7 @@ function setupDetailPanel() {
         const end = D.parse(entry.end);
         if (end < today) return; // 종료된 일정은 제외
         const start = D.parse(entry.start);
-        const gameName = game.nameKo || game.name;
+        const gName = gameName(game);
         const descParts = [];
         if (entry.subtitle) descParts.push(entry.subtitle);
         if (entry.tentative) descParts.push(t('tooltipTentative', '⚠ 미확정 일정 (변동 가능)'));
@@ -1277,7 +1293,7 @@ function setupDetailPanel() {
           `DTSTAMP:${stamp}`,
           `DTSTART;VALUE=DATE:${icsDate(start)}`,
           `DTEND;VALUE=DATE:${icsDate(D.addDays(end, 1))}`, // DTEND는 exclusive
-          `SUMMARY:${icsEscape(`[${gameName}] ${entry.title}`)}`,
+          `SUMMARY:${icsEscape(`[${gName}] ${entry.title}`)}`,
           descParts.length ? `DESCRIPTION:${icsEscape(descParts.join('\n'))}` : null,
           'END:VEVENT'
         );
@@ -1296,7 +1312,8 @@ function setupDetailPanel() {
       a.href = url;
       a.download = 'subculture-timeline.ics';
       a.click();
-      URL.revokeObjectURL(url);
+      // 클릭과 동시에 revoke하면 일부 브라우저에서 다운로드가 취소된다
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
     });
   }
 
