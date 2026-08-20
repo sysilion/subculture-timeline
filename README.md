@@ -66,10 +66,12 @@ GitHub Actions가 매일 UTC 00:00 (KST 09:00)에 실행되어 배너·이벤트
 | 블루 아카이브 | bluearchive.wiki (Cargo API) | 영어 | ✅ |
 | 엔드필드 | endfield.wiki.gg (Cargo API, 아시아 서버) | 영어 | ✅ |
 | 림버스 컴퍼니 | limbuscompany.wiki.gg (parse API) | 영어 | ✅ |
-| 명조 · 이환 · 몬길 · 우마무스메 | game8.co | 영어 | ❌ 수동 |
+| 명조 | wuwatracker.com (타임라인 JSON) | 영어 | ❌ 수동 |
+| 이환 · 몬길 · 우마무스메 | game8.co | 영어 | ❌ 수동 |
 | 니케 | nikke.gg | 영어 | ❌ 수동 |
 
-game8.co와 nikke.gg는 **GitHub Actions의 데이터센터 IP를 차단**합니다(각각 2KB 차단 페이지, HTTP 429).
+game8.co · nikke.gg · wuwatracker.com은 **GitHub Actions의 데이터센터 IP를 차단**합니다
+(각각 2KB 차단 페이지, HTTP 429, HTTP 403).
 동일 URL이 로컬에서는 정상 응답하므로, 이 게임들은 자동 갱신에서 제외하고 필요할 때 로컬에서 갱신합니다:
 
 ```bash

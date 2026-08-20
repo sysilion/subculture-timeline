@@ -19,14 +19,14 @@ from parsers import (
     genshin, game8 as g8, hoyoverse,
     nikke as nikke_parser, bluearchive as ba_parser,
     umamusume as uma_parser, endfield as ef_parser,
-    limbus as limbus_parser,
+    limbus as limbus_parser, wuwa as wuwa_parser,
 )
 
 # GitHub Actions의 데이터센터 IP에서는 아래 소스가 차단되어 항상 0건이 된다.
 # (game8은 2KB짜리 차단 페이지, nikke.gg는 429) 자동 갱신 대상에서 빼두고,
 # 로컬에서 손으로 돌릴 때는 UPDATE_ALL=1 로 강제 실행한다.
 CI_BLOCKED = {
-    "wuwa":      "game8.co가 데이터센터 IP에 차단 페이지 반환",
+    "wuwa":      "wuwatracker.com이 403, game8.co도 차단 페이지 반환",
     "nte":       "game8.co가 데이터센터 IP에 차단 페이지 반환",
     "mongil":    "game8.co가 데이터센터 IP에 차단 페이지 반환",
     "umamusume": "game8.co가 데이터센터 IP에 차단 페이지 반환",
@@ -194,6 +194,11 @@ def run():
                 fresh = ef_parser.parse()
             elif gid == "limbus":
                 fresh = limbus_parser.parse()
+            elif gid == "wuwa":
+                # wuwatracker 타임라인(JSON 페이로드), game8은 fallback
+                fresh = wuwa_parser.parse()
+                if not fresh and gid in g8.GAME8_URLS:
+                    fresh = g8.parse(gid, g8.GAME8_URLS[gid])
             elif gid in g8.GAME8_URLS:
                 fresh = g8.parse(gid, g8.GAME8_URLS[gid])
             else:
