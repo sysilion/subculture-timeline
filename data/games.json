@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-19",
+    "lastUpdated": "2026-08-20",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-19"
+    "autoUpdated": "2026-08-20"
   },
   "games": [
     {
@@ -758,6 +758,16 @@
           "title": "연월 나선",
           "start": "2026-08-16",
           "end": "2026-09-16",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "지맥 제압전",
+          "start": "2026-08-19",
+          "end": "2026-09-22",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -2239,6 +2249,18 @@
           "_auto": true
         },
         {
+          "type": "banner",
+          "title": "기사의 세리모니",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-08-19",
+          "end": "2026-09-08",
+          "version": "3.1",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
           "type": "event",
           "title": "Operation: Save Bootopia",
           "subtitle": "부투피아 구출 작전 이벤트",
@@ -2650,6 +2672,18 @@
         },
         {
           "type": "banner",
+          "title": "Fest of Brilliance",
+          "subtitle": "",
+          "rarity": 6,
+          "start": "2026-05-14",
+          "end": "2026-06-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Mi Fu (Debut)",
           "subtitle": "Phase 1",
           "rarity": 6,
@@ -2660,6 +2694,18 @@
         },
         {
           "type": "banner",
+          "title": "Fists of No Regrets",
+          "subtitle": "Mi Fu",
+          "rarity": 6,
+          "start": "2026-06-05",
+          "end": "2026-06-25",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Camille (Debut)",
           "subtitle": "Phase 2",
           "rarity": 6,
@@ -2667,6 +2713,42 @@
           "end": "2026-07-17",
           "version": "1.3",
           "source": "endfieldhub.org"
+        },
+        {
+          "type": "banner",
+          "title": "Expunger of Sin",
+          "subtitle": "Camille",
+          "rarity": 6,
+          "start": "2026-06-26",
+          "end": "2026-07-15",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "North Yearns the Rift Vigile",
+          "subtitle": "Arcane",
+          "rarity": 6,
+          "start": "2026-07-16",
+          "end": "2026-08-08",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Good Morning from Your Dawnstar",
+          "subtitle": "Liino",
+          "rarity": 6,
+          "start": "2026-08-09",
+          "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
         },
         {
           "type": "event",
@@ -2690,6 +2772,17 @@
         },
         {
           "type": "event",
+          "title": "Etchings of Our Cosmic Dreams",
+          "subtitle": "Space Exploration",
+          "start": "2026-04-24",
+          "end": "2026-06-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "AIC Support: Palm-Top Savior",
           "subtitle": "AIC 생산 이벤트",
           "start": "2026-04-28",
@@ -2705,6 +2798,28 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Party Together",
+          "subtitle": "Fest",
+          "start": "2026-05-01",
+          "end": "2026-06-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Monumental Etching: Corrupting Surge",
+          "subtitle": "Challenge",
+          "start": "2026-05-08",
+          "end": "2026-06-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
           "_auto": true
         },
         {
@@ -2749,6 +2864,39 @@
         },
         {
           "type": "event",
+          "title": "Shimmering Moment",
+          "subtitle": "Sign-In",
+          "start": "2026-05-14",
+          "end": "2026-06-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Supply: Wuling Super Chef",
+          "subtitle": "Supply",
+          "start": "2026-05-14",
+          "end": "2026-06-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Curious Use of Xiranite",
+          "subtitle": "Guide",
+          "start": "2026-05-14",
+          "end": "2026-06-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Curios and Myths Sign-In (Version 1.2)",
           "start": "2026-05-29",
           "end": "2026-06-04",
@@ -2775,6 +2923,17 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Curios and Myths",
+          "subtitle": "Sign-In",
+          "start": "2026-05-29",
+          "end": "2026-06-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
           "_auto": true
         },
         {
@@ -2848,6 +3007,50 @@
         },
         {
           "type": "event",
+          "title": "A Fistful of Reflections",
+          "subtitle": "Narrative",
+          "start": "2026-06-05",
+          "end": "2026-07-15",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Search for Sword Vault Dale",
+          "subtitle": "Guide",
+          "start": "2026-06-05",
+          "end": "2026-06-25",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "One with Her Fists",
+          "subtitle": "Sign-In",
+          "start": "2026-06-05",
+          "end": "2026-06-25",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Contingency Readiness",
+          "subtitle": "Limited-time",
+          "start": "2026-06-11",
+          "end": "2026-06-18",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Period:",
           "start": "2026-06-12",
           "end": "2026-06-19",
@@ -2864,6 +3067,28 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Trial Algorithmics",
+          "subtitle": "Challenge",
+          "start": "2026-06-12",
+          "end": "2026-07-15",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Contingency Contract: Re-Ignition Experimental Operation",
+          "subtitle": "Challenge",
+          "start": "2026-06-19",
+          "end": "2026-07-15",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
           "_auto": true
         },
         {
@@ -2888,12 +3113,67 @@
         },
         {
           "type": "event",
+          "title": "Danse Macabre",
+          "subtitle": "Narrative",
+          "start": "2026-06-26",
+          "end": "2026-07-15",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Peacekeeper's Nocturne",
+          "subtitle": "Sign-In",
+          "start": "2026-06-26",
+          "end": "2026-07-15",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Carly's Fairytale of Wuling (Version 1.3)",
           "start": "2026-07-02",
           "end": "2026-07-16",
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Monumental Etching: Dirge of Grief",
+          "subtitle": "Challenge",
+          "start": "2026-07-02",
+          "end": "2026-07-15",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Carly's Fairytale of Wuling",
+          "subtitle": "Camera",
+          "start": "2026-07-02",
+          "end": "2026-07-15",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Sanity Supply",
+          "subtitle": "Limited-Time",
+          "start": "2026-07-08",
+          "end": "2026-07-15",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
           "_auto": true
         },
         {
@@ -2938,6 +3218,83 @@
         },
         {
           "type": "event",
+          "title": "Season of Recalling",
+          "subtitle": "Echoes of War",
+          "start": "2026-07-16",
+          "end": "2026-08-08",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Fortune Connect-and-Win",
+          "subtitle": "Celebration",
+          "start": "2026-07-16",
+          "end": "2026-07-30",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Tribute of Companionship",
+          "subtitle": "Celebration",
+          "start": "2026-07-16",
+          "end": "2026-08-08",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Gaze Towards the Northern Exclusion",
+          "subtitle": "Guide",
+          "start": "2026-07-16",
+          "end": "2026-08-08",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Gaze North to the Rift",
+          "subtitle": "Sign-In",
+          "start": "2026-07-16",
+          "end": "2026-08-08",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "HEAT RAGE! MEGA ARENA!",
+          "subtitle": "Challenge",
+          "start": "2026-07-30",
+          "end": "2026-08-12",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Sanity Supply",
+          "subtitle": "Limited-Time",
+          "start": "2026-08-01",
+          "end": "2026-08-08",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "North Yearns The Rift Vigile (Ver. 1.4 Phase 1) 07/16/2026 - 08/06/2026",
           "start": "2026-08-06",
           "end": "2026-08-27",
@@ -2964,6 +3321,17 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Monumental Etching: Beastly Howl",
+          "subtitle": "Challenge",
+          "start": "2026-08-06",
+          "end": "2026-08-19",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
           "_auto": true
         },
         {
@@ -3004,6 +3372,61 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Rooted Realm",
+          "subtitle": "Fun & Games",
+          "start": "2026-08-09",
+          "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Season of Delirating",
+          "subtitle": "Echoes of War",
+          "start": "2026-08-09",
+          "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Like a Star Streaking Through the Boundaries",
+          "subtitle": "Narrative",
+          "start": "2026-08-09",
+          "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Bedazzling Dawnstar",
+          "subtitle": "Sign-In",
+          "start": "2026-08-09",
+          "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Artful Realm of Six Cardinals",
+          "subtitle": "Challenge",
+          "start": "2026-08-19",
+          "end": "2026-09-02",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
           "_auto": true
         },
         {
@@ -5165,6 +5588,36 @@
           "version": "S7",
           "tentative": true,
           "source": "limbuscompany.wiki.gg"
+        },
+        {
+          "type": "event",
+          "title": "Nocturnal Sweeping BokGak",
+          "start": "2026-04-30",
+          "end": "2026-05-28",
+          "version": "",
+          "tentative": false,
+          "source": "limbuscompany.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Fixer at Dawnbreak",
+          "start": "2026-07-09",
+          "end": "2026-07-23",
+          "version": "",
+          "tentative": false,
+          "source": "limbuscompany.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Daily Check-in",
+          "start": "2026-08-20",
+          "end": "2026-09-17",
+          "version": "",
+          "tentative": false,
+          "source": "limbuscompany.wiki.gg",
+          "_auto": true
         }
       ],
       "nameKo": "림버스 컴퍼니",
