@@ -30,9 +30,14 @@ npx serve .
 │   ├── update_data.py      # 배너/이벤트 자동 갱신 스크립트
 │   ├── requirements.txt    # Python 의존성
 │   └── parsers/
-│       ├── base.py         # 공통 유틸리티
-│       ├── game8.py        # Game8 범용 파서 (6개 게임)
-│       └── genshin.py      # 원신 paimon.moe 파서
+│       ├── base.py         # 공통 HTTP·날짜·위키 API 유틸리티
+│       ├── hoyoverse.py    # 원신·스타레일·젠레스 (api.ennead.cc, 한국어)
+│       ├── bluearchive.py  # 블루 아카이브 (위키 Cargo API)
+│       ├── endfield.py     # 엔드필드 (위키 Cargo API, 아시아 서버)
+│       ├── limbus.py       # 림버스 컴퍼니 (위키 parse API)
+│       ├── genshin.py      # 원신 paimon.moe 폴백 (vm 샌드박스 평가)
+│       ├── game8.py        # Game8 범용 파서 (CI에서는 차단됨)
+│       └── umamusume.py    # 우마무스메 (game8 월별, CI에서는 차단됨)
 ├── .github/workflows/
 │   ├── update-data.yml     # 매일 자동 데이터 갱신 (cron)
 │   └── deploy.yml          # GitHub Pages 배포
@@ -50,7 +55,27 @@ npx serve .
 
 ## 자동 데이터 갱신
 
-GitHub Actions가 매일 UTC 00:00 (KST 09:00)에 실행되어 Game8 / paimon.moe에서 배너·이벤트 일정을 파싱합니다.
+GitHub Actions가 매일 UTC 00:00 (KST 09:00)에 실행되어 배너·이벤트 일정을 갱신합니다.
+어느 파서든 결과가 0건이면 워크플로우가 실패로 끝나므로, 소스가 조용히 깨져도 바로 드러납니다.
+
+### 소스 현황
+
+| 게임 | 소스 | 언어 | 자동 갱신 |
+|------|------|------|-----------|
+| 원신 · 스타레일 · 젠레스 | api.ennead.cc | 한국어 | ✅ |
+| 블루 아카이브 | bluearchive.wiki (Cargo API) | 영어 | ✅ |
+| 엔드필드 | endfield.wiki.gg (Cargo API, 아시아 서버) | 영어 | ✅ |
+| 림버스 컴퍼니 | limbuscompany.wiki.gg (parse API) | 영어 | ✅ |
+| 명조 · 이환 · 몬길 · 우마무스메 | game8.co | 영어 | ❌ 수동 |
+| 니케 | nikke.gg | 영어 | ❌ 수동 |
+
+game8.co와 nikke.gg는 **GitHub Actions의 데이터센터 IP를 차단**합니다(각각 2KB 차단 페이지, HTTP 429).
+동일 URL이 로컬에서는 정상 응답하므로, 이 게임들은 자동 갱신에서 제외하고 필요할 때 로컬에서 갱신합니다:
+
+```bash
+UPDATE_ALL=1 python3 scripts/update_data.py
+```
+
 미확정(tentative) 일정은 커뮤니티 추적/리크 기반이며 변동될 수 있습니다.
 
 ## 게임 일정 추가/수정
