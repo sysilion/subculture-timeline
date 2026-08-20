@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-18",
+    "lastUpdated": "2026-08-20",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-18"
+    "autoUpdated": "2026-08-20"
   },
   "games": [
     {
@@ -682,6 +682,16 @@
           "title": "연월 나선",
           "start": "2026-08-15",
           "end": "2026-09-15",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "지맥 제압전",
+          "start": "2026-08-19",
+          "end": "2026-09-21",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
