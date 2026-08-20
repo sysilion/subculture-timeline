@@ -46,6 +46,78 @@ def fetch(url: str, timeout=20, retries=2, headers: dict | None = None) -> str:
 def soup(html: str) -> BeautifulSoup:
     return BeautifulSoup(html, "lxml")
 
+
+# ── MediaWiki 위키 소스 공통 유틸 ──
+# HTML 스크래핑과 달리 위키 API는 CI 환경에서도 차단되지 않아 안정적이다.
+
+def cargo_query(api: str, tables: str, fields: str, where: str = "",
+                order_by: str = "", limit: int = 200) -> list[dict]:
+    """Cargo 확장이 설치된 위키에서 구조화된 행을 가져온다."""
+    params = {
+        "action": "cargoquery",
+        "tables": tables,
+        "fields": fields,
+        "limit":  str(limit),
+        "format": "json",
+    }
+    if where:
+        params["where"] = where
+    if order_by:
+        params["order_by"] = order_by
+
+    r = requests.get(api, headers=BROWSER_HEADERS, timeout=20, params=params)
+    r.raise_for_status()
+    data = r.json()
+    if "error" in data:
+        raise RuntimeError(data["error"].get("info", "cargo error"))
+    return [row.get("title", {}) for row in data.get("cargoquery", [])]
+
+
+def wiki_datetime(s: str, is_end: bool = False) -> date | None:
+    """'2026-08-09 04:00:00' → date.
+
+    종료 시각이 새벽이면(예: 03:59:59) 실질적인 마지막 날은 전날이므로 하루 뺀다.
+    """
+    s = (s or "").strip()
+    if not s:
+        return None
+    try:
+        dt = datetime.strptime(s, "%Y-%m-%d %H:%M:%S")
+    except ValueError:
+        try:
+            return date.fromisoformat(s[:10])
+        except ValueError:
+            return None
+    d = dt.date()
+    if is_end and dt.hour < 6:
+        d -= timedelta(days=1)
+    return d
+
+
+def wiki_parse_html(api: str, page: str) -> str:
+    """MediaWiki parse API로 문서의 렌더된 HTML을 받는다.
+
+    Cargo가 없는 위키(DPL 등 서버 렌더 확장을 쓰는 곳)에서 표를 읽을 때 사용한다.
+    """
+    r = requests.get(api, headers=BROWSER_HEADERS, timeout=25, params={
+        "action": "parse",
+        "page": page,
+        "prop": "text",
+        "format": "json",
+        "formatversion": "2",
+    })
+    r.raise_for_status()
+    data = r.json()
+    if "error" in data:
+        raise RuntimeError(data["error"].get("info", "parse error"))
+    return data["parse"]["text"]
+
+
+def within_window(start: date | None, end: date | None, past_days: int = 90) -> bool:
+    """표시 범위에 들어오는 일정인지(끝난 지 past_days 이내인지) 판단."""
+    return bool(start and end and end >= start
+                and (date.today() - end).days <= past_days)
+
 def parse_date(s: str, ref_year: int | None = None) -> date | None:
     """다양한 날짜 형식을 date 객체로 변환."""
     s = s.strip()
