@@ -32,7 +32,19 @@ CI_BLOCKED = {
     "umamusume": "game8.co가 데이터센터 IP에 차단 페이지 반환",
     "nikke":     "nikke.gg가 429(Too Many Requests) 반환",
 }
+
+# SYNC_PROXY(주거/사설망 출구)가 있으면 다시 뚫리는 소스.
+# game8은 프록시를 거쳐도 202 Cloudflare 챌린지를 돌려주므로 제외 대상에 남긴다.
+PROXY_UNBLOCKS = {"wuwa", "nikke"}
+
 FORCE_ALL = os.environ.get("UPDATE_ALL") == "1"
+
+
+def blocked_games() -> dict:
+    """이번 실행에서 건너뛸 게임 목록."""
+    if os.environ.get("SYNC_PROXY", "").strip():
+        return {k: v for k, v in CI_BLOCKED.items() if k not in PROXY_UNBLOCKS}
+    return CI_BLOCKED
 
 
 def load_games() -> dict:
@@ -152,6 +164,11 @@ def report(attempted: list, failed: list, updated: list, total_new: int,
 
 def run():
     print("=== 배너/이벤트 자동 갱신 시작 ===")
+    blocked = blocked_games()
+    proxy = os.environ.get("SYNC_PROXY", "").strip()
+    if proxy:
+        # 자격증명이 로그에 남지 않도록 가린다
+        print(f"프록시 경유: {re.sub(r'//[^@]*@', '//***@', proxy)}")
     data = load_games()
     today = str(date.today())
     total_new = 0
@@ -163,8 +180,8 @@ def run():
     for game in data["games"]:
         gid = game["id"]
 
-        if gid in CI_BLOCKED and not FORCE_ALL:
-            print(f"\n[{gid}] 자동 갱신 제외 — {CI_BLOCKED[gid]}")
+        if gid in blocked and not FORCE_ALL:
+            print(f"\n[{gid}] 자동 갱신 제외 — {blocked[gid]}")
             skipped_games.append(gid)
             continue
 

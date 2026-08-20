@@ -1,14 +1,11 @@
 """NIKKE 파서 — nikke.gg 패치노트 스크래핑"""
 import re
-import requests
 from datetime import date, timedelta
 from bs4 import BeautifulSoup
 
-from .base import MONTH_MAP
+from .base import MONTH_MAP, fetch
 
 BASE = "https://nikke.gg"
-UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124"
-HDR = {"User-Agent": UA}
 
 # "June 11, 2026" 형식
 _DATE_RE = re.compile(
@@ -36,13 +33,12 @@ def _to_date(m: tuple) -> date | None:
 
 def _fetch_patch_urls(limit: int = 3) -> list[str]:
     try:
-        r = requests.get(f"{BASE}/patch-notes/", headers=HDR, timeout=15)
-        r.raise_for_status()
+        html = fetch(f"{BASE}/patch-notes/", timeout=15)
     except Exception as e:
         print(f"  [nikke] 목록 fetch 실패: {e}")
         return []
 
-    soup = BeautifulSoup(r.text, "lxml")
+    soup = BeautifulSoup(html, "lxml")
     seen: set[str] = set()
     urls: list[str] = []
     for a in soup.find_all("a", href=True):
@@ -58,13 +54,12 @@ def _fetch_patch_urls(limit: int = 3) -> list[str]:
 
 def _parse_one(url: str) -> list[dict]:
     try:
-        r = requests.get(url, headers=HDR, timeout=15)
-        r.raise_for_status()
+        html = fetch(url, timeout=15)
     except Exception as e:
         print(f"  [nikke] {url} fetch 실패: {e}")
         return []
 
-    lines = [l.strip() for l in BeautifulSoup(r.text, "lxml").get_text(separator="\n").splitlines() if l.strip()]
+    lines = [l.strip() for l in BeautifulSoup(html, "lxml").get_text(separator="\n").splitlines() if l.strip()]
     entries: list[dict] = []
     today = date.today()
     cutoff = today - timedelta(days=90)

@@ -1,5 +1,5 @@
 """공통 유틸리티 — HTTP 페치, 날짜 파싱"""
-import re, time, requests
+import os, re, time, requests
 from datetime import datetime, date, timedelta
 from bs4 import BeautifulSoup
 
@@ -26,15 +26,27 @@ MONTH_MAP = {
 }
 
 
-def fetch(url: str, timeout=20, retries=2, headers: dict | None = None) -> str:
+def proxies() -> dict | None:
+    """SYNC_PROXY가 있으면 requests용 프록시 매핑을 돌려준다.
+
+    데이터센터 IP를 막는 사이트(wuwatracker·nikke.gg)를 CI에서 읽기 위한 통로다.
+    값 예: socks5h://user:pass@fly-app:8080 (socks5h = DNS도 프록시에서 해석)
+    """
+    p = os.environ.get("SYNC_PROXY", "").strip()
+    return {"http": p, "https": p} if p else None
+
+
+def fetch(url: str, timeout=20, retries=2, headers: dict | None = None,
+          use_proxy: bool = True) -> str:
     """브라우저 유사 헤더로 GET. 일시적 실패는 지수 백오프로 재시도한다."""
     hdr = dict(BROWSER_HEADERS)
     if headers:
         hdr.update(headers)
+    prox = proxies() if use_proxy else None
     last_err = None
     for attempt in range(retries + 1):
         try:
-            r = requests.get(url, headers=hdr, timeout=timeout)
+            r = requests.get(url, headers=hdr, timeout=timeout, proxies=prox)
             r.raise_for_status()
             return r.text
         except Exception as e:
