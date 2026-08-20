@@ -1486,6 +1486,116 @@
           "source": "sportskeeda.com"
         },
         {
+          "type": "banner",
+          "title": "Forged Dwarfstar - Denia Weapon Banner",
+          "start": "2026-08-20",
+          "end": "2026-09-10",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "False Promise for Tomorrow - Denia Banner",
+          "start": "2026-08-20",
+          "end": "2026-09-10",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Glint of Clouds - Qingxiao Weapon Banner",
+          "start": "2026-08-20",
+          "end": "2026-09-10",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Wind of Transcendence - Qingxiao Banner",
+          "start": "2026-08-20",
+          "end": "2026-09-10",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Starfield Calibrator - Mornye Weapon Banner",
+          "start": "2026-09-10",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Distant May the Starlights Be - Mornye Banner",
+          "start": "2026-09-10",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Frostburn - Hiyuki Weapon Banner",
+          "start": "2026-09-10",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Thousand Futures Mirrored in Snow - Hiyuki Banner",
+          "start": "2026-09-10",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Thousandfold Deliverance - Jingran Weapon Banner",
+          "start": "2026-09-10",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Where Santu Beckons - Jingran Banner",
+          "start": "2026-09-10",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5
+        },
+        {
           "type": "event",
           "title": "2nd Anniversary Rally",
           "start": "2026-04-22",
@@ -1964,6 +2074,16 @@
         },
         {
           "type": "event",
+          "title": "Endstate Matrix (Phase 1)",
+          "start": "2026-07-17",
+          "end": "2026-08-18",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Bountiful Crescendo",
           "start": "2026-07-23",
           "end": "2026-07-30",
@@ -2004,6 +2124,16 @@
         },
         {
           "type": "event",
+          "title": "Whimpering Wastes",
+          "start": "2026-08-03",
+          "end": "2026-08-30",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Lollo Campaign: New Journey",
           "start": "2026-08-06",
           "end": "2026-08-19",
@@ -2024,12 +2154,52 @@
         },
         {
           "type": "event",
+          "title": "Tower of Adversity: Hazard Revisited",
+          "start": "2026-08-17",
+          "end": "2026-09-14",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Gifts of Drifting Mist",
           "start": "2026-08-20",
           "end": "2026-09-29",
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Tactical Hologram: Simulation",
+          "start": "2026-08-20",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Pioneer Podcast",
+          "start": "2026-08-20",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Gifts of Drifting Mist 7-Day Login Event",
+          "start": "2026-08-20",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
           "_auto": true
         },
         {
@@ -2044,12 +2214,32 @@
         },
         {
           "type": "event",
+          "title": "Resonance Sim Realm Combat Event",
+          "start": "2026-08-22",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Second Coming of Solaris: Coded Deception",
           "start": "2026-08-27",
           "end": "2026-09-14",
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Second Coming of Solaris: Coded Deception Leisure Event",
+          "start": "2026-08-27",
+          "end": "2026-09-13",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
           "_auto": true
         },
         {
@@ -2064,6 +2254,26 @@
         },
         {
           "type": "event",
+          "title": "[Bountiful Crescendo] Limited-Time Material Double Drop Event",
+          "start": "2026-09-03",
+          "end": "2026-09-10",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Strings Remember Leisure Event",
+          "start": "2026-09-03",
+          "end": "2026-09-21",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "If Dreams Still Reverberate",
           "start": "2026-09-10",
           "end": "2026-09-29",
@@ -2074,12 +2284,52 @@
         },
         {
           "type": "event",
+          "title": "If Dreams Still Reverberate Featured Co-op Combat Event",
+          "start": "2026-09-10",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Tower of Adversity: Hazard Revisited",
+          "start": "2026-09-14",
+          "end": "2026-10-12",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "3.6 Wuthering Exploration",
           "start": "2026-09-17",
           "end": "2026-09-29",
           "version": "",
           "tentative": false,
           "source": "game8.co",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Featured Exploration Event: Fogveil Pagoda",
+          "start": "2026-09-17",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "[Chord Cleansing] Limited-Time Echo Double Drop Event",
+          "start": "2026-09-22",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
           "_auto": true
         }
       ],
