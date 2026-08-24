@@ -1,5 +1,5 @@
 """공통 유틸리티 — HTTP 페치, 날짜 파싱"""
-import os, re, time, requests
+import json, os, re, time, requests
 from datetime import datetime, date, timedelta
 from bs4 import BeautifulSoup
 
@@ -57,6 +57,36 @@ def fetch(url: str, timeout=20, retries=2, headers: dict | None = None,
 
 def soup(html: str) -> BeautifulSoup:
     return BeautifulSoup(html, "lxml")
+
+
+# ── schema.org 구조화 데이터 ──
+# 일부 사이트는 일정을 <script type="application/ld+json">에 Event로 노출한다.
+# 표준 마크업이라 페이지 레이아웃이 바뀌어도 잘 깨지지 않는다.
+
+_LD_JSON = re.compile(
+    r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', re.S | re.I)
+
+
+def _collect_events(node, out: list) -> None:
+    if isinstance(node, dict):
+        if node.get("@type") == "Event":
+            out.append(node)
+        for v in node.values():
+            _collect_events(v, out)
+    elif isinstance(node, list):
+        for v in node:
+            _collect_events(v, out)
+
+
+def ld_json_events(html: str) -> list[dict]:
+    """HTML의 ld+json 블록에서 schema.org Event 객체를 모두 모은다."""
+    out: list[dict] = []
+    for block in _LD_JSON.findall(html):
+        try:
+            _collect_events(json.loads(block), out)
+        except ValueError:
+            continue
+    return out
 
 
 # ── MediaWiki 위키 소스 공통 유틸 ──
@@ -125,10 +155,22 @@ def wiki_parse_html(api: str, page: str) -> str:
     return data["parse"]["text"]
 
 
-def within_window(start: date | None, end: date | None, past_days: int = 90) -> bool:
-    """표시 범위에 들어오는 일정인지(끝난 지 past_days 이내인지) 판단."""
-    return bool(start and end and end >= start
-                and (date.today() - end).days <= past_days)
+def within_window(start: date | None, end: date | None, past_days: int = 90,
+                  future_days: int | None = None) -> bool:
+    """표시 범위에 들어오는 일정인지 판단.
+
+    past_days: 끝난 지 이만큼 지난 일정까지만 남긴다.
+    future_days: 지정하면 그보다 먼 미래의 일정은 버린다.
+                 (예측 일정을 수년치 제공하는 소스를 다룰 때 쓴다.)
+    """
+    if not (start and end and end >= start):
+        return False
+    today = date.today()
+    if (today - end).days > past_days:
+        return False
+    if future_days is not None and (start - today).days > future_days:
+        return False
+    return True
 
 def parse_date(s: str, ref_year: int | None = None) -> date | None:
     """다양한 날짜 형식을 date 객체로 변환."""

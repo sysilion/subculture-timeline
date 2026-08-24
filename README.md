@@ -35,9 +35,11 @@ npx serve .
 │       ├── bluearchive.py  # 블루 아카이브 (위키 Cargo API)
 │       ├── endfield.py     # 엔드필드 (위키 Cargo API, 아시아 서버)
 │       ├── limbus.py       # 림버스 컴퍼니 (위키 parse API)
+│       ├── nte.py          # 이환 (ntebuild.com schema.org Event)
+│       ├── umamusume.py    # 우마무스메 (uma.moe 리소스 API)
+│       ├── wuwa.py         # 명조 (wuwatracker RSC 페이로드)
 │       ├── genshin.py      # 원신 paimon.moe 폴백 (vm 샌드박스 평가)
-│       ├── game8.py        # Game8 범용 파서 (CI에서는 차단됨)
-│       └── umamusume.py    # 우마무스메 (game8 월별, CI에서는 차단됨)
+│       └── game8.py        # Game8 범용 파서 (CI에서는 차단됨)
 ├── .github/workflows/
 │   ├── update-data.yml     # 매일 자동 데이터 갱신 (cron)
 │   └── deploy.yml          # GitHub Pages 배포
@@ -66,9 +68,11 @@ GitHub Actions가 매일 UTC 00:00 (KST 09:00)에 실행되어 배너·이벤트
 | 블루 아카이브 | bluearchive.wiki (Cargo API) | 영어 | ✅ |
 | 엔드필드 | endfield.wiki.gg (Cargo API, 아시아 서버) | 영어 | ✅ |
 | 림버스 컴퍼니 | limbuscompany.wiki.gg (parse API) | 영어 | ✅ |
+| 이환 | ntebuild.com (schema.org Event) | 영어 | ✅ |
+| 우마무스메 | uma.moe (리소스 API) | 영어 | ✅ |
 | 명조 | wuwatracker.com (타임라인 JSON) | 영어 | ⚠️ 프록시 필요 |
 | 니케 | nikke.gg | 영어 | ⚠️ 프록시 필요 |
-| 이환 · 몬길 · 우마무스메 | game8.co | 영어 | ❌ 수동 |
+| 몬길 | game8.co | 영어 | ❌ 수동 |
 
 ### 데이터센터 IP 차단과 프록시 우회
 
