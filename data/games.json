@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-21",
+    "lastUpdated": "2026-08-24",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-21"
+    "autoUpdated": "2026-08-24"
   },
   "games": [
     {
@@ -4424,18 +4424,6 @@
         },
         {
           "type": "banner",
-          "title": "Kisaki, Reijo, Yuuka (Sportswear) +1",
-          "subtitle": "Pickup",
-          "rarity": 3,
-          "start": "2026-05-12",
-          "end": "2026-05-25",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Rio (Battle), Himari (Battle)",
           "subtitle": "Pickup",
           "rarity": 3,
@@ -4887,16 +4875,6 @@
           "title": "Academy Club Story: A Finale for Two",
           "start": "2026-04-07",
           "end": "2099-12-31",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "The Senses Descend",
-          "start": "2026-05-12",
-          "end": "2026-05-25",
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
