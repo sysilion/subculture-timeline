@@ -20,6 +20,7 @@ from parsers import (
     nikke as nikke_parser, bluearchive as ba_parser,
     umamusume as uma_parser, endfield as ef_parser,
     limbus as limbus_parser, wuwa as wuwa_parser,
+    nte as nte_parser,
 )
 
 # GitHub Actions의 데이터센터 IP에서는 아래 소스가 차단되어 항상 0건이 된다.
@@ -27,9 +28,7 @@ from parsers import (
 # 로컬에서 손으로 돌릴 때는 UPDATE_ALL=1 로 강제 실행한다.
 CI_BLOCKED = {
     "wuwa":      "wuwatracker.com이 403, game8.co도 차단 페이지 반환",
-    "nte":       "game8.co가 데이터센터 IP에 차단 페이지 반환",
     "mongil":    "game8.co가 데이터센터 IP에 차단 페이지 반환",
-    "umamusume": "game8.co가 데이터센터 IP에 차단 페이지 반환",
     "nikke":     "nikke.gg가 429(Too Many Requests) 반환",
 }
 
@@ -211,6 +210,9 @@ def run():
                 fresh = ef_parser.parse()
             elif gid == "limbus":
                 fresh = limbus_parser.parse()
+            elif gid == "nte":
+                # game8 대신 ntebuild.com의 schema.org 이벤트 캘린더
+                fresh = nte_parser.parse()
             elif gid == "wuwa":
                 # wuwatracker 타임라인(JSON 페이로드), game8은 fallback
                 fresh = wuwa_parser.parse()
