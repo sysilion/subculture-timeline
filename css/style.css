@@ -988,12 +988,14 @@ html, body {
 .detail-panel-content {
   flex: 1;
   overflow-y: auto;
-  padding: 8px 0;
+  /* 위쪽 패딩을 두면 sticky 구분자가 그만큼 아래에 붙어,
+     생긴 틈으로 스크롤되는 항목이 비쳐 보인다. 아래쪽만 남긴다. */
+  padding: 0 0 8px;
 }
 
 /* ── 타입 구분선 (섹션 헤더) ── */
 .detail-type-sep {
-  padding: 6px 18px 4px;
+  padding: 7px 18px 6px;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -1001,22 +1003,25 @@ html, body {
   position: sticky;
   top: 0;
   z-index: 5;
+  /* sticky로 떠 있는 동안 아래 항목이 비쳐 겹쳐 보이지 않도록 불투명 바탕을 깐다.
+     타입별 색조는 background-image로 이 위에 얹는다. */
+  background-color: var(--surface);
 }
 .detail-type-sep.sep-version {
   color: #78909c;
-  background: linear-gradient(to right, rgba(84,110,122,0.15) 0%, transparent 60%);
+  background-image: linear-gradient(to right, rgba(84,110,122,0.15) 0%, transparent 60%);
   border-left: 3px solid rgba(84,110,122,0.5);
   border-bottom: 1px solid rgba(84,110,122,0.15);
 }
 .detail-type-sep.sep-banner {
   color: #7c9cf8;
-  background: linear-gradient(to right, rgba(92,124,250,0.12) 0%, transparent 60%);
+  background-image: linear-gradient(to right, rgba(92,124,250,0.12) 0%, transparent 60%);
   border-left: 3px solid rgba(92,124,250,0.5);
   border-bottom: 1px solid rgba(92,124,250,0.12);
 }
 .detail-type-sep.sep-event {
   color: #81c784;
-  background: linear-gradient(to right, rgba(102,187,106,0.12) 0%, transparent 60%);
+  background-image: linear-gradient(to right, rgba(102,187,106,0.12) 0%, transparent 60%);
   border-left: 3px solid rgba(102,187,106,0.5);
   border-bottom: 1px solid rgba(102,187,106,0.12);
 }

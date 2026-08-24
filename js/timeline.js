@@ -894,13 +894,14 @@ function openDetail(game) {
 
   content.innerHTML = '';
 
-  // 타입 순서: version → banner → event, 같은 타입 내 최신순
+  // 타입 순서: version → banner → event, 같은 타입 내 시작일 오름차순
   const typeOrder = { version: 0, banner: 1, event: 2 };
   const sorted = [...game.entries].sort((a, b) => {
     const ta = typeOrder[a.type] ?? 9;
     const tb = typeOrder[b.type] ?? 9;
     if (ta !== tb) return ta - tb;
-    return b.start.localeCompare(a.start);
+    const byStart = a.start.localeCompare(b.start);
+    return byStart !== 0 ? byStart : a.end.localeCompare(b.end);
   });
 
   let lastType = null;
