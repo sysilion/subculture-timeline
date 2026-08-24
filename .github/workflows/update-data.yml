@@ -44,6 +44,25 @@ jobs:
       # OAuth secret은 tskey-client-<id>-… 형태로 client ID를 품고 있어
       # authkey로 그대로 쓰인다. oauth-client-id는 OIDC 방식에만 필요하다.
       # 프록시 주소가 없으면 tailnet에 붙을 이유가 없으므로 둘 다 있을 때만 연결한다.
+      # Tailscale 키는 종류마다 넘기는 입력이 다르다.
+      #   tskey-client-… → OAuth client secret → oauth-secret (+tags 필수)
+      #   tskey-auth-…   → Auth key           → authkey (태그가 키에 이미 박혀 있음)
+      # OAuth 입력에 auth key를 주면 ?preauthorized=… 가 덧붙어 무효가 되므로 구분한다.
+      # 값은 노출하지 않고 접두사만 판별한다.
+      - name: Detect Tailscale key type
+        id: tskey
+        if: env.TS_OAUTH_SECRET != '' && env.SYNC_PROXY != ''
+        run: |
+          if [ "${TS_OAUTH_SECRET#tskey-client-}" != "$TS_OAUTH_SECRET" ]; then
+            kind=oauth
+          elif [ "${TS_OAUTH_SECRET#tskey-auth-}" != "$TS_OAUTH_SECRET" ]; then
+            kind=authkey
+          else
+            kind=unknown
+          fi
+          echo "kind=$kind" >> "$GITHUB_OUTPUT"
+          echo "감지된 키 종류: $kind"
+
       # 프록시는 부가 경로이므로 연결 실패가 나머지 갱신을 막으면 안 된다.
       - name: Connect to Tailscale
         id: tailscale
@@ -51,7 +70,8 @@ jobs:
         continue-on-error: true
         uses: tailscale/github-action@v4
         with:
-          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          oauth-secret: ${{ steps.tskey.outputs.kind == 'oauth' && secrets.TS_OAUTH_SECRET || '' }}
+          authkey: ${{ steps.tskey.outputs.kind == 'oauth' && '' || secrets.TS_OAUTH_SECRET }}
           tags: tag:ci
 
       # tailnet 연결이 실패·생략되면 프록시를 쓸 수 없으므로 값을 비운다.
@@ -90,5 +110,6 @@ jobs:
       # 데이터는 이미 갱신된 뒤이므로 경고로만 알린다.
       - name: Warn if Tailscale was configured but failed
         if: steps.tailscale.outcome == 'failure'
-        run: echo "::warning::Tailscale 연결 실패 — 명조·니케는 이번 실행에서 건너뛰었습니다. TS_OAUTH_SECRET을 확인하세요."
+        run: |
+          echo "::warning::Tailscale 연결 실패 (키 종류: ${{ steps.tskey.outputs.kind }}) — 명조·니케는 이번 실행에서 건너뛰었습니다."
 
