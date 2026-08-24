@@ -86,17 +86,20 @@ SYNC_PROXY="socks5h://user:pass@proxy-host:8080" python3 scripts/update_data.py
 UPDATE_ALL=1 python3 scripts/update_data.py
 ```
 
-CI에서는 러너를 tailnet에 넣어 사설망 프록시에 접근합니다. 아래 시크릿이 **모두 있을 때만**
+CI에서는 러너를 tailnet에 넣어 사설망 프록시에 접근합니다. 아래 시크릿이 **둘 다 있을 때만**
 Tailscale 연결과 프록시가 활성화되고, 없으면 조용히 건너뛴 뒤 나머지 소스만 갱신합니다.
 
 | 시크릿 | 용도 |
 |--------|------|
-| `TS_OAUTH_CLIENT_ID` | Tailscale OAuth client ID |
-| `TS_OAUTH_SECRET` | Tailscale OAuth client secret |
+| `TS_OAUTH_SECRET` | Tailscale OAuth client secret (`tskey-client-…`) |
 | `SYNC_PROXY` | `socks5h://user:pass@host:8080` |
 
-Tailscale 쪽에는 `tag:ci` 태그를 쓸 수 있는 OAuth client와, 그 태그가 프록시 노드에
-접근하도록 허용하는 ACL이 필요합니다.
+OAuth secret에 client ID가 포함되어 있어 `tailscale/github-action`이 이를 authkey로
+그대로 사용합니다. 별도의 client ID 시크릿은 필요하지 않습니다
+(`oauth-client-id`는 OIDC Federated Identity 방식에만 씁니다).
+
+Tailscale 쪽에는 `auth_keys` 스코프와 `tag:ci` 태그를 가진 OAuth client, 그리고 그 태그가
+프록시 노드에 접근하도록 허용하는 ACL이 필요합니다.
 
 미확정(tentative) 일정은 커뮤니티 추적/리크 기반이며 변동될 수 있습니다.
 
