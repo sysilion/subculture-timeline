@@ -905,6 +905,8 @@ function openDetail(game) {
   });
 
   let lastType = null;
+  // 아직 끝나지 않은 첫 항목 — 패널을 열었을 때 여기가 보이도록 스크롤한다
+  let firstCurrent = null;
   sorted.forEach(entry => {
     const start = D.parse(entry.start);
     const end = D.parse(entry.end);
@@ -943,7 +945,13 @@ function openDetail(game) {
       <div class="detail-entry-status ${status.cls}">${esc(status.label)}</div>
     `;
     content.appendChild(item);
+
+    if (!firstCurrent && end >= today) firstCurrent = item;
   });
+
+  // 시작일 오름차순이라 과거 항목이 위에 쌓인다.
+  // 오늘 진행 중인(또는 다음에 올) 항목이 첫 화면에 오도록 맞춘다.
+  scrollDetailToToday(content, firstCurrent);
 
   panel.classList.add('open');
   overlay.classList.add('open');
@@ -958,6 +966,20 @@ function openDetail(game) {
       highlightTimelineEntry(entryEl.dataset.entryId);
     });
   });
+}
+
+/* ── 상세 패널을 오늘 위치로 맞춤 ── */
+function scrollDetailToToday(content, target) {
+  if (!target) {
+    // 전부 지난 일정이면 가장 최근(맨 아래)을 보여준다
+    content.scrollTop = content.scrollHeight;
+    return;
+  }
+  // content와 항목이 같은 offsetParent를 공유하므로 그 차이가 곧 내부 오프셋이다
+  // (transform이 걸린 패널에서도 getBoundingClientRect와 달리 영향받지 않는다)
+  const sep = content.querySelector('.detail-type-sep');
+  const stickyH = sep ? sep.offsetHeight : 0;
+  content.scrollTop = Math.max(0, target.offsetTop - content.offsetTop - stickyH);
 }
 
 function highlightTimelineEntry(entryKeyStr) {
