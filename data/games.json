@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-24",
+    "lastUpdated": "2026-08-25",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-24"
+    "autoUpdated": "2026-08-25"
   },
   "games": [
     {
@@ -2247,6 +2247,16 @@
           "title": "Second Coming of Solaris: Coded Deception Leisure Event",
           "start": "2026-08-27",
           "end": "2026-09-13",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Whimpering Wastes",
+          "start": "2026-08-31",
+          "end": "2026-09-27",
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
