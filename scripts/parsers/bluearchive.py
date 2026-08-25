@@ -12,6 +12,10 @@ HDR = {"User-Agent": "subculture-timeline/1.0 (+https://github.com/)"}
 # 글로벌 서버만 대상 (JP 선행 일정은 제외)
 SERVER = "GL"
 
+# 상시 콘텐츠는 종료일이 2099년 등으로 들어와 타임라인 전 구간을 가로지른다.
+# 한 줄씩 차지해 다른 일정을 밀어내므로 제외한다.
+MAX_DURATION_DAYS = 180
+
 
 def _cargo(tables: str, fields: str, where: str, order_by: str, limit: int = 200) -> list[dict]:
     r = requests.get(API, headers=HDR, timeout=20, params={
@@ -49,7 +53,11 @@ def _to_date(s: str, is_end: bool = False) -> date | None:
 
 
 def _fresh(start: date | None, end: date | None) -> bool:
-    return bool(start and end and end >= start and (date.today() - end).days <= 90)
+    if not (start and end and end >= start):
+        return False
+    if (end - start).days > MAX_DURATION_DAYS:
+        return False
+    return (date.today() - end).days <= 90
 
 
 def _parse_banners() -> list[dict]:
