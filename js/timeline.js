@@ -12,10 +12,31 @@ const Timeline = (() => {
     dayPx: 28,           // 1일당 픽셀 (CSS --day-px와 동기화)
     pastDays: 30,        // 오늘 기준 과거 표시 일수
     futureDays: 60,      // 오늘 기준 미래 표시 일수
-    rowH: 44,            // 행 높이
+    rowH: 44,            // 행 높이 (레인이 하나일 때)
+    laneH: 32,           // 겹친 일정을 나눠 담는 레인 높이
     rulerH: 52,          // 눈금자 높이
     labelW: 120,         // 게임 이름 컬럼 너비
   };
+
+  /* ── 화면 폭별 치수 ──
+     바 좌표를 JS가 계산하므로 CSS 미디어쿼리로 --day-px를 바꾸면 계산과 어긋난다.
+     치수는 여기서 정하고 CSS 변수는 updateCSSVars()로 파생시킨다. */
+  const METRICS = [
+    { maxWidth: 600,      dayPx: 20, labelW: 76,  rowH: 38, laneH: 28 },
+    { maxWidth: 1024,     dayPx: 24, labelW: 100, rowH: 42, laneH: 30 },
+    { maxWidth: Infinity, dayPx: 28, labelW: 120, rowH: 44, laneH: 32 },
+  ];
+
+  function applyResponsiveMetrics() {
+    const m = METRICS.find(x => window.innerWidth <= x.maxWidth);
+    const changed = CFG.dayPx !== m.dayPx || CFG.labelW !== m.labelW
+                 || CFG.rowH !== m.rowH || CFG.laneH !== m.laneH;
+    CFG.dayPx = m.dayPx;
+    CFG.labelW = m.labelW;
+    CFG.rowH = m.rowH;
+    CFG.laneH = m.laneH;
+    return changed;
+  }
 
   let data = null;
   let today = null;
@@ -77,6 +98,8 @@ const Timeline = (() => {
       return;
     }
 
+    applyResponsiveMetrics();
+
     // 오늘 날짜 (시간 제거)
     today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -116,6 +139,20 @@ const Timeline = (() => {
       setTimeout(() => { skeleton.style.display = 'none'; }, 300);
     }
 
+    // 화면 폭이 바뀌면 치수를 다시 정하고 그릴 때만 재렌더한다
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (!applyResponsiveMetrics()) return;
+        updateCSSVars();
+        renderRuler();
+        renderGames();
+        renderTodayLine();
+        if (currentView === 'list') renderListView();
+      }, 150);
+    });
+
     // 언어 전환 시 렌더 텍스트 갱신 (행 레이블·오늘선·리스트 뷰)
     document.addEventListener('tl-langchange', () => {
       buildFilters();   // 칩 이름도 언어를 따라간다
@@ -144,6 +181,7 @@ const Timeline = (() => {
     root.style.setProperty('--day-px', CFG.dayPx + 'px');
     root.style.setProperty('--label-w', CFG.labelW + 'px');
     root.style.setProperty('--row-h', CFG.rowH + 'px');
+    root.style.setProperty('--lane-h', CFG.laneH + 'px');
     root.style.setProperty('--ruler-h', CFG.rulerH + 'px');
   }
 
@@ -494,7 +532,13 @@ function saveFilters() {
     if (banners.length > 0)  rows.push({ kind: 'banners',  items: banners });
     if (events.length > 0)   rows.push({ kind: 'events',   items: events });
 
-    const totalRows = Math.max(rows.length, 1);
+    // 겹치는 일정을 레인으로 나누고, 그 결과로 행·라벨 높이를 정한다
+    rows.forEach(r => {
+      r.lanes = packLanes(r.items);
+      r.laneH = r.lanes.length > 1 ? CFG.laneH : CFG.rowH;
+      r.height = Math.max(r.lanes.length, 1) * r.laneH;
+    });
+    const totalHeight = rows.reduce((sum, r) => sum + r.height, 0) || CFG.rowH;
 
     // 게임 라벨 (첫 행만 sticky, rowspan은 CSS로 처리)
     const headerRow = document.createElement('div');
@@ -506,7 +550,7 @@ function saveFilters() {
     label.setAttribute('role', 'button');
     label.setAttribute('aria-label', `${gameName(game)} ${t('detailHint', '상세보기')}`);
     label.style.borderLeft = `3px solid ${game.color}`;
-    label.style.height = (totalRows * CFG.rowH) + 'px';
+    label.style.height = totalHeight + 'px';
 
     // 배경 이미지
     if (game.bgUrl) {
@@ -536,12 +580,12 @@ function saveFilters() {
     const entriesWrapper = document.createElement('div');
     entriesWrapper.className = 'game-entries';
     entriesWrapper.style.width = (totalDays * CFG.dayPx) + 'px';
-    entriesWrapper.style.minHeight = (totalRows * CFG.rowH) + 'px';
+    entriesWrapper.style.minHeight = totalHeight + 'px';
 
     rows.forEach(rowGroup => {
       const rowEl = document.createElement('div');
       rowEl.className = `entry-row entry-row-${rowGroup.kind}`;
-      rowEl.style.height = CFG.rowH + 'px';
+      rowEl.style.height = rowGroup.height + 'px';
 
       // 행 타입 레이블
       const labelText = rowGroup.kind === 'versions' ? t('rowVersions', '버전')
@@ -551,9 +595,15 @@ function saveFilters() {
       label.textContent = labelText;
       rowEl.appendChild(label);
 
-      rowGroup.items.forEach(entry => {
-        const bar = buildBar(entry, game);
-        if (bar) rowEl.appendChild(bar);
+      rowGroup.lanes.forEach(laneItems => {
+        const laneEl = document.createElement('div');
+        laneEl.className = 'entry-lane';
+        laneEl.style.height = rowGroup.laneH + 'px';
+        laneItems.forEach(entry => {
+          const bar = buildBar(entry, game);
+          if (bar) laneEl.appendChild(bar);
+        });
+        rowEl.appendChild(laneEl);
       });
 
       entriesWrapper.appendChild(rowEl);
@@ -566,20 +616,56 @@ function saveFilters() {
     return section;
   }
 
-function buildBar(entry, game) {
+/* ── 바의 x·너비 계산 (표시 범위 밖이면 null) ── */
+function barGeometry(entry) {
   const entryStart = D.parse(entry.start);
   const entryEnd   = D.parse(entry.end);
   const rangeEnd   = D.addDays(startDate, totalDays);
 
-  // 범위 밖 완전히 제외
   if (entryEnd <= startDate || entryStart >= rangeEnd) return null;
 
-  // 클리핑
   const clippedStart = entryStart < startDate ? startDate : entryStart;
   const clippedEnd   = entryEnd > rangeEnd ? rangeEnd : entryEnd;
 
-  const x = dateToX(clippedStart);
-  const w = Math.max(4, D.diffDays(clippedStart, clippedEnd) * CFG.dayPx);
+  return {
+    x: dateToX(clippedStart),
+    w: Math.max(4, D.diffDays(clippedStart, clippedEnd) * CFG.dayPx),
+  };
+}
+
+/* ── 겹치는 일정을 레인으로 분배 ──
+   한 행에 몰아 그리면 서로 가려 제목도 못 읽고 클릭도 위쪽 바가 가로챈다. */
+const LANE_GAP = 6;    // 인접한 바 사이 최소 간격(px)
+const MAX_LANES = 24;  // 극단적인 데이터에서 행이 끝없이 높아지지 않도록 둔 상한
+
+function packLanes(items) {
+  const placed = items
+    .map(entry => ({ entry, geo: barGeometry(entry) }))
+    .filter(o => o.geo)
+    .sort((a, b) => a.geo.x - b.geo.x || a.geo.w - b.geo.w);
+
+  const lanes = [];
+  for (const o of placed) {
+    let lane = lanes.find(l => o.geo.x >= l.end + LANE_GAP);
+    if (!lane) {
+      if (lanes.length >= MAX_LANES) {
+        // 상한을 넘으면 가장 일찍 비는 레인에 얹는다 (이 경우만 겹침을 허용)
+        lane = lanes.reduce((a, b) => (a.end <= b.end ? a : b));
+      } else {
+        lane = { end: -Infinity, items: [] };
+        lanes.push(lane);
+      }
+    }
+    lane.items.push(o.entry);
+    lane.end = Math.max(lane.end, o.geo.x + o.geo.w);
+  }
+  return lanes.map(l => l.items);
+}
+
+function buildBar(entry, game) {
+  const geo = barGeometry(entry);
+  if (!geo) return null;
+  const { x, w } = geo;
 
   const bar = document.createElement('div');
   bar.className = `entry-bar type-${entry.type}`;
@@ -617,8 +703,9 @@ function buildBar(entry, game) {
   barData.set(bar, { game, entry, key });
   barIndex.set(key, bar);
 
-  // 키보드 접근성: Tab으로 포커스 → 툴팁 표시
-  bar.tabIndex = 0;
+  // 340개 바가 모두 탭 대상이면 키보드로 푸터까지 가는 데 수백 번이 걸린다.
+  // 바는 탭 순서에서 빼고(프로그램적 포커스는 가능) 목록 탐색은 상세 패널이 맡는다.
+  bar.tabIndex = -1;
   bar.setAttribute('aria-label',
     `${gameName(game)} — ${entry.title} (${entry.start} ~ ${entry.end})`);
 
@@ -1127,10 +1214,14 @@ function setupDetailPanel() {
     fromEl.classList.add('view-fade-out');
 
     setTimeout(() => {
-      fromEl.style.display = isList ? 'none' : '';
+      // 이전 뷰는 어느 방향이든 숨긴다.
+      // display만 비우면 간트로 돌아올 때 리스트가 남아 그대로 겹쳐 보였다.
+      fromEl.hidden = true;
+      fromEl.style.display = 'none';
       fromEl.classList.remove('view-fade-out');
 
       toEl.hidden = false;
+      toEl.style.display = '';
       toEl.classList.add('view-fade-out');
       // 강제 리플로우 후 페이드 인
       toEl.offsetHeight;
@@ -1168,6 +1259,20 @@ function setupDetailPanel() {
 
   function fmtDuration(days) {
     return t('durationFmt', '{n}일').replace('{n}', days);
+  }
+
+  /* ── 리스트 뷰 그룹 접기 상태 ── */
+  // 진행중 항목이 100건을 넘는 경우가 있어, 지난 일정은 기본으로 접어둔다
+  let listCollapsed = new Set(['ended']);
+  try {
+    const saved = JSON.parse(localStorage.getItem('tl-list-collapsed'));
+    if (Array.isArray(saved)) listCollapsed = new Set(saved);
+  } catch (e) {}
+
+  function saveListCollapsed() {
+    try {
+      localStorage.setItem('tl-list-collapsed', JSON.stringify([...listCollapsed]));
+    } catch (e) {}
   }
 
   /* ── 리스트 뷰 렌더링 ── */
@@ -1212,10 +1317,27 @@ function setupDetailPanel() {
     groups.forEach(group => {
       if (group.items.length === 0) return;
 
-      const titleEl = document.createElement('div');
+      const collapsed = listCollapsed.has(group.key);
+
+      const titleEl = document.createElement('button');
+      titleEl.type = 'button';
       titleEl.className = `list-section-title list-sec-${group.key}`;
-      titleEl.textContent = `${group.title} (${group.items.length})`;
+      titleEl.setAttribute('aria-expanded', String(!collapsed));
+      titleEl.innerHTML =
+        `<span class="list-sec-caret" aria-hidden="true">▾</span>` +
+        `<span>${esc(group.title)} (${group.items.length})</span>`;
+      titleEl.addEventListener('click', () => {
+        if (listCollapsed.has(group.key)) listCollapsed.delete(group.key);
+        else listCollapsed.add(group.key);
+        saveListCollapsed();
+        renderListView();
+      });
       container.appendChild(titleEl);
+
+      const body = document.createElement('div');
+      body.className = 'list-section-body';
+      body.hidden = collapsed;
+      container.appendChild(body);
 
       group.items.forEach(({ game, entry, s, e }) => {
         const dur = D.diffDays(s, e);
@@ -1252,7 +1374,7 @@ function setupDetailPanel() {
         item.addEventListener('keydown', (ev) => {
           if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); open(); }
         });
-        container.appendChild(item);
+        body.appendChild(item);
       });
     });
   }

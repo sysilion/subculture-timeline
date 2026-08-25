@@ -374,19 +374,42 @@ html, body {
 #list-scroll[hidden] { display: none; }
 
 #list-container {
-  max-width: 960px;
+  /* 넓은 화면에서 제목과 날짜 사이가 과하게 비지 않도록 폭을 넓혔다 */
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 12px 16px 48px;
+  padding: 12px 20px 48px;
 }
 
 .list-section-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  font-family: inherit;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   padding: 14px 4px 6px;
+  border: none;
   border-bottom: 1px solid var(--border);
   margin-bottom: 4px;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+.list-section-title:hover { color: var(--text); }
+.list-section-title:focus-visible {
+  outline: 2px solid var(--text-muted);
+  outline-offset: 2px;
+}
+.list-sec-caret {
+  display: inline-block;
+  transition: transform 0.15s ease;
+  font-size: 9px;
+}
+.list-section-title[aria-expanded="false"] .list-sec-caret {
+  transform: rotate(-90deg);
 }
 .list-section-title.list-sec-ongoing  { color: #66bb6a; }
 .list-section-title.list-sec-upcoming { color: #ffa726; }
@@ -593,6 +616,11 @@ html, body {
 }
 
 /* 배경 이미지 위 반투명 그라디언트 오버레이 */
+/* 배경 이미지 위 텍스트 가독성 확보 */
+.game-label-content {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6);
+}
+
 .game-label-overlay {
   position: absolute;
   inset: 0;
@@ -670,12 +698,16 @@ html, body {
 
 /* 배너/이벤트 행 */
 .entry-row {
-  display: flex;
-  align-items: center;
-  height: var(--row-h);
+  /* 높이는 레인 수에 따라 JS가 정한다 */
   position: relative;
   border-bottom: 1px solid rgba(255,255,255,0.03);
   transition: background 0.1s;
+}
+
+/* 겹치는 일정을 나눠 담는 줄. 바는 이 안에서 절대 배치된다. */
+.entry-lane {
+  position: relative;
+  height: var(--lane-h);
 }
 .entry-row:last-child { border-bottom: none; }
 .entry-row:hover { background: var(--row-hover); }
@@ -902,7 +934,7 @@ html, body {
    반응형
 ═══════════════════════════════════════ */
 @media (max-width: 600px) {
-  :root { --label-w: 80px; --day-px: 20px; }
+  /* --label-w·--day-px는 JS(METRICS)가 정한다. 여기서 덮으면 바 좌표와 어긋난다. */
   #header h1 { font-size: 14px; }
   .game-label-name { font-size: 10px; }
 }
@@ -1215,4 +1247,41 @@ html, body {
 #timeline-scroll.view-fade-out,
 #list-scroll.view-fade-out {
   opacity: 0;
+}
+
+/* ═══════════════════════════════════════
+   모션 최소화 설정 존중
+═══════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .skeleton-row { animation: none; background: var(--surface2); }
+}
+
+/* ═══════════════════════════════════════
+   태블릿 구간 (600px 초과 ~ 1024px)
+═══════════════════════════════════════ */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #header h1 { font-size: 13px; }
+  #legend { gap: 8px; }
+  #list-container { padding: 0 12px; }
+}
+
+/* 좁은 화면에서 헤더가 차지하는 세로 공간 줄이기 */
+@media (max-width: 600px) {
+  #header { padding: 8px 10px; gap: 6px 10px; }
+  #header h1 { font-size: 13px; }
+  #header h1 span[data-i18n="siteSubtitle"] { display: none; }
+  #legend { gap: 6px 10px; font-size: 10px; }
+  #last-updated { font-size: 9px; }
+  #range-controls label { display: none; }
+  #filter-bar { padding: 6px 10px; }
+  .filter-label { display: none; }
+  #footer { font-size: 9px; padding: 6px 10px; }
 }
