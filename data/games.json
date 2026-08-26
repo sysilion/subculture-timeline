@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-25",
+    "lastUpdated": "2026-08-27",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-25"
+    "autoUpdated": "2026-08-27"
   },
   "games": [
     {
@@ -1400,6 +1400,86 @@
           "type": "event",
           "title": "폭풍 소탕",
           "start": "2026-08-17",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "한계 돌파: 질주 그랑프리",
+          "start": "2026-08-24",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "별의 선물",
+          "start": "2026-08-25",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "군단의 재림",
+          "start": "2026-08-26",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "선객과 천랑",
+          "start": "2026-08-31",
+          "end": "2026-10-05",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "차원 분열",
+          "start": "2026-09-07",
+          "end": "2026-09-21",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "한 뼘 대모험",
+          "start": "2026-09-12",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "입계의 서막",
+          "start": "2026-09-14",
+          "end": "2026-10-19",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "기묘한 영역",
+          "start": "2026-09-19",
           "end": "2026-09-28",
           "version": "",
           "tentative": false,
@@ -1494,7 +1574,8 @@
           "tentative": false,
           "source": "wuwatracker.com",
           "_auto": true,
-          "rarity": 5
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
           "type": "banner",
@@ -1505,7 +1586,8 @@
           "tentative": false,
           "source": "wuwatracker.com",
           "_auto": true,
-          "rarity": 5
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
           "type": "banner",
@@ -1516,7 +1598,8 @@
           "tentative": false,
           "source": "wuwatracker.com",
           "_auto": true,
-          "rarity": 5
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
           "type": "banner",
@@ -1527,7 +1610,8 @@
           "tentative": false,
           "source": "wuwatracker.com",
           "_auto": true,
-          "rarity": 5
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
           "type": "banner",
@@ -1538,7 +1622,8 @@
           "tentative": false,
           "source": "wuwatracker.com",
           "_auto": true,
-          "rarity": 5
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
           "type": "banner",
@@ -1549,7 +1634,8 @@
           "tentative": false,
           "source": "wuwatracker.com",
           "_auto": true,
-          "rarity": 5
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
           "type": "banner",
@@ -1560,7 +1646,8 @@
           "tentative": false,
           "source": "wuwatracker.com",
           "_auto": true,
-          "rarity": 5
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
           "type": "banner",
@@ -1571,7 +1658,8 @@
           "tentative": false,
           "source": "wuwatracker.com",
           "_auto": true,
-          "rarity": 5
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
           "type": "banner",
@@ -1582,7 +1670,8 @@
           "tentative": false,
           "source": "wuwatracker.com",
           "_auto": true,
-          "rarity": 5
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
           "type": "banner",
@@ -1593,7 +1682,8 @@
           "tentative": false,
           "source": "wuwatracker.com",
           "_auto": true,
-          "rarity": 5
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
           "type": "event",
@@ -2130,7 +2220,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/2094",
+          "description": "Assemble unique lineups and equip distinct Tokens to conquer challenging levels."
         },
         {
           "type": "event",
@@ -2160,7 +2252,8 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/3128"
         },
         {
           "type": "event",
@@ -2180,7 +2273,8 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5023"
         },
         {
           "type": "event",
@@ -2190,7 +2284,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310",
+          "description": "During Pioneer Podcast, you can obtain Podcast EXP by completing Podcast Tasks to increase the Podcast Level and win various rewards."
         },
         {
           "type": "event",
@@ -2200,7 +2296,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310",
+          "description": "During the event, log in to claim the day's login rewards."
         },
         {
           "type": "event",
@@ -2210,7 +2308,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5023",
+          "description": "In Endstate Matrix, deploy Resonators and select a Power Circuit before starting a high-difficulty challenge. Endstate Matrix progresses through Challenge Cycles. Each Challenge Cycle spans across multiple Challenge Phases, which reset with version updates. Rewards are offered independently for Chal"
         },
         {
           "type": "event",
@@ -2230,7 +2330,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310",
+          "description": "In this mode, you fight simulated battles from a top-down side view using Rover: Spectro or Rover: Havoc. Within a stage, Rover can obtain Resonance Factors of different Resonators, granting corresponding special enhancements to the basic skills or strengthening other combat abilities."
         },
         {
           "type": "event",
@@ -2250,7 +2352,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310",
+          "description": "Certain anomalies can be found in the game scenes. After locating these anomalies, use the Utility: Zoom Camera to capture them, then work with Bertolt to modify them. You may choose to mark these anomalies or intentionally distort them further. The choices you make will determine how players of The"
         },
         {
           "type": "event",
@@ -2260,7 +2364,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/2094",
+          "description": "Assemble unique lineups and equip distinct Tokens to conquer challenging levels."
         },
         {
           "type": "event",
@@ -2280,7 +2386,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5023",
+          "description": "Spend Waveplates to claim double rewards after completing a Simulation or Forgery Challenge."
         },
         {
           "type": "event",
@@ -2290,7 +2398,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310",
+          "description": "During the event, one event quest opens each day at 04:00 server time, for a total of 7 quests. You can receive Qingxiao's personal instruction at various locations, play pieces to refine your skill on the guqin, and earn the corresponding event rewards."
         },
         {
           "type": "event",
@@ -2310,7 +2420,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310",
+          "description": "This event consists of 14 stages, 7 Surface Layer stages and\n7 Deep Layer stages. The stages will unlock gradually. Clear\neach Surface Layer stage to unlock the corresponding Deep\nLayer stage; clear all Surface Layer stages to unlock the\nAbyss of the Final Dreams for a boss-rush challenge."
         },
         {
           "type": "event",
@@ -2320,7 +2432,8 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/3128"
         },
         {
           "type": "event",
@@ -2340,7 +2453,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310",
+          "description": "Complete Survey Tasks daily to get Survey Points and claim rewards after meeting Survey Point requirements. Survey Tasks refresh every day at 04:00 (server time). Unclaimed Survey Points will be automatically claimed at this time."
         },
         {
           "type": "event",
@@ -2350,7 +2465,9 @@
           "version": "",
           "tentative": false,
           "source": "wuwatracker.com",
-          "_auto": true
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310",
+          "description": "Spend Waveplates to claim double rewards after completing a Tacet Suppression challenge."
         }
       ],
       "iconUrl": "https://wutheringwaves.kurogames.com/website-preface/favicon.ico",
@@ -3728,6 +3845,17 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "A Forest Mantled in Snow",
+          "subtitle": "Sign-In",
+          "start": "2026-08-26",
+          "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
         }
       ],
       "iconUrl": "https://web.hycdn.cn/favicon.ico",
@@ -3814,6 +3942,8 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
+          "image": "https://www.ntebuild.com/images/drip-marketing/drip-zankou.webp",
+          "description": "Zankou opens Version 1.3 as the Phase 1 headliner — an Incantation/Gas Esper from the Scarlet Letter faction, featured on the Alluring Shadows board alongside A-rank Mint, Edgar and Adler.",
           "rarity": 5
         },
         {
@@ -3825,6 +3955,8 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/nanally_rerun.webp?v=3",
+          "description": "Rerun of Nanally's launch banner on The Ichi-daime board, running alongside Zankou's Phase 1 — see the Nanally guide for current build advice.",
           "rarity": 5
         },
         {
@@ -3836,6 +3968,8 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/spellbound_special.webp?v=3",
+          "description": "The research program carrying Ravenous Blade, Zankou's signature Gas arc, alongside her Version 1.3 Phase 1 banner.",
           "rarity": 5
         },
         {
@@ -3847,6 +3981,8 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/tiger_special_rerun.webp",
+          "description": "Rerun of Nanally's signature Plasma arc, scaling off ATK% — available alongside her Phase 1 rerun banner.",
           "rarity": 5
         },
         {
@@ -3858,6 +3994,8 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
+          "image": "https://www.ntebuild.com/images/drip-marketing/drip-linko.webp",
+          "description": "Linko opens Phase 2 of Version 1.3 as an Anima/Plasma Esper built around team-attack sync support.",
           "rarity": 5
         },
         {
@@ -3869,6 +4007,8 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/hotori_rerun.webp",
+          "description": "Rerun of Hotori's Misty Tipsy Style board, running alongside Linko's Phase 2 banner — see the Hotori guide for current build advice.",
           "rarity": 5
         },
         {
@@ -3880,6 +4020,8 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/chorus_special.webp",
+          "description": "The research program carrying Voice of the Voyager, Linko's signature Plasma arc, alongside her Version 1.3 Phase 2 banner.",
           "rarity": 5
         },
         {
@@ -3887,16 +4029,6 @@
           "title": "Market Opening Rehersal",
           "start": "2026-05-13",
           "end": "2026-06-03",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Zero’s Companion",
-          "start": "2026-05-13",
-          "end": "2026-05-27",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -4247,7 +4379,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/beyond_the_rails.webp",
+          "description": "The third Version 1.2 rotation of the permanent Beyond the Rails anomaly mode, closing out the update."
         },
         {
           "type": "event",
@@ -4257,7 +4391,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/circle_gift_v13.webp",
+          "description": "A 7-day login check-in track for Version 1.3 — log in on 7 days inside the window to earn Solid Dice x10."
         },
         {
           "type": "event",
@@ -4267,7 +4403,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/volley_star.webp?v=3",
+          "description": "A new permanent Hethereau Hobby: 2v2 beach volleyball, paired with an AI partner through the Rookie Series group stage into a weekly ranked tournament."
         },
         {
           "type": "event",
@@ -4277,7 +4415,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/surf_breaker.webp",
+          "description": "Jetski racing across Hethereau's waterways — clear a route's three difficulties in order to unlock the next."
         },
         {
           "type": "event",
@@ -4287,7 +4427,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/hunters_crucible.webp?v=3",
+          "description": "The Version 1.3 seasonal run of the boss-rush combat trial — clear a cumulative 15,000 points to unlock an exclusive event title."
         },
         {
           "type": "event",
@@ -4297,7 +4439,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/alluring_perks.webp",
+          "description": "The Version 1.3 Phase 1 Perks pass, run alongside the Alluring Shadows board — adds the Scarlet Sash glider livery, the Sandy Mirage Sirocco vehicle livery and Zankou's Autumn Vignette outfit."
         },
         {
           "type": "event",
@@ -4307,7 +4451,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/tiger_perks_v13.webp",
+          "description": "The Perks pass attached to Nanally's Ichi-daime rerun — the Underboss-of-the-Underboss glider livery, the Tiger Incoming! M1000 livery and Nanally's Phoenix Kick outfit."
         },
         {
           "type": "event",
@@ -4317,7 +4463,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/alluring_special_offers.webp",
+          "description": "The Phase 1 shop window: one-time dice, key and bond bundles for both the Alluring Shadows and Ichi-daime boards, plus a twice-buyable Anomaly Pilgrimage material box."
         },
         {
           "type": "event",
@@ -4327,7 +4475,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/lucent_tides.webp",
+          "description": "A 15-box Fons/Annulith gacha whose cost climbs with every box opened — the pool holds the Tide watercraft, Nanally's Sunny Surf, Mint's Saltwater Taffy and Esper Zero's Cloudless Summer outfits. Opening all 15 clears the pool."
         },
         {
           "type": "event",
@@ -4337,7 +4487,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/version_1_3.webp?v=3",
+          "description": "The Version 1.3 season pass: run Circle Quests for XP, climb Circle Bounty ranks, and claim Fabricated Dice, Gold Carrota, De-noise Solution and Expansion Cores — with Elite and Honor Hunter Supplies unlocking a paid reward track on top."
         },
         {
           "type": "event",
@@ -4347,7 +4499,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/stamina_recharge_v13.webp",
+          "description": "A one-week Version 1.3 boost event: City Stamina spent in Hethereau Hobbies activities returns rewards at 2x efficiency."
         },
         {
           "type": "event",
@@ -4357,7 +4511,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/beyond_the_rails.webp",
+          "description": "The first Version 1.3 rotation of Beyond the Rails, taking over from Waxing Circle on August 27 with its own weekly reward track."
         },
         {
           "type": "event",
@@ -4367,7 +4523,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/shipwreck_salvage.webp",
+          "description": "Ride the Tide jetski with a harpoon in hand to spear floating cargo marked on the map and haul it ashore before your fuel runs out — only cargo actually brought in counts."
         },
         {
           "type": "event",
@@ -4377,7 +4535,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/gold_clash.webp?v=3",
+          "description": "A two-week Version 1.3 boost event: Fons earned in Pink Paws Heist comes in at 2x efficiency for the whole window."
         },
         {
           "type": "event",
@@ -4387,7 +4547,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/runaway_echoes.webp",
+          "description": "A new mode entering Version 1.3: survive waves of monsters in an Anomalous Realm, leveling up mid-run to pick build-defining upgrade cards. Two variants — a timed Simulation Mode and an untimed Endless Mode."
         },
         {
           "type": "event",
@@ -4397,7 +4559,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/beyond_the_rails.webp",
+          "description": "The Version 1.3 rotation of Beyond the Rails opening September 10, on the mode's standing 14-day cycle. Hotta names each circle as it goes live."
         },
         {
           "type": "event",
@@ -4407,7 +4571,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/pixel_surge.webp?v=2",
+          "description": "A one-week Version 1.3 boost event doubling Character Pixel rewards from eligible Anomaly Zone stages, capped at 120 Pixels per day."
         },
         {
           "type": "event",
@@ -4417,7 +4583,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/breezy_tour.webp",
+          "description": "Ride the 'Yesteryear' bicycle and invite a character along for the trip — they chat with your Appraiser as you pedal them to their destination."
         },
         {
           "type": "event",
@@ -4427,7 +4595,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/fons_rush.webp?v=3",
+          "description": "A closing Version 1.3 event doubling Fons earned from Hethereau Hobbies — Racing is excluded, and the bonus is capped once you've spent 700 City Stamina during the window."
         },
         {
           "type": "event",
@@ -4437,7 +4607,9 @@
           "version": "",
           "tentative": false,
           "source": "ntebuild.com",
-          "_auto": true
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/beyond_the_rails.webp",
+          "description": "The Version 1.3 rotation of Beyond the Rails opening September 24. The mode refreshes on a 14-day cycle; Hotta names each circle as it goes live, so this one is unnamed for now."
         }
       ],
       "iconUrl": "https://nte.perfectworld.com/public/images/icon.png",
@@ -4923,7 +5095,8 @@
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
-          "_auto": true
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_854_Jp.png"
         },
         {
           "type": "event",
@@ -4943,7 +5116,8 @@
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
-          "_auto": true
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_855_Jp.png"
         },
         {
           "type": "event",
@@ -4953,7 +5127,8 @@
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
-          "_auto": true
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_80000_Jp.png"
         },
         {
           "type": "event",
@@ -4973,7 +5148,8 @@
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
-          "_auto": true
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_842_Jp.png"
         },
         {
           "type": "event",
@@ -4983,7 +5159,8 @@
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
-          "_auto": true
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_856_Jp.png"
         },
         {
           "type": "event",
@@ -4993,7 +5170,8 @@
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
-          "_auto": true
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_843_Jp.png"
         },
         {
           "type": "event",
@@ -5013,7 +5191,8 @@
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
-          "_auto": true
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_Mini_60000_2_Jp.png"
         },
         {
           "type": "event",
@@ -5023,7 +5202,8 @@
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
-          "_auto": true
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_857_Jp.png"
         },
         {
           "type": "event",
@@ -5033,7 +5213,8 @@
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
-          "_auto": true
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_845_Jp.png"
         },
         {
           "type": "event",
@@ -5572,30 +5753,6 @@
       "entries": [
         {
           "type": "banner",
-          "title": "Fine Motion + 1 more",
-          "start": "2026-05-19",
-          "end": "2026-05-28",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
-          "title": "Haru Urara + 1 more",
-          "start": "2026-05-19",
-          "end": "2026-05-27",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
           "title": "Inari One",
           "start": "2026-05-29",
           "end": "2026-06-06",
@@ -5604,6 +5761,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30094.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30094",
+          "description": "픽업: Inari One",
           "rarity": 3
         },
         {
@@ -5616,6 +5776,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30095.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30095",
           "rarity": 3
         },
         {
@@ -5646,6 +5808,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30096.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30096",
+          "description": "픽업: Sweep Tosho",
           "rarity": 3
         },
         {
@@ -5658,6 +5823,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30097.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30097",
           "rarity": 3
         },
         {
@@ -5680,6 +5847,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30098.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30098",
+          "description": "픽업: Taiki Shuttle, Mejiro Dober",
           "rarity": 3
         },
         {
@@ -5692,6 +5862,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30099.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30099",
           "rarity": 3
         },
         {
@@ -5730,6 +5902,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30101.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30101",
           "rarity": 3
         },
         {
@@ -5752,6 +5926,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30102.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30102",
+          "description": "픽업: Narita Brian, Seiun Sky",
           "rarity": 3
         },
         {
@@ -5764,6 +5941,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30103.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30103",
           "rarity": 3
         },
         {
@@ -5802,6 +5981,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30104.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30104",
+          "description": "픽업: Gold Ship, Mejiro McQueen",
           "rarity": 3
         },
         {
@@ -5814,6 +5996,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30105.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30105",
           "rarity": 3
         },
         {
@@ -5836,6 +6020,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30106.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30106",
+          "description": "픽업: Bamboo Memory",
           "rarity": 3
         },
         {
@@ -5848,6 +6035,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30107.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30107",
           "rarity": 3
         },
         {
@@ -5886,6 +6075,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30108.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30108",
+          "description": "픽업: Copano Rickey",
           "rarity": 3
         },
         {
@@ -5898,6 +6090,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30109.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30109",
           "rarity": 3
         },
         {
@@ -5910,6 +6104,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30110.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30110",
+          "description": "픽업: Smart Falcon",
           "rarity": 3
         },
         {
@@ -5922,6 +6119,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30111.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30111",
           "rarity": 3
         },
         {
@@ -5934,6 +6133,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30112.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30112",
+          "description": "픽업: Winning Ticket, Narita Taishin",
           "rarity": 3
         },
         {
@@ -5946,6 +6148,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30113.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30113",
           "rarity": 3
         },
         {
@@ -5976,6 +6180,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30114.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30114",
+          "description": "픽업: Yukino Bijin",
           "rarity": 3
         },
         {
@@ -5988,6 +6195,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30115.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30115",
           "rarity": 3
         },
         {
@@ -6010,6 +6219,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30116.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30116",
+          "description": "픽업: Seeking the Pearl",
           "rarity": 3
         },
         {
@@ -6022,6 +6234,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30117.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30117",
           "rarity": 3
         },
         {
@@ -6052,6 +6266,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30118.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30118",
+          "description": "픽업: Agnes Digital, Meisho Doto",
           "rarity": 3
         },
         {
@@ -6064,6 +6281,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30119.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30119",
           "rarity": 3
         },
         {
@@ -6086,6 +6305,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30120.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30120",
+          "description": "픽업: Aston Machan",
           "rarity": 3
         },
         {
@@ -6098,6 +6320,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30121.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30121",
           "rarity": 3
         },
         {
@@ -6110,6 +6334,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30130.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30130",
+          "description": "픽업: Seeking the Pearl",
           "rarity": 3
         },
         {
@@ -6122,6 +6349,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30131.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30131",
           "rarity": 3
         },
         {
@@ -6134,6 +6363,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30122.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30122",
+          "description": "픽업: Yamanin Zephyr",
           "rarity": 3
         },
         {
@@ -6146,6 +6378,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30123.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30123",
           "rarity": 3
         },
         {
@@ -6158,6 +6392,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30124.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30124",
+          "description": "픽업: Tamamo Cross, Inari One",
           "rarity": 3
         },
         {
@@ -6170,6 +6407,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30125.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30125",
           "rarity": 3
         },
         {
@@ -6182,6 +6421,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30126.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30126",
+          "description": "픽업: Nakayama Festa",
           "rarity": 3
         },
         {
@@ -6194,6 +6436,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30127.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30127",
           "rarity": 3
         },
         {
@@ -6206,6 +6450,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30128.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30128",
+          "description": "픽업: Wonder Acute",
           "rarity": 3
         },
         {
@@ -6218,6 +6465,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30129.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30129",
           "rarity": 3
         },
         {
@@ -6230,6 +6479,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30132.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30132",
+          "description": "픽업: Vodka, Daiwa Scarlet",
           "rarity": 3
         },
         {
@@ -6242,6 +6494,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30133.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30133",
           "rarity": 3
         },
         {
@@ -6254,6 +6508,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30134.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30134",
+          "description": "픽업: Zenno Rob Roy",
           "rarity": 3
         },
         {
@@ -6266,6 +6523,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30135.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30135",
           "rarity": 3
         },
         {
@@ -6278,6 +6537,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30136.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30136",
+          "description": "픽업: Narita Brian",
           "rarity": 3
         },
         {
@@ -6290,6 +6552,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30137.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30137",
           "rarity": 3
         },
         {
@@ -6302,6 +6566,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2022_30138.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30138",
+          "description": "픽업: Satono Diamond, Kitasan Black",
           "rarity": 3
         },
         {
@@ -6314,6 +6581,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2022_30139.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30139",
           "rarity": 3
         },
         {
@@ -6326,6 +6595,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30140.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30140",
+          "description": "픽업: Hokko Tarumae",
           "rarity": 3
         },
         {
@@ -6338,6 +6610,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30141.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30141",
           "rarity": 3
         },
         {
@@ -6350,6 +6624,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30142.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30142",
+          "description": "픽업: Daitaku Helios",
           "rarity": 3
         },
         {
@@ -6362,6 +6639,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30144.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30144",
+          "description": "픽업: Rice Shower, Haru Urara",
           "rarity": 3
         },
         {
@@ -6374,6 +6654,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30143.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30143",
           "rarity": 3
         },
         {
@@ -6386,6 +6668,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30145.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30145",
           "rarity": 3
         },
         {
@@ -6398,6 +6682,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30146.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30146",
+          "description": "픽업: Mejiro Ryan, Ines Fujin",
           "rarity": 3
         },
         {
@@ -6410,6 +6697,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30147.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30147",
           "rarity": 3
         },
         {
@@ -6422,6 +6711,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30148.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30148",
+          "description": "픽업: Shinko Windy",
           "rarity": 3
         },
         {
@@ -6434,6 +6726,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30149.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30149",
           "rarity": 3
         },
         {
@@ -6446,6 +6740,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30150.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30150",
+          "description": "픽업: Mr. C.B., Twin Turbo",
           "rarity": 3
         },
         {
@@ -6458,6 +6755,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30151.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30151",
           "rarity": 3
         },
         {
@@ -6470,6 +6769,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30152.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30152",
+          "description": "픽업: Daiichi Ruby",
           "rarity": 3
         },
         {
@@ -6482,6 +6784,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30153.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30153",
           "rarity": 3
         },
         {
@@ -6494,6 +6798,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30154.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30154",
+          "description": "픽업: Symboli Kris S",
           "rarity": 3
         },
         {
@@ -6506,29 +6813,9 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30155.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30155",
           "rarity": 3
-        },
-        {
-          "type": "event",
-          "title": "The Promised Time: Silks & Three Riddles",
-          "start": "2026-05-19",
-          "end": "2026-05-28",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "story event"
-        },
-        {
-          "type": "event",
-          "title": "Spring G1 Celebration Missions, Part 2: Yasuda Kinen",
-          "start": "2026-05-21",
-          "end": "2026-05-27",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "campaign"
         },
         {
           "type": "event",
@@ -6539,7 +6826,8 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/161.webp"
         },
         {
           "type": "event",
@@ -6550,7 +6838,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting"
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/811.webp",
+          "link": "https://umapyoi.net/news/811?lang=jp"
         },
         {
           "type": "event",
@@ -6571,7 +6861,10 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "legend race"
+          "subtitle": "legend race",
+          "image": "https://uma.moe/assets/timeline-images/events/legend-race/806.webp",
+          "link": "https://umapyoi.net/news/806?lang=jp",
+          "description": "픽업: Tamamo Cross (Original), Meisho Doto (Original)"
         },
         {
           "type": "event",
@@ -6582,7 +6875,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/180.webp",
+          "link": "https://umapyoi.net/news/823?lang=jp"
         },
         {
           "type": "event",
@@ -6603,7 +6898,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "story event"
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/06_seek_solve_summer_walk_banner.webp",
+          "link": "https://umapyoi.net/news/836?lang=jp"
         },
         {
           "type": "event",
@@ -6614,7 +6911,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/183.webp",
+          "link": "https://umapyoi.net/news/823?lang=jp"
         },
         {
           "type": "event",
@@ -6635,7 +6934,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting"
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/845.webp",
+          "link": "https://umapyoi.net/news/845?lang=jp"
         },
         {
           "type": "event",
@@ -6646,7 +6947,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "strongest team"
+          "subtitle": "strongest team",
+          "image": "https://uma.moe/assets/timeline-images/events/strongest-team/853.webp",
+          "link": "https://umapyoi.net/news/853?lang=jp"
         },
         {
           "type": "event",
@@ -6657,7 +6960,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "story event"
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/07_super_smashing_summer_vacation_banner.webp",
+          "link": "https://umapyoi.net/news/866?lang=jp"
         },
         {
           "type": "event",
@@ -6678,7 +6983,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting"
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/881.webp",
+          "link": "https://umapyoi.net/news/881?lang=jp"
         },
         {
           "type": "event",
@@ -6689,7 +6996,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/217.webp",
+          "link": "https://umapyoi.net/news/887?lang=jp"
         },
         {
           "type": "event",
@@ -6700,7 +7009,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/218.webp",
+          "link": "https://umapyoi.net/news/902?lang=jp"
         },
         {
           "type": "event",
@@ -6711,7 +7022,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "scenario release"
+          "subtitle": "scenario release",
+          "image": "https://uma.moe/assets/timeline-images/events/training-scenario/905.webp",
+          "link": "https://umapyoi.net/news/905?lang=jp"
         },
         {
           "type": "event",
@@ -6722,7 +7035,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "story event"
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/08_wings_of_iron_banner.webp",
+          "link": "https://umapyoi.net/news/915?lang=jp"
         },
         {
           "type": "event",
@@ -6743,7 +7058,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting"
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/936.webp",
+          "link": "https://umapyoi.net/news/936?lang=jp"
         },
         {
           "type": "event",
@@ -6754,7 +7071,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "trainer skills test"
+          "subtitle": "trainer skills test",
+          "image": "https://uma.moe/assets/timeline-images/events/trainer-skills-test/955.webp",
+          "link": "https://umapyoi.net/news/955?lang=jp"
         },
         {
           "type": "event",
@@ -6765,7 +7084,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/194.webp",
+          "link": "https://umapyoi.net/news/948?lang=jp"
         },
         {
           "type": "event",
@@ -6776,7 +7097,10 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "legend race"
+          "subtitle": "legend race",
+          "image": "https://uma.moe/assets/timeline-images/events/legend-race/954.webp",
+          "link": "https://umapyoi.net/news/954?lang=jp",
+          "description": "픽업: Nishino Flower (Original), Hishi Akebono (Original)"
         },
         {
           "type": "event",
@@ -6787,7 +7111,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/195.webp",
+          "link": "https://umapyoi.net/news/948?lang=jp"
         },
         {
           "type": "event",
@@ -6798,7 +7124,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "story event"
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/09_days_in_a_flash_banner.webp",
+          "link": "https://umapyoi.net/news/973?lang=jp"
         },
         {
           "type": "event",
@@ -6819,7 +7147,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/196.webp",
+          "link": "https://umapyoi.net/news/948?lang=jp"
         },
         {
           "type": "event",
@@ -6830,7 +7160,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting"
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/992.webp",
+          "link": "https://umapyoi.net/news/992?lang=jp"
         },
         {
           "type": "event",
@@ -6841,7 +7173,9 @@
           "tentative": false,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/197.webp",
+          "link": "https://umapyoi.net/news/948?lang=jp"
         },
         {
           "type": "event",
@@ -6852,7 +7186,10 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "legend race"
+          "subtitle": "legend race",
+          "image": "https://uma.moe/assets/timeline-images/events/legend-race/1021.webp",
+          "link": "https://umapyoi.net/news/1021?lang=jp",
+          "description": "픽업: Fine Motion (Original), Kawakami Princess (Original)"
         },
         {
           "type": "event",
@@ -6863,7 +7200,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/198.webp",
+          "link": "https://umapyoi.net/news/1001?lang=jp"
         },
         {
           "type": "event",
@@ -6874,7 +7213,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/199.webp",
+          "link": "https://umapyoi.net/news/1001?lang=jp"
         },
         {
           "type": "event",
@@ -6885,7 +7226,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "story event"
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/10_intertwined_memories_banner.webp",
+          "link": "https://umapyoi.net/news/1023?lang=jp"
         },
         {
           "type": "event",
@@ -6896,7 +7239,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/200.webp",
+          "link": "https://umapyoi.net/news/1001?lang=jp"
         },
         {
           "type": "event",
@@ -6907,7 +7252,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting"
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1050.webp",
+          "link": "https://umapyoi.net/news/1050?lang=jp"
         },
         {
           "type": "event",
@@ -6918,7 +7265,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/201.webp",
+          "link": "https://umapyoi.net/news/1001?lang=jp"
         },
         {
           "type": "event",
@@ -6929,7 +7278,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "strongest team"
+          "subtitle": "strongest team",
+          "image": "https://uma.moe/assets/timeline-images/events/strongest-team/1055.webp",
+          "link": "https://umapyoi.net/news/1055?lang=jp"
         },
         {
           "type": "event",
@@ -6940,7 +7291,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/202.webp",
+          "link": "https://umapyoi.net/news/1001?lang=jp"
         },
         {
           "type": "event",
@@ -6951,7 +7304,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/203.webp",
+          "link": "https://umapyoi.net/news/1001?lang=jp"
         },
         {
           "type": "event",
@@ -6962,7 +7317,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "story event"
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/11_illuminate_the_heart_banner.webp",
+          "link": "https://umapyoi.net/news/1077?lang=jp"
         },
         {
           "type": "event",
@@ -6973,7 +7330,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/204.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
         },
         {
           "type": "event",
@@ -6984,7 +7343,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/205.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
         },
         {
           "type": "event",
@@ -6995,7 +7356,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/206.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
         },
         {
           "type": "event",
@@ -7006,7 +7369,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting"
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1087.webp",
+          "link": "https://umapyoi.net/news/1087?lang=jp"
         },
         {
           "type": "event",
@@ -7017,7 +7382,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/207.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
         },
         {
           "type": "event",
@@ -7028,7 +7395,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/208.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
         },
         {
           "type": "event",
@@ -7039,7 +7408,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/209.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
         },
         {
           "type": "event",
@@ -7050,7 +7421,10 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "legend race"
+          "subtitle": "legend race",
+          "image": "https://uma.moe/assets/timeline-images/events/legend-race/1111.webp",
+          "link": "https://umapyoi.net/news/1111?lang=jp",
+          "description": "픽업: Mejiro Palmer (Original), Daiwa Scarlet (Original)"
         },
         {
           "type": "event",
@@ -7061,7 +7435,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "story event"
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/12_happy_new_future_banner.webp",
+          "link": "https://umapyoi.net/news/1126?lang=jp"
         },
         {
           "type": "event",
@@ -7072,7 +7448,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting"
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1135.webp",
+          "link": "https://umapyoi.net/news/1135?lang=jp"
         },
         {
           "type": "event",
@@ -7083,7 +7461,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "racing carnival"
+          "subtitle": "racing carnival",
+          "image": "https://uma.moe/assets/timeline-images/events/racing-carnival/1151.webp",
+          "link": "https://umapyoi.net/news/1151?lang=jp"
         },
         {
           "type": "event",
@@ -7094,7 +7474,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/277.webp",
+          "link": "https://umapyoi.net/news/1142?lang=jp"
         },
         {
           "type": "event",
@@ -7105,7 +7487,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "story event"
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/01_sweet_memories_banner.webp",
+          "link": "https://umapyoi.net/news/1159?lang=jp"
         },
         {
           "type": "event",
@@ -7116,7 +7500,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/278.webp",
+          "link": "https://umapyoi.net/news/1142?lang=jp"
         },
         {
           "type": "event",
@@ -7127,7 +7513,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1182.webp",
+          "link": "https://umapyoi.net/news/1182?lang=jp"
         },
         {
           "type": "event",
@@ -7138,7 +7526,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting"
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1179.webp",
+          "link": "https://umapyoi.net/news/1179?lang=jp"
         },
         {
           "type": "event",
@@ -7149,7 +7539,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1194.webp",
+          "link": "https://umapyoi.net/news/1194?lang=jp"
         },
         {
           "type": "event",
@@ -7160,7 +7552,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "scenario release"
+          "subtitle": "scenario release",
+          "image": "https://uma.moe/assets/timeline-images/events/training-scenario/1195.webp",
+          "link": "https://umapyoi.net/news/1195?lang=jp"
         },
         {
           "type": "event",
@@ -7171,7 +7565,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "story event"
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/02_leap_into_a_new_world_banner.webp",
+          "link": "https://umapyoi.net/news/1198?lang=jp"
         },
         {
           "type": "event",
@@ -7182,7 +7578,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1216.webp",
+          "link": "https://umapyoi.net/news/1216?lang=jp"
         },
         {
           "type": "event",
@@ -7193,7 +7591,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting"
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1214.webp",
+          "link": "https://umapyoi.net/news/1214?lang=jp"
         },
         {
           "type": "event",
@@ -7204,7 +7604,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/304.webp",
+          "link": "https://umapyoi.net/news/1224?lang=jp"
         },
         {
           "type": "event",
@@ -7215,7 +7617,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "factor research"
+          "subtitle": "factor research",
+          "image": "https://uma.moe/assets/timeline-images/events/factor-research/1233.webp",
+          "link": "https://umapyoi.net/news/1233?lang=jp"
         },
         {
           "type": "event",
@@ -7226,7 +7630,9 @@
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "campaign"
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/305.webp",
+          "link": "https://umapyoi.net/news/1224?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
@@ -7260,9 +7666,9 @@
         },
         {
           "type": "event",
-          "title": "Nocturnal Sweeping BokGak",
-          "start": "2026-04-30",
-          "end": "2026-05-28",
+          "title": "Mnestic Experience",
+          "start": "2026-06-11",
+          "end": "2026-07-09",
           "version": "",
           "tentative": false,
           "source": "limbuscompany.wiki.gg",

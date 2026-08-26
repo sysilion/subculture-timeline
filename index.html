@@ -30,9 +30,6 @@
         <div class="legend-dot type-event"></div><span data-i18n="legendEvent">이벤트</span>
       </div>
       <div class="legend-item">
-        <div class="legend-dot type-version"></div><span data-i18n="legendVersion">버전 기간</span>
-      </div>
-      <div class="legend-item">
         <div class="legend-dot tentative"></div><span data-i18n="legendTentative">미확정</span>
       </div>
       <div class="legend-item" style="margin-left:4px;">
@@ -49,6 +46,16 @@
         <option value="30,60" selected>-30일 ~ +60일</option>
         <option value="60,90">-60일 ~ +90일</option>
         <option value="90,120">-90일 ~ +120일</option>
+      </select>
+    </div>
+
+    <!-- 행 높이 -->
+    <div id="density-controls">
+      <label for="density-select" data-i18n="densityLabel">행 높이:</label>
+      <select id="density-select">
+        <option value="compact" data-i18n="densityCompact">촘촘</option>
+        <option value="normal" data-i18n="densityNormal">보통</option>
+        <option value="roomy" data-i18n="densityRoomy">넓게</option>
       </select>
     </div>
 
@@ -137,6 +144,13 @@
 </div>
 
 <div id="tooltip"><div class="tooltip-inner"></div></div>
+
+<!-- ── 개별 일정 상세 ── -->
+<div id="entry-modal" class="entry-modal" role="dialog" aria-modal="true" aria-labelledby="entry-modal-title" hidden>
+  <button class="entry-modal-close" id="entry-modal-close" aria-label="닫기">&times;</button>
+  <div id="entry-modal-body"></div>
+</div>
+<div id="entry-modal-overlay" class="entry-modal-overlay" hidden></div>
 
 <!-- ── 게임 상세 패널 ── -->
 <div id="detail-panel" class="detail-panel" role="dialog" aria-modal="true" aria-label="게임 상세">

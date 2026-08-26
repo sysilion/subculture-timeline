@@ -61,6 +61,12 @@ def parse() -> list[dict]:
             "source":    "ntebuild.com",
             "_auto":     True,
         }
+        image = ev.get("image")
+        if isinstance(image, str) and image.startswith("https://"):
+            entry["image"] = image
+        desc = (ev.get("description") or "").strip()
+        if desc:
+            entry["description"] = desc[:300]
         if is_banner:
             entry["rarity"] = 5
         entries.append(entry)

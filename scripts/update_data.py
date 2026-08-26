@@ -235,7 +235,8 @@ def run():
             continue
 
         new_entries, new_count = merge_entries(game.get("entries", []), fresh)
-        if new_count > 0 or len(new_entries) != len(game.get("entries", [])):
+        # 항목 수가 같아도 내용(이미지·설명 등)이 바뀌었을 수 있다
+        if new_entries != game.get("entries", []):
             game["entries"] = new_entries
             updated_games.append(gid)
             total_new += new_count

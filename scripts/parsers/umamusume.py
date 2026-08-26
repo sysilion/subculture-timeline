@@ -103,6 +103,15 @@ def parse() -> list[dict]:
         }
         if kind:
             entry["subtitle"] = kind.replace("_", " ")[:60]
+        img = (ev.get("image_path") or "").lstrip("/")
+        if img:
+            entry["image"] = f"{BASE}/{img}"
+        link = ev.get("gametora_url") or ev.get("umapyoi_url")
+        if isinstance(link, str) and link.startswith("https://"):
+            entry["link"] = link
+        chars = ev.get("related_characters")
+        if isinstance(chars, list) and chars:
+            entry["description"] = "픽업: " + ", ".join(str(c) for c in chars[:6])
         if is_banner:
             entry["rarity"] = 3
         entries.append(entry)

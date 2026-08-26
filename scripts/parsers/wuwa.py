@@ -104,6 +104,14 @@ def _entries(items: list, etype: str) -> list[dict]:
         }
         if etype == "banner":
             entry["rarity"] = 5
+        # 표지 이미지(coverImgSrc)는 Referer가 붙으면 403이라 브라우저에서 못 띄운다.
+        # 링크와 설명만 가져온다.
+        link = it.get("sourceUrl")
+        if isinstance(link, str) and link.startswith("https://"):
+            entry["link"] = link
+        desc = it.get("description")
+        if isinstance(desc, str) and desc and desc != "$undefined":
+            entry["description"] = desc[:300]
         out.append(entry)
     return out
 

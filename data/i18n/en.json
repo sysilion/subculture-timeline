@@ -47,5 +47,10 @@
   "rowBanners": "Banner",
   "rowEvents": "Event",
   "detailHint": "Details",
-  "icsBtn": "📅 .ics"
+  "icsBtn": "📅 .ics",
+  "entryMoreInfo": "More info",
+  "densityLabel": "Row height:",
+  "densityCompact": "Compact",
+  "densityNormal": "Normal",
+  "densityRoomy": "Roomy"
 }
