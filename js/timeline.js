@@ -27,15 +27,42 @@ const Timeline = (() => {
     { maxWidth: Infinity, dayPx: 28, labelW: 120, rowH: 44, laneH: 32 },
   ];
 
+  /* ── 행 높이(밀도) ── 화면 폭 기준 치수에 배율을 곱한다 ── */
+  const DENSITY = { compact: 0.72, normal: 1, roomy: 1.4 };
+  let density = 'normal';
+  try {
+    const saved = localStorage.getItem('tl-density');
+    if (saved && DENSITY[saved]) density = saved;
+  } catch (e) {}
+
   function applyResponsiveMetrics() {
     const m = METRICS.find(x => window.innerWidth <= x.maxWidth);
+    const k = DENSITY[density] || 1;
+    const rowH  = Math.round(m.rowH * k);
+    const laneH = Math.round(m.laneH * k);
     const changed = CFG.dayPx !== m.dayPx || CFG.labelW !== m.labelW
-                 || CFG.rowH !== m.rowH || CFG.laneH !== m.laneH;
+                 || CFG.rowH !== rowH || CFG.laneH !== laneH;
     CFG.dayPx = m.dayPx;
     CFG.labelW = m.labelW;
-    CFG.rowH = m.rowH;
-    CFG.laneH = m.laneH;
+    CFG.rowH = rowH;
+    CFG.laneH = laneH;
     return changed;
+  }
+
+  function setupDensityControl() {
+    const sel = document.getElementById('density-select');
+    if (!sel) return;
+    sel.value = density;
+    sel.addEventListener('change', () => {
+      if (!DENSITY[sel.value]) return;
+      density = sel.value;
+      try { localStorage.setItem('tl-density', density); } catch (e) {}
+      applyResponsiveMetrics();
+      updateCSSVars();
+      renderRuler();
+      renderGames();
+      renderTodayLine();
+    });
   }
 
   let data = null;
@@ -127,6 +154,8 @@ const Timeline = (() => {
     setupTooltip();
     setupSortable();
     setupDetailPanel();
+    setupEntryModal();
+    setupDensityControl();
     setupViewToggle();
     setupTodayButton();
     setupIcsExport();
@@ -182,6 +211,8 @@ const Timeline = (() => {
     root.style.setProperty('--label-w', CFG.labelW + 'px');
     root.style.setProperty('--row-h', CFG.rowH + 'px');
     root.style.setProperty('--lane-h', CFG.laneH + 'px');
+    // 레인이 좁아지면 바도 같이 줄어야 넘치지 않는다
+    root.style.setProperty('--bar-h', Math.min(28, CFG.laneH - 4) + 'px');
     root.style.setProperty('--ruler-h', CFG.rulerH + 'px');
   }
 
@@ -229,6 +260,15 @@ const Timeline = (() => {
     return curLang() === 'en'
       ? (game.nameEn || game.fullName || game.name)
       : (game.fullName || game.name);
+  }
+
+  /* ── 화면에 그리는 일정 종류 ──
+     버전 기간은 배너·이벤트와 축이 달라 행만 차지해 제외한다.
+     데이터에는 남겨 두고 표시만 하지 않는다. */
+  const VISIBLE_TYPES = new Set(['banner', 'event']);
+
+  function visibleEntries(game) {
+    return (game.entries || []).filter(e => VISIBLE_TYPES.has(e.type));
   }
 
   /* ── 엔트리 안정 키 — 재렌더·언어 전환에도 동일하게 유지된다 ── */
@@ -285,7 +325,7 @@ function buildFilters() {
       ? `<img class="chip-icon-img" src="${esc(game.iconUrl)}" alt="${esc(gameName(game))}" onerror="this.style.display='none'">`
       : `<span class="chip-icon">${esc(game.icon)}</span>`;
 
-    const entryCount = game.entries.length;
+    const entryCount = visibleEntries(game).length;
     chip.innerHTML = `${iconHtml}<span class="chip-name">${esc(gameName(game))}</span><span class="chip-count">${entryCount}</span>`;
     chip.addEventListener('click', () => toggleGame(game.id, chip));
     bar.appendChild(chip);
@@ -521,16 +561,13 @@ function saveFilters() {
     section.className = 'game-section';
     section.dataset.id = game.id;
 
-    // 타입별 분리
-    const versions = game.entries.filter(e => e.type === 'version');
-    const banners  = game.entries.filter(e => e.type === 'banner');
-    const events   = game.entries.filter(e => e.type === 'event');
+    // 타입별 분리 (버전 기간은 표시하지 않는다)
+    const banners = game.entries.filter(e => e.type === 'banner');
+    const events  = game.entries.filter(e => e.type === 'event');
 
-    // 행 목록 구성: 버전 행 + 배너 행 + 이벤트 행
     const rows = [];
-    if (versions.length > 0) rows.push({ kind: 'versions', items: versions });
-    if (banners.length > 0)  rows.push({ kind: 'banners',  items: banners });
-    if (events.length > 0)   rows.push({ kind: 'events',   items: events });
+    if (banners.length > 0) rows.push({ kind: 'banners', items: banners });
+    if (events.length > 0)  rows.push({ kind: 'events',  items: events });
 
     // 겹치는 일정을 레인으로 나누고, 그 결과로 행·라벨 높이를 정한다
     rows.forEach(r => {
@@ -670,6 +707,8 @@ function buildBar(entry, game) {
   const bar = document.createElement('div');
   bar.className = `entry-bar type-${entry.type}`;
   if (entry.tentative) bar.classList.add('tentative');
+  // 지난 일정은 흐리게 — 진행 중인 일정이 먼저 눈에 들어와야 한다
+  if (D.parse(entry.end) < today) bar.classList.add('is-ended');
 
   bar.style.left  = x + 'px';
   bar.style.width = w + 'px';
@@ -829,27 +868,14 @@ function buildBar(entry, game) {
       }
     }, { signal });
 
-    // 터치 기기: 탭으로 툴팁 토글 (hover 불가 환경)
+    // 바를 누르면 상세를 연다 (마우스·터치 공통)
     scroll.addEventListener('click', (e) => {
-      if (!window.matchMedia('(hover: none)').matches) return;
       const bar = e.target.closest('.entry-bar');
-      if (!bar || !barData.has(bar)) return;
-      if (bar === currentBar && tooltip.classList.contains('visible')) {
-        hideTooltip();
-        return;
-      }
-      clearTimeout(hoverDelayTimer);
-      currentBar = bar;
-      const rect = bar.getBoundingClientRect();
-      showTooltip(bar, tooltip, {
-        clientX: rect.left + rect.width / 2,
-        clientY: rect.bottom + 4
-      });
-    }, { signal });
-
-    document.addEventListener('click', (e) => {
-      if (!window.matchMedia('(hover: none)').matches) return;
-      if (!e.target.closest('.entry-bar')) hideTooltip();
+      if (!bar) return;
+      const rec = barData.get(bar);
+      if (!rec) return;
+      hideTooltip();
+      openEntryModal(rec.game, rec.entry);
     }, { signal });
   }
   function showTooltip(bar, tooltip, e) {
@@ -983,7 +1009,7 @@ function openDetail(game) {
 
   // 타입 순서: version → banner → event, 같은 타입 내 시작일 오름차순
   const typeOrder = { version: 0, banner: 1, event: 2 };
-  const sorted = [...game.entries].sort((a, b) => {
+  const sorted = visibleEntries(game).sort((a, b) => {
     const ta = typeOrder[a.type] ?? 9;
     const tb = typeOrder[b.type] ?? 9;
     if (ta !== tb) return ta - tb;
@@ -1053,6 +1079,89 @@ function openDetail(game) {
       highlightTimelineEntry(entryEl.dataset.entryId);
     });
   });
+}
+
+/* ── 개별 일정 상세 모달 ── */
+let lastFocusedBeforeEntry = null;
+
+function safeUrl(u) {
+  return (typeof u === 'string' && /^https:\/\//.test(u)) ? u : '';
+}
+
+function openEntryModal(game, entry) {
+  const modal   = document.getElementById('entry-modal');
+  const overlay = document.getElementById('entry-modal-overlay');
+  const body    = document.getElementById('entry-modal-body');
+  if (!modal || !entry) return;
+
+  const start = D.parse(entry.start);
+  const end   = D.parse(entry.end);
+  const status = entryStatus(start, end);
+  const typeLabel = entry.type === 'banner'
+    ? t('legendBanner', '뽑기 배너') : t('legendEvent', '이벤트');
+
+  const img = safeUrl(entry.image);
+  const cover = img
+    ? `<img class="entry-modal-cover" src="${esc(img)}" alt="" loading="lazy" onerror="this.remove()">`
+    : '';
+  const icon = game.iconUrl
+    ? `<img src="${esc(game.iconUrl)}" alt="" onerror="this.remove()">`
+    : `<span>${esc(game.icon || '')}</span>`;
+  const link = safeUrl(entry.link);
+
+  body.innerHTML = `
+    ${cover}
+    <div class="entry-modal-content">
+      <div class="entry-modal-game">${icon}${esc(gameFullName(game))}</div>
+      <div class="entry-modal-title" id="entry-modal-title">${esc(entry.title)}</div>
+      ${entry.subtitle ? `<div class="entry-modal-subtitle">${esc(entry.subtitle)}</div>` : ''}
+      <div class="entry-modal-badges">
+        <span class="entry-modal-badge type-${esc(entry.type)}">${esc(typeLabel)}</span>
+        <span class="entry-modal-badge ${status.cls}">${esc(status.label)}</span>
+        ${entry.tentative
+          ? `<span class="entry-modal-badge tentative">⚠ ${esc(t('legendTentative', '미확정'))}</span>`
+          : ''}
+      </div>
+      <div class="entry-modal-dates">
+        <div><span>${esc(t('tooltipStart', '시작:'))}</span> ${D.fmt(start)}</div>
+        <div><span>${esc(t('tooltipEnd', '종료:'))}</span> ${D.fmt(end)}</div>
+        <div><span>${esc(t('tooltipDuration', '기간'))}:</span> ${esc(fmtDuration(D.diffDays(start, end)))}</div>
+      </div>
+      ${entry.description ? `<div class="entry-modal-desc">${esc(entry.description)}</div>` : ''}
+      <div class="entry-modal-links">
+        ${link ? `<a href="${esc(link)}" target="_blank" rel="noopener noreferrer">${esc(t('entryMoreInfo', '자세히 보기'))} ↗</a>` : ''}
+        ${entry.source ? `<span class="entry-modal-source">${esc(t('tooltipSource', '출처:'))} ${esc(entry.source)}</span>` : ''}
+      </div>
+    </div>`;
+
+  lastFocusedBeforeEntry = document.activeElement;
+  modal.hidden = false;
+  overlay.hidden = false;
+  document.getElementById('entry-modal-close').focus();
+}
+
+function closeEntryModal() {
+  const modal   = document.getElementById('entry-modal');
+  const overlay = document.getElementById('entry-modal-overlay');
+  if (!modal || modal.hidden) return false;
+  modal.hidden = true;
+  overlay.hidden = true;
+  if (lastFocusedBeforeEntry && document.contains(lastFocusedBeforeEntry)) {
+    lastFocusedBeforeEntry.focus();
+  }
+  lastFocusedBeforeEntry = null;
+  return true;
+}
+
+function setupEntryModal() {
+  document.getElementById('entry-modal-close')
+    .addEventListener('click', closeEntryModal);
+  document.getElementById('entry-modal-overlay')
+    .addEventListener('click', closeEntryModal);
+  // 게임 상세 패널의 ESC보다 먼저 잡도록 캡처 단계에서 듣는다
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && closeEntryModal()) e.stopPropagation();
+  }, true);
 }
 
 /* ── 상세 패널을 오늘 위치로 맞춤 ── */
@@ -1289,7 +1398,7 @@ function setupDetailPanel() {
     const items = [];
     data.games.forEach(game => {
       if (!activeIds.has(game.id)) return;
-      game.entries.forEach(entry => {
+      visibleEntries(game).forEach(entry => {
         const s = D.parse(entry.start);
         const e = D.parse(entry.end);
         if (e <= startDate || s >= rangeEnd) return; // 표시 범위 밖 제외
@@ -1369,7 +1478,7 @@ function setupDetailPanel() {
           </div>
           <div class="detail-entry-status ${status.cls}">${esc(status.label)}</div>
         `;
-        const open = () => openDetail(game);
+        const open = () => openEntryModal(game, entry);
         item.addEventListener('click', open);
         item.addEventListener('keydown', (ev) => {
           if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); open(); }
@@ -1423,7 +1532,7 @@ function setupDetailPanel() {
 
     data.games.forEach(game => {
       if (!activeIds.has(game.id)) return;
-      game.entries.forEach(entry => {
+      visibleEntries(game).forEach(entry => {
         const end = D.parse(entry.end);
         if (end < today) return; // 종료된 일정은 제외
         const start = D.parse(entry.start);

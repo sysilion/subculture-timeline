@@ -23,9 +23,16 @@
 }
 
 /* WCAG 대비 색상 */
+/* 진행 중·예정 일정은 또렷하게, 지난 일정은 .is-ended로 흐리게 낮춘다 */
 .entry-bar.type-banner  { background: #5c7cfa; color: white; }
-.entry-bar.type-event   { background: rgba(100,220,150,0.7); border: 1px solid #66bb6a; color: #1a1d27; }
+.entry-bar.type-event   { background: #57b37a; border: 1px solid #7fd6a0; color: #0f2318; }
 .entry-bar.type-version { background: #37474f; border: 1px solid #546e7a; color: white; }
+
+.entry-bar.is-ended {
+  opacity: 0.42;
+  filter: saturate(0.55);
+}
+.entry-bar.is-ended:hover { opacity: 0.8; filter: none; }
 
 .game-label-name { color: white; }
 .game-label-dev { color: rgba(255,255,255,0.8); }
@@ -720,7 +727,7 @@ html, body {
 /* 배너 막대 */
 .entry-bar {
   position: absolute;
-  height: 28px;
+  height: var(--bar-h, 28px);
   border-radius: var(--corner-r);
   display: flex;
   align-items: center;
@@ -1284,4 +1291,153 @@ html, body {
   #filter-bar { padding: 6px 10px; }
   .filter-label { display: none; }
   #footer { font-size: 9px; padding: 6px 10px; }
+}
+
+
+/* ═══════════════════════════════════════
+   개별 일정 상세 모달
+═══════════════════════════════════════ */
+.entry-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 340;
+}
+.entry-modal-overlay[hidden] { display: none; }
+
+.entry-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(420px, 92vw);
+  max-height: 86vh;
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.75);
+  z-index: 350;
+}
+.entry-modal[hidden] { display: none; }
+
+.entry-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+.entry-modal-close:hover { background: rgba(0, 0, 0, 0.8); }
+
+.entry-modal-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: var(--surface2);
+  border-radius: 12px 12px 0 0;
+}
+
+.entry-modal-content { padding: 14px 16px 18px; }
+
+.entry-modal-game {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.entry-modal-game img { width: 16px; height: 16px; border-radius: 4px; object-fit: contain; }
+
+.entry-modal-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+}
+.entry-modal-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.entry-modal-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 12px;
+}
+.entry-modal-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 10px;
+  background: var(--surface2);
+  color: var(--text-muted);
+}
+.entry-modal-badge.type-banner  { background: rgba(92,124,250,0.2);  color: #9db2fb; }
+.entry-modal-badge.type-event   { background: rgba(102,187,106,0.2); color: #8ed6a5; }
+.entry-modal-badge.status-active   { background: rgba(102,187,106,0.18); color: #66bb6a; }
+.entry-modal-badge.status-upcoming { background: rgba(255,167,38,0.18);  color: #ffa726; }
+.entry-modal-badge.status-ended    { background: rgba(255,255,255,0.06); color: var(--text-dim); }
+.entry-modal-badge.tentative { background: rgba(255,167,38,0.15); color: #ffa726; }
+
+.entry-modal-dates {
+  font-size: 12px;
+  color: var(--text);
+  padding: 10px 12px;
+  background: var(--surface2);
+  border-radius: 8px;
+  line-height: 1.6;
+}
+.entry-modal-dates span { color: var(--text-muted); }
+
+.entry-modal-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.entry-modal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 11px;
+}
+.entry-modal-links a { color: var(--text-muted); }
+.entry-modal-links a:hover { color: var(--text); }
+.entry-modal-source { color: var(--text-dim); }
+
+#density-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+#density-controls select {
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 6px;
+  font-size: 11px;
+  font-family: inherit;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  #density-controls label { display: none; }
 }

@@ -47,5 +47,10 @@
   "rowBanners": "배너",
   "rowEvents": "이벤트",
   "detailHint": "상세보기",
-  "icsBtn": "📅 .ics"
+  "icsBtn": "📅 .ics",
+  "entryMoreInfo": "자세히 보기",
+  "densityLabel": "행 높이:",
+  "densityCompact": "촘촘",
+  "densityNormal": "보통",
+  "densityRoomy": "넓게"
 }
