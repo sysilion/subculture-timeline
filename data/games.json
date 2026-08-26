@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-25",
+    "lastUpdated": "2026-08-26",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-25"
+    "autoUpdated": "2026-08-26"
   },
   "games": [
     {
@@ -3728,6 +3728,17 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "A Forest Mantled in Snow",
+          "subtitle": "Sign-In",
+          "start": "2026-08-26",
+          "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
         }
       ],
       "iconUrl": "https://web.hycdn.cn/favicon.ico",
@@ -3887,16 +3898,6 @@
           "title": "Market Opening Rehersal",
           "start": "2026-05-13",
           "end": "2026-06-03",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Zero’s Companion",
-          "start": "2026-05-13",
-          "end": "2026-05-27",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -5584,18 +5585,6 @@
         },
         {
           "type": "banner",
-          "title": "Haru Urara + 1 more",
-          "start": "2026-05-19",
-          "end": "2026-05-27",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
           "title": "Inari One",
           "start": "2026-05-29",
           "end": "2026-06-06",
@@ -6521,17 +6510,6 @@
         },
         {
           "type": "event",
-          "title": "Spring G1 Celebration Missions, Part 2: Yasuda Kinen",
-          "start": "2026-05-21",
-          "end": "2026-05-27",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "campaign"
-        },
-        {
-          "type": "event",
           "title": "Spring G1 Celebration Missions, Part 2: Takarazuka Kinen",
           "start": "2026-05-28",
           "end": "2026-06-03",
@@ -7263,6 +7241,16 @@
           "title": "Nocturnal Sweeping BokGak",
           "start": "2026-04-30",
           "end": "2026-05-28",
+          "version": "",
+          "tentative": false,
+          "source": "limbuscompany.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Mnestic Experience",
+          "start": "2026-06-11",
+          "end": "2026-07-09",
           "version": "",
           "tentative": false,
           "source": "limbuscompany.wiki.gg",
