@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-27",
+    "lastUpdated": "2026-08-28",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-27"
+    "autoUpdated": "2026-08-28"
   },
   "games": [
     {
@@ -768,6 +768,16 @@
           "title": "지맥 제압전",
           "start": "2026-08-19",
           "end": "2026-09-22",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "티바트 모험왕",
+          "start": "2026-08-28",
+          "end": "2026-09-14",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -3015,6 +3025,16 @@
           "tentative": false,
           "source": "api.ennead.cc",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "위험한 강습전",
+          "start": "2026-08-28",
+          "end": "2026-09-11",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
         }
       ],
       "iconUrl": "https://zenless.hoyoverse.com/favicon.ico",
@@ -3828,6 +3848,17 @@
         },
         {
           "type": "event",
+          "title": "Sanity Supply",
+          "subtitle": "Limited-Time",
+          "start": "2026-08-25",
+          "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Sanity Supply (Version 1.4)",
           "start": "2026-08-26",
           "end": "2026-09-02",
@@ -3852,6 +3883,17 @@
           "subtitle": "Sign-In",
           "start": "2026-08-26",
           "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "AIC Support: Chubby Lung Attacks",
+          "subtitle": "AIC Production",
+          "start": "2026-09-16",
+          "end": "2026-09-30",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
