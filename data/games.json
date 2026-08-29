@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-28",
+    "lastUpdated": "2026-08-29",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-08-28"
+    "autoUpdated": "2026-08-29"
   },
   "games": [
     {
@@ -777,6 +777,16 @@
           "type": "event",
           "title": "티바트 모험왕",
           "start": "2026-08-28",
+          "end": "2026-09-14",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "격투 모드: 임기응변",
+          "start": "2026-08-29",
           "end": "2026-09-14",
           "version": "",
           "tentative": false,
@@ -2658,6 +2668,30 @@
           "_auto": true
         },
         {
+          "type": "banner",
+          "title": "클라렛",
+          "subtitle": "클라렛, 남궁우",
+          "rarity": 5,
+          "start": "2026-09-09",
+          "end": "2026-09-30",
+          "version": "3.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "디스코 데몬",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-09-09",
+          "end": "2026-09-30",
+          "version": "3.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
           "type": "event",
           "title": "Operation: Save Bootopia",
           "subtitle": "부투피아 구출 작전 이벤트",
@@ -3162,6 +3196,30 @@
           "rarity": 6,
           "start": "2026-08-09",
           "end": "2026-09-01",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Winter Hunt",
+          "subtitle": "Typhoeus",
+          "rarity": 6,
+          "start": "2026-09-02",
+          "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Resplendent Spectrum",
+          "subtitle": "",
+          "rarity": 6,
+          "start": "2026-09-24",
+          "end": "2026-10-21",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
@@ -3894,6 +3952,17 @@
           "subtitle": "AIC Production",
           "start": "2026-09-16",
           "end": "2026-09-30",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "OrbiPom! MERGE!",
+          "subtitle": "Fun & Games",
+          "start": "2026-10-01",
+          "end": "2026-10-14",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
@@ -6860,6 +6929,35 @@
           "rarity": 3
         },
         {
+          "type": "banner",
+          "title": "Sakura Chiyono O + 1 more",
+          "start": "2026-12-27",
+          "end": "2027-01-07",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30156.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30156",
+          "description": "픽업: Sakura Chiyono O, Mejiro Ardan",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Nice Nature + 1 more",
+          "start": "2026-12-27",
+          "end": "2027-01-06",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30157.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30157",
+          "rarity": 3
+        },
+        {
           "type": "event",
           "title": "Spring G1 Celebration Missions, Part 2: Takarazuka Kinen",
           "start": "2026-05-28",
@@ -7675,6 +7773,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/images/campaign/305.webp",
           "link": "https://umapyoi.net/news/1224?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Wherefore I Adore You",
+          "start": "2026-12-27",
+          "end": "2027-01-06",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/03_wherefore_i_adore_you_banner.webp",
+          "link": "https://umapyoi.net/news/1247?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
