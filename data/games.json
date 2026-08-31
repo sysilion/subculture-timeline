@@ -5839,6 +5839,66 @@
           "tentative": false,
           "source": "nikke.gg",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Archives - NEW FLAVOR",
+          "start": "2026-07-23",
+          "end": "2026-08-12",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "14 Days Login Event - HERO DAYS",
+          "start": "2026-07-23",
+          "end": "2026-08-12",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "『P3R』『P4G』『P5R』 Major Collab Event: PERSONA ON FRONTLINE",
+          "start": "2026-08-13",
+          "end": "2026-09-10",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "『P3R』『P4G』『P5R』 Collab Mini Game: MIDNIGHT PHANTOM RUNNER",
+          "start": "2026-08-13",
+          "end": "2026-09-10",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Archives - TRUE FLAVOR",
+          "start": "2026-08-13",
+          "end": "2026-09-10",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "14 Days Login Event - Phantom Thieves' Calling Card",
+          "start": "2026-08-13",
+          "end": "2026-09-10",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
         }
       ],
       "nameKo": "승리의 여신: 니케",
