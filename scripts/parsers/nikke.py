@@ -17,6 +17,18 @@ _DATE_RE = re.compile(
 # 섹션 번호 패턴 (X.Y 형식)
 _SECTION_RE = re.compile(r'^\d+\.\d+\s+(.+)')
 
+# 패치노트 목록 페이지. /patch-notes/ 는 2026-08 이후 404이고
+# /category/patch-notes/ 는 그 404로 301 리다이렉트한다. 실제 목록은 /news/.
+_LIST_URL = f"{BASE}/news/"
+
+# 목록에서 뽑을 패치노트 slug. 연도가 빠진 글이 많아(august-13-patch-notes)
+# 연도를 요구하면 절반을 놓친다. "월-일 … patch|update" 조합으로 잡는다.
+_PATCH_SLUG_RE = re.compile(
+    r'nikke\.gg/(?:january|february|march|april|may|june|july|august'
+    r'|september|october|november|december)-\d{1,2}\b[^/]*(?:patch|update)',
+    re.IGNORECASE,
+)
+
 # 이벤트로 인정할 키워드 (화이트리스트)
 _EVENT_KEYWORDS = re.compile(
     r'(story event|login event|mini game|minigame|archives|union raid|solo raid'
@@ -33,7 +45,7 @@ def _to_date(m: tuple) -> date | None:
 
 def _fetch_patch_urls(limit: int = 3) -> list[str]:
     try:
-        html = fetch(f"{BASE}/patch-notes/", timeout=15)
+        html = fetch(_LIST_URL, timeout=15)
     except Exception as e:
         print(f"  [nikke] 목록 fetch 실패: {e}")
         return []
@@ -43,7 +55,7 @@ def _fetch_patch_urls(limit: int = 3) -> list[str]:
     urls: list[str] = []
     for a in soup.find_all("a", href=True):
         href = a["href"]
-        if re.search(r'202\d.*(update|patch)', href, re.I) or re.search(r'(update|patch).*202\d', href, re.I):
+        if _PATCH_SLUG_RE.search(href):
             if href not in seen:
                 seen.add(href)
                 urls.append(href)
@@ -123,8 +135,10 @@ def _parse_one(url: str) -> list[dict]:
         ).strip()
         if not event_name or event_name.lower() in ("new events", "events", "event"):
             continue
-        # "Added ..." 형식은 업데이트 노트이지 이벤트가 아님
-        if re.match(r'^Added\s', event_name, re.I):
+        # 서술형 변경 사항은 이벤트가 아니라 업데이트 노트다.
+        # ("Increased the amount of ... in Solo Raid." 가 solo raid 키워드에 걸린다)
+        if re.match(r'^(?:Added|Increased|Decreased|Improved|Fixed|Adjusted|Changed|Removed|Updated)\s',
+                    event_name, re.I) or event_name.endswith('.'):
             continue
 
         # 이 섹션 이후 첫 번째 "duration" 줄 찾기 (최대 10줄 이내)
