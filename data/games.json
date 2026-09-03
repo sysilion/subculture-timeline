@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-02",
+    "lastUpdated": "2026-09-03",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-02"
+    "autoUpdated": "2026-09-03"
   },
   "games": [
     {
@@ -3139,18 +3139,6 @@
         },
         {
           "type": "banner",
-          "title": "Fest of Brilliance",
-          "subtitle": "",
-          "rarity": 6,
-          "start": "2026-05-14",
-          "end": "2026-06-04",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Mi Fu (Debut)",
           "subtitle": "Phase 1",
           "rarity": 6,
@@ -3263,17 +3251,6 @@
         },
         {
           "type": "event",
-          "title": "Etchings of Our Cosmic Dreams",
-          "subtitle": "Space Exploration",
-          "start": "2026-04-24",
-          "end": "2026-06-04",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "AIC Support: Palm-Top Savior",
           "subtitle": "AIC 생산 이벤트",
           "start": "2026-04-28",
@@ -3289,28 +3266,6 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Party Together",
-          "subtitle": "Fest",
-          "start": "2026-05-01",
-          "end": "2026-06-04",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Monumental Etching: Corrupting Surge",
-          "subtitle": "Challenge",
-          "start": "2026-05-08",
-          "end": "2026-06-04",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
           "_auto": true
         },
         {
@@ -3355,49 +3310,6 @@
         },
         {
           "type": "event",
-          "title": "Shimmering Moment",
-          "subtitle": "Sign-In",
-          "start": "2026-05-14",
-          "end": "2026-06-04",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Supply: Wuling Super Chef",
-          "subtitle": "Supply",
-          "start": "2026-05-14",
-          "end": "2026-06-04",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Curious Use of Xiranite",
-          "subtitle": "Guide",
-          "start": "2026-05-14",
-          "end": "2026-06-04",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Curios and Myths Sign-In (Version 1.2)",
-          "start": "2026-05-29",
-          "end": "2026-06-04",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Sanity Supply (Version 1.2)",
           "start": "2026-05-29",
           "end": "2026-06-05",
@@ -3414,17 +3326,6 @@
           "version": "",
           "tentative": false,
           "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Curios and Myths",
-          "subtitle": "Sign-In",
-          "start": "2026-05-29",
-          "end": "2026-06-04",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
           "_auto": true
         },
         {
@@ -3979,6 +3880,28 @@
           "subtitle": "Echoes of War",
           "start": "2026-09-02",
           "end": "2026-09-23",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "A Winter Dream Fogged Deep in the Woods",
+          "subtitle": "Narrative",
+          "start": "2026-09-02",
+          "end": "2026-10-14",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Fletched Irontip",
+          "subtitle": "Sign-In",
+          "start": "2026-09-02",
+          "end": "2026-09-29",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
@@ -8749,6 +8672,19 @@
           "title": "Spring G1 Celebration Missions, Part 1: Oka Sho",
           "start": "2026-12-29",
           "end": "2027-01-04",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/306.webp",
+          "link": "https://umapyoi.net/news/1224?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 1: Oka Sho",
+          "start": "2027-01-01",
+          "end": "2027-01-07",
           "version": "",
           "tentative": true,
           "source": "uma.moe",
