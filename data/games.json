@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-05",
+    "lastUpdated": "2026-09-06",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-05"
+    "autoUpdated": "2026-09-06"
   },
   "games": [
     {
@@ -1733,26 +1733,6 @@
         },
         {
           "type": "event",
-          "title": "2nd Anniversary Rally",
-          "start": "2026-04-22",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Event Duration",
-          "start": "2026-04-22",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Into the Land of Paradox",
           "start": "2026-04-30",
           "end": "2026-10-27",
@@ -1773,189 +1753,9 @@
         },
         {
           "type": "event",
-          "title": "Back to Solaris",
-          "start": "2026-04-30",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Dimmr Traces",
-          "start": "2026-04-30",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Gifts of Starlight",
-          "start": "2026-04-30",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Second Coming of Solaris: Collab Season",
-          "start": "2026-04-30",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Bountiful Waves",
-          "start": "2026-04-30",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "2026 Gifts of Grand Celebration",
-          "start": "2026-04-30",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Into the Memory Program",
-          "start": "2026-04-30",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Event Duration",
           "start": "2026-04-30",
           "end": "2026-10-27",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Star Bouncing",
-          "start": "2026-05-02",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Event Duration",
-          "start": "2026-05-02",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Lollo Express: Promise Delivered",
-          "start": "2026-05-07",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Event Duration",
-          "start": "2026-05-07",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Ascendant Aces",
-          "start": "2026-05-21",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Crossworld Sync: Part 2",
-          "start": "2026-05-21",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Depths of Illusive Realm: Chromatic Fantasy",
-          "start": "2026-05-21",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Event Duration",
-          "start": "2026-05-21",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Beyond the Waves",
-          "start": "2026-05-25",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Event Duration",
-          "start": "2026-05-25",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Chord Cleansing",
-          "start": "2026-05-31",
-          "end": "2026-06-07",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -5375,16 +5175,6 @@
         },
         {
           "type": "event",
-          "title": "Event",
-          "start": "2026-06-05",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "ARK RANGER Story Event",
           "start": "2026-06-11",
           "end": "2026-07-02",
@@ -7268,6 +7058,35 @@
           "rarity": 3
         },
         {
+          "type": "banner",
+          "title": "Sakura Laurel",
+          "start": "2027-01-04",
+          "end": "2027-01-12",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30158.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30158",
+          "description": "픽업: Sakura Laurel",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Eishin Flash + 1 more",
+          "start": "2027-01-04",
+          "end": "2027-01-11",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30159.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30159",
+          "rarity": 3
+        },
+        {
           "type": "event",
           "title": "Training Booster Giveaway",
           "start": "2026-05-29",
@@ -7279,19 +7098,6 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/813.webp",
           "link": "https://umapyoi.net/en/news/813"
-        },
-        {
-          "type": "event",
-          "title": "Gemini Cup",
-          "start": "2026-06-01",
-          "end": "2026-06-07",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "champions meeting",
-          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/811.webp",
-          "link": "https://umapyoi.net/en/news/811"
         },
         {
           "type": "event",
@@ -9217,6 +9023,45 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1226.webp",
           "link": "https://umapyoi.net/news/1226?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-01-04",
+          "end": "2027-01-17",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1227.webp",
+          "link": "https://umapyoi.net/news/1227?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 1: Satsuki Sho",
+          "start": "2027-01-04",
+          "end": "2027-01-10",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/307.webp",
+          "link": "https://umapyoi.net/news/1224?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Aries Cup",
+          "start": "2027-01-04",
+          "end": "2027-01-12",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1271.webp",
+          "link": "https://umapyoi.net/news/1271?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
