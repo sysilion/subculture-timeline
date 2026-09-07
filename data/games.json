@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-06",
+    "lastUpdated": "2026-09-07",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-06"
+    "autoUpdated": "2026-09-07"
   },
   "games": [
     {
@@ -824,6 +824,16 @@
           "title": "현실 속 환상극",
           "start": "2026-09-01",
           "end": "2026-10-01",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "모의 방어전",
+          "start": "2026-09-07",
+          "end": "2026-09-17",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -3632,6 +3642,17 @@
           "subtitle": "Sign-In",
           "start": "2026-09-02",
           "end": "2026-09-29",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Trial of the Bow",
+          "subtitle": "Challenge",
+          "start": "2026-09-09",
+          "end": "2026-10-14",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
