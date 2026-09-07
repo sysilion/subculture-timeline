@@ -52,5 +52,7 @@
   "densityLabel": "Row height:",
   "densityCompact": "Compact",
   "densityNormal": "Normal",
-  "densityRoomy": "Roomy"
+  "densityRoomy": "Roomy",
+  "laneMore": " more",
+  "laneCollapse": "Collapse"
 }

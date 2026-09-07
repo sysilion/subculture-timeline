@@ -52,5 +52,7 @@
   "densityLabel": "행 높이:",
   "densityCompact": "촘촘",
   "densityNormal": "보통",
-  "densityRoomy": "넓게"
+  "densityRoomy": "넓게",
+  "laneMore": "개 더 보기",
+  "laneCollapse": "접기"
 }

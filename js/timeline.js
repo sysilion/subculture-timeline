@@ -239,6 +239,26 @@ const Timeline = (() => {
     return fallback;
   }
 
+  /* ── 채운 바 위에서 읽히는 글자색 ──
+     게임 컬러가 #ffcc80 파스텔부터 #c2185b 원색까지 섞여 있어
+     흑백 중 하나로 고정하면 어느 한쪽은 반드시 대비가 무너진다. */
+  function readableOn(hex) {
+    const m = /^#?([0-9a-f]{3}|[0-9a-f]{6})$/i.exec(String(hex || ''));
+    if (!m) return '#fff';
+    const h = m[1].length === 3 ? m[1].replace(/./g, c => c + c) : m[1];
+    const ch = [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16) / 255);
+    const lin = v => (v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4));
+    const L = 0.2126 * lin(ch[0]) + 0.7152 * lin(ch[1]) + 0.0722 * lin(ch[2]);
+    return L > 0.42 ? '#0b0e16' : '#ffffff';
+  }
+
+  /* ── CSS url() 에 끼울 수 있는 값인지 확인 ──
+     bgUrl·iconUrl은 파서가 외부 사이트에서 주워 온 문자열이다. 그대로 넣으면
+     따옴표·괄호로 선언을 닫고 다른 CSS를 이어 붙일 수 있다. */
+  function safeCssUrl(u) {
+    return /^https:\/\/[^\s"'()\\;]+$/.test(String(u || '')) ? `url("${u}")` : null;
+  }
+
   /* ── HTML 이스케이프 (파서가 외부 사이트에서 수집한 문자열 무해화) ── */
   function esc(s) {
     return String(s ?? '').replace(/[&<>"']/g, c =>
@@ -572,8 +592,16 @@ function saveFilters() {
     // 겹치는 일정을 레인으로 나누고, 그 결과로 행·라벨 높이를 정한다
     rows.forEach(r => {
       r.lanes = packLanes(r.items);
+      r.key = `${game.id}:${r.kind}`;
+      r.expanded = expandedRows.has(r.key);
+      r.hiddenLanes = r.expanded ? 0 : Math.max(0, r.lanes.length - MAX_VISIBLE_LANES);
+      r.shownLanes = r.lanes.length - r.hiddenLanes;
       r.laneH = r.lanes.length > 1 ? CFG.laneH : CFG.rowH;
-      r.height = Math.max(r.lanes.length, 1) * r.laneH;
+      // 접기·펼치기 줄이 붙는 행은 그만큼 높이를 더 잡는다.
+      // 펼친 상태(hiddenLanes === 0)를 빼먹으면 '접기'가 행을 넘쳐 다음 행에 겹친다.
+      r.hasToggle = r.hiddenLanes > 0 || r.expanded;
+      r.height = Math.max(r.shownLanes, 1) * r.laneH
+               + (r.hasToggle ? TOGGLE_H : 0);
     });
     const totalHeight = rows.reduce((sum, r) => sum + r.height, 0) || CFG.rowH;
 
@@ -589,22 +617,19 @@ function saveFilters() {
     label.style.borderLeft = `3px solid ${game.color}`;
     label.style.height = totalHeight + 'px';
 
-    // 배경 이미지
-    if (game.bgUrl) {
-      label.style.backgroundImage = `url("${game.bgUrl}")`;
-      label.style.backgroundSize = 'cover';
-      label.style.backgroundPosition = 'center';
-    } else {
-      // bgUrl 없으면 게임 색상 그라디언트
-      label.style.background = `linear-gradient(135deg, ${game.color}33, var(--surface))`;
-    }
+    // 라벨에 게임 이미지를 cover로 깔면 행이 높아질수록(명조는 960px까지 갔다)
+    // 캐릭터 전신이 확대돼 이름을 덮는다. 이미지는 일정 행 배경으로 옮기고
+    // 라벨은 게임 컬러만 옅게 쓴다.
+    // backgroundImage만 건드린다 — background 단축으로 쓰면 CSS의 불투명한
+    // --surface 배경까지 지워져 라벨이 반투명해지고 뒤의 바가 비친다.
+    label.style.backgroundImage =
+      `linear-gradient(160deg, ${game.color}2e, transparent 62%)`;
 
-    const iconHtml = game.iconUrl
-      ? `<img class="game-label-icon-img" src="${esc(game.iconUrl)}" alt="${esc(game.name)}" onerror="this.remove()">`
+    const iconHtml = /^https:\/\//.test(game.iconUrl || '')
+      ? `<img class="game-label-icon-img" src="${esc(game.iconUrl)}" alt="" onerror="this.remove()">`
       : '';
 
     label.innerHTML = `
-      <div class="game-label-overlay"></div>
       <div class="game-label-drag" title="${esc(t('dragHint', '드래그하여 순서 변경'))}"></div>
       ${iconHtml}
       <div class="game-label-content">
@@ -619,6 +644,23 @@ function saveFilters() {
     entriesWrapper.style.width = (totalDays * CFG.dayPx) + 'px';
     entriesWrapper.style.minHeight = totalHeight + 'px';
 
+    // 일정 바 뒤에 게임 이미지를 아주 연하게 깔아 어느 게임의 행인지 보이게 한다.
+    // 이미지가 없는 5개 게임(블루아카·니케·우마무스메·림버스·트릭컬)은
+    // CSS가 --game-color 그라디언트로 대신 채운다.
+    const bg = safeCssUrl(game.bgUrl);
+    entriesWrapper.style.setProperty('--game-color', game.color);
+    if (bg) {
+      // 별도 레이어로 두는 이유: ::before(absolute)는 sticky가 되지 않아
+      // 가로로 스크롤하면 이미지가 왼쪽으로 빠져나가 사라진다.
+      // 음수 margin으로 흐름에서 빼내 아래 행들이 이 위에 겹치게 한다.
+      const bgLayer = document.createElement('div');
+      bgLayer.className = 'game-bg-layer';
+      bgLayer.style.setProperty('--game-bg', bg);
+      bgLayer.style.height = totalHeight + 'px';
+      bgLayer.style.marginBottom = -totalHeight + 'px';
+      entriesWrapper.appendChild(bgLayer);
+    }
+
     rows.forEach(rowGroup => {
       const rowEl = document.createElement('div');
       rowEl.className = `entry-row entry-row-${rowGroup.kind}`;
@@ -632,7 +674,7 @@ function saveFilters() {
       label.textContent = labelText;
       rowEl.appendChild(label);
 
-      rowGroup.lanes.forEach(laneItems => {
+      rowGroup.lanes.slice(0, rowGroup.shownLanes).forEach(laneItems => {
         const laneEl = document.createElement('div');
         laneEl.className = 'entry-lane';
         laneEl.style.height = rowGroup.laneH + 'px';
@@ -642,6 +684,10 @@ function saveFilters() {
         });
         rowEl.appendChild(laneEl);
       });
+
+      if (rowGroup.hasToggle) {
+        rowEl.appendChild(buildLaneToggle(game, rowGroup));
+      }
 
       entriesWrapper.appendChild(rowEl);
     });
@@ -674,6 +720,53 @@ function barGeometry(entry) {
    한 행에 몰아 그리면 서로 가려 제목도 못 읽고 클릭도 위쪽 바가 가로챈다. */
 const LANE_GAP = 6;    // 인접한 바 사이 최소 간격(px)
 const MAX_LANES = 24;  // 극단적인 데이터에서 행이 끝없이 높아지지 않도록 둔 상한
+
+/* 한 버전의 캐릭터·무기 배너는 같은 날 동시에 시작한다. 그대로 쌓으면
+   명조 한 게임이 한 화면(30레인, 960px)을 넘겨 게임 간 비교가 불가능해진다.
+   기본은 이만큼만 펼치고 나머지는 행별 '더 보기'로 접는다. */
+const MAX_VISIBLE_LANES = 4;
+const TOGGLE_H = 20;              // '더 보기' 줄 높이(px)
+const expandedRows = new Set();   // `${gameId}:${kind}` — 펼쳐 둔 행
+
+/* 접은 레인을 펼치는 줄. 가로로 스크롤해도 따라오도록 sticky로 둔다. */
+function buildLaneToggle(game, rowGroup) {
+  const wrap = document.createElement('div');
+  wrap.className = 'lane-toggle-wrap';
+  wrap.style.height = TOGGLE_H + 'px';
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'lane-toggle';
+  const n = rowGroup.lanes.length - MAX_VISIBLE_LANES;
+  btn.textContent = rowGroup.expanded
+    ? `${t('laneCollapse', '접기')} \u25b4`
+    : `+${n}${t('laneMore', '개 더 보기')} \u25be`;
+  btn.setAttribute('aria-expanded', String(!!rowGroup.expanded));
+  btn.addEventListener('click', ev => {
+    ev.stopPropagation();
+    if (expandedRows.has(rowGroup.key)) expandedRows.delete(rowGroup.key);
+    else expandedRows.add(rowGroup.key);
+    rebuildSection(game);
+  });
+
+  wrap.appendChild(btn);
+  return wrap;
+}
+
+/* 한 게임만 다시 그린다 — 전체 renderRows는 필터·검색·스크롤 상태를 흔든다. */
+function rebuildSection(game) {
+  const oldEl = document.querySelector(`.game-section[data-id="${game.id}"]`);
+  if (!oldEl) return;
+  // 사라지는 바가 barIndex에 남으면 하이라이트가 유령 노드를 가리킨다
+  oldEl.querySelectorAll('.entry-bar').forEach(b => {
+    const rec = barData.get(b);
+    if (rec) barIndex.delete(rec.key);
+  });
+  const fresh = buildGameSection(game);
+  fresh.className = oldEl.className;   // hidden·search-hidden 유지
+  oldEl.replaceWith(fresh);
+  renderTodayLine();                   // 섹션 높이가 바뀌면 오늘 선도 다시 재야 한다
+}
 
 function packLanes(items) {
   const placed = items
@@ -713,13 +806,15 @@ function buildBar(entry, game) {
   bar.style.left  = x + 'px';
   bar.style.width = w + 'px';
 
+  // 색은 게임 컬러 하나만 넘기고, 배너=채움 / 이벤트=윤곽선 해석은 CSS가 맡는다.
+  // 예전에는 둘 다 game.color로 꽉 채워 범례(파랑/초록)와 실물이 어긋났다.
+  bar.style.setProperty('--bar-color', game.color);
   if (entry.type === 'version') {
     bar.style.borderColor = game.color;
     bar.style.color = game.color;
-  } else if (entry.type === 'event') {
-    bar.style.backgroundColor = game.color;
-  } else {
-    bar.style.background = game.color;
+  } else if (entry.type === 'banner') {
+    // 파스텔부터 원색까지 섞여 있어 글자색을 고정하면 한쪽이 반드시 안 읽힌다
+    bar.style.color = readableOn(game.color);
   }
 
   // 텍스트 (너비가 충분할 때만)

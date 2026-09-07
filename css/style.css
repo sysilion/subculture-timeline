@@ -24,8 +24,21 @@
 
 /* WCAG 대비 색상 */
 /* 진행 중·예정 일정은 또렷하게, 지난 일정은 .is-ended로 흐리게 낮춘다 */
-.entry-bar.type-banner  { background: #5c7cfa; color: white; }
-.entry-bar.type-event   { background: #57b37a; border: 1px solid #7fd6a0; color: #0f2318; }
+/* 배너는 게임 컬러로 꽉 채우고, 이벤트는 같은 색을 윤곽선으로만 쓴다.
+   예전에는 둘 다 game.color로 채워 대각선 해칭이 유일한 구분이었고
+   범례(파랑/초록)와 실물이 어긋났다. --bar-color는 JS가 게임별로 넣는다. */
+.entry-bar.type-banner {
+  background: var(--bar-color, #5c7cfa);
+  border: 1px solid rgba(0,0,0,0.22);
+  color: white;
+}
+.entry-bar.type-event {
+  /* 완전 투명한 채움은 뒤에 깔린 게임 이미지와 겹쳐 제목이 묻힌다.
+     바 안쪽에만 어두운 베이스를 깔아 대비를 세운다. */
+  background: color-mix(in srgb, var(--bar-color, #57b37a) 15%, rgba(15,17,23,0.62));
+  border: 1px solid color-mix(in srgb, var(--bar-color, #57b37a) 52%, transparent);
+  color: color-mix(in srgb, var(--bar-color, #57b37a) 40%, white);
+}
 .entry-bar.type-version { background: #37474f; border: 1px solid #546e7a; color: white; }
 
 .entry-bar.is-ended {
@@ -108,10 +121,11 @@ html, body {
   border-radius: 2px;
   flex-shrink: 0;
 }
-.legend-dot.type-banner  { background: #5c7cfa; }
-.legend-dot.type-event   { background: rgba(100,220,150,0.7); border: 1px solid #66bb6a; }
+/* 바와 같은 어법으로 보여야 한다: 채움=배너, 윤곽선=이벤트, 점선=미확정 */
+.legend-dot.type-banner  { background: #5c7cfa; border: 1px solid rgba(0,0,0,0.22); }
+.legend-dot.type-event   { background: rgba(87,179,122,0.15); border: 1px solid rgba(87,179,122,0.85); }
 .legend-dot.type-version { background: #37474f; border: 1px solid #546e7a; }
-.legend-dot.tentative    { background: repeating-linear-gradient(45deg,#444,#444 4px,#222 4px,#222 8px); border: 1px dashed #888; }
+.legend-dot.tentative    { background: rgba(255,255,255,0.06); border: 1.5px dashed rgba(255,255,255,0.65); }
 
 /* 날짜 범위 컨트롤 */
 #range-controls {
@@ -587,7 +601,9 @@ html, body {
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* 행이 높은 게임(레인 4개 = 130px 이상)에서도 이름이 위에 보이게 한다.
+     하단 정렬은 라벨이 길어질수록 이름이 화면 밖으로 내려갔다. */
+  justify-content: flex-start;
   padding: 0;
   cursor: pointer;
   overflow: hidden;
@@ -622,29 +638,11 @@ html, body {
   letter-spacing: -1px;
 }
 
-/* 배경 이미지 위 반투명 그라디언트 오버레이 */
-/* 배경 이미지 위 텍스트 가독성 확보 */
-.game-label-content {
-  text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6);
-}
-
-.game-label-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(10, 12, 20, 0.55) 50%,
-    rgba(10, 12, 20, 0.88) 100%
-  );
-  pointer-events: none;
-}
-
-/* 게임 라벨 텍스트 (오버레이 위) */
+/* 게임 라벨 텍스트 — 배경이 컬러 그라디언트라 그림자를 덜어냈다 */
 .game-label-content {
   position: relative;
   z-index: 1;
-  padding: 5px 8px 5px 8px;
+  padding: 6px 8px 6px 22px;   /* 좌측 22px = 드래그 핸들 자리 */
   display: flex;
   flex-direction: column;
   gap: 1px;
@@ -653,10 +651,10 @@ html, body {
 /* 게임 아이콘 img */
 .game-label-icon-img {
   position: absolute;
-  top: 5px;
+  top: 6px;
   right: 6px;
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   border-radius: 4px;
   object-fit: contain;
   z-index: 1;
@@ -669,16 +667,18 @@ html, body {
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.9);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .game-label-dev {
   font-size: 9px;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.5);
   margin-top: 0;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+  /* 'Shift Up / Level Infinite'처럼 긴 개발사명이 라벨을 세 줄로 밀어냈다 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 게임 라벨에 상세보기 힌트 */
@@ -701,6 +701,33 @@ html, body {
 .game-entries {
   flex: 1;
   position: relative;
+  /* 이미지가 없는 게임(블루아카·니케·우마무스메·림버스·트릭컬)은
+     게임 컬러가 같은 자리를 대신 잡는다. */
+  background: linear-gradient(
+    to right,
+    color-mix(in srgb, var(--game-color, transparent) 8%, transparent),
+    transparent 45%
+  );
+}
+
+/* 일정 바 뒤에 깔리는 게임 이미지.
+   게임 라벨 바로 오른쪽에 sticky로 고정해 가로로 스크롤해도 계속 보인다.
+   폭은 고정한다 — 행 폭(90일 = 2520px)에 맞춰 늘리면 이미지가 알아볼 수 없이 커진다. */
+.game-bg-layer {
+  position: sticky;
+  left: var(--label-w);
+  width: 320px;
+  background-image: var(--game-bg, none);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 320px auto;
+  opacity: 0.22;
+  /* screen은 이미지의 어두운 부분을 배경 그대로 두고 밝은 쪽만 드러낸다.
+     opacity만 낮추면 어두운 키비주얼이 왼쪽에 검은 얼룩으로 남는다. */
+  mix-blend-mode: screen;
+  mask-image: linear-gradient(to right, #000, rgba(0,0,0,0.55) 150px, transparent 320px);
+  -webkit-mask-image: linear-gradient(to right, #000, rgba(0,0,0,0.55) 150px, transparent 320px);
+  pointer-events: none;
 }
 
 /* 배너/이벤트 행 */
@@ -732,7 +759,9 @@ html, body {
   display: flex;
   align-items: center;
   padding: 0 8px;
-  overflow: hidden;
+  /* clip은 hidden과 달리 스크롤 컨테이너를 만들지 않는다 —
+     안쪽 .bar-text의 sticky 기준이 바가 아니라 타임라인 스크롤러가 되어야 한다. */
+  overflow: clip;
   cursor: pointer;
   transition: box-shadow 0.15s ease, transform 0.1s ease;
   white-space: nowrap;
@@ -769,32 +798,26 @@ html, body {
   opacity: 0.9;
 }
 
-.entry-bar.type-event {
-  height: 24px;
-  opacity: 0.65;
-  border: 1.5px dashed rgba(255,255,255,0.4);
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 5px,
-    rgba(0,0,0,0.15) 5px,
-    rgba(0,0,0,0.15) 10px
-  ) !important;
-}
+.entry-bar.type-event { height: 24px; }
 
+/* 미확정은 점선 하나로 알린다. 이벤트에도 해칭을 깔던 탓에
+   '이벤트'와 '미확정'이 같은 대각선 무늬로 보여 구분되지 않았다. */
 .entry-bar.tentative {
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 4px,
-    rgba(0,0,0,0.2) 4px,
-    rgba(0,0,0,0.2) 8px
-  ) !important;
-  border: 1.5px dashed;
-  opacity: 0.8;
+  border-style: dashed;
+  border-width: 1.5px;
+  border-color: color-mix(in srgb, var(--bar-color, #fff) 65%, white);
 }
 
+/* 표시 범위가 시작되기 전부터 진행 중인 바는 제목이 화면 왼쪽 밖에 놓여
+   sticky 게임 라벨 뒤로 숨었다(306개 중 98개가 그랬다).
+   제목만 라벨 오른쪽에 붙여 두면 바가 아무리 왼쪽에서 시작해도 읽힌다. */
 .bar-text {
+  position: sticky;
+  left: calc(var(--label-w) + 6px);
+  /* flex item의 min-width 기본값(auto)은 nowrap 텍스트를 줄이지 않는다.
+     0으로 낮춰야 ellipsis가 걸리고, 바 밖으로 제목이 흘러나오지 않는다. */
+  min-width: 0;
+  max-width: 100%;
   font-size: 10px;
   font-weight: 600;
   color: rgba(255,255,255,0.92);
@@ -803,6 +826,36 @@ html, body {
   pointer-events: none;
   line-height: 1.2;
 }
+/* 접어 둔 레인을 펼치는 줄 — 가로로 스크롤해도 라벨 옆에 남는다 */
+.lane-toggle-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.lane-toggle {
+  position: sticky;
+  left: calc(var(--label-w) + 6px);
+  background: var(--surface2);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1px 9px;
+  font-size: 9.5px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+}
+.lane-toggle:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+.lane-toggle:focus-visible {
+  outline: 2px solid var(--text-muted);
+  outline-offset: 1px;
+}
+
 .bar-text .bar-subtitle {
   display: block;
   font-size: 9px;
@@ -1282,6 +1335,14 @@ html, body {
 
 /* 좁은 화면에서 헤더가 차지하는 세로 공간 줄이기 */
 @media (max-width: 600px) {
+  /* 320px 이미지는 폰 화면(라벨 76px을 빼면 340px 남는다)을 거의 다 덮는다 */
+  .game-bg-layer {
+    width: 140px;
+    background-size: 140px auto;
+    opacity: 0.16;
+    mask-image: linear-gradient(to right, #000, transparent 140px);
+    -webkit-mask-image: linear-gradient(to right, #000, transparent 140px);
+  }
   #header { padding: 8px 10px; gap: 6px 10px; }
   #header h1 { font-size: 13px; }
   #header h1 span[data-i18n="siteSubtitle"] { display: none; }
