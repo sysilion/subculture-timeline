@@ -90,7 +90,8 @@ def ld_json_events(html: str) -> list[dict]:
 
 
 # ── MediaWiki 위키 소스 공통 유틸 ──
-# HTML 스크래핑과 달리 위키 API는 CI 환경에서도 차단되지 않아 안정적이다.
+# HTML 스크래핑과 달리 레이아웃 변경에 깨지지 않는다.
+# 단, bluearchive.wiki는 데이터센터 IP에 403을 주므로 SYNC_PROXY를 경유한다.
 
 def cargo_query(api: str, tables: str, fields: str, where: str = "",
                 order_by: str = "", limit: int = 200) -> list[dict]:
@@ -107,7 +108,8 @@ def cargo_query(api: str, tables: str, fields: str, where: str = "",
     if order_by:
         params["order_by"] = order_by
 
-    r = requests.get(api, headers=BROWSER_HEADERS, timeout=20, params=params)
+    r = requests.get(api, headers=BROWSER_HEADERS, timeout=20, params=params,
+                     proxies=proxies())
     r.raise_for_status()
     data = r.json()
     if "error" in data:
