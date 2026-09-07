@@ -4674,18 +4674,6 @@
       "entries": [
         {
           "type": "banner",
-          "title": "Rio (Battle), Himari (Battle)",
-          "subtitle": "Pickup",
-          "rarity": 3,
-          "start": "2026-05-26",
-          "end": "2026-06-08",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Kei, Arisu (Battle), Hoshino (Battle) +1",
           "subtitle": "Pickup",
           "rarity": 3,
