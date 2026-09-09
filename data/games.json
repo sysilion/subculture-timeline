@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-08",
+    "lastUpdated": "2026-09-09",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-08"
+    "autoUpdated": "2026-09-09"
   },
   "games": [
     {
@@ -2474,6 +2474,18 @@
           "_auto": true
         },
         {
+          "type": "banner",
+          "title": "피를 향한 갈증",
+          "subtitle": "피를 향한 갈증, 디스코 데몬",
+          "rarity": 5,
+          "start": "2026-09-09",
+          "end": "2026-09-30",
+          "version": "3.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
           "type": "event",
           "title": "Operation: Save Bootopia",
           "subtitle": "부투피아 구출 작전 이벤트",
@@ -2847,6 +2859,56 @@
           "title": "시유 방어전",
           "start": "2026-09-04",
           "end": "2026-09-18",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "「핀볼 히어로」 팅탕!",
+          "start": "2026-09-10",
+          "end": "2026-10-19",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "가상 그림자 추격전",
+          "start": "2026-09-16",
+          "end": "2026-10-05",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "깜짝 상영 기획",
+          "start": "2026-09-23",
+          "end": "2026-10-20",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "짜잔! 동글이 성장 일기",
+          "start": "2026-09-30",
+          "end": "2026-10-19",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "절름발이 까마귀 탐정록",
+          "start": "2026-10-03",
+          "end": "2026-10-19",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -4792,6 +4854,18 @@
         },
         {
           "type": "banner",
+          "title": "Erika, Kirara, Tsubaki (Guide) +2",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-09-08",
+          "end": "2026-09-14",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Sumire (Part-Timer), Rei, Akari / Izumi / Haruka (New Year)",
           "start": "2026-09-15",
           "end": "2026-09-29",
@@ -4948,6 +5022,16 @@
           "title": "Defense Exercise",
           "start": "2026-09-01",
           "end": "2026-09-07",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Shooting Exercise",
+          "start": "2026-09-29",
+          "end": "2026-10-05",
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
