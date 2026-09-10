@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-09",
+    "lastUpdated": "2026-09-10",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-09"
+    "autoUpdated": "2026-09-10"
   },
   "games": [
     {
@@ -2480,6 +2480,30 @@
           "rarity": 5,
           "start": "2026-09-09",
           "end": "2026-09-30",
+          "version": "3.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "프로미아",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-09-30",
+          "end": "2026-10-20",
+          "version": "3.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "종말의 심판",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-09-30",
+          "end": "2026-10-20",
           "version": "3.2",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -5052,17 +5076,6 @@
       "entries": [
         {
           "type": "banner",
-          "title": "Special Recruit",
-          "subtitle": "",
-          "start": "2026-05-28",
-          "end": "2026-06-11",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Ark Ranger Black",
           "start": "2026-06-11",
           "end": "2026-07-02",
@@ -5117,66 +5130,6 @@
           "subtitle": "",
           "start": "2026-09-03",
           "end": "2026-09-17",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Event",
-          "start": "2026-05-28",
-          "end": "2026-06-11",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "BITTER SPICE",
-          "start": "2026-05-28",
-          "end": "2026-06-11",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "7-Day Login Event – TWINKLE GREEN STAR",
-          "start": "2026-05-28",
-          "end": "2026-06-11",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "New character packages will be available after the May 28, 2026 maintenance.",
-          "start": "2026-05-28",
-          "end": "2026-06-11",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "SSR Prika",
-          "start": "2026-05-28",
-          "end": "2026-06-11",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Archives – OVER THE HORIZON",
-          "start": "2026-05-28",
-          "end": "2026-06-11",
           "version": "",
           "tentative": false,
           "source": "nikke.gg",
@@ -7124,19 +7077,6 @@
           "image": "https://uma.moe/assets/images/support/banner/2023_30159.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30159",
           "rarity": 3
-        },
-        {
-          "type": "event",
-          "title": "Training Booster Giveaway",
-          "start": "2026-05-29",
-          "end": "2026-06-11",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/813.webp",
-          "link": "https://umapyoi.net/en/news/813"
         },
         {
           "type": "event",
