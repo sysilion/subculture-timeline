@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-10",
+    "lastUpdated": "2026-09-11",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-10"
+    "autoUpdated": "2026-09-11"
   },
   "games": [
     {
@@ -2900,6 +2900,16 @@
         },
         {
           "type": "event",
+          "title": "위험한 강습전",
+          "start": "2026-09-11",
+          "end": "2026-09-25",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "가상 그림자 추격전",
           "start": "2026-09-16",
           "end": "2026-10-05",
@@ -5641,20 +5651,6 @@
         },
         {
           "type": "banner",
-          "title": "Taiki Shuttle + 1 more",
-          "start": "2026-06-05",
-          "end": "2026-06-12",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/support/banner/2022_30097.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30097",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
           "title": "Matikanetannhauser (Wit SSR)",
           "start": "2026-06-11",
           "end": "2026-06-22",
@@ -7087,20 +7083,6 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Takarazuka Kinen Legend Race",
-          "start": "2026-06-08",
-          "end": "2026-06-12",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "legend race",
-          "image": "https://uma.moe/assets/timeline-images/events/legend-race/806.webp",
-          "link": "https://umapyoi.net/en/news/806",
-          "description": "픽업: Tamamo Cross (Original), Meisho Doto (Original)"
         },
         {
           "type": "event",
