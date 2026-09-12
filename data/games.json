@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-11",
+    "lastUpdated": "2026-09-12",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-11"
+    "autoUpdated": "2026-09-12"
   },
   "games": [
     {
@@ -5636,21 +5636,6 @@
         },
         {
           "type": "banner",
-          "title": "Sweep Tosho",
-          "start": "2026-06-05",
-          "end": "2026-06-13",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/character/banner/2022_30096.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30096",
-          "description": "픽업: Sweep Tosho",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
           "title": "Matikanetannhauser (Wit SSR)",
           "start": "2026-06-11",
           "end": "2026-06-22",
@@ -7073,16 +7058,6 @@
           "image": "https://uma.moe/assets/images/support/banner/2023_30159.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30159",
           "rarity": 3
-        },
-        {
-          "type": "event",
-          "title": "Takarazuka Kinen",
-          "start": "2026-06-07",
-          "end": "2026-06-13",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
         },
         {
           "type": "event",
@@ -9023,6 +8998,19 @@
           "subtitle": "champions meeting",
           "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1271.webp",
           "link": "https://umapyoi.net/news/1271?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-01-10",
+          "end": "2027-01-23",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1228.webp",
+          "link": "https://umapyoi.net/news/1228?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
