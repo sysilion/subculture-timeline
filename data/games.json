@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-12",
+    "lastUpdated": "2026-09-13",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-12"
+    "autoUpdated": "2026-09-13"
   },
   "games": [
     {
@@ -5618,16 +5618,6 @@
       "entries": [
         {
           "type": "banner",
-          "title": "Oguri Cap (Guts SR)",
-          "start": "2026-06-04",
-          "end": "2026-06-14",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Mejiro Dober & Taiki Shuttle (Camp)",
           "start": "2026-06-05",
           "end": "2026-06-19",
@@ -7057,6 +7047,35 @@
           "subtitle": "standard pickup",
           "image": "https://uma.moe/assets/images/support/banner/2023_30159.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30159",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Neo Universe",
+          "start": "2027-01-11",
+          "end": "2027-01-19",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30160.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30160",
+          "description": "픽업: Neo Universe",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Symboli Rudolf + 1 more",
+          "start": "2027-01-11",
+          "end": "2027-01-18",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30161.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30161",
           "rarity": 3
         },
         {
@@ -9011,6 +9030,32 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1228.webp",
           "link": "https://umapyoi.net/news/1228?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to Commemorate the Delivery of \"Uma Musume Pretty Derby ROAD TO THE TOP\"",
+          "start": "2027-01-11",
+          "end": "2027-01-24",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1269.webp",
+          "link": "https://umapyoi.net/news/1269?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Trainer Skills Test",
+          "start": "2027-01-11",
+          "end": "2027-01-19",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "trainer skills test",
+          "image": "https://uma.moe/assets/timeline-images/events/trainer-skills-test/1289.webp",
+          "link": "https://umapyoi.net/news/1289?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
