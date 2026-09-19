@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-18",
+    "lastUpdated": "2026-09-19",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-18"
+    "autoUpdated": "2026-09-19"
   },
   "games": [
     {
@@ -2491,6 +2491,18 @@
           "type": "banner",
           "title": "종말의 심판",
           "subtitle": "",
+          "rarity": 5,
+          "start": "2026-09-30",
+          "end": "2026-10-20",
+          "version": "3.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "록시",
+          "subtitle": "록시, 프로미아",
           "rarity": 5,
           "start": "2026-09-30",
           "end": "2026-10-20",
@@ -5692,20 +5704,6 @@
         },
         {
           "type": "banner",
-          "title": "El Condor Pasa + 1 more",
-          "start": "2026-06-12",
-          "end": "2026-06-20",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/support/banner/2022_30099.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30099",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
           "title": "Gold City (Wit SR)",
           "start": "2026-06-18",
           "end": "2026-06-27",
@@ -7117,6 +7115,50 @@
           "subtitle": "standard pickup",
           "image": "https://uma.moe/assets/images/support/banner/2023_30161.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30161",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Sakura Bakushin O + 1 more",
+          "start": "2027-01-17",
+          "end": "2027-01-28",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30162.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30162",
+          "description": "픽업: Sakura Bakushin O, Matikanetannhauser",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Gold City + 3 more",
+          "start": "2027-01-17",
+          "end": "2027-01-28",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30164.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30164",
+          "description": "픽업: Gold City, Tosen Jordan, Mejiro Palmer, Daitaku Helios",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Mihono Bourbon + 1 more",
+          "start": "2027-01-17",
+          "end": "2027-01-27",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30163.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30163",
           "rarity": 3
         },
         {
@@ -9514,6 +9556,71 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1228.webp",
           "link": "https://umapyoi.net/news/1228?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 2: Kashiwa Kinen",
+          "start": "2027-01-17",
+          "end": "2027-01-23",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/309.webp",
+          "link": "https://umapyoi.net/news/1279?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Gal Week Campaign",
+          "start": "2027-01-17",
+          "end": "2027-01-30",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1299.webp",
+          "link": "https://umapyoi.net/news/1299?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Held \"Gyaru-Sanpo Campaign",
+          "start": "2027-01-17",
+          "end": "2027-01-30",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1310.webp",
+          "link": "https://umapyoi.net/news/1310?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Tagball Rumble: Witty Warfare!",
+          "start": "2027-01-17",
+          "end": "2027-01-27",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/04_tagball_rumble_banner.webp",
+          "link": "https://umapyoi.net/news/1308?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 2: NHK Mile Cup",
+          "start": "2027-01-17",
+          "end": "2027-01-23",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/310.webp",
+          "link": "https://umapyoi.net/news/1279?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
