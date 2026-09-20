@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-19",
+    "lastUpdated": "2026-09-20",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-19"
+    "autoUpdated": "2026-09-20"
   },
   "games": [
     {
@@ -455,16 +455,6 @@
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "격투 모드: 빠른 기책",
-          "start": "2026-06-06",
-          "end": "2026-06-21",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -5469,16 +5459,6 @@
         {
           "type": "event",
           "title": "Event",
-          "start": "2026-06-19",
-          "end": "2026-06-21",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Event",
           "start": "2026-06-30",
           "end": "2026-09-22",
           "version": "",
@@ -5686,21 +5666,6 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Taiki Shuttle + 1 more",
-          "start": "2026-06-12",
-          "end": "2026-06-21",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/character/banner/2022_30098.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30098",
-          "description": "픽업: Taiki Shuttle, Mejiro Dober",
-          "rarity": 3
         },
         {
           "type": "banner",
@@ -7183,19 +7148,6 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Seek, Solve, Summer Walk!",
-          "start": "2026-06-12",
-          "end": "2026-06-21",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "story event",
-          "image": "https://uma.moe/assets/images/story/06_seek_solve_summer_walk_banner.webp",
-          "link": "https://umapyoi.net/en/news/836"
         },
         {
           "type": "event",
