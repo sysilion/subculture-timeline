@@ -1502,3 +1502,150 @@ html, body {
 @media (max-width: 600px) {
   #density-controls label { display: none; }
 }
+
+/* ═══════════════════════════════════════
+   리딤 코드 패널
+═══════════════════════════════════════ */
+#codes-btn {
+  margin-left: 6px;
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+#codes-btn:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
+.codes-updated {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--text-dim);
+  margin-left: 4px;
+}
+
+.codes-game + .codes-game { margin-top: 2px; }
+
+/* 게임 머리글 — 목록을 스크롤해도 어느 게임인지 보이게 붙여 둔다 */
+.codes-game-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px 7px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: var(--surface);
+  background-image: linear-gradient(to right,
+    color-mix(in srgb, var(--game-color, #5c7cfa) 16%, transparent) 0%, transparent 60%);
+  border-left: 3px solid color-mix(in srgb, var(--game-color, #5c7cfa) 60%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+.codes-game-icon { display: flex; align-items: center; font-size: 14px; }
+.codes-game-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+.codes-game-count {
+  font-size: 10px;
+  color: var(--text-dim);
+}
+.codes-redeem {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+.codes-redeem:hover { color: var(--text); }
+.codes-ingame {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.code-list { padding: 4px 0 6px; }
+
+.code-row {
+  display: grid;
+  grid-template-columns: minmax(140px, auto) 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 18px;
+}
+.code-row:hover { background: var(--row-hover); }
+
+/* 코드 자체가 복사 버튼이다 */
+.code-copy {
+  display: inline-flex;
+  align-items: center;
+  /* 코드 길이가 제각각이라 버튼을 열 너비에 맞춰야 보상 문구 시작점이 가지런하다 */
+  width: 100%;
+  justify-content: space-between;
+  gap: 6px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+.code-copy:hover {
+  border-color: var(--text-muted);
+  background: color-mix(in srgb, var(--text-muted) 12%, var(--surface2));
+}
+.code-copy:active { transform: translateY(1px); }
+.code-copy-icon { font-size: 11px; color: var(--text-dim); }
+.code-copy:hover .code-copy-icon { color: var(--text-muted); }
+
+.code-reward {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+.code-new {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #1b5e20;
+  background: #81c784;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.codes-empty,
+.codes-note {
+  padding: 14px 18px;
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.codes-note { border-top: 1px solid var(--border); }
+
+/* 게임 상세 패널 안의 코드 구분선 */
+.detail-type-sep.sep-codes {
+  color: #ffb74d;
+  background-image: linear-gradient(to right, rgba(255,183,77,0.12) 0%, transparent 60%);
+  border-left: 3px solid rgba(255,183,77,0.5);
+  border-bottom: 1px solid rgba(255,183,77,0.12);
+}
+
+@media (max-width: 600px) {
+  .code-row {
+    grid-template-columns: 1fr auto;
+    row-gap: 2px;
+    padding: 6px 12px;
+  }
+  .code-reward { grid-column: 1 / -1; }
+  .codes-game-head { padding: 8px 12px 7px; }
+}

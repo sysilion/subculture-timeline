@@ -54,5 +54,16 @@
   "densityNormal": "Normal",
   "densityRoomy": "Roomy",
   "laneMore": " more",
-  "laneCollapse": "Collapse"
+  "laneCollapse": "Collapse",
+  "codesBtn": "🎁 Codes",
+  "codesTitle": "Redeem codes",
+  "codesCopy": "Click to copy",
+  "codesCopied": "Copied",
+  "codesCopyFailed": "Copy failed — select the code manually",
+  "codesRedeemLink": "Official redemption page",
+  "codesInGame": "In-game only",
+  "codesCountFmt": "{n}",
+  "codesNew": "NEW",
+  "codesEmpty": "No redeem codes collected.",
+  "codesNote": "Some codes may not work depending on region or account. Rewards are quoted from the source."
 }

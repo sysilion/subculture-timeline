@@ -142,6 +142,9 @@ const Timeline = (() => {
       luEl.textContent = `${prefix} ${data.meta.lastUpdated}`;
     }
 
+    // 코드 목록은 타임라인과 별개 파일이다. 실패해도 나머지는 그대로 그린다.
+    await loadCodes();
+
     applyHashState();
     restoreOrder();
     buildFilters();
@@ -159,6 +162,7 @@ const Timeline = (() => {
     setupViewToggle();
     setupTodayButton();
     setupIcsExport();
+    setupCodesPanel();
     updateCSSVars();
     scrollToToday(false);
 
@@ -1102,6 +1106,17 @@ function openDetail(game) {
 
   content.innerHTML = '';
 
+  // 코드가 있으면 일정 위에 먼저 보여준다 (패널은 진행 중 일정으로 스크롤되므로
+  // 위로 올렸을 때 자연스럽게 눈에 들어온다)
+  const codeInfo = gameCodes(game.id);
+  if (codeInfo) {
+    const sep = document.createElement('div');
+    sep.className = 'detail-type-sep sep-codes';
+    sep.textContent = `${t('codesTitle', '리딤 코드')} · ${codeInfo.codes.length}`;
+    content.appendChild(sep);
+    content.appendChild(buildCodeList(codeInfo));
+  }
+
   // 타입 순서: version → banner → event, 같은 타입 내 시작일 오름차순
   const typeOrder = { version: 0, banner: 1, event: 2 };
   const sorted = visibleEntries(game).sort((a, b) => {
@@ -1663,6 +1678,226 @@ function setupDetailPanel() {
       a.click();
       // 클릭과 동시에 revoke하면 일부 브라우저에서 다운로드가 취소된다
       setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+  }
+
+  /* ═══════════════════════════════════════
+     리딤 코드 (codes.json)
+     ═══════════════════════════════════════ */
+
+  let codesData = null;
+  let lastFocusedBeforeCodes = null;
+
+  // 처음 수집된 지 이만큼 안 된 코드에 NEW 배지를 단다
+  const CODE_NEW_DAYS = 7;
+
+  /* codes.json은 게임 일정과 갱신 주기가 달라 따로 받는다.
+     없거나 깨져도 타임라인은 그대로 동작해야 하므로 실패를 삼킨다. */
+  async function loadCodes() {
+    try {
+      const res = await fetch('data/codes.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      codesData = await res.json();
+    } catch (e) {
+      console.warn('codes.json 로드 실패:', e);
+      codesData = null;
+    }
+  }
+
+  function gameCodes(gameId) {
+    const info = codesData && codesData.games ? codesData.games[gameId] : null;
+    return (info && Array.isArray(info.codes) && info.codes.length) ? info : null;
+  }
+
+  function isNewCode(item) {
+    if (!item.added) return false;
+    const days = D.diffDays(D.parse(item.added), today);
+    return days >= 0 && days <= CODE_NEW_DAYS;
+  }
+
+  function fmtKey(key, fallback, n) {
+    return t(key, fallback).replace('{n}', n);
+  }
+
+  /* ── 클립보드 복사 ── */
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    ta.remove();
+    return ok;
+  }
+
+  function copyCode(code) {
+    const done = () => showToast(`${code} · ${t('codesCopied', '복사했습니다')}`);
+    const fail = () => showToast(t('codesCopyFailed', '복사 실패 — 코드를 직접 선택해 주세요'));
+    // clipboard API는 보안 컨텍스트(https/localhost)에서만 동작한다
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(code).then(done, () => (fallbackCopy(code) ? done() : fail()));
+      return;
+    }
+    fallbackCopy(code) ? done() : fail();
+  }
+
+  /* ── 코드 한 줄 ── */
+  function buildCodeRow(item) {
+    const row = document.createElement('div');
+    row.className = 'code-row';
+    const meta = [item.source, item.added].filter(Boolean).join(' · ');
+    row.innerHTML = `
+      <button class="code-copy" type="button" data-code="${esc(item.code)}"
+              title="${esc(t('codesCopy', '클릭하면 복사됩니다'))}">
+        <span class="code-text">${esc(item.code)}</span>
+        <span class="code-copy-icon" aria-hidden="true">⧉</span>
+      </button>
+      <div class="code-reward"${meta ? ` title="${esc(meta)}"` : ''}>${esc(item.reward || '')}</div>
+      ${isNewCode(item) ? `<span class="code-new">${esc(t('codesNew', 'NEW'))}</span>` : ''}
+    `;
+    return row;
+  }
+
+  function buildCodeList(info) {
+    const list = document.createElement('div');
+    list.className = 'code-list';
+    info.codes.forEach(item => list.appendChild(buildCodeRow(item)));
+    return list;
+  }
+
+  /* ── 게임 한 덩어리 (아이콘 + 이름 + 코드 목록) ── */
+  function buildCodesGameSection(game, info) {
+    const wrap = document.createElement('div');
+    wrap.className = 'codes-game';
+
+    const iconHtml = game.iconUrl
+      ? `<img src="${esc(game.iconUrl)}" alt="" style="width:18px;height:18px;border-radius:4px;object-fit:contain;">`
+      : esc(game.icon || '');
+    const redeem = safeUrl(info.redeemUrl)
+      ? `<a class="codes-redeem" href="${esc(info.redeemUrl)}" target="_blank" rel="noopener">${esc(t('codesRedeemLink', '공식 교환 페이지'))} ↗</a>`
+      : `<span class="codes-ingame">${esc(t('codesInGame', '게임 내 입력'))}</span>`;
+
+    const head = document.createElement('div');
+    head.className = 'codes-game-head';
+    head.style.setProperty('--game-color', game.color || 'var(--text-muted)');
+    head.innerHTML = `
+      <span class="codes-game-icon">${iconHtml}</span>
+      <span class="codes-game-name">${esc(gameFullName(game))}</span>
+      <span class="codes-game-count">${esc(fmtKey('codesCountFmt', '{n}개', info.codes.length))}</span>
+      ${redeem}
+    `;
+    wrap.appendChild(head);
+    wrap.appendChild(buildCodeList(info));
+    return wrap;
+  }
+
+  /* ── 코드 패널 ── */
+  function renderCodesPanel() {
+    const content = document.getElementById('codes-panel-content');
+    if (!content) return;
+    content.innerHTML = '';
+
+    const updatedEl = document.getElementById('codes-updated');
+    if (updatedEl) {
+      const when = codesData && codesData.meta ? codesData.meta.lastUpdated : '';
+      updatedEl.textContent = when ? `${t('dataUpdated', '데이터 기준:')} ${when}` : '';
+    }
+
+    // 게임 순서는 타임라인과 같게 (드래그로 바꾼 순서를 그대로 따른다)
+    const sections = (data && data.games ? data.games : [])
+      .map(game => ({ game, info: gameCodes(game.id) }))
+      .filter(x => x.info);
+
+    if (!sections.length) {
+      const empty = document.createElement('div');
+      empty.className = 'codes-empty';
+      empty.textContent = t('codesEmpty', '수집된 리딤 코드가 없습니다.');
+      content.appendChild(empty);
+      return;
+    }
+
+    sections.forEach(({ game, info }) => {
+      content.appendChild(buildCodesGameSection(game, info));
+    });
+
+    const note = document.createElement('div');
+    note.className = 'codes-note';
+    note.textContent = t('codesNote', '지역·계정 조건에 따라 쓸 수 없는 코드가 있을 수 있습니다.');
+    content.appendChild(note);
+  }
+
+  function codesPanelOpen() {
+    const panel = document.getElementById('codes-panel');
+    return !!panel && panel.classList.contains('open');
+  }
+
+  function openCodesPanel() {
+    const panel = document.getElementById('codes-panel');
+    const overlay = document.getElementById('codes-overlay');
+    if (!panel || !overlay) return;
+    renderCodesPanel();
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    lastFocusedBeforeCodes = document.activeElement;
+    document.getElementById('codes-panel-close').focus();
+  }
+
+  function closeCodesPanel() {
+    const panel = document.getElementById('codes-panel');
+    const overlay = document.getElementById('codes-overlay');
+    if (!panel || !overlay) return;
+    panel.classList.remove('open');
+    overlay.classList.remove('open');
+    if (lastFocusedBeforeCodes && document.contains(lastFocusedBeforeCodes)) {
+      lastFocusedBeforeCodes.focus();
+    }
+    lastFocusedBeforeCodes = null;
+  }
+
+  function setupCodesPanel() {
+    const btn = document.getElementById('codes-btn');
+    const panel = document.getElementById('codes-panel');
+    if (!btn || !panel) return;
+
+    btn.addEventListener('click', openCodesPanel);
+    document.getElementById('codes-panel-close').addEventListener('click', closeCodesPanel);
+    document.getElementById('codes-overlay').addEventListener('click', closeCodesPanel);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && codesPanelOpen()) closeCodesPanel();
+    });
+
+    // 포커스 트랩 — Tab 순환을 패널 안으로 제한
+    panel.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab') return;
+      const focusables = panel.querySelectorAll('button, a[href], [tabindex="0"]');
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
+
+    // 코드 버튼은 상세 패널 안에도 생기므로 문서 단위로 한 번만 건다
+    document.addEventListener('click', (e) => {
+      const copyBtn = e.target.closest('.code-copy');
+      if (!copyBtn) return;
+      e.preventDefault();
+      copyCode(copyBtn.dataset.code || '');
+    });
+
+    // 언어를 바꾸면 열려 있는 패널의 문구도 따라간다
+    document.addEventListener('tl-langchange', () => {
+      if (codesPanelOpen()) renderCodesPanel();
     });
   }
 

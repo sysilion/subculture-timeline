@@ -1,4 +1,4 @@
-name: Auto-update Banner & Event Schedule
+name: Auto-update Banner, Event & Redeem Code Data
 
 on:
   schedule:
@@ -87,12 +87,21 @@ jobs:
           SYNC_PROXY: ${{ steps.tailscale.outcome == 'success' && secrets.SYNC_PROXY || '' }}
         run: python scripts/update_data.py
 
+      # 리딤 코드는 일정과 소스가 달라 따로 돌린다.
+      # 여기서 실패해도 일정 갱신 결과는 이미 나와 있으므로 워크플로우를 멈추지 않는다.
+      - name: Collect redeem codes
+        id: codes
+        continue-on-error: true
+        env:
+          SYNC_PROXY: ${{ steps.tailscale.outcome == 'success' && secrets.SYNC_PROXY || '' }}
+        run: python scripts/update_codes.py
+
       - name: Commit if changed
         id: auto-commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: auto-update banner/event schedule"
-          file_pattern: "data/games.json"
+          commit_message: "chore: auto-update banner/event schedule and redeem codes"
+          file_pattern: "data/games.json data/codes.json"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
 
@@ -110,6 +119,12 @@ jobs:
         run: |
           echo "::error::파싱 실패/무수확 ${{ steps.update.outputs.failed_count }}개: ${{ steps.update.outputs.failed }}"
           exit 1
+
+      # 코드 소스가 전부 죽으면 기존 목록이 그대로 남는다. 조용히 굳지 않게 알린다.
+      - name: Warn if any code source returned nothing
+        if: steps.codes.outputs.codes_failed_count != '' && steps.codes.outputs.codes_failed_count != '0'
+        run: |
+          echo "::warning::리딤 코드 소스 응답 없음: ${{ steps.codes.outputs.codes_failed }}"
 
       # 프록시를 쓰도록 설정했는데 tailnet에 붙지 못한 경우를 눈에 띄게 남긴다.
       # 데이터는 이미 갱신된 뒤이므로 경고로만 알린다.

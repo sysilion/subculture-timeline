@@ -28,6 +28,7 @@ npx serve .
 │   └── i18n/               # 번역 JSON 파일
 ├── scripts/
 │   ├── update_data.py      # 배너/이벤트 자동 갱신 스크립트
+│   ├── import_schedule.py  # 일정 이미지 → games.json 수동 반영 임포터
 │   ├── requirements.txt    # Python 의존성
 │   └── parsers/
 │       ├── base.py         # 공통 HTTP·날짜·위키 API 유틸리티
@@ -39,9 +40,12 @@ npx serve .
 │       ├── umamusume.py    # 우마무스메 (uma.moe 리소스 API)
 │       ├── wuwa.py         # 명조 (wuwatracker RSC 페이로드)
 │       ├── genshin.py      # 원신 paimon.moe 폴백 (vm 샌드박스 평가)
-│       └── game8.py        # Game8 범용 파서 (CI에서는 차단됨)
+│       ├── game8.py        # Game8 범용 파서 (CI에서는 차단됨)
+│       └── codes/          # 리딤 코드 수집기
+│           ├── hoyo.py            # 원신·스타레일·젠레스 (hoyo-codes.seria.moe)
+│           └── pockettactics.py   # 나머지 게임 범용 (pockettactics.com)
 ├── .github/workflows/
-│   ├── update-data.yml     # 매일 자동 데이터 갱신 (cron)
+│   ├── update-data.yml     # 매일 자동 데이터·코드 갱신 (cron)
 │   └── deploy.yml          # GitHub Pages 배포
 └── README.md
 ```
@@ -51,13 +55,37 @@ npx serve .
 - **게임 순서 드래그 & localStorage 저장** — 게임 라벨 좌측 `⋯` 핸들로 순서 변경, 새로고침해도 유지됨
 - **게임 상세 패널** — 게임 이름 클릭 시 우측 패널에서 전체 배너/이벤트 목록 확인 (ESC/배경 클릭으로 닫힘)
 - **타입별 행 구분** — 각 행에 `버전` / `배너` / `이벤트` 레이블 표시
+- **리딤 코드 목록** — 타임라인 상단 `🎁 리딤 코드` 버튼으로 게임별 코드 확인, 클릭 시 클립보드 복사
 - **언어 전환** — 한국어/영어 지원 (헤더 우측 버튼)
 - **표시 범위 조절** — 과거/미래 일수 선택 가능
 - **게임 필터** — 각 게임 on/off 토글
 
+## 리딤 코드
+
+타임라인 상단 `🎁 리딤 코드` 버튼으로 게임별 코드 목록을 연다. 코드를 클릭하면 클립보드로 복사되고,
+공식 웹 교환 페이지가 있는 게임은 링크가 함께 뜬다. 게임 상세 패널 맨 위에도 같은 목록이 붙는다.
+
+데이터는 `data/codes.json`이며 `scripts/update_codes.py`가 갱신한다.
+
+| 소스 | 대상 | 비고 |
+|------|------|------|
+| hoyo-codes.seria.moe | 원신 · 스타레일 · 젠레스 | 보상 항목까지 구조화된 JSON |
+| pockettactics.com | 위 3종 + 명조 · 니케 · 블루 아카이브 · 엔드필드 · 이환 · 애니모 · 몬길 · 우마무스메 | 본문 첫 목록의 `코드 - 보상` 줄을 읽는다 |
+
+- 림버스 컴퍼니·트릭컬은 코드 페이지가 없어 수집 대상에서 빠져 있다.
+- 우마무스메는 페이지는 있으나 글로벌 서버에 배포된 코드가 아직 없다.
+- **소스에서 사라진 자동 코드는 만료로 보고 지운다.** 단, 그 소스가 이번 실행에서 응답하지
+  않았다면 판단을 미루고 그대로 둔다. 소스 한 곳이 잠깐 죽었다고 코드가 통째로 날아가면 안 된다.
+- `_auto` 없이 손으로 넣은 코드는 소스와 무관하게 유지된다.
+- 처음 수집한 날짜(`added`)가 7일 이내면 화면에 `NEW` 배지가 붙는다.
+
+```bash
+python3 scripts/update_codes.py      # 코드만 갱신
+```
+
 ## 자동 데이터 갱신
 
-GitHub Actions가 매일 UTC 00:00 (KST 09:00)에 실행되어 배너·이벤트 일정을 갱신합니다.
+GitHub Actions가 매일 UTC 00:00 (KST 09:00)에 실행되어 배너·이벤트 일정과 리딤 코드를 갱신합니다.
 어느 파서든 결과가 0건이면 워크플로우가 실패로 끝나므로, 소스가 조용히 깨져도 바로 드러납니다.
 
 ### 소스 현황
@@ -125,6 +153,26 @@ Tailscale 쪽에는 `auth_keys` 스코프와 `tag:ci` 태그를 가진 OAuth cli
 }
 ```
 
+### 일정 이미지로 한 번에 넣기
+
+공식 일정표 이미지(버전 업데이트 공지 등)를 읽어 만든 스테이징 JSON을 `scripts/import_schedule.py`가
+검증·중복 제거·정렬해서 `games.json`에 병합합니다. 날짜 형식, `end < start`, 같은 `title+start` 중복,
+1년을 넘는 비정상 기간을 걸러내므로 손으로 편집하는 것보다 안전합니다.
+
+```bash
+python3 scripts/import_schedule.py staging.json --dry-run   # 반영될 항목만 출력
+python3 scripts/import_schedule.py staging.json             # 실제 병합
+```
+
+스테이징 JSON 형식은 스크립트 상단 docstring 참조. 기존 게임이면 `gameId`만, 새 게임이면 `game` 블록
+(`id`/`name`/`color`/`icon` 필수)을 채웁니다. 병합 키는 `title|start` — 같은 키는 교체, 나머지는 추가됩니다.
+
+이미지 판독 자체는 Claude Code 스킬 `.claude/skills/schedule-image/`가 맡습니다. 일정 이미지를 붙여넣고
+"일정 추가"라고 하면 게임 식별 → 판독 → 스테이징 JSON → 임포트 순으로 진행합니다. 타입 매핑(픽업은
+`banner`, 나머지는 `event`), 회차 분리, 연도 추정 규칙이 거기 적혀 있습니다.
+
+임포트한 항목에는 `_auto`가 붙지 않으므로 자동 갱신이 덮어쓰거나 90일 뒤 지우지 않습니다.
+
 ## 수록 게임 (2026-06-02 기준)
 
 | 게임 | 버전 | 데이터 출처 |
@@ -136,6 +184,7 @@ Tailscale 쪽에는 `auth_keys` 스코프와 `tag:ci` 태그를 가진 OAuth cli
 | 명일방주: 엔드필드 | 1.2 ~ 1.3 | game8.co / buffhub.com |
 | 이환 (NTE) | 1.0 ~ 1.2 | buffhub.com / neverness.gg |
 | 몬길: STAR DIVE | 1.0 ~ 1.2 | mongilstardive.wiki |
+| 애니모 (Aniimo) | 1.0 | aniimo.com 공식 일정 이미지 |
 
 > ⚠ 미확정(tentative) 일정은 커뮤니티 추적/리크 기반이며 변동될 수 있습니다.
 

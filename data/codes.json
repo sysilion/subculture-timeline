@@ -1,0 +1,961 @@
+{
+  "meta": {
+    "lastUpdated": "2026-09-22",
+    "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
+  },
+  "games": {
+    "genshin": {
+      "codes": [
+        {
+          "code": "YOAL3V36XHS7",
+          "reward": "Mora ×10000 · Adventurer's Experience ×10 · Fine Enhancement Ore ×5 · Jueyun Chili Chicken ×5 · Stir-Fried Fish Noodles ×5",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "Y6JYMKV6JKSL",
+          "reward": "Primogem ×60 · Adventurer's Experience ×5",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "Y1INABQB6DEX",
+          "reward": "60 primogems and five adventurer's experience",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "GS71XYNSYJ",
+          "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "GS71XAVWDS",
+          "reward": "Mora ×30000 · Hero's Wit ×3 · Mystic Enhancement Ore ×5",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "GENSHINGIFT",
+          "reward": "50 primogems and three hero's wit (this code works periodically)",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "BALLETCOLLAB",
+          "reward": "Primogem ×30 · Mora ×10000 · Hero's Wit ×3 · Mystic Enhancement Ore ×3",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "2BJ64QRZ7RT8",
+          "reward": "Primogem ×60 · Adventurer's Experience ×5",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        }
+      ],
+      "redeemUrl": "https://genshin.hoyoverse.com/ko/gift"
+    },
+    "starrail": {
+      "codes": [
+        {
+          "code": "WAVEFLAIRSTYLE",
+          "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-09-22",
+          "_auto": true
+        },
+        {
+          "code": "WA4AV2F24PYX",
+          "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-09-22",
+          "_auto": true
+        },
+        {
+          "code": "CTK5DRQVT48F",
+          "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-09-22",
+          "_auto": true
+        },
+        {
+          "code": "SUNSWEPTROBIN",
+          "reward": "three traveler's guides and two Classic SoulGlads",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "STARRAILGIFT",
+          "reward": "50 stellar jade, 10k credits, two traveler’s guides, and five bottled soda",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "OMEGA",
+          "reward": "60 stellar jade and one fuel",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "IFYOUAREREADINGTHIS",
+          "reward": "60 stellar jade and one fuel",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "FAREWELL",
+          "reward": "60 stellar jade and one fuel",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "CREATIONNYMPH",
+          "reward": "60 stellar jade and one fuel",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "5S6ZHRWTDNJB",
+          "reward": "60 stellar jade",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "4TKSX77Y58QK",
+          "reward": "30 stellar jade, three traveler’s guides, five condensed aether, four lost gold fragments, and 20k credits",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        }
+      ],
+      "redeemUrl": "https://hsr.hoyoverse.com/gift"
+    },
+    "wuwa": {
+      "codes": [
+        {
+          "code": "WUTHERINGGIFT",
+          "reward": "two premium resonance potions, two medium revival inhalers, two medium energy bags, 10k shell credits, and 50 astrite",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "WAKINGMOON",
+          "reward": "100 astrite, 20 premium tuners, and five advanced sealed tubes",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "FINDSENTINEL",
+          "reward": "100 astrite, 2 premium enclosure tank III, and 40k shell credits",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "FALLINGSANCTUM",
+          "reward": "100 astrite, three premium resonance potions, and two advanced revival inhalers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        }
+      ]
+    },
+    "zzz": {
+      "codes": [
+        {
+          "code": "ZZZVOID32",
+          "reward": "Polychrome ×20 · Denny ×2,222",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "ZZZINK32",
+          "reward": "Polychrome ×20 · Denny ×2,222",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "ZZZGRIND32",
+          "reward": "Polychrome ×20 · Denny ×2,222",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "ZENLESSGIFT",
+          "reward": "50 polychrome, two official investigator logs, three w-engine power supplies, and one bangboo algorithm module",
+          "source": "hoyo-codes.seria.moe",
+          "added": "",
+          "_auto": true
+        }
+      ],
+      "redeemUrl": "https://zenless.hoyoverse.com/redemption"
+    },
+    "endfield": {
+      "codes": [
+        {
+          "code": "ZAU2SYXHWX5L4ZH",
+          "reward": "5k T-creds and ten arms INSP Kits",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "ENDFIELDRENEW",
+          "reward": "one safety helmet sticker and 71,600 T-creds",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "ENDFIELDGIFT",
+          "reward": "150 oroberyl, 20 intermediate combat records, 20 arms INSP kits, and 10k T-creds",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "ENDFIELD4PC",
+          "reward": "two advanced combat records, two arms INSP kits, and 13k T-creds (PC only)",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "AKENDFIELDSUB",
+          "reward": "100 oroberyl",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        }
+      ]
+    },
+    "nte": {
+      "codes": [
+        {
+          "code": "ZANKOU0819",
+          "reward": "30 annulith, 50k fons, and 30k beetle coins",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NTENENE",
+          "reward": "10k fons, ten dynamiK, and ten clicky fries",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NTEMusou",
+          "reward": "10k fons and 10k beetle coins",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NTEKokushi",
+          "reward": "30k fons and 30k beetle coins",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NTEGIFT",
+          "reward": "50 annulith, five rising hunter guides, and five light dye",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "COMEBACK",
+          "reward": "one fabricated die",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        }
+      ]
+    },
+    "mongil": {
+      "codes": [
+        {
+          "code": "REGINULAUPDATE",
+          "reward": "ten premium salmon puree, one purple upgrade stone, and three compasses of promise",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NAGIUPDATE",
+          "reward": "three conquest entry tickets, three compasses of promise, and 100 keys",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "MONGILREPORT",
+          "reward": "one White Wolf Warrior monsterling",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "MONGILPRESENT",
+          "reward": "one Brown Cappy monsterling, one Forkmugger monsterling, and one Spark Slime monsterling",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "MONGILDISCORD",
+          "reward": "30 diamonds, three glimmering stardust, and 300k gold",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "MEMOLMONGIL",
+          "reward": "rewards",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "LOVEMONGIL",
+          "reward": "one Overflowing Love artifact",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "DINDINISDINDIN",
+          "reward": "10k gold and one Green Cappy monsterling",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "DEVLIVE0410",
+          "reward": "one Scar monsterling, one White Wolf Warrior monsterling, and one Spark Slime",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        }
+      ]
+    },
+    "bluearchive": {
+      "codes": [
+        {
+          "code": "RUNEREADER",
+          "reward": "Pyroxene and choice boxes",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "RABBITHOLE",
+          "reward": "Pyroxene and choice boxes",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "MAGICALVIGILANTE",
+          "reward": "five gift choice boxes, ten superior enhancement stones, and five advanced enhancement stones",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "HEAVYCALIBER310",
+          "reward": "600 Pyroxene",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "DOKIDOKIRAID",
+          "reward": "600 pyroxene, 15 superior activity reports, 50 advanced activity reports, 200 total assault coins, and 200 grand assault coins",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "BOLTCATCH831",
+          "reward": "30 T9 equipment blueprint choice boxes, 30 T8 equipment blueprint choice boxes, and 30 T7 equipment blueprint choice boxes",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        }
+      ]
+    },
+    "nikke": {
+      "codes": [
+        {
+          "code": "thxfor990000",
+          "reward": "one-hour growth box",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "thxfor970000",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "thxfor960000",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "stopn0924",
+          "reward": "300 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "YROMEM",
+          "reward": "free rewards",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "X04Z1AJBM",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "WECAUGHTTHEGHOST",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "WAVETOYOU2026",
+          "reward": "ten advanced recruit vouchers, one 24-hour growth set, three darling for a day tickets, and 50 ultra boost modules",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "W04Z17JII",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "V04Z18KFG",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "ULANGTAHUNNIKKE2ID",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "TWOANDAHALFYEARS",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "TRINAYKOTALAGA",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "THXMISSILIS",
+          "reward": "300 gems and other rewards",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "THANKYOU",
+          "reward": "50 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "THAINIKKEDAY11MAY",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "TACTICALBUBBLE",
+          "reward": "600 gems and other rewards",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "STELLARNIKKEMYSG",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "SB06NK12EVETH",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "SALAMINSALAMIN",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "RubianaVol9SNWR",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "RAPIKANHATI1446H",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "PUNYQUEEN",
+          "reward": "ten advanced recruit vouchers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "PROTECTARKSTAR",
+          "reward": "600 gems, 50 ultra boost modules, five darling for a day, and one 12-hour growth set",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "ONLYMISSILISCANDO",
+          "reward": "ten recruit vouchers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKEUNDERSEA",
+          "reward": "five recruit vouchers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKESTELLARBLADE",
+          "reward": "five advanced recruit vouchers, one 24-hour growth set, three darling for a day, and 50 ultra boost modules",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKEPC",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKEORIGIN",
+          "reward": "one recruit voucher",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKEONSATELLITE",
+          "reward": "one recruit voucher and anniversary cake",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKEMYSGTWOHALFANNI",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKEFORYOU",
+          "reward": "credit 2h",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKEFOR2024",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKEFOR2023",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKECONCERT2025",
+          "reward": "300 gems and special title",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKECHRISTMASPARTY",
+          "reward": "ten advanced recruit vouchers, 24hr growth set, three darlings for a day, and 50 ultra boost modules",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKE777",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKE2NDANNIVKRKOL",
+          "reward": "600 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKE2023",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NIKKE1104",
+          "reward": "credit 2h",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "NAKAMANIAITAI",
+          "reward": "150 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "MUNTINGSIRENA",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "KanaeSatoruVol10BQID",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "IAMNAYUTA",
+          "reward": "five recruit vouchers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "FuranLilithVol9WZLY",
+          "reward": "300 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "FORYOURSUPPORT",
+          "reward": "50 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "EVATADAN",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "ENCOUNTERONCEMORE",
+          "reward": "five recruit vouchers and 3.5th anniversary cake",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "EEEEEEEEENTERTAINMENT",
+          "reward": "five recruit vouchers, two synchro expansions, and 60 code selection boxes",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "DWAVECOMING",
+          "reward": "300 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "DUAKOMALIMATAHUNNIKKE",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "DEARRAPICARRYON",
+          "reward": "free rewards",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "COMMANDERS",
+          "reward": "50 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "COMMANDERLOVETRIAL",
+          "reward": "20 ultra boost modules, 20 code manual selection boxes, one skill manual selection box, one burst manual box, and one darling for a day",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "CHEERFORANIS",
+          "reward": "300 gems, 50 code manual selection boxes, and two synchro expansions",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "CATCHMEIFYOUCAN717",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "BUBBLEPARADISEYO",
+          "reward": "ten recruit vouchers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "BECOMMANDERNOW",
+          "reward": "100 gems",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "3YEARSWITHNIKKE",
+          "reward": "ten recruit vouchers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "3YEARSWITHCOMMANDER",
+          "reward": "900 gems and one advanced recruit voucher",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "3ANDHALFWITHCOMMANDER",
+          "reward": "ten recruit vouchers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "30MONTHSTOGETHER",
+          "reward": "six growth sets, ten recruit vouchers, ten ultra boost modules, five skill manual boxes, and 50 profile custom packs",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "2YEARSANDCOUNTING",
+          "reward": "ten recruit vouchers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "2026WORKHARDER",
+          "reward": "two advanced recruit vouchers and 50 ultra boost modules",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "2026LETSDANCE",
+          "reward": "two advanced recruit vouchers and two skill manual boxes",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "2026KEEPTACTICAL",
+          "reward": "two advanced recruit vouchers and two burst manual boxes",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "2026HAPPYNEWYEAR",
+          "reward": "two advanced recruit vouchers and extra rewards",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "2026EATBETTER",
+          "reward": "two advanced recruit vouchers and 24h growth set",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        }
+      ]
+    },
+    "aniimo": {
+      "codes": [
+        {
+          "code": "twinewithaniimo",
+          "reward": "50 glimmer, five aniipod pro, and five growth flowers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "anyoneaniimo",
+          "reward": "five aniipod and 10k credits",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "aniimowelcome",
+          "reward": "50 glimmer, five aniipod pro, and five growth flowers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "aniimoparty",
+          "reward": "50 glimmer, five aniipod pro, and five growth flowers",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "aniimoopenworld",
+          "reward": "five aniipod and 10k credits",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "aniimolaunch2026",
+          "reward": "five aniipod and 10k credits",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "aniimobonus",
+          "reward": "50 glimmer",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "Aniimo2026",
+          "reward": "a SUSUTA egg special prize, two aniipod ultra, and 200 glimmer",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        },
+        {
+          "code": "ANIIMOGIFT",
+          "reward": "ten glimmer, 20k credits, ten growth flowers, and five aniipod pro",
+          "source": "pockettactics.com",
+          "added": "",
+          "_auto": true
+        }
+      ]
+    }
+  }
+}

@@ -103,6 +103,7 @@
       </button>
       <button id="today-btn" data-i18n="todayBtn">오늘</button>
       <button id="ics-btn" data-i18n="icsBtn" title="표시 중인 게임의 예정/진행중 일정을 캘린더 파일로 저장">📅 .ics</button>
+      <button id="codes-btn" data-i18n="codesBtn" title="게임별 리딤 코드 목록 보기">🎁 리딤 코드</button>
     </div>
     <!-- 로딩 스켈레톤 (데이터 로드 중 표시) -->
     <div id="skeleton-container">
@@ -155,6 +156,19 @@
   <div id="entry-modal-body"></div>
 </div>
 <div id="entry-modal-overlay" class="entry-modal-overlay" hidden></div>
+
+<!-- ── 리딤 코드 패널 ── -->
+<div id="codes-panel" class="detail-panel codes-panel" role="dialog" aria-modal="true" aria-labelledby="codes-panel-title">
+  <div class="detail-panel-header">
+    <div class="detail-panel-title" id="codes-panel-title">
+      🎁 <span data-i18n="codesTitle">리딤 코드</span>
+      <span id="codes-updated" class="codes-updated"></span>
+    </div>
+    <button class="detail-panel-close" id="codes-panel-close" aria-label="닫기">&times;</button>
+  </div>
+  <div class="detail-panel-content" id="codes-panel-content"></div>
+</div>
+<div id="codes-overlay" class="detail-overlay"></div>
 
 <!-- ── 게임 상세 패널 ── -->
 <div id="detail-panel" class="detail-panel" role="dialog" aria-modal="true" aria-label="게임 상세">

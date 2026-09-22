@@ -54,5 +54,16 @@
   "densityNormal": "보통",
   "densityRoomy": "넓게",
   "laneMore": "개 더 보기",
-  "laneCollapse": "접기"
+  "laneCollapse": "접기",
+  "codesBtn": "🎁 리딤 코드",
+  "codesTitle": "리딤 코드",
+  "codesCopy": "클릭하면 복사됩니다",
+  "codesCopied": "복사했습니다",
+  "codesCopyFailed": "복사 실패 — 코드를 직접 선택해 주세요",
+  "codesRedeemLink": "공식 교환 페이지",
+  "codesInGame": "게임 내 입력",
+  "codesCountFmt": "{n}개",
+  "codesNew": "NEW",
+  "codesEmpty": "수집된 리딤 코드가 없습니다.",
+  "codesNote": "지역·계정 조건에 따라 쓸 수 없는 코드가 있을 수 있습니다. 보상 표기는 수집처(영문) 기준입니다."
 }
