@@ -10741,6 +10741,286 @@
       ],
       "nameKo": "트릭컬 RE:VIVE",
       "nameEn": "Trickcal RE:VIVE"
+    },
+    {
+      "id": "aniimo",
+      "name": "애니모",
+      "fullName": "애니모 (Aniimo)",
+      "color": "#5ec8c0",
+      "icon": "🥚",
+      "developer": "Pawprint Studio",
+      "enabled": true,
+      "iconUrl": "https://www.aniimo.com/favicon.ico",
+      "entries": [
+        {
+          "type": "version",
+          "title": "Version 1.0 — 출시",
+          "subtitle": "PC·콘솔 9/16, 모바일 9/23",
+          "start": "2026-09-16",
+          "end": "2026-10-28",
+          "version": "1.0",
+          "tentative": true,
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "천휘의 약속 - 천휘 애니모 선택",
+          "subtitle": "초보 이벤트 (상시)",
+          "start": "2026-09-16",
+          "end": "2026-12-09",
+          "version": "1.0",
+          "tentative": true,
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "출발하자! 모험가여!",
+          "subtitle": "초보 이벤트 (상시)",
+          "start": "2026-09-16",
+          "end": "2026-12-09",
+          "version": "1.0",
+          "tentative": true,
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "여행 수기",
+          "start": "2026-09-16",
+          "end": "2026-10-28",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "내가 누구게",
+          "subtitle": "1회차",
+          "start": "2026-09-16",
+          "end": "2026-09-24",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "내가 누구게",
+          "subtitle": "2회차",
+          "start": "2026-10-02",
+          "end": "2026-10-08",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "내가 누구게",
+          "subtitle": "3회차",
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "에이델 생태 조사",
+          "subtitle": "1회차",
+          "start": "2026-09-16",
+          "end": "2026-09-20",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "에이델 생태 조사",
+          "subtitle": "2회차",
+          "start": "2026-10-02",
+          "end": "2026-10-08",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "에이델 생태 조사",
+          "subtitle": "3회차",
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "화려한 스타",
+          "subtitle": "1회차",
+          "start": "2026-09-25",
+          "end": "2026-10-01",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "화려한 스타",
+          "subtitle": "2회차",
+          "start": "2026-10-09",
+          "end": "2026-10-15",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "화려한 스타",
+          "subtitle": "3회차",
+          "start": "2026-10-23",
+          "end": "2026-10-29",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "애니모 발견왕 - 썬더자드",
+          "start": "2026-09-25",
+          "end": "2026-10-08",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "여정에 담긴 빛",
+          "start": "2026-10-01",
+          "end": "2026-10-28",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "흔적 찾기",
+          "start": "2026-09-20",
+          "end": "2026-12-09",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "전설의 여행 - 꽃 그림자 추적",
+          "start": "2026-09-16",
+          "end": "2026-09-25",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "전설의 여행 - 아이리스테일과 동행&축복의 선물",
+          "start": "2026-09-25",
+          "end": "2026-12-09",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "banner",
+          "title": "풍요로운 지맥 - 스타폴 숲",
+          "start": "2026-09-18",
+          "end": "2026-09-20",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "banner",
+          "title": "풍요로운 지맥 - 천휘 설휘랑",
+          "subtitle": "UP",
+          "start": "2026-09-21",
+          "end": "2026-09-27",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "banner",
+          "title": "풍요로운 지맥 - 천휘 플로리안",
+          "subtitle": "UP",
+          "start": "2026-09-28",
+          "end": "2026-10-04",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "banner",
+          "title": "풍요로운 지맥 - 천휘 모터터",
+          "subtitle": "UP",
+          "start": "2026-10-05",
+          "end": "2026-10-11",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "banner",
+          "title": "풍요로운 지맥 - 천휘 헬울프",
+          "subtitle": "UP",
+          "start": "2026-10-12",
+          "end": "2026-10-18",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "banner",
+          "title": "풍요로운 지맥 - 천휘 카니발",
+          "subtitle": "UP",
+          "start": "2026-10-19",
+          "end": "2026-10-25",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "부화 가속",
+          "subtitle": "1회차",
+          "start": "2026-09-18",
+          "end": "2026-09-20",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "부화 가속",
+          "subtitle": "2회차",
+          "start": "2026-09-25",
+          "end": "2026-09-27",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "부화 가속",
+          "subtitle": "3회차",
+          "start": "2026-10-02",
+          "end": "2026-10-04",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "부화 가속",
+          "subtitle": "4회차",
+          "start": "2026-10-09",
+          "end": "2026-10-11",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "부화 가속",
+          "subtitle": "5회차",
+          "start": "2026-10-16",
+          "end": "2026-10-18",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        },
+        {
+          "type": "event",
+          "title": "부화 가속",
+          "subtitle": "6회차",
+          "start": "2026-10-23",
+          "end": "2026-10-25",
+          "version": "1.0",
+          "source": "aniimo.com 공식 일정"
+        }
+      ],
+      "nameKo": "애니모",
+      "nameEn": "Aniimo"
     }
   ],
   "candidates": [
