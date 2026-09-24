@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-23",
+    "lastUpdated": "2026-09-24",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-23"
+    "autoUpdated": "2026-09-24"
   },
   "games": [
     {
@@ -830,6 +830,16 @@
           "tentative": false,
           "source": "api.ennead.cc",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "달빛을 물어온 제비",
+          "start": "2026-09-24",
+          "end": "2026-10-12",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
         }
       ],
       "iconUrl": "https://genshin.hoyoverse.com/favicon.ico",
@@ -1613,16 +1623,6 @@
         },
         {
           "type": "banner",
-          "title": "Startorch Racing, Rerun!",
-          "start": "2026-06-11",
-          "end": "2026-06-25",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Cartethyia (Rerun) + Rebecca (Debut, Cyberpunk)",
           "subtitle": "Phase 2",
           "rarity": 5,
@@ -1884,16 +1884,6 @@
           "title": "Nightmare Challenge (Adam Smasher)",
           "start": "2026-06-08",
           "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Event Duration",
-          "start": "2026-06-11",
-          "end": "2026-06-25",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -2997,18 +2987,6 @@
         },
         {
           "type": "banner",
-          "title": "Fists of No Regrets",
-          "subtitle": "Mi Fu",
-          "rarity": 6,
-          "start": "2026-06-05",
-          "end": "2026-06-25",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Camille (Debut)",
           "subtitle": "Phase 2",
           "rarity": 6,
@@ -3171,28 +3149,6 @@
           "subtitle": "Narrative",
           "start": "2026-06-05",
           "end": "2026-07-15",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Search for Sword Vault Dale",
-          "subtitle": "Guide",
-          "start": "2026-06-05",
-          "end": "2026-06-25",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "One with Her Fists",
-          "subtitle": "Sign-In",
-          "start": "2026-06-05",
-          "end": "2026-06-25",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
@@ -3702,6 +3658,17 @@
           "type": "event",
           "title": "Season of Illusion",
           "subtitle": "Echoes of War",
+          "start": "2026-09-24",
+          "end": "2026-10-14",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Echoing Bell of an Old City",
+          "subtitle": "Guide",
           "start": "2026-09-24",
           "end": "2026-10-14",
           "version": "",
@@ -5830,20 +5797,6 @@
           "end": "2026-07-03",
           "tentative": true,
           "source": "gamerant.com"
-        },
-        {
-          "type": "banner",
-          "title": "Air Groove + 1 more",
-          "start": "2026-06-19",
-          "end": "2026-06-25",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/support/banner/2022_30101.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30101",
-          "rarity": 3
         },
         {
           "type": "banner",

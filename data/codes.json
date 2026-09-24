@@ -1,11 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-23",
+    "lastUpdated": "2026-09-24",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
+        {
+          "code": "VESNAONPATROL",
+          "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-09-24",
+          "_auto": true
+        },
+        {
+          "code": "PLDXI8VFKI7C",
+          "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-09-24",
+          "_auto": true
+        },
+        {
+          "code": "EPIC2026",
+          "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-09-24",
+          "_auto": true
+        },
         {
           "code": "YOAL3V36XHS7",
           "reward": "10k mora, ten adventurer's experience, five fine enhancement ore, five jueyun chili chicken, and five stir-fried fish noodles",
@@ -152,27 +173,6 @@
         {
           "code": "WUTHERINGGIFT",
           "reward": "two premium resonance potions, two medium revival inhalers, two medium energy bags, 10k shell credits, and 50 astrite",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "WAKINGMOON",
-          "reward": "100 astrite, 20 premium tuners, and five advanced sealed tubes",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "FINDSENTINEL",
-          "reward": "100 astrite, 2 premium enclosure tank III, and 40k shell credits",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "FALLINGSANCTUM",
-          "reward": "100 astrite, three premium resonance potions, and two advanced revival inhalers",
           "source": "pockettactics.com",
           "added": "",
           "_auto": true
