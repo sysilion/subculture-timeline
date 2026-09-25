@@ -1,14 +1,21 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-24",
+    "lastUpdated": "2026-09-25",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
         {
-          "code": "VESNAONPATROL",
+          "code": "DATG5HG1PL89",
           "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-09-25",
+          "_auto": true
+        },
+        {
+          "code": "VESNAONPATROL",
+          "reward": "Primogem ×40 · Mora ×20000 · Hero's Wit ×3",
           "source": "hoyo-codes.seria.moe",
           "added": "2026-09-24",
           "_auto": true
@@ -22,7 +29,7 @@
         },
         {
           "code": "EPIC2026",
-          "reward": "",
+          "reward": "40 primogems, five hero's wit, and 20k mora",
           "source": "hoyo-codes.seria.moe",
           "added": "2026-09-24",
           "_auto": true

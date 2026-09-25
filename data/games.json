@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-24",
+    "lastUpdated": "2026-09-25",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-24"
+    "autoUpdated": "2026-09-25"
   },
   "games": [
     {
@@ -2906,6 +2906,16 @@
         },
         {
           "type": "event",
+          "title": "위험한 강습전",
+          "start": "2026-09-25",
+          "end": "2026-10-09",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "짜잔! 동글이 성장 일기",
           "start": "2026-09-30",
           "end": "2026-10-19",
@@ -3085,59 +3095,9 @@
         },
         {
           "type": "event",
-          "title": "Expunger of Sin (Ver. 1.3 Phase 2) 06/26/2026 - TBD",
-          "start": "2026-06-05",
-          "end": "2026-06-26",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Crimson Hued Issue (Ver. 1.3 Phase 2) 06/26/2026 - TBD",
           "start": "2026-06-05",
           "end": "2026-12-02",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Fists of No Regrets (Ver. 1.3 Phase 1)",
-          "start": "2026-06-05",
-          "end": "2026-06-26",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Expunger of Sin (Ver. 1.3 Phase 2) 06/26/2026 - 07/16/2026",
-          "start": "2026-06-05",
-          "end": "2026-06-26",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Search for Sword Vault Dale (Version 1.3)",
-          "start": "2026-06-05",
-          "end": "2026-06-26",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "One with Her Fists Sign-In (Version 1.3)",
-          "start": "2026-06-05",
-          "end": "2026-06-26",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -5012,6 +4972,18 @@
         {
           "type": "banner",
           "title": "Saori (Dress), Kayoko (Dress), Aru (Dress) +2",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-09-15",
+          "end": "2026-09-28",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Mutsuki (Dress), Haruka (Dress), Aru (Dress) +2",
           "subtitle": "Pickup",
           "rarity": 3,
           "start": "2026-09-15",
@@ -10619,6 +10591,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1282.webp",
           "link": "https://umapyoi.net/news/1282?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-01-23",
+          "end": "2027-02-05",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1283.webp",
+          "link": "https://umapyoi.net/news/1283?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
