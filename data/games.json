@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-26",
+    "lastUpdated": "2026-09-27",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-26"
+    "autoUpdated": "2026-09-27"
   },
   "games": [
     {
@@ -7609,19 +7609,6 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Cancer Cup",
-          "start": "2026-06-22",
-          "end": "2026-06-28",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "champions meeting",
-          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/global-845.webp",
-          "link": "https://umapyoi.net/en/news/845"
         },
         {
           "type": "event",
