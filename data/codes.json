@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-26",
+    "lastUpdated": "2026-09-28",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -103,20 +103,6 @@
     "starrail": {
       "codes": [
         {
-          "code": "WAVEFLAIRSTYLE",
-          "reward": "",
-          "source": "hoyo-codes.seria.moe",
-          "added": "2026-09-22",
-          "_auto": true
-        },
-        {
-          "code": "WA4AV2F24PYX",
-          "reward": "",
-          "source": "hoyo-codes.seria.moe",
-          "added": "2026-09-22",
-          "_auto": true
-        },
-        {
           "code": "CTK5DRQVT48F",
           "reward": "",
           "source": "hoyo-codes.seria.moe",
@@ -124,9 +110,9 @@
           "_auto": true
         },
         {
-          "code": "SUNSWEPTROBIN",
+          "code": "SunsweptRobin",
           "reward": "three traveler's guides and two Classic SoulGlads",
-          "source": "hoyo-codes.seria.moe",
+          "source": "pockettactics.com",
           "added": "",
           "_auto": true
         },
