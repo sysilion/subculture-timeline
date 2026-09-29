@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-28",
+    "lastUpdated": "2026-09-29",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-28"
+    "autoUpdated": "2026-09-29"
   },
   "games": [
     {
@@ -39,66 +39,6 @@
           "start": "2026-05-21",
           "end": "2026-06-10",
           "version": "6.6"
-        },
-        {
-          "type": "banner",
-          "title": "Frostedge Nocturne",
-          "subtitle": "Lohen, Mavuika",
-          "rarity": 5,
-          "start": "2026-06-09",
-          "end": "2026-06-30",
-          "version": "6.6",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Epitome Invocation",
-          "subtitle": "Disaster_And_Remorse, A_Thousand_Blazing_Suns",
-          "rarity": 5,
-          "start": "2026-06-09",
-          "end": "2026-06-30",
-          "version": "6.6",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "캐릭터 기원",
-          "subtitle": "로엔, 미카, 향릉",
-          "rarity": 5,
-          "start": "2026-06-09",
-          "end": "2026-06-30",
-          "version": "6.6",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "캐릭터 기원 2",
-          "subtitle": "마비카, 미카, 향릉",
-          "rarity": 5,
-          "start": "2026-06-09",
-          "end": "2026-06-30",
-          "version": "6.6",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "무기 기원",
-          "subtitle": "재앙, 타오르는 천 개의 태양",
-          "rarity": 5,
-          "start": "2026-06-09",
-          "end": "2026-06-30",
-          "version": "6.6",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
         },
         {
           "type": "banner",
@@ -407,52 +347,12 @@
         },
         {
           "type": "event",
-          "title": "수련의 방·공격 전략",
-          "start": "2026-05-19",
-          "end": "2026-06-30",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "As All Falls to Emptiness",
-          "start": "2026-05-20",
-          "end": "2026-06-30",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Phantasmal Pals",
           "subtitle": "Klee & Little Hexenzirkel 미니게임",
           "start": "2026-05-22",
           "end": "2026-06-08",
           "version": "6.6",
           "source": "gamingonphone.com"
-        },
-        {
-          "type": "event",
-          "title": "Stygian Onslaught",
-          "start": "2026-05-27",
-          "end": "2026-06-30",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "현실 속 환상극",
-          "start": "2026-05-31",
-          "end": "2026-06-30",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
         },
         {
           "type": "event",
@@ -481,36 +381,6 @@
           "end": "2026-06-18",
           "version": "6.6",
           "source": "gamingonphone.com"
-        },
-        {
-          "type": "event",
-          "title": "Frostedge Nocturne - Lohen Banner",
-          "start": "2026-06-09",
-          "end": "2026-06-30",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Ancient Flame Ablaze - Mavuika Banner",
-          "start": "2026-06-09",
-          "end": "2026-06-30",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Epitome Invocation - Weapon Banner",
-          "start": "2026-06-09",
-          "end": "2026-06-30",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
         },
         {
           "type": "event",
@@ -1812,6 +1682,149 @@
           "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310"
         },
         {
+          "type": "banner",
+          "title": "Across Time's Waxes and Wanes - Iuno Banner",
+          "start": "2026-09-30",
+          "end": "2026-10-22",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Buling, Taoqi, and Youhu."
+        },
+        {
+          "type": "banner",
+          "title": "Horizon of Danbreak - Chisa Banner",
+          "start": "2026-09-30",
+          "end": "2026-10-22",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Buling, Taoqi, and Youhu."
+        },
+        {
+          "type": "banner",
+          "title": "Moongazer's Sigil - Iuno Weapon Banner",
+          "start": "2026-09-30",
+          "end": "2026-10-22",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Fusion Accretion, Commando of Conviction, Dauntless Evernight."
+        },
+        {
+          "type": "banner",
+          "title": "Kumokiri - Chisa Weapon Banner",
+          "start": "2026-09-30",
+          "end": "2026-10-22",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Fusion Accretion, Commando of Conviction, Dauntless Evernight."
+        },
+        {
+          "type": "banner",
+          "title": "Blooming Jadehaven - Hsin Weapon Banner",
+          "start": "2026-09-30",
+          "end": "2026-10-22",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Fusion Accretion, Commando of Conviction, Dauntless Evernight."
+        },
+        {
+          "type": "banner",
+          "title": "As Full as Tonight, Forever - Hsin Banner",
+          "start": "2026-09-30",
+          "end": "2026-10-22",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Buling, Taoqi, and Youhu."
+        },
+        {
+          "type": "banner",
+          "title": "Freeze Frame - Lucilla Weapon Banner",
+          "start": "2026-10-22",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Overture, Relativistic Jet, Amity Accord."
+        },
+        {
+          "type": "banner",
+          "title": "Unspoken Rue - Suoming Weapon Banner",
+          "start": "2026-10-22",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Overture, Relativistic Jet, Amity Accord."
+        },
+        {
+          "type": "banner",
+          "title": "Undefined Spectrum - Lynae Banner",
+          "start": "2026-10-22",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Lumi, Danjin, and Chixia."
+        },
+        {
+          "type": "banner",
+          "title": "Tomorrow in the Frame - Lucilla Banner",
+          "start": "2026-10-22",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Lumi, Danjin, and Chixia."
+        },
+        {
+          "type": "banner",
+          "title": "Nine Deaths, One Unbent Heart - Suoming Banner",
+          "start": "2026-10-22",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "rarity": 5,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Featured 4-stars are; Lumi, Danjin, and Chixia."
+        },
+        {
           "type": "event",
           "title": "Into the Land of Paradox",
           "start": "2026-04-30",
@@ -2373,6 +2386,173 @@
           "source": "wuwatracker.com",
           "_auto": true,
           "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5310",
+          "description": "Spend Waveplates to claim double rewards after completing a Tacet Suppression challenge."
+        },
+        {
+          "type": "event",
+          "title": "Whimpering Wastes",
+          "start": "2026-09-28",
+          "end": "2026-10-25",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/2094",
+          "description": "Assemble unique lineups and equip distinct Tokens to conquer challenging levels."
+        },
+        {
+          "type": "event",
+          "title": "Back to Solaris Web Event",
+          "start": "2026-09-30",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Share your invitation code with up to 3 Returning Players in your server, complete in-game tasks to obtain Fox Fortune Sticks, and exchange them for rewards. Returning Rovers can link their accounts with the Player of their choice by using their corresponding invitation code. This can be done once. "
+        },
+        {
+          "type": "event",
+          "title": "Dreams in the Capsule Area Exploration Event",
+          "start": "2026-09-30",
+          "end": "2026-11-10",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "The event consists of 4 phases, unlocked in sequence as you progress through the Main Quest. In each phase, you complete event tasks, including puzzle solving, combat, and item collecting, to unlock and obtain rewards based on the number of CSC Cipherlocks obtained."
+        },
+        {
+          "type": "event",
+          "title": "Gifts of Waking Moon 7-Day Login Event",
+          "start": "2026-09-30",
+          "end": "2026-11-10",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "During the event, log in to claim the day's login rewards."
+        },
+        {
+          "type": "event",
+          "title": "Cubie Wars Leisure Event",
+          "start": "2026-09-30",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "You can unlock various Cubie Warriors by progressing through stages and challenging different foes. During the event, complete Adventure Goals to win Stage Badges. When the total number of Stage Badges reaches specific milestones, more rewards will unlock. Clear stages to win Show Coins, which can b"
+        },
+        {
+          "type": "event",
+          "title": "Pioneer Podcast",
+          "start": "2026-09-30",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "During Pioneer Podcast, you can obtain Podcast EXP by completing Podcast Tasks to increase the Podcast Level and win various rewards."
+        },
+        {
+          "type": "event",
+          "title": "Artisan's Search Featured Combat Event",
+          "start": "2026-10-08",
+          "end": "2026-11-25",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "During the event, you will enter a special Sonoro Sphere to battle waves of enemies within a set time limit, with the aid of unique buffs. You collect Coins by dealing damage to enemies, and lose Coins when taking damage. Advancing through enemy waves unlocks more special buffs to give you the suppo"
+        },
+        {
+          "type": "event",
+          "title": "Tower of Adversity: Hazard Revisited",
+          "start": "2026-10-12",
+          "end": "2026-11-09",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/3128"
+        },
+        {
+          "type": "event",
+          "title": "[Bountiful Crescendo] Limited-Time Material Double Drop Event",
+          "start": "2026-10-15",
+          "end": "2026-10-22",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Spend Waveplates to claim double rewards after completing a Simulation or Forgery Challenge."
+        },
+        {
+          "type": "event",
+          "title": "Waking Moon Fishing Web Event",
+          "start": "2026-10-15",
+          "end": "2026-11-01",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "During the event, you can challenge event stages and complete event tasks to earn Astrites, Shell Credits, Advanced Sealed Tubes, and other in-game item rewards."
+        },
+        {
+          "type": "event",
+          "title": "Echo Erase Leisure Event",
+          "start": "2026-10-22",
+          "end": "2026-11-08",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "During the event, stages become available daily. Each stage has two difficulties: Easy and Hard. Complete the Easy difficulty to unlock the Hard challenge. Complete the goals of each stage to earn rewards."
+        },
+        {
+          "type": "event",
+          "title": "Gifts of Singing Drizzle Limited-Time Login Event",
+          "start": "2026-10-22",
+          "end": "2026-11-10",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "Once your total login days reach the requirement, the corresponding cumulative login reward will be ready to claim."
+        },
+        {
+          "type": "event",
+          "title": "Beyond the Waves: Land of Xuanfang Featured Exploration Event",
+          "start": "2026-10-29",
+          "end": "2026-11-10",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
+          "description": "During the event, complete event tasks once per day to obtain a set number of Adventure Logs. Each Adventure Log can be exchanged for an Adventure Package. Adventure Packages contain special mechanics that, when triggered, unlock a large amount of rewards. There are 3 Inventories for the Adventure P"
+        },
+        {
+          "type": "event",
+          "title": "[Chord Cleansing] Limited-Time Echo Double Drop Event",
+          "start": "2026-11-04",
+          "end": "2026-11-10",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5529",
           "description": "Spend Waveplates to claim double rewards after completing a Tacet Suppression challenge."
         }
       ],
@@ -3699,6 +3879,17 @@
         {
           "type": "event",
           "title": "OrbiPom! MERGE!",
+          "subtitle": "Fun & Games",
+          "start": "2026-10-01",
+          "end": "2026-10-14",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Runners' Steeplechase",
           "subtitle": "Fun & Games",
           "start": "2026-10-01",
           "end": "2026-10-14",
@@ -5299,36 +5490,6 @@
           "subtitle": "",
           "start": "2026-09-24",
           "end": "2026-10-15",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "June Mission Pass",
-          "start": "2026-06-01",
-          "end": "2026-06-30",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Added new titles.",
-          "start": "2026-06-01",
-          "end": "2026-06-30",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "COOL PAPRIKA PASS",
-          "start": "2026-06-01",
-          "end": "2026-06-30",
           "version": "",
           "tentative": false,
           "source": "nikke.gg",
@@ -7651,16 +7812,6 @@
         },
         {
           "type": "event",
-          "title": "Cancer Cup (CM15)",
-          "start": "2026-06-21",
-          "end": "2026-06-30",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "StarHorse4 Collab Celebration now available!",
           "start": "2026-06-26",
           "end": "2026-07-16",
@@ -8807,8 +8958,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1068.webp",
-          "link": "https://umapyoi.net/news/1068?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1043.webp",
+          "link": "https://umapyoi.net/news/1043?lang=jp"
         },
         {
           "type": "event",
@@ -8879,7 +9030,7 @@
           "type": "event",
           "title": "Fall G1 Celebration Missions, Part 3: Tokyo Daishoten",
           "start": "2026-10-14",
-          "end": "2026-10-19",
+          "end": "2026-10-20",
           "version": "",
           "tentative": true,
           "source": "uma.moe",
@@ -8905,13 +9056,26 @@
           "type": "event",
           "title": "Fall G1 Celebration Missions, Part 3: Hopeful Stakes",
           "start": "2026-10-16",
-          "end": "2026-10-21",
+          "end": "2026-10-22",
           "version": "",
           "tentative": true,
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/images/campaign/208.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Fall G1 Celebration Missions, Part 3: Hanshin Juvenile Fillies",
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1066.webp",
           "link": "https://umapyoi.net/news/1066?lang=jp"
         },
         {
@@ -9021,6 +9185,19 @@
         },
         {
           "type": "event",
+          "title": "Fall G1 Celebration Missions, Part 3: Zen-Nippon Junior Yushun",
+          "start": "2026-10-21",
+          "end": "2026-10-27",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/205.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Arima Kinen Legend Race",
           "start": "2026-10-22",
           "end": "2026-10-26",
@@ -9074,6 +9251,19 @@
         },
         {
           "type": "event",
+          "title": "Fall G1 Celebration Missions, Part 3: Asahi Hai Futurity Stakes",
+          "start": "2026-10-28",
+          "end": "2026-11-03",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/206.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Capricorn Cup",
           "start": "2026-10-29",
           "end": "2026-11-06",
@@ -9084,6 +9274,19 @@
           "subtitle": "champions meeting",
           "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1135.webp",
           "link": "https://umapyoi.net/news/1135?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2026-10-29",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1090.webp",
+          "link": "https://umapyoi.net/news/1090?lang=jp"
         },
         {
           "type": "event",
@@ -9162,6 +9365,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/uma-sanpo/1154.webp",
           "link": "https://umapyoi.net/news/1154?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "New Year's Race Support Campaign Vol. 1",
+          "start": "2026-11-04",
+          "end": "2026-11-17",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1123.webp",
+          "link": "https://umapyoi.net/news/1123?lang=jp"
         },
         {
           "type": "event",
@@ -9321,6 +9537,19 @@
         },
         {
           "type": "event",
+          "title": "New Year's Race Support Campaign Vol. 2",
+          "start": "2026-11-11",
+          "end": "2026-11-24",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1133.webp",
+          "link": "https://umapyoi.net/news/1133?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "G1 Celebration Missions: Kawasaki Kinen",
           "start": "2026-11-12",
           "end": "2026-11-18",
@@ -9331,6 +9560,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/images/campaign/277.webp",
           "link": "https://umapyoi.net/news/1142?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to Commemorate the Performance of \"Uma Musume Pretty Derby - Sprinters' Story\"",
+          "start": "2026-11-12",
+          "end": "2026-11-25",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1117.webp",
+          "link": "https://umapyoi.net/news/1117?lang=jp"
         },
         {
           "type": "event",
@@ -9441,6 +9683,19 @@
           "title": "G1 Celebration Missions: Kawasaki Kinen",
           "start": "2026-11-18",
           "end": "2026-11-24",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1142.webp",
+          "link": "https://umapyoi.net/news/1142?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "G1 Celebration Missions: Kawasaki Kinen",
+          "start": "2026-11-19",
+          "end": "2026-11-25",
           "version": "",
           "tentative": true,
           "source": "uma.moe",
@@ -10135,8 +10390,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1227.webp",
-          "link": "https://umapyoi.net/news/1227?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1225.webp",
+          "link": "https://umapyoi.net/news/1225?lang=jp"
         },
         {
           "type": "event",
@@ -10597,6 +10852,19 @@
         },
         {
           "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 2: Tenno Sho (Spring)",
+          "start": "2027-01-17",
+          "end": "2027-01-23",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1279.webp",
+          "link": "https://umapyoi.net/news/1279?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Spring G1 Celebration Missions, Part 2: Victoria Mile",
           "start": "2027-01-18",
           "end": "2027-01-24",
@@ -10657,8 +10925,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1283.webp",
-          "link": "https://umapyoi.net/news/1283?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1281.webp",
+          "link": "https://umapyoi.net/news/1281?lang=jp"
         },
         {
           "type": "event",
@@ -10672,6 +10940,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/images/campaign/313.webp",
           "link": "https://umapyoi.net/news/1279?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-01-25",
+          "end": "2027-02-07",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1282.webp",
+          "link": "https://umapyoi.net/news/1282?lang=jp"
         },
         {
           "type": "event",
