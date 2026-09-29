@@ -39,6 +39,8 @@
   "listUpcoming": "예정",
   "listEnded": "종료",
   "listEmpty": "표시할 일정이 없습니다.",
+  "deadlineToday": "오늘 종료",
+  "deadlineTomorrow": "내일 종료",
   "statusEndedFmt": "종료 ({n}일 전)",
   "statusUpcomingFmt": "{n}일 후 시작",
   "statusOngoingFmt": "진행중 · {n}일 남음",

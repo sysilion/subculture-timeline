@@ -182,7 +182,7 @@ const Timeline = (() => {
         renderRuler();
         renderGames();
         renderTodayLine();
-        if (currentView === 'list') renderListView();
+        if (currentView !== 'gantt') renderListView();
       }, 150);
     });
 
@@ -192,7 +192,7 @@ const Timeline = (() => {
       restoreFilters();
       renderGames();
       renderTodayLine();
-      if (currentView === 'list') renderListView();
+      if (currentView !== 'gantt') renderListView();
     });
   }
 
@@ -230,7 +230,7 @@ const Timeline = (() => {
     renderGames();
     renderTodayLine();
     restoreFilters();
-    if (currentView === 'list') renderListView();
+    if (currentView !== 'gantt') renderListView();
     updateHash();
   }
 
@@ -305,7 +305,8 @@ const Timeline = (() => {
 
   function applyHashState() {
     const params = new URLSearchParams(location.hash.slice(1));
-    if (params.get('view') === 'list') currentView = 'list';
+    const hv = params.get('view');
+    if (hv === 'list' || hv === 'deadline') currentView = hv;
     const range = (params.get('range') || '').split(',').map(Number);
     if (range.length === 2 && range[0] > 0 && range[1] > 0) {
       CFG.pastDays = range[0];
@@ -377,7 +378,7 @@ function applySearch(term) {
     const section = document.querySelector(`.game-section[data-id="${game.id}"]`);
     if (section) section.classList.toggle('search-hidden', !match);
   });
-  if (currentView === 'list') renderListView();
+  if (currentView !== 'gantt') renderListView();
 }
 
 function setupSearch() {
@@ -403,7 +404,7 @@ function setAllGames(active) {
   });
   saveFilters();
   updateHash();
-  if (currentView === 'list') renderListView();
+  if (currentView !== 'gantt') renderListView();
 }
 
 function setupBulkFilters() {
@@ -420,7 +421,7 @@ function setupBulkFilters() {
     section.classList.toggle('hidden', isActive);
     saveFilters();
     updateHash();
-    if (currentView === 'list') renderListView();
+    if (currentView !== 'gantt') renderListView();
   }
 
 function showToast(message) {
@@ -1417,18 +1418,34 @@ function setupDetailPanel() {
 
   /* ── 뷰 전환 (간트 ↔ 리스트) ── */
   let currentView = 'gantt';
-  try { currentView = localStorage.getItem('tl-view') || 'gantt'; } catch(e) {}
+  const VIEWS = ['gantt', 'list', 'deadline'];
+  try {
+    const v = localStorage.getItem('tl-view');
+    if (VIEWS.includes(v)) currentView = v;
+  } catch(e) {}
 
   function setView(view) {
+    const prevView = currentView;
     currentView = view;
     try { localStorage.setItem('tl-view', view); } catch(e) {}
-    const isList = view === 'list';
+    const isList = view !== 'gantt';
     const timelineEl = document.getElementById('timeline-scroll');
     const listEl = document.getElementById('list-scroll');
 
     // 페이드 아웃 → 전환 → 페이드 인
     const fromEl = isList ? timelineEl : listEl;
     const toEl   = isList ? listEl : timelineEl;
+
+    document.getElementById('gantt-view').classList.toggle('active', view === 'gantt');
+    document.getElementById('list-view').classList.toggle('active', view === 'list');
+    document.getElementById('deadline-view').classList.toggle('active', view === 'deadline');
+    updateHash();
+
+    // 리스트 ↔ 마감순은 같은 컨테이너라 페이드 없이 다시 그린다
+    if (isList && prevView !== 'gantt' && !listEl.hidden) {
+      renderListView();
+      return;
+    }
 
     fromEl.classList.add('view-fade-out');
 
@@ -1448,16 +1465,13 @@ function setupDetailPanel() {
 
       if (isList) renderListView();
     }, 200); // CSS transition duration과 일치
-
-    document.getElementById('gantt-view').classList.toggle('active', !isList);
-    document.getElementById('list-view').classList.toggle('active', isList);
-    updateHash();
   }
 
   function setupViewToggle() {
     document.getElementById('gantt-view').addEventListener('click', () => setView('gantt'));
     document.getElementById('list-view').addEventListener('click', () => setView('list'));
-    if (currentView === 'list') setView('list');
+    document.getElementById('deadline-view').addEventListener('click', () => setView('deadline'));
+    if (currentView !== 'gantt') setView(currentView);
   }
 
   /* ── 엔트리 상태 계산 ── */
@@ -1516,6 +1530,19 @@ function setupDetailPanel() {
       });
     });
 
+    if (items.length === 0) {
+      const empty = document.createElement('div');
+      empty.className = 'list-empty';
+      empty.textContent = t('listEmpty', '표시할 일정이 없습니다.');
+      container.appendChild(empty);
+      return;
+    }
+
+    if (currentView === 'deadline') {
+      renderDeadlineGroups(container, items);
+      return;
+    }
+
     const groups = [
       { key: 'ongoing',  title: t('listOngoing', '진행중'),
         items: items.filter(it => it.s <= today && it.e >= today).sort((a, b) => a.e - b.e) },
@@ -1524,14 +1551,6 @@ function setupDetailPanel() {
       { key: 'ended',    title: t('listEnded', '종료'),
         items: items.filter(it => it.e < today).sort((a, b) => b.e - a.e) },
     ];
-
-    if (items.length === 0) {
-      const empty = document.createElement('div');
-      empty.className = 'list-empty';
-      empty.textContent = t('listEmpty', '표시할 일정이 없습니다.');
-      container.appendChild(empty);
-      return;
-    }
 
     groups.forEach(group => {
       if (group.items.length === 0) return;
@@ -1559,42 +1578,91 @@ function setupDetailPanel() {
       container.appendChild(body);
 
       group.items.forEach(({ game, entry, s, e }) => {
-        const dur = D.diffDays(s, e);
-        const status = entryStatus(s, e);
-
-        const iconHtml = game.iconUrl
-          ? `<img class="chip-icon-img" src="${esc(game.iconUrl)}" alt="" onerror="this.style.display='none'">`
-          : `<span class="chip-icon">${esc(game.icon || '')}</span>`;
-
-        const item = document.createElement('div');
-        item.className = 'list-entry';
-        item.tabIndex = 0;
-        item.setAttribute('role', 'button');
-        item.innerHTML = `
-          <div class="detail-entry-bar-indicator type-${entry.type}${entry.tentative ? ' tentative' : ''}"></div>
-          <div class="list-entry-game" style="--chip-color:${esc(game.color)}">
-            ${iconHtml}<span class="list-entry-game-name">${esc(gameName(game))}</span>
-          </div>
-          <div class="detail-entry-main">
-            <div class="detail-entry-title-row">
-              <span class="detail-entry-title">${esc(entry.title)}</span>
-              ${entry.tentative ? `<span class="detail-entry-tentative-badge">⚠ ${esc(t('legendTentative', '미확정'))}</span>` : ''}
-            </div>
-            ${entry.subtitle ? `<div class="detail-entry-subtitle">${esc(entry.subtitle)}</div>` : ''}
-          </div>
-          <div class="detail-entry-dates">
-            <span class="detail-date-range">${D.fmtShort(s)} → ${D.fmtShort(e)}</span>
-            <span class="detail-date-dur">${esc(fmtDuration(dur))}${entry.version ? ` · v${esc(entry.version)}` : ''}</span>
-          </div>
-          <div class="detail-entry-status ${status.cls}">${esc(status.label)}</div>
-        `;
-        const open = () => openEntryModal(game, entry);
-        item.addEventListener('click', open);
-        item.addEventListener('keydown', (ev) => {
-          if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); open(); }
-        });
-        body.appendChild(item);
+        body.appendChild(buildListEntry(game, entry, s, e));
       });
+    });
+  }
+
+  /* ── 리스트 항목 한 줄 ── */
+  function buildListEntry(game, entry, s, e) {
+    const dur = D.diffDays(s, e);
+    const status = entryStatus(s, e);
+
+    const iconHtml = game.iconUrl
+      ? `<img class="chip-icon-img" src="${esc(game.iconUrl)}" alt="" onerror="this.style.display='none'">`
+      : `<span class="chip-icon">${esc(game.icon || '')}</span>`;
+
+    const item = document.createElement('div');
+    item.className = 'list-entry';
+    item.tabIndex = 0;
+    item.setAttribute('role', 'button');
+    item.innerHTML = `
+      <div class="detail-entry-bar-indicator type-${entry.type}${entry.tentative ? ' tentative' : ''}"></div>
+      <div class="list-entry-game" style="--chip-color:${esc(game.color)}">
+        ${iconHtml}<span class="list-entry-game-name">${esc(gameName(game))}</span>
+      </div>
+      <div class="detail-entry-main">
+        <div class="detail-entry-title-row">
+          <span class="detail-entry-title">${esc(entry.title)}</span>
+          ${entry.tentative ? `<span class="detail-entry-tentative-badge">⚠ ${esc(t('legendTentative', '미확정'))}</span>` : ''}
+        </div>
+        ${entry.subtitle ? `<div class="detail-entry-subtitle">${esc(entry.subtitle)}</div>` : ''}
+      </div>
+      <div class="detail-entry-dates">
+        <span class="detail-date-range">${D.fmtShort(s)} → ${D.fmtShort(e)}</span>
+        <span class="detail-date-dur">${esc(fmtDuration(dur))}${entry.version ? ` · v${esc(entry.version)}` : ''}</span>
+      </div>
+      <div class="detail-entry-status ${status.cls}">${esc(status.label)}</div>
+    `;
+    const open = () => openEntryModal(game, entry);
+    item.addEventListener('click', open);
+    item.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); open(); }
+    });
+    return item;
+  }
+
+  /* ── 마감순 뷰 — 게임 구분 없이 종료일이 가까운 순, 종료일별로 묶는다 ── */
+  const WEEKDAYS = {
+    ko: ['일', '월', '화', '수', '목', '금', '토'],
+    en: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+  };
+
+  function renderDeadlineGroups(container, items) {
+    const live = items
+      .filter(it => it.e >= today)
+      .sort((a, b) => (a.e - b.e) || (a.s - b.s));
+
+    if (live.length === 0) {
+      const empty = document.createElement('div');
+      empty.className = 'list-empty';
+      empty.textContent = t('listEmpty', '표시할 일정이 없습니다.');
+      container.appendChild(empty);
+      return;
+    }
+
+    const wd = WEEKDAYS[curLang()] || WEEKDAYS.ko;
+    let body = null;
+    let lastKey = null;
+    live.forEach(({ game, entry, s, e }) => {
+      const key = e.getTime();
+      if (key !== lastKey) {
+        lastKey = key;
+        const n = D.diffDays(today, e);
+        const when = n === 0 ? t('deadlineToday', '오늘 종료')
+          : n === 1 ? t('deadlineTomorrow', '내일 종료')
+          : `D-${n}`;
+        const head = document.createElement('div');
+        head.className = `list-section-title deadline-head${n <= 1 ? ' deadline-soon' : ''}`;
+        head.innerHTML =
+          `<span>${D.fmtShort(e)} (${esc(wd[e.getDay()])})</span>` +
+          `<span class="deadline-when">${esc(when)}</span>`;
+        container.appendChild(head);
+        body = document.createElement('div');
+        body.className = 'list-section-body';
+        container.appendChild(body);
+      }
+      body.appendChild(buildListEntry(game, entry, s, e));
     });
   }
 

@@ -39,6 +39,8 @@
   "listUpcoming": "Upcoming",
   "listEnded": "Ended",
   "listEmpty": "No entries in the selected range.",
+  "deadlineToday": "Ends today",
+  "deadlineTomorrow": "Ends tomorrow",
   "statusEndedFmt": "Ended ({n}d ago)",
   "statusUpcomingFmt": "Starts in {n}d",
   "statusOngoingFmt": "Ongoing · {n}d left",

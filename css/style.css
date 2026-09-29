@@ -435,6 +435,13 @@ html, body {
 .list-section-title.list-sec-ongoing  { color: #66bb6a; }
 .list-section-title.list-sec-upcoming { color: #ffa726; }
 .list-section-title.list-sec-ended    { color: var(--text-dim); }
+.list-section-title.deadline-head {
+  cursor: default;
+  justify-content: space-between;
+}
+.list-section-title.deadline-head:hover { color: inherit; }
+.deadline-when { font-weight: 600; color: var(--text-dim); }
+.deadline-soon .deadline-when { color: #f44336; }
 
 .list-entry {
   display: grid;
