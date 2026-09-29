@@ -1047,16 +1047,6 @@
         },
         {
           "type": "event",
-          "title": "Pixel Plane Rumble",
-          "start": "2026-06-01",
-          "end": "2026-07-15",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Duration",
           "start": "2026-06-01",
           "end": "2026-07-15",
@@ -1102,16 +1092,6 @@
           "end": "2026-07-14",
           "version": "4.3",
           "source": "sportskeeda.com"
-        },
-        {
-          "type": "event",
-          "title": "Wispae Amusement Park",
-          "start": "2026-06-24",
-          "end": "2026-07-15",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
         },
         {
           "type": "event",
@@ -1990,16 +1970,6 @@
           "end": "2026-07-09",
           "version": "3.4",
           "source": "pockettactics.com"
-        },
-        {
-          "type": "event",
-          "title": "Matrix Reform",
-          "start": "2026-06-25",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
         },
         {
           "type": "event",

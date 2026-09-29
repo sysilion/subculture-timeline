@@ -94,6 +94,7 @@ def merge_entries(existing: list, fresh: list) -> tuple[list, int]:
                 e["subtitle"] = sanitize_text(e["subtitle"])
 
     auto_fresh = {entry_key(e): e for e in fresh}
+    manual_keys = {entry_key(e) for e in existing if not e.get("_auto")}
 
     kept = []
     for e in existing:
@@ -103,6 +104,8 @@ def merge_entries(existing: list, fresh: list) -> tuple[list, int]:
             auto_fresh.pop(entry_key(e), None)
             continue
         key = entry_key(e)
+        if key in manual_keys:
+            continue  # 수동 항목이 같은 키를 갖고 있으면 기존 자동 항목은 버린다
         if key in auto_fresh:
             kept.append(auto_fresh.pop(key))  # 갱신
         else:
