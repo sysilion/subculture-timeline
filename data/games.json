@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-29",
+    "lastUpdated": "2026-09-30",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-09-29"
+    "autoUpdated": "2026-09-30"
   },
   "games": [
     {
@@ -365,16 +365,6 @@
         },
         {
           "type": "event",
-          "title": "Imaginarium Theater",
-          "start": "2026-06-01",
-          "end": "2026-07-01",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Combat Event (Nasha Town)",
           "subtitle": "나샤 타운 전투 이벤트",
           "start": "2026-06-08",
@@ -676,6 +666,16 @@
           "title": "달빛을 물어온 제비",
           "start": "2026-09-24",
           "end": "2026-10-12",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "지맥 제압전",
+          "start": "2026-09-30",
+          "end": "2026-11-03",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -4571,8 +4571,56 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
-          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "image": "https://www.ntebuild.com/images/events/pukaland_travelogue.webp",
           "description": "Version 1.4's headline event, built around the newly opened Pukaland theme park — collect Wonder Stamps around the park for the length of the version."
+        },
+        {
+          "type": "event",
+          "title": "Terminal Depths",
+          "start": "2026-09-30",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/terminal_depths.webp",
+          "description": "A new Version 1.4 event set on a metro platform, dated September 30 to November 11 on the official calendar. Its art lists Annulith, Fons and an Elite Hunter Guide as rewards but keeps the rules for the official channels."
+        },
+        {
+          "type": "event",
+          "title": "Circle Gifts",
+          "start": "2026-09-30",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/circle_gift_v14.webp",
+          "description": "The Version 1.4 run of the Circle Gifts login track: seven check-ins inside the window, with Solid Dice on each day tile of the official calendar. The 1.1 and 1.3 runs paid Solid Dice ×10."
+        },
+        {
+          "type": "event",
+          "title": "Pukaland Fest Special Gift Pack",
+          "start": "2026-09-30",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/pukaland_fest_special_gift_pack.webp",
+          "description": "A gift pack themed on the opening of Pukaland that runs the whole of Version 1.4. The official calendar pictures Solid Dice, a ring-shaped item and Fons in it."
+        },
+        {
+          "type": "event",
+          "title": "Blackbird's Invitation",
+          "start": "2026-09-30",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/blackbirds_invitation.webp",
+          "description": "The Version 1.4 community event, named for the version's first limited character and open all version. The official calendar pictures Solid Dice, Annulith and Fons as rewards."
         },
         {
           "type": "event",
@@ -4583,7 +4631,7 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
-          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "image": "https://www.ntebuild.com/images/events/stamina_recharge_v14.webp",
           "description": "A two-week Version 1.4 boost event doubling City Stamina spend and its rewards in select Hethereau Hobbies activities."
         },
         {
@@ -4595,7 +4643,7 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
-          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "image": "https://www.ntebuild.com/images/events/coal_lumps_treasure.webp",
           "description": "Confirmed on the official Version 1.4 event list. Our reading of the Preview Special Program pairs it with the new single-player tower-defense minigame shown there, though Hotta never matched the two by name."
         },
         {
@@ -4607,7 +4655,7 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
-          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "image": "https://www.ntebuild.com/images/events/beyond_the_rails.webp",
           "description": "The Version 1.4 rotation of Beyond the Rails — the first circle Hotta named up front on the official event list instead of revealing it once it went live."
         },
         {
@@ -4619,8 +4667,8 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
-          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
-          "description": "A one-week Version 1.4 boost event doubling Character Pixel rewards across four Hethereau Hobbies activities."
+          "image": "https://www.ntebuild.com/images/events/pixel_surge_v14.webp",
+          "description": "A one-week Version 1.4 boost event: Character Pixels spent in Houdini's Magic Stage, Houdini's Schemes, Bubble Can Factory and Rabbit Hole return double rewards."
         },
         {
           "type": "event",
@@ -4631,8 +4679,20 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
-          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "image": "https://www.ntebuild.com/images/events/snap_golden_crackshot.webp",
           "description": "Confirmed on the official Version 1.4 event list. Our reading of the Preview Special Program pairs it with the new 1v1 shooting mode shown there — one player aims while the other breaks line of sight — though Hotta never matched the two by name."
+        },
+        {
+          "type": "event",
+          "title": "Beyond the Rails: Lucent Circle",
+          "start": "2026-10-22",
+          "end": "2026-11-05",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/beyond_the_rails.webp",
+          "description": "The second Version 1.4 rotation of Beyond the Rails, following Sunset Circle on the usual 14-day cycle."
         },
         {
           "type": "event",
@@ -4648,6 +4708,18 @@
         },
         {
           "type": "event",
+          "title": "Gold Clash",
+          "start": "2026-10-26",
+          "end": "2026-11-09",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/gold_clash_v14.webp",
+          "description": "A two-week Version 1.4 boost event doubling Fons earned in Pink Paws Heist, the same two-week window as the Version 1.2 and 1.3 runs, dated October 26 to November 9 on the official Version 1.4 calendar."
+        },
+        {
+          "type": "event",
           "title": "Puka Lucky Flip",
           "start": "2026-10-29",
           "end": "2026-11-11",
@@ -4655,8 +4727,20 @@
           "tentative": false,
           "source": "ntebuild.com",
           "_auto": true,
-          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "image": "https://www.ntebuild.com/images/events/puka_lucky_flip.webp",
           "description": "A Pukaland-themed card-flip minigame for Version 1.4 — Daily Quests earn flips, the same format Warren Lucky Flip used in Version 1.2."
+        },
+        {
+          "type": "event",
+          "title": "Beyond the Rails: Glinting Circle",
+          "start": "2026-11-05",
+          "end": "2026-11-19",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/events/beyond_the_rails.webp",
+          "description": "The third Beyond the Rails rotation on the Version 1.4 calendar, running past the end of the version. The calendar cuts its name off after \"Glinting Ci\"; \"Glinting Circle\" follows the pattern of the two before it."
         }
       ],
       "iconUrl": "https://nte.perfectworld.com/public/images/icon.png",
@@ -5224,11 +5308,35 @@
         },
         {
           "type": "banner",
+          "title": "Nagusa (Swimsuit), Kikyou (Swimsuit), Renge (Swimsuit), Yukari (Swimsuit)",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-09-29",
+          "end": "2026-10-05",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Mutsuki / Haruka / Aru / Kayoko / Saori (Dress)",
           "start": "2026-10-06",
           "end": "2026-10-20",
           "tentative": true,
           "source": "ba.joexyz.online"
+        },
+        {
+          "type": "banner",
+          "title": "Kazusa (Band), Yoshimi (Band), Natsu (Band)",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-10-06",
+          "end": "2026-10-12",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
         },
         {
           "type": "event",
@@ -5364,6 +5472,27 @@
           "title": "Shooting Exercise",
           "start": "2026-09-29",
           "end": "2026-10-05",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Rerun",
+          "start": "2026-09-29",
+          "end": "2026-10-12",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_847_Jp.png"
+        },
+        {
+          "type": "event",
+          "title": "Assault Exercise",
+          "start": "2026-10-27",
+          "end": "2026-11-02",
           "version": "",
           "tentative": false,
           "source": "bluearchive.wiki",
@@ -8382,8 +8511,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "champions meeting",
-          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/global-1049.webp",
-          "link": "https://umapyoi.net/en/news/1049"
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/global-1050.webp",
+          "link": "https://umapyoi.net/en/news/1050"
         },
         {
           "type": "event",

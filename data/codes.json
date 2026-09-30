@@ -1,11 +1,18 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-29",
+    "lastUpdated": "2026-09-30",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
+        {
+          "code": "OPERACOLLAB",
+          "reward": "Primogem ×30 · Mora ×20000 · Hero's Wit ×2",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-09-30",
+          "_auto": true
+        },
         {
           "code": "PNKZ3WLNN8G6",
           "reward": "",
