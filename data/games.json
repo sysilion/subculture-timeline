@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-01",
+    "lastUpdated": "2026-10-02",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-01"
+    "autoUpdated": "2026-10-02"
   },
   "games": [
     {
@@ -3170,6 +3170,16 @@
         },
         {
           "type": "event",
+          "title": "시유 방어전",
+          "start": "2026-10-02",
+          "end": "2026-10-16",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "절름발이 까마귀 탐정록",
           "start": "2026-10-03",
           "end": "2026-10-19",
@@ -3901,6 +3911,17 @@
           "tentative": false,
           "source": "endfield.wiki.gg",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Ridgeline Flows of Autumn",
+          "subtitle": "Sign-In",
+          "start": "2026-10-01",
+          "end": "2026-10-14",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
         }
       ],
       "iconUrl": "https://web.hycdn.cn/favicon.ico",
@@ -4269,16 +4290,6 @@
           "title": "Fogshroud Perks",
           "start": "2026-06-24",
           "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Pixel Surge",
-          "start": "2026-06-26",
-          "end": "2026-07-03",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -5918,21 +5929,6 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Narita Brian + 1 more",
-          "start": "2026-06-26",
-          "end": "2026-07-03",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/character/banner/2022_30102.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30102",
-          "description": "픽업: Narita Brian, Seiun Sky",
-          "rarity": 3
         },
         {
           "type": "banner",
