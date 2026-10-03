@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-02",
+    "lastUpdated": "2026-10-03",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-02"
+    "autoUpdated": "2026-10-03"
   },
   "games": [
     {
@@ -5922,16 +5922,6 @@
         },
         {
           "type": "banner",
-          "title": "El Condor Pasa (Speed SR)",
-          "start": "2026-06-25",
-          "end": "2026-07-04",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Nakayama Festa (Wit SSR)",
           "start": "2026-07-02",
           "end": "2026-07-14",
@@ -8221,19 +8211,6 @@
           "subtitle": "strongest team",
           "image": "https://uma.moe/assets/timeline-images/events/strongest-team/853.webp",
           "link": "https://umapyoi.net/en/news/853"
-        },
-        {
-          "type": "event",
-          "title": "Aim! The Strongest Team",
-          "start": "2026-06-27",
-          "end": "2026-07-04",
-          "version": "",
-          "tentative": true,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "strongest team",
-          "image": "https://uma.moe/assets/timeline-images/events/strongest-team/853.webp",
-          "link": "https://umapyoi.net/news/853?lang=jp"
         },
         {
           "type": "event",

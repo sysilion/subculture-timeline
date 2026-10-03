@@ -1,11 +1,18 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-01",
+    "lastUpdated": "2026-10-03",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
+        {
+          "code": "6LS3F3LS5K87",
+          "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-10-03",
+          "_auto": true
+        },
         {
           "code": "NEEI8A8341OW",
           "reward": "",
@@ -906,6 +913,27 @@
     },
     "aniimo": {
       "codes": [
+        {
+          "code": "anywhereaniimo",
+          "reward": "three growth flowers and 10k credits",
+          "source": "pockettactics.com",
+          "added": "2026-10-03",
+          "_auto": true
+        },
+        {
+          "code": "anythinganiimo",
+          "reward": "three growth flowers and 10k credits",
+          "source": "pockettactics.com",
+          "added": "2026-10-03",
+          "_auto": true
+        },
+        {
+          "code": "aniimonow",
+          "reward": "three growth flowers and 10k credits",
+          "source": "pockettactics.com",
+          "added": "2026-10-03",
+          "_auto": true
+        },
         {
           "code": "aniimotogether",
           "reward": "three growth flowers and 10k credits",
