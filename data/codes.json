@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-03",
+    "lastUpdated": "2026-10-04",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -8,7 +8,7 @@
       "codes": [
         {
           "code": "6LS3F3LS5K87",
-          "reward": "",
+          "reward": "Primogem ×20 · Geode of Replication ×160",
           "source": "hoyo-codes.seria.moe",
           "added": "2026-10-03",
           "_auto": true
@@ -29,14 +29,14 @@
         },
         {
           "code": "PNKZ3WLNN8G6",
-          "reward": "",
+          "reward": "Teachings of Charity ×5 · Teachings of Fortitude ×5 · Teachings of Glory ×5",
           "source": "hoyo-codes.seria.moe",
           "added": "2026-09-26",
           "_auto": true
         },
         {
           "code": "DATG5HG1PL89",
-          "reward": "",
+          "reward": "Mora ×10000 · Adventurer's Experience ×10 · Fine Enhancement Ore ×5 · Stir-Fried Fish Noodles ×5 · Jueyun Chili Chicken ×5",
           "source": "hoyo-codes.seria.moe",
           "added": "2026-09-25",
           "_auto": true
