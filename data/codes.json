@@ -1,11 +1,18 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-04",
+    "lastUpdated": "2026-10-05",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
+        {
+          "code": "NEEIJB764CA3",
+          "reward": "Primogem ×60",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-10-05",
+          "_auto": true
+        },
         {
           "code": "6LS3F3LS5K87",
           "reward": "Primogem ×20 · Geode of Replication ×160",
