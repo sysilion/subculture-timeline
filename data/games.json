@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-05",
+    "lastUpdated": "2026-10-06",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-05"
+    "autoUpdated": "2026-10-06"
   },
   "games": [
     {
@@ -2890,16 +2890,6 @@
         },
         {
           "type": "event",
-          "title": "Advanced Bounty - Area Patrol",
-          "start": "2026-07-02",
-          "end": "2026-07-07",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Tales of the Hobbling Crow",
           "start": "2026-07-03",
           "end": "2026-07-20",
@@ -5673,6 +5663,17 @@
           "_auto": true
         },
         {
+          "type": "banner",
+          "title": "Special Recruit",
+          "subtitle": "",
+          "start": "2026-10-08",
+          "end": "2026-10-28",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
           "type": "event",
           "title": "ARK RANGER Story Event",
           "start": "2026-06-11",
@@ -5855,6 +5856,36 @@
           "title": "14-Day Login Event - EXPO CHECK-IN",
           "start": "2026-09-17",
           "end": "2026-10-08",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "LITTLE WITCH TRICK",
+          "start": "2026-10-08",
+          "end": "2026-10-28",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Archives - ABSOLUTE",
+          "start": "2026-10-08",
+          "end": "2026-10-28",
+          "version": "",
+          "tentative": false,
+          "source": "nikke.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "14-Day Login Event - DAILY TRICK",
+          "start": "2026-10-08",
+          "end": "2026-10-28",
           "version": "",
           "tentative": false,
           "source": "nikke.gg",
