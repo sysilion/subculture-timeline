@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-06",
+    "lastUpdated": "2026-10-07",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-06"
+    "autoUpdated": "2026-10-07"
   },
   "games": [
     {
@@ -2444,6 +2444,18 @@
         },
         {
           "type": "event",
+          "title": "Endstate Matrix",
+          "start": "2026-10-07",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "wuwatracker.com",
+          "_auto": true,
+          "link": "https://wutheringwaves.kurogames.com/en/main/news/detail/5023",
+          "description": "In Endstate Matrix, deploy Resonators and select a Power Circuit before starting a high-difficulty challenge. Endstate Matrix progresses through Challenge Cycles. Each Challenge Cycle spans across multiple Challenge Phases, which reset with version updates. Rewards are offered independently for Chal"
+        },
+        {
+          "type": "event",
           "title": "Artisan's Search Featured Combat Event",
           "start": "2026-10-08",
           "end": "2026-11-25",
@@ -2810,16 +2822,6 @@
         },
         {
           "type": "event",
-          "title": "Duration",
-          "start": "2026-06-17",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Celestial Nexus Intelligence Dossier",
           "start": "2026-06-17",
           "end": "2026-07-29",
@@ -2843,16 +2845,6 @@
           "title": "All-New Program",
           "start": "2026-06-17",
           "end": "2026-07-29",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "The Final Callback",
-          "start": "2026-06-17",
-          "end": "2026-07-08",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -3913,6 +3905,17 @@
           "tentative": false,
           "source": "endfield.wiki.gg",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Monumental Etching: Forest of Maras",
+          "subtitle": "Challenge",
+          "start": "2026-10-22",
+          "end": "2026-11-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
         }
       ],
       "iconUrl": "https://web.hycdn.cn/favicon.ico",
@@ -4179,112 +4182,12 @@
         },
         {
           "type": "event",
-          "title": "Circle Gift",
-          "start": "2026-06-03",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Everdriving Mystery Box",
-          "start": "2026-06-03",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Underground Circuit",
-          "start": "2026-06-03",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "What's Baking",
-          "start": "2026-06-03",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Sunward Travelogue",
-          "start": "2026-06-03",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "The Long Dream",
-          "start": "2026-06-03",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Hunter's Crucible",
-          "start": "2026-06-18",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Pursuit Special",
           "subtitle": "추격 스페셜 이벤트",
           "start": "2026-06-24",
           "end": "2026-07-08",
           "version": "1.1",
           "source": "ntebuild.com"
-        },
-        {
-          "type": "event",
-          "title": "Fight Championship",
-          "start": "2026-06-24",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Market Opening Rehersal",
-          "start": "2026-06-24",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Fogshroud Perks",
-          "start": "2026-06-24",
-          "end": "2026-07-08",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
         },
         {
           "type": "event",
@@ -8195,6 +8098,35 @@
           "rarity": 3
         },
         {
+          "type": "banner",
+          "title": "Taiki Shuttle + 1 more",
+          "start": "2027-02-04",
+          "end": "2027-02-13",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30172.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30172",
+          "description": "픽업: Taiki Shuttle, Yamanin Zephyr",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "T.M. Opera O + 1 more",
+          "start": "2027-02-04",
+          "end": "2027-02-12",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30173.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30173",
+          "rarity": 3
+        },
+        {
           "type": "event",
           "title": "StarHorse4 Collab Celebration now available!",
           "start": "2026-06-26",
@@ -12094,6 +12026,19 @@
           "image": "https://uma.moe/assets/timeline-images/events/legend-race/1363.webp",
           "link": "https://umapyoi.net/news/1363?lang=jp",
           "description": "픽업: Yamanin Zephyr (Original), Agnes Digital (Halloween)"
+        },
+        {
+          "type": "event",
+          "title": "MILE",
+          "start": "2027-02-04",
+          "end": "2027-02-12",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1372.webp",
+          "link": "https://umapyoi.net/news/1372?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
