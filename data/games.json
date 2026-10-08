@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-07",
+    "lastUpdated": "2026-10-08",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-07"
+    "autoUpdated": "2026-10-08"
   },
   "games": [
     {
@@ -1854,132 +1854,12 @@
         },
         {
           "type": "event",
-          "title": "Instant Flashlight",
-          "start": "2026-06-08",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Night City Roaming",
-          "start": "2026-06-08",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Gifts of Dreamchasers",
-          "start": "2026-06-08",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Sweetdream Tuning",
-          "start": "2026-06-08",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Ascendant Aces",
-          "start": "2026-06-08",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "3.4 Depths of Illusive Realm: Dreamchasers",
-          "start": "2026-06-08",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Event Duration",
-          "start": "2026-06-08",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Milestone Challenge",
-          "start": "2026-06-08",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Nightmare Challenge (Adam Smasher)",
-          "start": "2026-06-08",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Dream of Azure Sky",
-          "start": "2026-06-18",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Event Duration",
-          "start": "2026-06-18",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Matrix Reform",
           "subtitle": "매트릭스 개혁 이벤트",
           "start": "2026-06-25",
           "end": "2026-07-09",
           "version": "3.4",
           "source": "pockettactics.com"
-        },
-        {
-          "type": "event",
-          "title": "Chord Cleansing",
-          "start": "2026-07-02",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
         },
         {
           "type": "event",
@@ -3901,6 +3781,28 @@
           "subtitle": "Challenge",
           "start": "2026-10-05",
           "end": "2026-10-18",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Sanity Supply",
+          "subtitle": "Limited-Time",
+          "start": "2026-10-07",
+          "end": "2026-10-14",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Inkwashed World",
+          "subtitle": "Sign-In",
+          "start": "2026-10-08",
+          "end": "2026-10-14",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
@@ -7329,6 +7231,64 @@
         },
         {
           "type": "banner",
+          "title": "Daitaku Helios",
+          "start": "2026-11-28",
+          "end": "2026-12-07",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30142.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30142",
+          "description": "픽업: Daitaku Helios",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Rice Shower + 1 more",
+          "start": "2026-11-28",
+          "end": "2026-12-07",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30144.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30144",
+          "description": "픽업: Rice Shower, Haru Urara",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "K.S.Miracle + 2 more",
+          "start": "2026-11-28",
+          "end": "2026-12-06",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30143.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30143",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Taiki Shuttle + 1 more",
+          "start": "2026-11-28",
+          "end": "2026-12-06",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30145.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30145",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
           "title": "Mr. C.B. + 1 more",
           "start": "2026-12-04",
           "end": "2026-12-27",
@@ -7354,6 +7314,35 @@
           "subtitle": "standard pickup",
           "image": "https://uma.moe/assets/images/support/banner/2023_30151.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30151",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Mejiro Ryan + 1 more",
+          "start": "2026-12-04",
+          "end": "2026-12-17",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30146.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30146",
+          "description": "픽업: Mejiro Ryan, Ines Fujin",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Marvelous Sunday + 1 more",
+          "start": "2026-12-04",
+          "end": "2026-12-16",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30147.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30147",
           "rarity": 3
         },
         {
@@ -7470,6 +7459,35 @@
           "subtitle": "standard pickup",
           "image": "https://uma.moe/assets/images/support/banner/2023_30155.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30155",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Shinko Windy",
+          "start": "2026-12-13",
+          "end": "2026-12-23",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30148.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30148",
+          "description": "픽업: Shinko Windy",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Nishino Flower + 1 more",
+          "start": "2026-12-13",
+          "end": "2026-12-22",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30149.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30149",
           "rarity": 3
         },
         {
@@ -7619,6 +7637,35 @@
         },
         {
           "type": "banner",
+          "title": "Mr. C.B. + 1 more",
+          "start": "2026-12-21",
+          "end": "2027-01-13",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30150.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30150",
+          "description": "픽업: Mr. C.B., Twin Turbo",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Mejiro Ramonu + 7 more",
+          "start": "2026-12-21",
+          "end": "2027-01-12",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30151.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30151",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
           "title": "Sakura Laurel",
           "start": "2026-12-26",
           "end": "2027-01-03",
@@ -7706,6 +7753,35 @@
         },
         {
           "type": "banner",
+          "title": "Daiichi Ruby",
+          "start": "2026-12-30",
+          "end": "2027-01-08",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30152.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30152",
+          "description": "픽업: Daiichi Ruby",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Sirius Symboli + 1 more",
+          "start": "2026-12-30",
+          "end": "2027-01-07",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30153.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30153",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
           "title": "Neo Universe",
           "start": "2027-01-01",
           "end": "2027-01-09",
@@ -7789,6 +7865,35 @@
           "subtitle": "standard pickup",
           "image": "https://uma.moe/assets/images/support/banner/2023_30161.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30161",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Symboli Kris S",
+          "start": "2027-01-06",
+          "end": "2027-01-14",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30154.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30154",
+          "description": "픽업: Symboli Kris S",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Darley Arabian + 1 more",
+          "start": "2027-01-06",
+          "end": "2027-01-13",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30155.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30155",
           "rarity": 3
         },
         {
@@ -7910,6 +8015,35 @@
         },
         {
           "type": "banner",
+          "title": "Sakura Chiyono O + 1 more",
+          "start": "2027-01-11",
+          "end": "2027-01-22",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30156.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30156",
+          "description": "픽업: Sakura Chiyono O, Mejiro Ardan",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Nice Nature + 1 more",
+          "start": "2027-01-11",
+          "end": "2027-01-21",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30157.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30157",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
           "title": "Hishi Miracle",
           "start": "2027-01-15",
           "end": "2027-01-23",
@@ -8012,6 +8146,35 @@
         },
         {
           "type": "banner",
+          "title": "Sakura Laurel",
+          "start": "2027-01-19",
+          "end": "2027-01-27",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30158.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30158",
+          "description": "픽업: Sakura Laurel",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Eishin Flash + 1 more",
+          "start": "2027-01-19",
+          "end": "2027-01-26",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30159.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30159",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
           "title": "Tanino Gimlet",
           "start": "2027-01-21",
           "end": "2027-01-30",
@@ -8070,6 +8233,35 @@
         },
         {
           "type": "banner",
+          "title": "Neo Universe",
+          "start": "2027-01-25",
+          "end": "2027-02-02",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30160.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30160",
+          "description": "픽업: Neo Universe",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Symboli Rudolf + 1 more",
+          "start": "2027-01-25",
+          "end": "2027-02-01",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30161.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30161",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
           "title": "Hishi Amazon + 1 more",
           "start": "2027-01-28",
           "end": "2027-02-07",
@@ -8095,6 +8287,50 @@
           "subtitle": "standard pickup",
           "image": "https://uma.moe/assets/images/support/banner/2023_30171.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30171",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Sakura Bakushin O + 1 more",
+          "start": "2027-01-31",
+          "end": "2027-02-11",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30162.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30162",
+          "description": "픽업: Sakura Bakushin O, Matikanetannhauser",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Gold City + 3 more",
+          "start": "2027-01-31",
+          "end": "2027-02-11",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30164.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30164",
+          "description": "픽업: Gold City, Tosen Jordan, Mejiro Palmer, Daitaku Helios",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Mihono Bourbon + 1 more",
+          "start": "2027-01-31",
+          "end": "2027-02-10",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30163.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30163",
           "rarity": 3
         },
         {
@@ -9802,6 +10038,19 @@
         },
         {
           "type": "event",
+          "title": "Fall G1 Celebration Missions, Part 3: Arima Kinen",
+          "start": "2026-10-30",
+          "end": "2026-11-05",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/207.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "New Year's Race Support Campaign Vol. 1",
           "start": "2026-11-02",
           "end": "2026-11-15",
@@ -9812,6 +10061,45 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1123.webp",
           "link": "https://umapyoi.net/news/1123?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2026-11-02",
+          "end": "2026-11-15",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1091.webp",
+          "link": "https://umapyoi.net/news/1091?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "The first \"Yuku-nen Kuru-nen Campaign",
+          "start": "2026-11-02",
+          "end": "2026-11-15",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1122.webp",
+          "link": "https://umapyoi.net/news/1122?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Happy New Future: Bonds Dyed in the Sunrise",
+          "start": "2026-11-02",
+          "end": "2026-11-12",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/12_happy_new_future_banner.webp",
+          "link": "https://umapyoi.net/news/1126?lang=jp"
         },
         {
           "type": "event",
@@ -9932,6 +10220,32 @@
         },
         {
           "type": "event",
+          "title": "Fall G1 Celebration Missions, Part 3: Hopeful Stakes",
+          "start": "2026-11-06",
+          "end": "2026-11-12",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/208.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "The second \"Yuku-nen Kuru-nen Campaign",
+          "start": "2026-11-06",
+          "end": "2026-11-19",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1131.webp",
+          "link": "https://umapyoi.net/news/1131?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Campaign to Commemorate the Performance of \"Uma Musume Pretty Derby - Sprinters' Story\"",
           "start": "2026-11-07",
           "end": "2026-11-20",
@@ -9942,6 +10256,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1117.webp",
           "link": "https://umapyoi.net/news/1117?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2026-11-07",
+          "end": "2026-11-20",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1090.webp",
+          "link": "https://umapyoi.net/news/1090?lang=jp"
         },
         {
           "type": "event",
@@ -10059,6 +10386,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1133.webp",
           "link": "https://umapyoi.net/news/1133?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Fall G1 Celebration Missions, Part 3: Tokyo Daishoten",
+          "start": "2026-11-11",
+          "end": "2026-11-17",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/209.webp",
+          "link": "https://umapyoi.net/news/1066?lang=jp"
         },
         {
           "type": "event",
@@ -10530,6 +10870,19 @@
         },
         {
           "type": "event",
+          "title": "Let's Go! Uma Outing!",
+          "start": "2026-11-28",
+          "end": "2026-12-06",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/uma-sanpo/1154.webp",
+          "link": "https://umapyoi.net/news/1154?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "2nd Anniversary Campaign Vol. 1",
           "start": "2026-11-29",
           "end": "2027-01-11",
@@ -10579,6 +10932,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1144.webp",
           "link": "https://umapyoi.net/news/1144?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Racing Carnival",
+          "start": "2026-11-30",
+          "end": "2026-12-06",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "racing carnival",
+          "image": "https://uma.moe/assets/timeline-images/events/racing-carnival/1151.webp",
+          "link": "https://umapyoi.net/news/1151?lang=jp"
         },
         {
           "type": "event",
@@ -10644,6 +11010,32 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1144.webp",
           "link": "https://umapyoi.net/news/1144?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "New Year's Race Support Campaign Vol. 1",
+          "start": "2026-12-04",
+          "end": "2026-12-17",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1123.webp",
+          "link": "https://umapyoi.net/news/1123?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Sweet Memories ♥ Tea Time",
+          "start": "2026-12-04",
+          "end": "2026-12-16",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/01_sweet_memories_banner.webp",
+          "link": "https://umapyoi.net/news/1159?lang=jp"
         },
         {
           "type": "event",
@@ -10713,6 +11105,19 @@
         {
           "type": "event",
           "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2026-12-06",
+          "end": "2026-12-19",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1143.webp",
+          "link": "https://umapyoi.net/news/1143?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
           "start": "2026-12-07",
           "end": "2026-12-20",
           "version": "",
@@ -10748,6 +11153,32 @@
           "subtitle": "champions meeting",
           "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1214.webp",
           "link": "https://umapyoi.net/news/1214?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "New Year's Race Support Campaign Vol. 2",
+          "start": "2026-12-12",
+          "end": "2026-12-25",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1133.webp",
+          "link": "https://umapyoi.net/news/1133?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to Commemorate the Performance of \"Uma Musume Pretty Derby - Sprinters' Story\"",
+          "start": "2026-12-12",
+          "end": "2026-12-25",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1117.webp",
+          "link": "https://umapyoi.net/news/1117?lang=jp"
         },
         {
           "type": "event",
@@ -10787,6 +11218,32 @@
           "subtitle": "factor research",
           "image": "https://uma.moe/assets/timeline-images/events/factor-research/1233.webp",
           "link": "https://umapyoi.net/news/1233?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "G1 Celebration Missions: February Stakes",
+          "start": "2026-12-13",
+          "end": "2026-12-19",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/278.webp",
+          "link": "https://umapyoi.net/news/1142?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Aquarius Cup",
+          "start": "2026-12-13",
+          "end": "2026-12-21",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1179.webp",
+          "link": "https://umapyoi.net/news/1179?lang=jp"
         },
         {
           "type": "event",
@@ -10852,6 +11309,32 @@
           "subtitle": "champions meeting",
           "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1214.webp",
           "link": "https://umapyoi.net/news/1214?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "2nd Anniversary Campaign Vol. 1",
+          "start": "2026-12-15",
+          "end": "2027-01-27",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1182.webp",
+          "link": "https://umapyoi.net/news/1182?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Valentine's Day Campaign",
+          "start": "2026-12-15",
+          "end": "2026-12-28",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1177.webp",
+          "link": "https://umapyoi.net/news/1177?lang=jp"
         },
         {
           "type": "event",
@@ -10959,6 +11442,19 @@
         },
         {
           "type": "event",
+          "title": "G1 Celebration Missions: Kawasaki Kinen",
+          "start": "2026-12-20",
+          "end": "2026-12-26",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1142.webp",
+          "link": "https://umapyoi.net/news/1142?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Spring G1 Celebration Missions, Part 1: Takamatsunomiya Kinen",
           "start": "2026-12-21",
           "end": "2026-12-27",
@@ -11008,6 +11504,45 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1230.webp",
           "link": "https://umapyoi.net/news/1230?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "2nd Anniversary Campaign Vol. 2",
+          "start": "2026-12-21",
+          "end": "2027-01-23",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1194.webp",
+          "link": "https://umapyoi.net/news/1194?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Grand Masters - To the Inheritors",
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "scenario release",
+          "image": "https://uma.moe/assets/timeline-images/events/training-scenario/1195.webp",
+          "link": "https://umapyoi.net/news/1195?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Leap Into a New World!",
+          "start": "2026-12-21",
+          "end": "2027-01-02",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/02_leap_into_a_new_world_banner.webp",
+          "link": "https://umapyoi.net/news/1198?lang=jp"
         },
         {
           "type": "event",
@@ -11193,6 +11728,32 @@
         },
         {
           "type": "event",
+          "title": "2nd Anniversary Campaign Vol. 3",
+          "start": "2026-12-30",
+          "end": "2027-01-18",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1216.webp",
+          "link": "https://umapyoi.net/news/1216?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Pisces Cup",
+          "start": "2026-12-30",
+          "end": "2027-01-07",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1214.webp",
+          "link": "https://umapyoi.net/news/1214?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Campaign to add \"Training Reward\" piece",
           "start": "2026-12-31",
           "end": "2027-01-13",
@@ -11319,8 +11880,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1227.webp",
-          "link": "https://umapyoi.net/news/1227?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1144.webp",
+          "link": "https://umapyoi.net/news/1144?lang=jp"
         },
         {
           "type": "event",
@@ -11413,6 +11974,45 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1296.webp",
           "link": "https://umapyoi.net/news/1296?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 1: Takamatsunomiya Kinen",
+          "start": "2027-01-06",
+          "end": "2027-01-12",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1224.webp",
+          "link": "https://umapyoi.net/news/1224?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "2nd Anniversary Campaign Vol. 4",
+          "start": "2027-01-06",
+          "end": "2027-01-19",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1230.webp",
+          "link": "https://umapyoi.net/news/1230?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Agnes Tachyon's Factor Research",
+          "start": "2027-01-06",
+          "end": "2027-01-14",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "factor research",
+          "image": "https://uma.moe/assets/timeline-images/events/factor-research/1233.webp",
+          "link": "https://umapyoi.net/news/1233?lang=jp"
         },
         {
           "type": "event",
@@ -11624,6 +12224,32 @@
         },
         {
           "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 1: Osaka Hai",
+          "start": "2027-01-11",
+          "end": "2027-01-17",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/305.webp",
+          "link": "https://umapyoi.net/news/1224?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Wherefore I Adore You",
+          "start": "2027-01-11",
+          "end": "2027-01-21",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/03_wherefore_i_adore_you_banner.webp",
+          "link": "https://umapyoi.net/news/1247?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Osaka Hai Legend Race",
           "start": "2027-01-12",
           "end": "2027-01-17",
@@ -11713,6 +12339,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/images/campaign/311.webp",
           "link": "https://umapyoi.net/news/1279?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-01-16",
+          "end": "2027-01-29",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1226.webp",
+          "link": "https://umapyoi.net/news/1226?lang=jp"
         },
         {
           "type": "event",
@@ -11828,8 +12467,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1281.webp",
-          "link": "https://umapyoi.net/news/1281?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1227.webp",
+          "link": "https://umapyoi.net/news/1227?lang=jp"
         },
         {
           "type": "event",
@@ -11846,6 +12485,32 @@
         },
         {
           "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 1: Satsuki Sho",
+          "start": "2027-01-19",
+          "end": "2027-01-25",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/307.webp",
+          "link": "https://umapyoi.net/news/1224?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Aries Cup",
+          "start": "2027-01-19",
+          "end": "2027-01-27",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "champions meeting",
+          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1271.webp",
+          "link": "https://umapyoi.net/news/1271?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Campaign to add \"Training Reward\" piece",
           "start": "2027-01-20",
           "end": "2027-02-02",
@@ -11856,6 +12521,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1283.webp",
           "link": "https://umapyoi.net/news/1283?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "White Day Campaign",
+          "start": "2027-01-20",
+          "end": "2027-02-02",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1211.webp",
+          "link": "https://umapyoi.net/news/1211?lang=jp"
         },
         {
           "type": "event",
@@ -11937,6 +12615,32 @@
         },
         {
           "type": "event",
+          "title": "Campaign to Commemorate the Delivery of \"Uma Musume Pretty Derby ROAD TO THE TOP\"",
+          "start": "2027-01-25",
+          "end": "2027-02-07",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1269.webp",
+          "link": "https://umapyoi.net/news/1269?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Trainer Skills Test",
+          "start": "2027-01-25",
+          "end": "2027-02-02",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "trainer skills test",
+          "image": "https://uma.moe/assets/timeline-images/events/trainer-skills-test/1289.webp",
+          "link": "https://umapyoi.net/news/1289?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Campaign to add \"Training Reward\" piece",
           "start": "2027-01-26",
           "end": "2027-02-08",
@@ -11960,6 +12664,46 @@
           "subtitle": "racing carnival",
           "image": "https://uma.moe/assets/timeline-images/events/racing-carnival/1351.webp",
           "link": "https://umapyoi.net/news/1351?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Osaka Hai Legend Race",
+          "start": "2027-01-26",
+          "end": "2027-01-31",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "legend race",
+          "image": "https://uma.moe/assets/timeline-images/events/legend-race/1287.webp",
+          "link": "https://umapyoi.net/news/1287?lang=jp",
+          "description": "픽업: Yaeno Muteki (Original), Tokai Teio (Anime Collab)"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-01-27",
+          "end": "2027-02-09",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1225.webp",
+          "link": "https://umapyoi.net/news/1225?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to celebrate the release of the Google Play Games (beta) version",
+          "start": "2027-01-27",
+          "end": "2027-02-09",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1296.webp",
+          "link": "https://umapyoi.net/news/1296?lang=jp"
         },
         {
           "type": "event",
@@ -12015,6 +12759,84 @@
         },
         {
           "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 2: Kashiwa Kinen",
+          "start": "2027-01-31",
+          "end": "2027-02-06",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/309.webp",
+          "link": "https://umapyoi.net/news/1279?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Gal Week Campaign",
+          "start": "2027-01-31",
+          "end": "2027-02-13",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1299.webp",
+          "link": "https://umapyoi.net/news/1299?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Held \"Gyaru-Sanpo Campaign",
+          "start": "2027-01-31",
+          "end": "2027-02-13",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1310.webp",
+          "link": "https://umapyoi.net/news/1310?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Tagball Rumble: Witty Warfare!",
+          "start": "2027-01-31",
+          "end": "2027-02-10",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/04_tagball_rumble_banner.webp",
+          "link": "https://umapyoi.net/news/1308?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 2: NHK Mile Cup",
+          "start": "2027-01-31",
+          "end": "2027-02-06",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/310.webp",
+          "link": "https://umapyoi.net/news/1279?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 1: Oka Sho",
+          "start": "2027-02-01",
+          "end": "2027-02-07",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/306.webp",
+          "link": "https://umapyoi.net/news/1224?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Yasuda Kinen Legend Race",
           "start": "2027-02-02",
           "end": "2027-02-07",
@@ -12026,6 +12848,19 @@
           "image": "https://uma.moe/assets/timeline-images/events/legend-race/1363.webp",
           "link": "https://umapyoi.net/news/1363?lang=jp",
           "description": "픽업: Yamanin Zephyr (Original), Agnes Digital (Halloween)"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-02-02",
+          "end": "2027-02-15",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1280.webp",
+          "link": "https://umapyoi.net/news/1280?lang=jp"
         },
         {
           "type": "event",
@@ -12069,16 +12904,6 @@
           "version": "S7",
           "tentative": true,
           "source": "limbuscompany.wiki.gg"
-        },
-        {
-          "type": "event",
-          "title": "Mnestic Experience",
-          "start": "2026-06-11",
-          "end": "2026-07-09",
-          "version": "",
-          "tentative": false,
-          "source": "limbuscompany.wiki.gg",
-          "_auto": true
         },
         {
           "type": "event",

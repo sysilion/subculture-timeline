@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-06",
+    "lastUpdated": "2026-10-08",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -79,20 +79,6 @@
         {
           "code": "Y1INABQB6DEX",
           "reward": "60 primogems and five adventurer's experience",
-          "source": "hoyo-codes.seria.moe",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "GS71XYNSYJ",
-          "reward": "",
-          "source": "hoyo-codes.seria.moe",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "GS71XAVWDS",
-          "reward": "Mora ×30000 · Hero's Wit ×3 · Mystic Enhancement Ore ×5",
           "source": "hoyo-codes.seria.moe",
           "added": "",
           "_auto": true
@@ -274,6 +260,20 @@
     },
     "nte": {
       "codes": [
+        {
+          "code": "WONDERLOGGIFT",
+          "reward": "30 annulith, three senior hunter guides, and 20k fons",
+          "source": "pockettactics.com",
+          "added": "2026-10-08",
+          "_auto": true
+        },
+        {
+          "code": "BLACKBIRDHERE",
+          "reward": "an exclusive avatar frame",
+          "source": "pockettactics.com",
+          "added": "2026-10-08",
+          "_auto": true
+        },
         {
           "code": "BLACKBIRDINNTE",
           "reward": "20 heterogeneous units, 30k beetle coins, and 10k fons",
