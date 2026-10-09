@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-08",
+    "lastUpdated": "2026-10-09",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-08"
+    "autoUpdated": "2026-10-09"
   },
   "games": [
     {
@@ -3035,6 +3035,16 @@
           "title": "절름발이 까마귀 탐정록",
           "start": "2026-10-03",
           "end": "2026-10-19",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "위험한 강습전",
+          "start": "2026-10-09",
+          "end": "2026-10-23",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
