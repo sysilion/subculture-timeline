@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-10",
+    "lastUpdated": "2026-10-12",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -190,8 +190,8 @@
       "codes": [
         {
           "code": "JRNY2SKY",
-          "reward": "Polychrome ×300 · Senior Investigator Log ×2 · W-Engine Energy Module ×3 · Denny ×30,000",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "300 polychromes, 3k denny, two senior investigator logs, and three W-engine energy modules",
+          "source": "pockettactics.com",
           "added": "2026-10-10",
           "_auto": true
         },
