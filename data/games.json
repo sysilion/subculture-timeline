@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-12",
+    "lastUpdated": "2026-10-13",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-12"
+    "autoUpdated": "2026-10-13"
   },
   "games": [
     {
@@ -1065,6 +1065,16 @@
         },
         {
           "type": "event",
+          "title": "승부 예측의 달인",
+          "start": "2026-10-12",
+          "end": "2026-10-23",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Spiral Abyss",
           "start": "2026-10-16",
           "end": "2026-11-16",
@@ -1122,50 +1132,6 @@
           "start": "2026-06-24",
           "end": "2026-07-14",
           "version": "4.3"
-        },
-        {
-          "type": "banner",
-          "title": "Cyrene Banner (Ver. 4.3 Phase 2) Phainon Banner (Ver. 4.3 Phase 2)",
-          "start": "2026-06-24",
-          "end": "2026-07-14",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Bygone Reminiscence Banners (Ver. 4.3 Phase 2)",
-          "start": "2026-06-24",
-          "end": "2026-07-14",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "키레네",
-          "subtitle": "키레네, 파이논, Mar. 7th",
-          "rarity": 5,
-          "start": "2026-06-24",
-          "end": "2026-07-14",
-          "version": "4.3",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "이 순간처럼 영원한 사랑",
-          "subtitle": "이 순간처럼 영원한 사랑, 이와 같이 타오르는 여명",
-          "rarity": 5,
-          "start": "2026-06-24",
-          "end": "2026-07-14",
-          "version": "4.3",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
         },
         {
           "type": "banner",
@@ -1381,36 +1347,6 @@
         },
         {
           "type": "event",
-          "title": "별의 선물",
-          "start": "2026-05-31",
-          "end": "2026-07-14",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "픽셀 비행기 대난투",
-          "start": "2026-05-31",
-          "end": "2026-07-14",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "웃음 같은 날갯짓",
-          "start": "2026-05-31",
-          "end": "2026-07-14",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Gift of Odyssey",
           "subtitle": "출석 보상 이벤트",
           "start": "2026-06-01",
@@ -1487,52 +1423,12 @@
         },
         {
           "type": "event",
-          "title": "진령 놀이공원",
-          "start": "2026-06-24",
-          "end": "2026-07-14",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Realm of the Strange",
           "subtitle": "기이한 영역 이벤트",
           "start": "2026-07-03",
           "end": "2026-07-14",
           "version": "4.3",
           "source": "sportskeeda.com"
-        },
-        {
-          "type": "event",
-          "title": "4.3 Realm of the Strange",
-          "start": "2026-07-03",
-          "end": "2026-07-13",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Duration:",
-          "start": "2026-07-03",
-          "end": "2026-07-13",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "기묘한 영역",
-          "start": "2026-07-03",
-          "end": "2026-07-13",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
         },
         {
           "type": "event",
@@ -3144,16 +3040,6 @@
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Gleaming Shadow Team Battle",
-          "start": "2026-06-19",
-          "end": "2026-07-13",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
           "_auto": true
         },
         {
