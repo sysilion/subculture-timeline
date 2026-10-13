@@ -3474,6 +3474,42 @@
           "_auto": true
         },
         {
+          "type": "banner",
+          "title": "Rejuvenation",
+          "subtitle": "Si",
+          "rarity": 6,
+          "start": "2026-10-15",
+          "end": "2026-11-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Ancestral Spring Flows Anew",
+          "subtitle": "",
+          "rarity": 6,
+          "start": "2026-10-29",
+          "end": "2026-11-18",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "The Hearth Fire Beckons the Starry Flow",
+          "subtitle": "Argent Flow",
+          "rarity": 6,
+          "start": "2026-11-05",
+          "end": "2026-11-25",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
           "type": "event",
           "title": "Drifting Raft Issue (Ver. 1.2 Phase 1) 04/17/2026 - TBD",
           "start": "2026-03-29",
@@ -5355,6 +5391,18 @@
         },
         {
           "type": "banner",
+          "title": "Yuuka (Pajama), Noa (Pajama), Haruna (New Year) +2",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-07-14",
+          "end": "2026-07-20",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Konoka, Rena, Hare (Camping) +3",
           "subtitle": "Pickup",
           "rarity": 3,
@@ -5578,6 +5626,18 @@
           "_auto": true
         },
         {
+          "type": "banner",
+          "title": "Kisaki (Swimsuit), Shun (Swimsuit)",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-10-13",
+          "end": "2026-10-26",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
           "type": "event",
           "title": "Secret Midnight Party: The Chimes of Tag",
           "start": "2026-07-14",
@@ -5694,6 +5754,17 @@
           "source": "bluearchive.wiki",
           "_auto": true,
           "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_847_Jp.png"
+        },
+        {
+          "type": "event",
+          "title": "The Calm After the Storm",
+          "start": "2026-10-13",
+          "end": "2026-10-26",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true,
+          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_859_Jp.png"
         },
         {
           "type": "event",
@@ -6047,16 +6118,6 @@
         },
         {
           "type": "banner",
-          "title": "Nakayama Festa (Wit SSR)",
-          "start": "2026-07-02",
-          "end": "2026-07-14",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Gold Ship & Mejiro McQueen (Summer)",
           "start": "2026-07-03",
           "end": "2026-07-17",
@@ -6094,20 +6155,6 @@
           "image": "https://uma.moe/assets/images/character/banner/2022_30106.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30106",
           "description": "픽업: Bamboo Memory",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
-          "title": "Yukino Bijin + 1 more",
-          "start": "2026-07-08",
-          "end": "2026-07-14",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/support/banner/2022_30107.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30107",
           "rarity": 3
         },
         {
