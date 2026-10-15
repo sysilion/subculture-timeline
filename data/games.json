@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-14",
+    "lastUpdated": "2026-10-15",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-14"
+    "autoUpdated": "2026-10-15"
   },
   "games": [
     {
@@ -3556,46 +3556,6 @@
         },
         {
           "type": "event",
-          "title": "Trial Algorithmics (Version 1.3)",
-          "start": "2026-06-12",
-          "end": "2026-07-16",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Expunger of Sin (Ver. 1.3 Phase 2)",
-          "start": "2026-06-26",
-          "end": "2026-07-16",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Peacekeeper's Nocturne Sign-In (Version 1.3)",
-          "start": "2026-06-26",
-          "end": "2026-07-16",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Carly's Fairytale of Wuling (Version 1.3)",
-          "start": "2026-07-02",
-          "end": "2026-07-16",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "North Yearns The Rift Vigile (Ver. 1.4 Phase 1)",
           "start": "2026-07-16",
           "end": "2026-08-06",
@@ -4089,6 +4049,28 @@
         },
         {
           "type": "event",
+          "title": "Season of Phantasia",
+          "subtitle": "Echoes of War",
+          "start": "2026-10-15",
+          "end": "2026-11-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Spirit's Restoration",
+          "subtitle": "Sign-In",
+          "start": "2026-10-15",
+          "end": "2026-11-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Monumental Etching: Forest of Maras",
           "subtitle": "Challenge",
           "start": "2026-10-22",
@@ -4137,6 +4119,28 @@
           "subtitle": "Narrative",
           "start": "2026-11-05",
           "end": "2026-11-25",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Season of Fervor",
+          "subtitle": "Echoes of War",
+          "start": "2026-11-05",
+          "end": "2026-11-25",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Stars Are With Me",
+          "subtitle": "Sign-In",
+          "start": "2026-11-05",
+          "end": "2026-11-24",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
@@ -6050,16 +6054,6 @@
           "end": "2026-07-17",
           "tentative": true,
           "source": "gamerant.com"
-        },
-        {
-          "type": "banner",
-          "title": "Yukino Bijin (Wit SSR)",
-          "start": "2026-07-07",
-          "end": "2026-07-16",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
         },
         {
           "type": "banner",
@@ -8653,19 +8647,6 @@
           "image": "https://uma.moe/assets/images/support/banner/2023_30175.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30175",
           "rarity": 3
-        },
-        {
-          "type": "event",
-          "title": "StarHorse4 Collab Celebration now available!",
-          "start": "2026-06-26",
-          "end": "2026-07-16",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/860.webp",
-          "link": "https://umapyoi.net/en/news/860"
         },
         {
           "type": "event",
