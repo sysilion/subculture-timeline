@@ -39,6 +39,7 @@
   "listUpcoming": "Upcoming",
   "listEnded": "Ended",
   "listEmpty": "No entries in the selected range.",
+  "loadFailed": "Failed to load schedule data. Please refresh in a moment.",
   "deadlineToday": "Ends today",
   "deadlineTomorrow": "Ends tomorrow",
   "statusEndedFmt": "Ended ({n}d ago)",

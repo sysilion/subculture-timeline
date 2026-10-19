@@ -1,14 +1,17 @@
 'use strict';
 
 const I18n = (() => {
-  let current = localStorage.getItem('tl-lang') || 'ko';
+  // 저장소가 막힌 환경(사생활 보호 모드 등)에서 getItem이 throw하면 IIFE가 통째로 실패해
+  // 전역 I18n 선언이 초기화되지 않고, timeline.js의 typeof I18n 가드까지 ReferenceError를 낸다.
+  let current = 'ko';
+  try { current = localStorage.getItem('tl-lang') || 'ko'; } catch (e) {}
   let strings = {};
 
   async function load(lang) {
     const res = await fetch(`data/i18n/${lang}.json`);
     strings = await res.json();
     current = lang;
-    localStorage.setItem('tl-lang', lang);
+    try { localStorage.setItem('tl-lang', lang); } catch (e) {}
     apply();
     document.documentElement.lang = lang;
     document.dispatchEvent(new CustomEvent('tl-langchange', { detail: { lang } }));

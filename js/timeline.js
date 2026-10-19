@@ -118,10 +118,24 @@ const Timeline = (() => {
 
     try {
       const res = await fetch('data/games.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       data = await res.json();
     } catch (e) {
       console.error('games.json 로드 실패:', e);
+      data = null;
       if (skeleton) skeleton.classList.add('hidden');
+      // 빈 화면과 '로딩 중...'만 남지 않도록 실패를 알린다
+      const msg = t('loadFailed', '일정 데이터를 불러오지 못했습니다. 잠시 후 새로고침해 주세요.');
+      const luEl = document.getElementById('last-updated');
+      if (luEl) luEl.textContent = msg;
+      const rows = document.getElementById('game-rows');
+      if (rows) {
+        const err = document.createElement('div');
+        err.className = 'list-empty';
+        err.setAttribute('role', 'alert');
+        err.textContent = msg;
+        rows.appendChild(err);
+      }
       return;
     }
 
@@ -138,7 +152,7 @@ const Timeline = (() => {
     // 마지막 업데이트 표시
     const luEl = document.getElementById('last-updated');
     if (luEl && data.meta) {
-      const prefix = (typeof I18n !== 'undefined') ? I18n.t('dataUpdated') : '데이터 기준:';
+      const prefix = t('dataUpdated', '데이터 기준:');   // 번역 파일이 없으면 키가 그대로 찍힌다
       luEl.textContent = `${prefix} ${data.meta.lastUpdated}`;
     }
 
@@ -180,9 +194,8 @@ const Timeline = (() => {
         if (!applyResponsiveMetrics()) return;
         updateCSSVars();
         renderRuler();
-        renderGames();
+        renderGames();   // 리스트 뷰는 renderGames → applySearch가 다시 그린다
         renderTodayLine();
-        if (currentView !== 'gantt') renderListView();
       }, 150);
     });
 
@@ -190,9 +203,8 @@ const Timeline = (() => {
     document.addEventListener('tl-langchange', () => {
       buildFilters();   // 칩 이름도 언어를 따라간다
       restoreFilters();
-      renderGames();
+      renderGames();   // 리스트 뷰는 renderGames → applySearch가 다시 그린다
       renderTodayLine();
-      if (currentView !== 'gantt') renderListView();
     });
   }
 
@@ -230,7 +242,7 @@ const Timeline = (() => {
     renderGames();
     renderTodayLine();
     restoreFilters();
-    if (currentView !== 'gantt') renderListView();
+    // 리스트 뷰는 renderGames → applySearch가 이미 다시 그렸다
     updateHash();
   }
 
@@ -1393,6 +1405,12 @@ function setupDetailPanel() {
 
   // 상세 패널 내 키보드 탐색
   document.getElementById('detail-panel-content').addEventListener('keydown', (e) => {
+    // 항목은 tabIndex=0으로 포커스는 되지만 click만 걸려 있어 키보드로는 실행이 안 됐다
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('detail-entry')) {
+      e.preventDefault();
+      highlightTimelineEntry(e.target.dataset.entryId);
+      return;
+    }
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
       const entries = document.querySelectorAll('.detail-entry');
       if (entries.length === 0) return;
@@ -1976,7 +1994,10 @@ function setupDetailPanel() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   // i18n 먼저 로드 (언어 버튼 + 텍스트)
-  if (typeof I18n !== 'undefined') await I18n.init();
+  // 번역 파일을 못 받아도 타임라인은 기본(한국어) 문구로 그린다
+  if (typeof I18n !== 'undefined') {
+    try { await I18n.init(); } catch (e) { console.error('i18n 로드 실패:', e); }
+  }
   Timeline.init();
   Timeline.setupRangeControl();
 });
