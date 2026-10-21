@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-16",
+    "lastUpdated": "2026-10-21",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -77,22 +77,8 @@
           "_auto": true
         },
         {
-          "code": "Y1INABQB6DEX",
-          "reward": "60 primogems and five adventurer's experience",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
           "code": "GENSHINGIFT",
           "reward": "50 primogems and three hero's wit (this code works periodically)",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "2BJ64QRZ7RT8",
-          "reward": "60 primogems and five adventurer's experience",
           "source": "pockettactics.com",
           "added": "",
           "_auto": true
@@ -105,7 +91,7 @@
         {
           "code": "RT4BPNA8FBS3",
           "reward": "50 stellar jade and 10k credits",
-          "source": "hoyo-codes.seria.moe",
+          "source": "pockettactics.com",
           "added": "2026-10-01",
           "_auto": true
         },
@@ -190,22 +176,22 @@
       "codes": [
         {
           "code": "ZZZVOID32",
-          "reward": "Polychrome ×20 · Denny ×2,222",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "20 polychrome and 2,222 denny",
+          "source": "pockettactics.com",
           "added": "",
           "_auto": true
         },
         {
           "code": "ZZZINK32",
-          "reward": "Polychrome ×20 · Denny ×2,222",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "20 polychrome and 2,222 denny",
+          "source": "pockettactics.com",
           "added": "",
           "_auto": true
         },
         {
           "code": "ZZZGRIND32",
-          "reward": "Polychrome ×20 · Denny ×2,222",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "20 polychrome and 2,222 denny",
+          "source": "pockettactics.com",
           "added": "",
           "_auto": true
         },

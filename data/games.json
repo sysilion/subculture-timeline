@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-16",
+    "lastUpdated": "2026-10-21",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-16"
+    "autoUpdated": "2026-10-21"
   },
   "games": [
     {
@@ -48,78 +48,6 @@
           "start": "2026-06-10",
           "end": "2026-07-02",
           "version": "6.6"
-        },
-        {
-          "type": "banner",
-          "title": "캐릭터 기원",
-          "subtitle": "산드로네, 북두, 디오나",
-          "rarity": 5,
-          "start": "2026-06-30",
-          "end": "2026-07-21",
-          "version": "6.7",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "캐릭터 기원 2",
-          "subtitle": "시틀라리, 북두, 디오나",
-          "rarity": 5,
-          "start": "2026-06-30",
-          "end": "2026-07-21",
-          "version": "6.7",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "무기 기원",
-          "subtitle": "초월의 열쇠, 별지기의 시선",
-          "rarity": 5,
-          "start": "2026-06-30",
-          "end": "2026-07-21",
-          "version": "6.7",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "묶음 기원/귀환 기원",
-          "subtitle": "유메미즈키 미즈키, 라이오슬리, 사이노",
-          "rarity": 5,
-          "start": "2026-06-30",
-          "end": "2026-07-21",
-          "version": "6.7",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "To the Looking-Glass the Mademoiselle Said",
-          "subtitle": "Sandrone, Citlali",
-          "rarity": 5,
-          "start": "2026-07-01",
-          "end": "2026-07-21",
-          "version": "6.7",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Epitome Invocation",
-          "subtitle": "A_Teaspoon_Of_Transcendence, Starcallers_Watch",
-          "rarity": 5,
-          "start": "2026-07-01",
-          "end": "2026-07-21",
-          "version": "6.7",
-          "tentative": false,
-          "source": "paimon.moe",
-          "_auto": true
         },
         {
           "type": "banner",
@@ -1118,6 +1046,16 @@
           "tentative": false,
           "source": "api.ennead.cc",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "근심 없는 눈싸움",
+          "start": "2026-10-21",
+          "end": "2026-11-02",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
         }
       ],
       "iconUrl": "https://genshin.hoyoverse.com/favicon.ico",
@@ -1398,16 +1336,6 @@
           "end": "2026-06-24",
           "version": "4.3",
           "source": "sportskeeda.com"
-        },
-        {
-          "type": "event",
-          "title": "망각과 한풍",
-          "start": "2026-06-08",
-          "end": "2026-07-20",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
         },
         {
           "type": "event",
@@ -3023,6 +2951,42 @@
           "_auto": true
         },
         {
+          "type": "banner",
+          "title": "부화하는 날",
+          "subtitle": "부화하는 날, 빈틈없는 예의",
+          "rarity": 5,
+          "start": "2026-10-21",
+          "end": "2026-11-11",
+          "version": "3.3",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "노르마",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-11-11",
+          "end": "2026-12-01",
+          "version": "3.3",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "천재의 수행원",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-11-11",
+          "end": "2026-12-01",
+          "version": "3.3",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
           "type": "event",
           "title": "Operation: Save Bootopia",
           "subtitle": "부투피아 구출 작전 이벤트",
@@ -3076,16 +3040,6 @@
           "title": "Assemble Mock Exam Comeback Plan",
           "start": "2026-06-26",
           "end": "2026-07-27",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Tales of the Hobbling Crow",
-          "start": "2026-07-03",
-          "end": "2026-07-20",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -3376,6 +3330,56 @@
           "title": "시유 방어전",
           "start": "2026-10-16",
           "end": "2026-10-30",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "모의 세계 섬멸전",
+          "start": "2026-10-21",
+          "end": "2027-01-13",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "괴상한 오싹오싹 유령의 집",
+          "start": "2026-10-22",
+          "end": "2026-11-30",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "사이버 명의, 출동!",
+          "start": "2026-10-28",
+          "end": "2026-11-16",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "절름발이 까마귀 행방록",
+          "start": "2026-11-11",
+          "end": "2026-11-30",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "복원하자! 표류 화집",
+          "start": "2026-11-16",
+          "end": "2026-11-30",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -4483,16 +4487,6 @@
           "title": "Resolve Perks",
           "start": "2026-07-08",
           "end": "2026-07-29",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Stamina Recharge",
-          "start": "2026-07-13",
-          "end": "2026-07-20",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -8669,27 +8663,33 @@
           "rarity": 3
         },
         {
-          "type": "event",
-          "title": "Leo Cup 2026 (CM16)",
-          "start": "2026-07-12",
-          "end": "2026-07-21",
+          "type": "banner",
+          "title": "Tosen Jordan + 1 more",
+          "start": "2027-02-17",
+          "end": "2027-02-27",
           "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Leo Cup",
-          "start": "2026-07-13",
-          "end": "2026-07-19",
-          "version": "",
-          "tentative": false,
+          "tentative": true,
           "source": "uma.moe",
           "_auto": true,
-          "subtitle": "champions meeting",
-          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/global-881.webp",
-          "link": "https://umapyoi.net/en/news/881"
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30176.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30176",
+          "description": "픽업: Tosen Jordan, Bamboo Memory",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Gold City + 1 more",
+          "start": "2027-02-17",
+          "end": "2027-02-26",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30177.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30177",
+          "rarity": 3
         },
         {
           "type": "event",
@@ -13362,6 +13362,58 @@
           "subtitle": "factor research",
           "image": "https://uma.moe/assets/timeline-images/events/factor-research/1388.webp",
           "link": "https://umapyoi.net/news/1388?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "G1 Celebration Missions: Teio Sho",
+          "start": "2027-02-16",
+          "end": "2027-02-22",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1379.webp",
+          "link": "https://umapyoi.net/news/1379?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-02-17",
+          "end": "2027-03-02",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1380.webp",
+          "link": "https://umapyoi.net/news/1380?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "#summer #besties",
+          "start": "2027-02-17",
+          "end": "2027-02-26",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "story event",
+          "image": "https://uma.moe/assets/images/story/06_summer_besties_banner.webp",
+          "link": "https://umapyoi.net/news/1399?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-02-18",
+          "end": "2027-03-03",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1331.webp",
+          "link": "https://umapyoi.net/news/1331?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
