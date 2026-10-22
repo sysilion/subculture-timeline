@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-21",
+    "lastUpdated": "2026-10-22",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-21"
+    "autoUpdated": "2026-10-22"
   },
   "games": [
     {
@@ -5312,42 +5312,6 @@
         },
         {
           "type": "banner",
-          "title": "Koyuki (Pajama), Yuuka (Pajama), Noa (Pajama) +2",
-          "subtitle": "Pickup",
-          "rarity": 3,
-          "start": "2026-07-14",
-          "end": "2026-07-20",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Fuuka (New Year), Haruna (New Year), Noa (Pajama) +2",
-          "subtitle": "Pickup",
-          "rarity": 3,
-          "start": "2026-07-14",
-          "end": "2026-07-20",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Yuuka (Pajama), Noa (Pajama), Haruna (New Year) +2",
-          "subtitle": "Pickup",
-          "rarity": 3,
-          "start": "2026-07-14",
-          "end": "2026-07-20",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Konoka, Rena, Hare (Camping) +3",
           "subtitle": "Pickup",
           "rarity": 3,
@@ -5581,17 +5545,6 @@
           "tentative": false,
           "source": "bluearchive.wiki",
           "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Secret Midnight Party: The Chimes of Tag",
-          "start": "2026-07-14",
-          "end": "2026-07-20",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true,
-          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_842_Jp.png"
         },
         {
           "type": "event",
@@ -8752,32 +8705,6 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/images/campaign/218.webp",
           "link": "https://umapyoi.net/news/902?lang=jp"
-        },
-        {
-          "type": "event",
-          "title": "Tsunagete, Shirase, Hire. Our Grand Live",
-          "start": "2026-07-23",
-          "end": "2026-07-23",
-          "version": "",
-          "tentative": true,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "scenario release",
-          "image": "https://uma.moe/assets/timeline-images/events/training-scenario/905.webp",
-          "link": "https://umapyoi.net/news/905?lang=jp"
-        },
-        {
-          "type": "event",
-          "title": "The new Career scenario \"Brighter Together! Our Grand Concert\" is here!",
-          "start": "2026-07-23",
-          "end": "2026-07-23",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "scenario release",
-          "image": "https://uma.moe/assets/timeline-images/events/training-scenario/905.webp",
-          "link": "https://umapyoi.net/en/news/905"
         },
         {
           "type": "event",
@@ -13455,16 +13382,6 @@
           "version": "S7",
           "tentative": true,
           "source": "limbuscompany.wiki.gg"
-        },
-        {
-          "type": "event",
-          "title": "The Fixer at Dawnbreak",
-          "start": "2026-07-09",
-          "end": "2026-07-23",
-          "version": "",
-          "tentative": false,
-          "source": "limbuscompany.wiki.gg",
-          "_auto": true
         },
         {
           "type": "event",
