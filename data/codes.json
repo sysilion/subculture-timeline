@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-21",
+    "lastUpdated": "2026-10-22",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -8,8 +8,8 @@
       "codes": [
         {
           "code": "OKTCV81F9H8D",
-          "reward": "",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "1만 모라, 모험가의 경험 10개, 정제용 광물 5개, 생선 볶음면 5개, 절운고추 치킨 5개",
+          "source": "arca.live",
           "added": "2026-10-15",
           "_auto": true
         },
@@ -22,8 +22,8 @@
         },
         {
           "code": "6LS3F3LS5K87",
-          "reward": "Primogem ×20 · Geode of Replication ×160",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "원석 x20, 구현의 수정x160",
+          "source": "arca.live",
           "added": "2026-10-03",
           "_auto": true
         },
@@ -36,43 +36,43 @@
         },
         {
           "code": "OPERACOLLAB",
-          "reward": "Primogem ×30 · Mora ×20000 · Hero's Wit ×2",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "원석 x30, 2만 모라, 영웅의 경험 x2, 정제용 마법광물 x5,",
+          "source": "arca.live",
           "added": "2026-09-30",
           "_auto": true
         },
         {
           "code": "PNKZ3WLNN8G6",
-          "reward": "Teachings of Charity ×5 · Teachings of Fortitude ×5 · Teachings of Glory ×5",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "자애, 인내, 영광의 가르침(2성)",
+          "source": "arca.live",
           "added": "2026-09-26",
           "_auto": true
         },
         {
           "code": "DATG5HG1PL89",
-          "reward": "Mora ×10000 · Adventurer's Experience ×10 · Fine Enhancement Ore ×5 · Stir-Fried Fish Noodles ×5 · Jueyun Chili Chicken ×5",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "3만 모라, 모험가의 경험 10개, 정제용 광물 5개, 생선 볶음면 5개, 절운고추 치킨 5개",
+          "source": "arca.live",
           "added": "2026-09-25",
           "_auto": true
         },
         {
           "code": "VESNAONPATROL",
-          "reward": "Primogem ×40 · Mora ×20000 · Hero's Wit ×3",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "원석 x40, 2만 모라, 영웅의 경험 x3",
+          "source": "arca.live",
           "added": "2026-09-24",
           "_auto": true
         },
         {
           "code": "EPIC2026",
-          "reward": "40 primogems, five hero's wit, and 20k mora",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "원석 x60, 2만 모라, 영웅의 경험 x5",
+          "source": "arca.live",
           "added": "2026-09-24",
           "_auto": true
         },
         {
           "code": "Y6JYMKV6JKSL",
-          "reward": "Primogem ×60 · Adventurer's Experience ×5",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "원석 x60, 모험가의 경험 x5",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
@@ -88,6 +88,20 @@
     },
     "starrail": {
       "codes": [
+        {
+          "code": "SSK9MC6HJWC7",
+          "reward": "성옥*30",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true
+        },
+        {
+          "code": "DSLSPNBREASP",
+          "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-10-22",
+          "_auto": true
+        },
         {
           "code": "RT4BPNA8FBS3",
           "reward": "50 stellar jade and 10k credits",
@@ -111,8 +125,8 @@
         },
         {
           "code": "STARRAILGIFT",
-          "reward": "50 stellar jade, 10k credits, two traveler’s guides, and five bottled soda",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "성옥*50 +ɑ",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
@@ -125,15 +139,15 @@
         },
         {
           "code": "IFYOUAREREADINGTHIS",
-          "reward": "60 stellar jade and one fuel",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "성옥*60 연료*1",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
         {
           "code": "FAREWELL",
-          "reward": "60 stellar jade and one fuel",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "성옥*60 연료*1",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
@@ -177,28 +191,28 @@
         {
           "code": "ZZZVOID32",
           "reward": "20 polychrome and 2,222 denny",
-          "source": "pockettactics.com",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
         {
           "code": "ZZZINK32",
           "reward": "20 polychrome and 2,222 denny",
-          "source": "pockettactics.com",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
         {
           "code": "ZZZGRIND32",
           "reward": "20 polychrome and 2,222 denny",
-          "source": "pockettactics.com",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
         {
           "code": "ZENLESSGIFT",
-          "reward": "50 polychrome, two official investigator logs, three w-engine power supplies, and one bangboo algorithm module",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "폴리크롬*50",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         }
@@ -314,6 +328,42 @@
     "mongil": {
       "codes": [
         {
+          "code": "PLAYMONGIL",
+          "reward": "몬스터링 1종 (슬라링)",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true
+        },
+        {
+          "code": "PLAY",
+          "reward": "몬스터링 1종 (왕소라뇽)",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true
+        },
+        {
+          "code": "LETS",
+          "reward": "몬스터링 1종 (고블린 훈련병)",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true
+        },
+        {
+          "code": "JOINMONGIL",
+          "reward": "몬스터링 1종 (도라뿅)",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true
+        },
+        {
+          "code": "HAPPYHALF1014",
+          "reward": "운명의 나침반 * 3 기억의 나침반 * 3 약속의 나침반 * 3 특별한 황금빛 승급의 돌 * 1",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true,
+          "expires": "2026-11-11"
+        },
+        {
           "code": "REGINULAUPDATE",
           "reward": "ten premium salmon puree, one purple upgrade stone, and three compasses of promise",
           "source": "pockettactics.com",
@@ -329,8 +379,8 @@
         },
         {
           "code": "MONGILREPORT",
-          "reward": "one White Wolf Warrior monsterling",
-          "source": "pockettactics.com",
+          "reward": "몬스터링 1종 (하얀 늑대)",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
@@ -343,8 +393,8 @@
         },
         {
           "code": "MONGILDISCORD",
-          "reward": "30 diamonds, three glimmering stardust, and 300k gold",
-          "source": "pockettactics.com",
+          "reward": "별빛 수정 * 30 은은한 별빛 가루 * 3 골드 * 300,000",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
@@ -357,8 +407,8 @@
         },
         {
           "code": "LOVEMONGIL",
-          "reward": "one Overflowing Love artifact",
-          "source": "pockettactics.com",
+          "reward": "아티팩트:넘쳐흐르는 사랑",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
@@ -426,6 +476,13 @@
     },
     "nikke": {
       "codes": [
+        {
+          "code": "NIKKEGIFT",
+          "reward": "",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true
+        },
         {
           "code": "thxfor990000",
           "reward": "one-hour growth box",
@@ -702,7 +759,7 @@
         {
           "code": "NIKKE1104",
           "reward": "credit 2h",
-          "source": "pockettactics.com",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         },
@@ -904,6 +961,41 @@
         }
       ]
     },
+    "trickcal": {
+      "codes": [
+        {
+          "code": "TRICKCALCOM",
+          "reward": "시온 포스터, 사도 모집 티켓 10개",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true
+        },
+        {
+          "code": "SILVERBOL",
+          "reward": "실비아 확정 모집권 1개",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true,
+          "expires": "2026-10-22"
+        },
+        {
+          "code": "GOOGLETOP3",
+          "reward": "교주의 빛무리 선택권 1개, 참! 잘했어요 333개",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true,
+          "expires": "2026-10-22"
+        },
+        {
+          "code": "3RDBOLTHDAY",
+          "reward": "엘리프 927개, 영원살이 일곱자매 선택권 1개",
+          "source": "arca.live",
+          "added": "2026-10-22",
+          "_auto": true,
+          "expires": "2026-10-22"
+        }
+      ]
+    },
     "aniimo": {
       "codes": [
         {
@@ -1006,15 +1098,16 @@
         },
         {
           "code": "Aniimo2026",
-          "reward": "a SUSUTA egg special prize, two aniipod ultra, and 200 glimmer",
-          "source": "pockettactics.com",
+          "reward": "휘석 20",
+          "source": "arca.live",
           "added": "",
-          "_auto": true
+          "_auto": true,
+          "expires": "2026-12-31"
         },
         {
           "code": "ANIIMOGIFT",
-          "reward": "ten glimmer, 20k credits, ten growth flowers, and five aniipod pro",
-          "source": "pockettactics.com",
+          "reward": "휘석 10, 2만 크래딧, 성장의 꽃 10,슈퍼 애니팟 5",
+          "source": "arca.live",
           "added": "",
           "_auto": true
         }

@@ -16,7 +16,7 @@ GAMES_FILE = ROOT / "data" / "games.json"
 CODES_FILE = ROOT / "data" / "codes.json"
 
 sys.path.insert(0, str(Path(__file__).parent))
-from parsers.codes import hoyo, pockettactics as pt
+from parsers.codes import arca, hoyo, pockettactics as pt
 
 # 웹 교환 페이지가 있는 게임만 링크를 둔다. 나머지는 게임 안에서만 입력할 수 있다.
 REDEEM_URLS = {
@@ -26,21 +26,24 @@ REDEEM_URLS = {
 }
 
 # 게임별 수집기 (소스 이름, 파서). 앞에 둔 소스의 보상 문구가 우선한다.
+# 아카라이브 공지는 보상이 한국어이고 기한이 적혀 있어 맨 앞에 둔다.
+ARCA = (arca.SOURCE, arca.parse)
 HOYO = (hoyo.SOURCE, hoyo.parse)
 PT   = (pt.SOURCE, pt.parse)
 
 COLLECTORS = {
-    "genshin":     [HOYO, PT],
-    "starrail":    [HOYO, PT],
-    "zzz":         [HOYO, PT],
+    "genshin":     [ARCA, HOYO, PT],
+    "starrail":    [ARCA, HOYO, PT],
+    "zzz":         [ARCA, HOYO, PT],
     "wuwa":        [PT],
-    "nikke":       [PT],
+    "nikke":       [ARCA, PT],
     "bluearchive": [PT],
     "umamusume":   [PT],
     "endfield":    [PT],
     "nte":         [PT],
-    "aniimo":      [PT],
-    "mongil":      [PT],
+    "aniimo":      [ARCA, PT],
+    "mongil":      [ARCA, PT],
+    "trickcal":    [ARCA],
 }
 
 # pockettactics.com이 데이터센터 IP를 막을 경우를 대비해 프록시 유무를 기록해 둔다.
@@ -76,10 +79,11 @@ def collect(game_id: str) -> tuple[list[dict], set[str]]:
         answered.add(source)
         for item in got:
             key = item["code"].upper()
-            # 먼저 들어온 소스를 신뢰한다. 보상이 비어 있을 때만 뒷 소스로 채운다.
+            # 먼저 들어온 소스를 신뢰한다. 보상·기한이 비어 있을 때만 뒷 소스로 채운다.
             if key in merged:
-                if not merged[key].get("reward") and item.get("reward"):
-                    merged[key]["reward"] = item["reward"]
+                for field in ("reward", "expires"):
+                    if not merged[key].get(field) and item.get(field):
+                        merged[key][field] = item[field]
                 continue
             merged[key] = dict(item)
 
@@ -89,31 +93,42 @@ def collect(game_id: str) -> tuple[list[dict], set[str]]:
 def merge(existing: list, fresh: list, today: str, answered: set[str]) -> list[dict]:
     """
     기존 목록과 새로 수집한 목록을 합친다.
-    - 손으로 넣은(_auto 없는) 코드는 소스에서 사라져도 남긴다
-    - 이미 알던 코드는 처음 본 날짜(added)를 유지한다
-    - 응답한 소스에서 빠진 자동 코드는 만료된 것으로 보고 지운다
+    - 기한(expires)이 지난 코드는 출처와 상관없이 지운다
+    - 기한이 있는 코드는 소스에서 사라져도 기한까지 남긴다
+    - 기한이 없는 코드는 응답한 소스에서 빠지면 만료된 것으로 보고 지운다 (손으로 넣은 것도 같다)
+    - 출처(source)가 없는 손 입력 코드는 판단할 소스가 없으므로 남긴다
+    - 이미 알던 코드는 처음 본 날짜(added)와 기한을 유지한다
     - 이번에 응답하지 않은 소스의 코드는 판단할 근거가 없으므로 그대로 둔다
       (소스 한 곳이 잠깐 죽었다고 그쪽 코드가 통째로 사라지면 안 된다)
     """
+    # 기한 판정 기준일. 첫 수집(today="")이어도 기한은 실제 날짜로 비교한다.
+    now = today or str(date.today())
+    alive = lambda c: not c.get("expires") or c["expires"] >= now
+
     known = {c.get("code", "").upper(): c for c in existing}
     out: list[dict] = []
 
     for item in fresh:
         key = item["code"].upper()
-        prev = known.get(key)
-        out.append({
+        prev = known.get(key) or {}
+        entry = {
             "code":   item["code"],
-            "reward": item.get("reward", ""),
+            "reward": item.get("reward", "") or prev.get("reward", ""),
             "source": item.get("source", ""),
-            "added":  (prev or {}).get("added", today),
+            "added":  prev.get("added", today),
             "_auto":  True,
-        })
+        }
+        expires = item.get("expires") or prev.get("expires", "")
+        if expires:
+            entry["expires"] = expires
+        if alive(entry):
+            out.append(entry)
 
-    seen = {c["code"].upper() for c in out}
+    seen = {c["code"].upper() for c in fresh}
     for c in existing:
-        if c.get("code", "").upper() in seen:
+        if c.get("code", "").upper() in seen or not alive(c):
             continue
-        if not c.get("_auto") or c.get("source") not in answered:
+        if c.get("expires") or not c.get("source") or c.get("source") not in answered:
             out.append(c)
 
     # 최근에 추가된 코드가 위로 온다

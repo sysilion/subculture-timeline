@@ -1620,6 +1620,7 @@ html, body {
   color: var(--text-muted);
   line-height: 1.4;
 }
+.code-until { color: var(--text-dim); white-space: nowrap; }
 .code-new {
   font-size: 9px;
   font-weight: 700;

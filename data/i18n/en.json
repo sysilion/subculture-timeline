@@ -67,6 +67,7 @@
   "codesInGame": "In-game only",
   "codesCountFmt": "{n}",
   "codesNew": "NEW",
+  "codesUntil": "until {d}",
   "codesEmpty": "No redeem codes collected.",
   "codesNote": "Some codes may not work depending on region or account. Rewards are quoted from the source."
 }

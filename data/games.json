@@ -13,6 +13,7 @@
       "icon": "🌸",
       "developer": "HoYoverse",
       "enabled": true,
+      "resetHour": 5,
       "entries": [
         {
           "type": "version",
@@ -1071,6 +1072,7 @@
       "icon": "⭐",
       "developer": "HoYoverse",
       "enabled": true,
+      "resetHour": 5,
       "entries": [
         {
           "type": "version",
@@ -1708,6 +1710,7 @@
       "icon": "🌊",
       "developer": "Kuro Games",
       "enabled": true,
+      "resetHour": 5,
       "entries": [
         {
           "type": "version",
@@ -2678,6 +2681,7 @@
       "icon": "⚡",
       "developer": "HoYoverse",
       "enabled": true,
+      "resetHour": 5,
       "entries": [
         {
           "type": "version",
@@ -3399,6 +3403,7 @@
       "icon": "🔴",
       "developer": "Hypergryph",
       "enabled": true,
+      "resetHour": 5,
       "entries": [
         {
           "type": "version",
@@ -4184,6 +4189,7 @@
       "icon": "🃏",
       "developer": "Infold Games",
       "enabled": true,
+      "resetHour": 5,
       "entries": [
         {
           "type": "version",
@@ -5016,6 +5022,7 @@
       "icon": "🐾",
       "developer": "Netmarble",
       "enabled": true,
+      "resetHour": 9,
       "entries": [
         {
           "type": "version",
@@ -5269,6 +5276,7 @@
       "icon": "📘",
       "developer": "Nexon Games / Yostar",
       "enabled": true,
+      "resetHour": 4,
       "entries": [
         {
           "type": "banner",
@@ -5725,6 +5733,7 @@
       "icon": "🎯",
       "developer": "Shift Up / Level Infinite",
       "enabled": true,
+      "resetHour": 5,
       "entries": [
         {
           "type": "banner",
@@ -6028,6 +6037,7 @@
       "icon": "🏇",
       "developer": "Cygames / Kakao Games",
       "enabled": true,
+      "resetHour": 5,
       "entries": [
         {
           "type": "banner",
@@ -13427,6 +13437,7 @@
       "icon": "🔥",
       "developer": "Project Moon",
       "enabled": true,
+      "resetHour": 6,
       "entries": [
         {
           "type": "version",
@@ -13477,6 +13488,7 @@
       "icon": "✨",
       "developer": "Epidgames",
       "enabled": true,
+      "resetHour": 4,
       "entries": [
         {
           "type": "banner",
@@ -13515,6 +13527,7 @@
       "developer": "Pawprint Studio",
       "enabled": true,
       "iconUrl": "https://www.aniimo.com/favicon.ico",
+      "resetHour": 5,
       "entries": [
         {
           "type": "version",

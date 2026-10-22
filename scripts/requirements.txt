@@ -1,3 +1,4 @@
 requests[socks]>=2.31   # socks5h:// 프록시 지원(PySocks)
 beautifulsoup4>=4.12
 lxml>=5.0
+curl_cffi>=0.7       # arca.live(Cloudflare) 통과용 브라우저 TLS 지문

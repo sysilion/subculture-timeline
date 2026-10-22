@@ -104,6 +104,17 @@ const Timeline = (() => {
     },
   };
 
+  /* ── 게임별 '오늘' ── */
+  // 일정 날짜는 KST 날짜만 담는다. 게임은 저마다 일일 초기화 시각(resetHour, KST 시)에
+  // 하루가 넘어가므로, 초기화 전 새벽은 아직 전날로 본다 (원신 05시 → 04:59까지는 어제).
+  // resetHour가 없는 게임과 눈금·오늘선은 KST 자정 기준이다.
+  const KST_OFFSET_H = 9;
+  function gameToday(game) {
+    const h = game && Number.isFinite(game.resetHour) ? game.resetHour : 0;
+    const k = new Date(Date.now() + (KST_OFFSET_H - h) * 3600000);
+    return new Date(k.getUTCFullYear(), k.getUTCMonth(), k.getUTCDate());
+  }
+
   /* ── 날짜 → X픽셀 (ruler-dates 기준) ── */
   function dateToX(date) {
     const diff = D.diffDays(startDate, date);
@@ -141,9 +152,8 @@ const Timeline = (() => {
 
     applyResponsiveMetrics();
 
-    // 오늘 날짜 (시간 제거)
-    today = new Date();
-    today.setHours(0, 0, 0, 0);
+    // 오늘 날짜 (KST 자정 기준). 게임별 판정은 gameToday(game)을 쓴다.
+    today = gameToday(null);
 
     // 표시 범위
     startDate = D.addDays(today, -CFG.pastDays);
@@ -818,7 +828,7 @@ function buildBar(entry, game) {
   bar.className = `entry-bar type-${entry.type}`;
   if (entry.tentative) bar.classList.add('tentative');
   // 지난 일정은 흐리게 — 진행 중인 일정이 먼저 눈에 들어와야 한다
-  if (D.parse(entry.end) < today) bar.classList.add('is-ended');
+  if (D.parse(entry.end) < gameToday(game)) bar.classList.add('is-ended');
 
   bar.style.left  = x + 'px';
   bar.style.width = w + 'px';
@@ -1005,7 +1015,7 @@ function buildBar(entry, game) {
       const end   = D.parse(entry.end);
       const dur   = D.diffDays(start, end);
 
-      const status = entryStatus(start, end);
+      const status = entryStatus(start, end, game);
       const icon = status.cls === 'status-ended' ? '⏹' : status.cls === 'status-upcoming' ? '🔜' : '▶';
       const statusText = `<div class="tooltip-duration"${status.cls === 'status-active' ? ' style="color:#66bb6a"' : ''}>${icon} ${esc(status.label)}</div>`;
 
@@ -1148,7 +1158,7 @@ function openDetail(game) {
     const end = D.parse(entry.end);
     const dur = D.diffDays(start, end);
 
-    const status = entryStatus(start, end);
+    const status = entryStatus(start, end, game);
 
     // 타입 구분선
     if (entry.type !== lastType) {
@@ -1182,7 +1192,7 @@ function openDetail(game) {
     `;
     content.appendChild(item);
 
-    if (!firstCurrent && end >= today) firstCurrent = item;
+    if (!firstCurrent && end >= gameToday(game)) firstCurrent = item;
   });
 
   // 시작일 오름차순이라 과거 항목이 위에 쌓인다.
@@ -1219,7 +1229,7 @@ function openEntryModal(game, entry) {
 
   const start = D.parse(entry.start);
   const end   = D.parse(entry.end);
-  const status = entryStatus(start, end);
+  const status = entryStatus(start, end, game);
   const typeLabel = entry.type === 'banner'
     ? t('legendBanner', '뽑기 배너') : t('legendEvent', '이벤트');
 
@@ -1493,9 +1503,10 @@ function setupDetailPanel() {
   }
 
   /* ── 엔트리 상태 계산 ── */
-  function entryStatus(start, end) {
-    const endDiff = D.diffDays(today, end);
-    const startDiff = D.diffDays(today, start);
+  function entryStatus(start, end, game) {
+    const now = gameToday(game);
+    const endDiff = D.diffDays(now, end);
+    const startDiff = D.diffDays(now, start);
     if (endDiff < 0) {
       return { cls: 'status-ended',
         label: t('statusEndedFmt', '종료 ({n}일 전)').replace('{n}', Math.abs(endDiff)) };
@@ -1563,11 +1574,11 @@ function setupDetailPanel() {
 
     const groups = [
       { key: 'ongoing',  title: t('listOngoing', '진행중'),
-        items: items.filter(it => it.s <= today && it.e >= today).sort((a, b) => a.e - b.e) },
+        items: items.filter(it => it.s <= gameToday(it.game) && it.e >= gameToday(it.game)).sort((a, b) => a.e - b.e) },
       { key: 'upcoming', title: t('listUpcoming', '예정'),
-        items: items.filter(it => it.s > today).sort((a, b) => a.s - b.s) },
+        items: items.filter(it => it.s > gameToday(it.game)).sort((a, b) => a.s - b.s) },
       { key: 'ended',    title: t('listEnded', '종료'),
-        items: items.filter(it => it.e < today).sort((a, b) => b.e - a.e) },
+        items: items.filter(it => it.e < gameToday(it.game)).sort((a, b) => b.e - a.e) },
     ];
 
     groups.forEach(group => {
@@ -1604,7 +1615,7 @@ function setupDetailPanel() {
   /* ── 리스트 항목 한 줄 ── */
   function buildListEntry(game, entry, s, e) {
     const dur = D.diffDays(s, e);
-    const status = entryStatus(s, e);
+    const status = entryStatus(s, e, game);
 
     const iconHtml = game.iconUrl
       ? `<img class="chip-icon-img" src="${esc(game.iconUrl)}" alt="" onerror="this.style.display='none'">`
@@ -1648,7 +1659,7 @@ function setupDetailPanel() {
 
   function renderDeadlineGroups(container, items) {
     const live = items
-      .filter(it => it.e >= today)
+      .filter(it => it.e >= gameToday(it.game))
       .sort((a, b) => (a.e - b.e) || (a.s - b.s));
 
     if (live.length === 0) {
@@ -1666,7 +1677,8 @@ function setupDetailPanel() {
       const key = e.getTime();
       if (key !== lastKey) {
         lastKey = key;
-        const n = D.diffDays(today, e);
+        // 같은 종료일 묶음은 첫 항목 게임의 하루 기준으로 D-day를 센다
+        const n = D.diffDays(gameToday(game), e);
         const when = n === 0 ? t('deadlineToday', '오늘 종료')
           : n === 1 ? t('deadlineTomorrow', '내일 종료')
           : `D-${n}`;
@@ -1730,7 +1742,7 @@ function setupDetailPanel() {
       if (!activeIds.has(game.id)) return;
       visibleEntries(game).forEach(entry => {
         const end = D.parse(entry.end);
-        if (end < today) return; // 종료된 일정은 제외
+        if (end < gameToday(game)) return; // 종료된 일정은 제외
         const start = D.parse(entry.start);
         const gName = gameName(game);
         const descParts = [];
@@ -1842,7 +1854,9 @@ function setupDetailPanel() {
         <span class="code-text">${esc(item.code)}</span>
         <span class="code-copy-icon" aria-hidden="true">⧉</span>
       </button>
-      <div class="code-reward"${meta ? ` title="${esc(meta)}"` : ''}>${esc(item.reward || '')}</div>
+      <div class="code-reward"${meta ? ` title="${esc(meta)}"` : ''}>${esc(item.reward || '')}${item.expires
+        ? ` <span class="code-until">${esc(t('codesUntil', '~{d}까지').replace('{d}', item.expires.slice(5).replace('-', '/')))}</span>`
+        : ''}</div>
       ${isNewCode(item) ? `<span class="code-new">${esc(t('codesNew', 'NEW'))}</span>` : ''}
     `;
     return row;
