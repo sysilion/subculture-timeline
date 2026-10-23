@@ -73,7 +73,7 @@ jobs:
         if: |
           steps.tskey.outputs.kind == 'oauth' || steps.tskey.outputs.kind == 'authkey'
         continue-on-error: true
-        uses: tailscale/github-action@v4
+        uses: tailscale/github-action@d1b6cd204f8dceda5b3eaad7f1f767be390056cd # v4.2.0
         with:
           oauth-secret: ${{ steps.tskey.outputs.kind == 'oauth' && secrets.TS_OAUTH_SECRET || '' }}
           authkey: ${{ steps.tskey.outputs.kind == 'oauth' && '' || secrets.TS_OAUTH_SECRET }}
@@ -98,7 +98,7 @@ jobs:
 
       - name: Commit if changed
         id: auto-commit
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5.2.0
         with:
           commit_message: "chore: auto-update banner/event schedule and redeem codes"
           file_pattern: "data/games.json data/codes.json"
@@ -116,15 +116,20 @@ jobs:
       # 커밋·배포 뒤에 두어, 정상 파서의 결과는 반영하면서 실패만 드러낸다.
       - name: Fail if any parser returned nothing
         if: steps.update.outputs.failed_count != '0'
+        env:
+          FAILED_COUNT: ${{ steps.update.outputs.failed_count }}
+          FAILED: ${{ steps.update.outputs.failed }}
         run: |
-          echo "::error::파싱 실패/무수확 ${{ steps.update.outputs.failed_count }}개: ${{ steps.update.outputs.failed }}"
+          echo "::error::파싱 실패/무수확 ${FAILED_COUNT}개: ${FAILED}"
           exit 1
 
       # 코드 소스가 전부 죽으면 기존 목록이 그대로 남는다. 조용히 굳지 않게 알린다.
       - name: Warn if any code source returned nothing
         if: steps.codes.outputs.codes_failed_count != '' && steps.codes.outputs.codes_failed_count != '0'
+        env:
+          CODES_FAILED: ${{ steps.codes.outputs.codes_failed }}
         run: |
-          echo "::warning::리딤 코드 소스 응답 없음: ${{ steps.codes.outputs.codes_failed }}"
+          echo "::warning::리딤 코드 소스 응답 없음: ${CODES_FAILED}"
 
       # 프록시를 쓰도록 설정했는데 tailnet에 붙지 못한 경우를 눈에 띄게 남긴다.
       # 데이터는 이미 갱신된 뒤이므로 경고로만 알린다.
