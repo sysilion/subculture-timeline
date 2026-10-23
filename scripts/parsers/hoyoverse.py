@@ -1,6 +1,7 @@
 """HoYoverse 파서 — api.ennead.cc 비공식 API (원신·스타레일·ZZZ)"""
-import requests
+import json
 from datetime import date, datetime, timezone, timedelta
+from .base import fetch, proxies
 
 BASE = "https://api.ennead.cc/mihoyo"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
@@ -46,13 +47,16 @@ def parse(game_id: str) -> list[dict]:
     entries: list[dict] = []
 
     # calendar 엔드포인트 (배너+이벤트)
-    try:
-        r = requests.get(f"{BASE}/{slug}/calendar", headers=HDR, timeout=15, params={"lang": "ko"})
-        r.raise_for_status()
-        data = r.json()
-    except Exception as e:
-        print(f"  [{game_id}] calendar fetch 실패: {e}")
-        data = {}
+    # ennead.cc는 가끔 응답이 멈춘다. 직접 재시도 후, SYNC_PROXY가 있으면 그 출구로 한 번 더.
+    url = f"{BASE}/{slug}/calendar?lang=ko"
+    data = {}
+    for use_proxy in ([False, True] if proxies() else [False]):
+        try:
+            data = json.loads(fetch(url, timeout=30, headers=HDR, use_proxy=use_proxy))
+            break
+        except Exception as e:
+            via = "proxy" if use_proxy else "direct"
+            print(f"  [{game_id}] calendar fetch 실패({via}): {e}")
 
     # ── 배너 ──
     for b in data.get("banners", []):
