@@ -1,11 +1,39 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-23",
+    "lastUpdated": "2026-10-24",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
+        {
+          "code": "PJ2KEBRAYSRM",
+          "reward": "원석 x60, 모험가의 경험 x5",
+          "source": "arca.live",
+          "added": "2026-10-24",
+          "_auto": true
+        },
+        {
+          "code": "PHOTOTIME",
+          "reward": "Primogem ×100 · Mora ×50000",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-10-24",
+          "_auto": true
+        },
+        {
+          "code": "HOUROFRUIN",
+          "reward": "Primogem ×100 · Mystic Enhancement Ore ×10",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-10-24",
+          "_auto": true
+        },
+        {
+          "code": "EXPERTMITYA",
+          "reward": "Primogem ×100 · Hero's Wit ×5",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-10-24",
+          "_auto": true
+        },
         {
           "code": "OKTCV81F9H8D",
           "reward": "1만 모라, 모험가의 경험 10개, 정제용 광물 5개, 생선 볶음면 5개, 절운고추 치킨 5개",
@@ -56,13 +84,6 @@
           "_auto": true
         },
         {
-          "code": "VESNAONPATROL",
-          "reward": "원석 x40, 2만 모라, 영웅의 경험 x3",
-          "source": "arca.live",
-          "added": "2026-09-24",
-          "_auto": true
-        },
-        {
           "code": "EPIC2026",
           "reward": "원석 x60, 2만 모라, 영웅의 경험 x5",
           "source": "arca.live",
@@ -73,13 +94,6 @@
           "code": "Y6JYMKV6JKSL",
           "reward": "원석 x60, 모험가의 경험 x5",
           "source": "arca.live",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "GENSHINGIFT",
-          "reward": "50 primogems and three hero's wit (this code works periodically)",
-          "source": "pockettactics.com",
           "added": "",
           "_auto": true
         }
@@ -190,15 +204,15 @@
       "codes": [
         {
           "code": "SUNBRINGER",
-          "reward": "",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "Polychrome ×30",
+          "source": "arca.live",
           "added": "2026-10-23",
           "_auto": true
         },
         {
           "code": "HOLLOWRUN33",
-          "reward": "",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "Polychrome ×20 · Denny ×2,222",
+          "source": "arca.live",
           "added": "2026-10-23",
           "_auto": true
         },

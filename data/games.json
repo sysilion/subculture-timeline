@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-23",
+    "lastUpdated": "2026-10-24",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-23"
+    "autoUpdated": "2026-10-24"
   },
   "games": [
     {
@@ -6171,21 +6171,6 @@
           "end": "2026-07-31",
           "tentative": true,
           "source": "gamerant.com"
-        },
-        {
-          "type": "banner",
-          "title": "Copano Rickey",
-          "start": "2026-07-17",
-          "end": "2026-07-25",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/character/banner/2022_30108.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30108",
-          "description": "픽업: Copano Rickey",
-          "rarity": 3
         },
         {
           "type": "banner",
