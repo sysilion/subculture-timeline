@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-24",
+    "lastUpdated": "2026-10-25",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-24"
+    "autoUpdated": "2026-10-25"
   },
   "games": [
     {
@@ -487,16 +487,6 @@
           "title": "연월 나선",
           "start": "2026-07-15",
           "end": "2026-08-15",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "티바트 저격왕",
-          "start": "2026-07-17",
-          "end": "2026-07-26",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -4536,6 +4526,32 @@
           "rarity": 5
         },
         {
+          "type": "banner",
+          "title": "Dazzling Star: Akane Rin Banner",
+          "start": "2026-10-21",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/drip-marketing/drip-akane.webp",
+          "description": "Akane Rin headlines the second half of Version 1.4: a Lakshana Main DPS whose Rhythm Wave relays her Basic Attacks through Overtone or a Reverb Field. Her signature arc is Far Side of the Moon.",
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Celestial Special: Arc Banner",
+          "start": "2026-10-21",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "description": "The Arc Research Program of Version 1.4's second half, running alongside Akane Rin's Dazzling Star board from October 21 to November 11.",
+          "rarity": 5
+        },
+        {
           "type": "event",
           "title": "Nocturne Special",
           "subtitle": "야상곡 스페셜 이벤트",
@@ -4952,7 +4968,7 @@
           "source": "ntebuild.com",
           "_auto": true,
           "image": "https://www.ntebuild.com/images/events/pukaland_travelogue.webp",
-          "description": "Version 1.4's headline event, built around the newly opened Pukaland theme park — collect Wonder Stamps around the park for the length of the version."
+          "description": "Version 1.4's headline event, built around the newly opened Pukaland theme park: collect Wonder Stamps around the park for the length of the version."
         },
         {
           "type": "event",
@@ -5060,7 +5076,7 @@
           "source": "ntebuild.com",
           "_auto": true,
           "image": "https://www.ntebuild.com/images/events/snap_golden_crackshot.webp",
-          "description": "Confirmed on the official Version 1.4 event list. Our reading of the Preview Special Program pairs it with the new 1v1 shooting mode shown there — one player aims while the other breaks line of sight — though Hotta never matched the two by name."
+          "description": "Confirmed on the official Version 1.4 event list. Our reading of the Preview Special Program pairs it with the new 1v1 shooting mode shown there (one player aims while the other breaks line of sight), though Hotta never matched the two by name."
         },
         {
           "type": "event",
@@ -5108,7 +5124,7 @@
           "source": "ntebuild.com",
           "_auto": true,
           "image": "https://www.ntebuild.com/images/events/puka_lucky_flip.webp",
-          "description": "A Pukaland-themed card-flip minigame for Version 1.4 — Daily Quests earn flips, the same format Warren Lucky Flip used in Version 1.2."
+          "description": "A Pukaland-themed card-flip minigame for Version 1.4. Daily Quests earn flips, the same format Warren Lucky Flip used in Version 1.2."
         },
         {
           "type": "event",
@@ -6145,16 +6161,6 @@
           "end": "2026-07-17",
           "tentative": true,
           "source": "gamerant.com"
-        },
-        {
-          "type": "banner",
-          "title": "Seiun Sky (Wit SR)",
-          "start": "2026-07-16",
-          "end": "2026-07-26",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
         },
         {
           "type": "banner",

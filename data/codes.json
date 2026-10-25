@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-24",
+    "lastUpdated": "2026-10-25",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -505,8 +505,43 @@
     "nikke": {
       "codes": [
         {
-          "code": "NIKKEGIFT",
+          "code": "TOTHEFRONTLINE",
           "reward": "",
+          "source": "arca.live",
+          "added": "2026-10-25",
+          "_auto": true
+        },
+        {
+          "code": "RECLAIMTHESURFACE",
+          "reward": "",
+          "source": "arca.live",
+          "added": "2026-10-25",
+          "_auto": true
+        },
+        {
+          "code": "NIKKE4EVER",
+          "reward": "",
+          "source": "arca.live",
+          "added": "2026-10-25",
+          "_auto": true
+        },
+        {
+          "code": "GODDESSMARCHON",
+          "reward": "",
+          "source": "arca.live",
+          "added": "2026-10-25",
+          "_auto": true
+        },
+        {
+          "code": "FORGETMENOT",
+          "reward": "",
+          "source": "arca.live",
+          "added": "2026-10-25",
+          "_auto": true
+        },
+        {
+          "code": "NIKKEGIFT",
+          "reward": "4주년 쿠폰",
           "source": "arca.live",
           "added": "2026-10-22",
           "_auto": true
