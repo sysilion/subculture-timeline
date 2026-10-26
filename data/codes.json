@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-25",
+    "lastUpdated": "2026-10-26",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -203,15 +203,29 @@
     "zzz": {
       "codes": [
         {
+          "code": "LEVELUP33",
+          "reward": "폴리크롬*20",
+          "source": "arca.live",
+          "added": "2026-10-26",
+          "_auto": true
+        },
+        {
+          "code": "INKSHIFT33",
+          "reward": "폴리크롬*20",
+          "source": "arca.live",
+          "added": "2026-10-26",
+          "_auto": true
+        },
+        {
           "code": "SUNBRINGER",
-          "reward": "Polychrome ×30",
+          "reward": "폴리크롬*30",
           "source": "arca.live",
           "added": "2026-10-23",
           "_auto": true
         },
         {
           "code": "HOLLOWRUN33",
-          "reward": "Polychrome ×20 · Denny ×2,222",
+          "reward": "폴리크롬*20",
           "source": "arca.live",
           "added": "2026-10-23",
           "_auto": true
