@@ -1,11 +1,18 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-26",
+    "lastUpdated": "2026-10-27",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
+        {
+          "code": "PhotoTime",
+          "reward": "100 primogems and 50k mora",
+          "source": "pockettactics.com",
+          "added": "2026-10-24",
+          "_auto": true
+        },
         {
           "code": "PJ2KEBRAYSRM",
           "reward": "원석 x60, 모험가의 경험 x5",
@@ -14,23 +21,16 @@
           "_auto": true
         },
         {
-          "code": "PHOTOTIME",
-          "reward": "Primogem ×100 · Mora ×50000",
-          "source": "hoyo-codes.seria.moe",
+          "code": "HourofRuin",
+          "reward": "100 primogems and ten mystic enhancement ore",
+          "source": "pockettactics.com",
           "added": "2026-10-24",
           "_auto": true
         },
         {
-          "code": "HOUROFRUIN",
-          "reward": "Primogem ×100 · Mystic Enhancement Ore ×10",
-          "source": "hoyo-codes.seria.moe",
-          "added": "2026-10-24",
-          "_auto": true
-        },
-        {
-          "code": "EXPERTMITYA",
-          "reward": "Primogem ×100 · Hero's Wit ×5",
-          "source": "hoyo-codes.seria.moe",
+          "code": "ExpertMitya",
+          "reward": "100 primogems and five hero's wit",
+          "source": "pockettactics.com",
           "added": "2026-10-24",
           "_auto": true
         },
@@ -111,16 +111,9 @@
         },
         {
           "code": "DSLSPNBREASP",
-          "reward": "",
+          "reward": "50 stellar jade and 10k credits",
           "source": "hoyo-codes.seria.moe",
           "added": "2026-10-22",
-          "_auto": true
-        },
-        {
-          "code": "RT4BPNA8FBS3",
-          "reward": "50 stellar jade and 10k credits",
-          "source": "pockettactics.com",
-          "added": "2026-10-01",
           "_auto": true
         },
         {
