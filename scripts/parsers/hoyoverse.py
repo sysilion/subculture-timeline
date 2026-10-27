@@ -36,6 +36,13 @@ def _ts(unix: int | None) -> str | None:
     return datetime.fromtimestamp(unix, tz=KST).strftime("%Y-%m-%d")
 
 
+def _iso(unix: int | None) -> str | None:
+    """정확한 종료 시각(KST). 화면 카운트다운이 날짜 추정 대신 이 값을 쓴다."""
+    if not unix:
+        return None
+    return datetime.fromtimestamp(unix, tz=KST).isoformat(timespec="seconds")
+
+
 def parse(game_id: str) -> list[dict]:
     slug = _SLUG.get(game_id)
     if not slug:
@@ -91,6 +98,7 @@ def parse(game_id: str) -> list[dict]:
             "rarity":    5,
             "start":     start_s,
             "end":       end_s,
+            "endAt":     _iso(b.get("end_time")),
             "version":   b.get("version", ""),
             "tentative": False,
             "source":    "api.ennead.cc",
@@ -114,6 +122,7 @@ def parse(game_id: str) -> list[dict]:
             "title":     ev.get("name", "이벤트"),
             "start":     start_s,
             "end":       end_s,
+            "endAt":     _iso(ev.get("end_time")),
             "version":   "",
             "tentative": False,
             "source":    "api.ennead.cc",
@@ -137,6 +146,7 @@ def parse(game_id: str) -> list[dict]:
             "title":     ch.get("name", "도전"),
             "start":     start_s,
             "end":       end_s,
+            "endAt":     _iso(ch.get("end_time")),
             "version":   "",
             "tentative": False,
             "source":    "api.ennead.cc",

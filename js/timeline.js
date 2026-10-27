@@ -115,6 +115,126 @@ const Timeline = (() => {
     return new Date(k.getUTCFullYear(), k.getUTCMonth(), k.getUTCDate());
   }
 
+  /* ── 종료 시각 · 카운트다운 ── */
+  // 파서가 정확한 종료 시각(endAt, ISO 8601)을 주면 그것을 쓴다.
+  // 날짜만 있으면 종료일 당일까지 진행으로 치고, 마감은 다음 날 게임의 초기화 시각(KST)으로 잡는다.
+  const endMsCache = new WeakMap();
+  function entryEndMs(entry, game) {
+    if (endMsCache.has(entry)) return endMsCache.get(entry);
+    const ms = calcEndMs(entry, game);
+    endMsCache.set(entry, ms);
+    return ms;
+  }
+
+  function calcEndMs(entry, game) {
+    if (entry.endAt) {
+      const ms = Date.parse(entry.endAt);
+      // 59초로 끝나는 마감은 다음 초 정각에 끝난 것으로 본다
+      if (Number.isFinite(ms)) return ms % 60000 === 59000 ? ms + 1000 : ms;
+    }
+    const [y, m, d] = entry.end.split('-').map(Number);
+    const h = game && Number.isFinite(game.resetHour) ? game.resetHour : 0;
+    return Date.UTC(y, m - 1, d + 1, h - KST_OFFSET_H);
+  }
+
+  function isEnded(entry, game) {
+    return Date.now() >= entryEndMs(entry, game);
+  }
+
+  // epoch ms → 그 순간의 KST 날짜 (D.parse와 같은 로컬 자정 Date)
+  function kstDate(ms) {
+    const k = new Date(ms + KST_OFFSET_H * 3600000);
+    return new Date(k.getUTCFullYear(), k.getUTCMonth(), k.getUTCDate());
+  }
+
+  function fmtKstTime(ms) {
+    const k = new Date(ms + KST_OFFSET_H * 3600000);
+    const pad = n => String(n).padStart(2, '0');
+    return `${k.getUTCFullYear()}.${pad(k.getUTCMonth() + 1)}.${pad(k.getUTCDate())} ` +
+      `${pad(k.getUTCHours())}:${pad(k.getUTCMinutes())} KST`;
+  }
+
+  function fmtCountdown(ms) {
+    if (ms <= 0) return t('countdownEnded', '종료됨');
+    const sec = Math.floor(ms / 1000);
+    const days = Math.floor(sec / 86400);
+    const pad = n => String(n).padStart(2, '0');
+    const hms = `${pad(Math.floor(sec % 86400 / 3600))}:${pad(Math.floor(sec % 3600 / 60))}:${pad(sec % 60)}`;
+    return days > 0
+      ? t('countdownFmt', '{d}일 {hms}').replace('{d}', days).replace('{hms}', hms)
+      : hms;
+  }
+
+  /* ── 현재 시각(KST) + 목록형 카운트다운, 1초마다 갱신 ── */
+  // 탭을 켜둔 채 날짜가 넘어가면 오늘선·눈금·상태가 전날 기준으로 남는다.
+  // KST 날짜가 바뀌면 전부 다시 그리고, 게임별 초기화 시각이 지나면 상태만 갱신한다.
+  let dayKey = '';
+  function currentDayKey() {
+    return [gameToday(null), ...data.games.map(g => gameToday(g))].map(d => d.getTime()).join();
+  }
+  function syncDay() {
+    const key = currentDayKey();
+    if (!dayKey) { dayKey = key; return false; }
+    if (key === dayKey) return false;
+    const kstChanged = key.split(',')[0] !== dayKey.split(',')[0];
+    dayKey = key;
+    if (kstChanged) {
+      today = gameToday(null);
+      setRange(CFG.pastDays, CFG.futureDays);   // 리스트 뷰도 renderGames → applySearch가 다시 그린다
+    } else {
+      tooltipCache.clear();
+      syncEndedBars();
+      if (currentView !== 'gantt') renderListView();
+    }
+    return true;
+  }
+
+  // 정확한 마감 시각(endAt)은 하루 중간에도 지나가므로 간트 바의 종료 표시를 따로 맞춘다
+  function syncEndedBars() {
+    let changed = false;
+    barIndex.forEach(bar => {
+      const rec = barData.get(bar);
+      if (!rec) return;
+      const ended = isEnded(rec.entry, rec.game);
+      if (ended !== bar.classList.contains('is-ended')) {
+        bar.classList.toggle('is-ended', ended);
+        changed = true;
+      }
+    });
+    if (changed) tooltipCache.clear();
+  }
+
+  function startClock() {
+    const clockEl = document.getElementById('now-clock');
+    let ticks = 0;
+    const tick = () => {
+      if (clockEl) {
+        const k = new Date(Date.now() + KST_OFFSET_H * 3600000);
+        const pad = n => String(n).padStart(2, '0');
+        const wd = (WEEKDAYS[curLang()] || WEEKDAYS.ko)[k.getUTCDay()];
+        clockEl.textContent = `${t('nowLabel', '현재')} ${k.getUTCFullYear()}.${pad(k.getUTCMonth() + 1)}.${pad(k.getUTCDate())} (${wd}) ` +
+          `${pad(k.getUTCHours())}:${pad(k.getUTCMinutes())}:${pad(k.getUTCSeconds())} KST`;
+      }
+      if (data && syncDay()) return;
+      if (currentView === 'gantt') {
+        if (++ticks % 10 === 0) syncEndedBars();
+        return;
+      }
+      const now = Date.now();
+      let expired = false;
+      document.querySelectorAll('#list-container .list-countdown').forEach(el => {
+        const left = Number(el.dataset.end) - now;
+        el.textContent = `⏳ ${fmtCountdown(left)}`;
+        el.classList.toggle('soon', left < 86400000);
+        if (left <= 0) expired = true;
+      });
+      // 마감이 지나면 진행중 → 종료 그룹으로 옮겨야 하므로 목록을 다시 그린다
+      if (expired) renderListView();
+    };
+    tick();
+    setInterval(tick, 1000);
+  }
+
   /* ── 날짜 → X픽셀 (ruler-dates 기준) ── */
   function dateToX(date) {
     const diff = D.diffDays(startDate, date);
@@ -187,6 +307,7 @@ const Timeline = (() => {
     setupTodayButton();
     setupIcsExport();
     setupCodesPanel();
+    startClock();
     updateCSSVars();
     scrollToToday(false);
 
@@ -828,7 +949,7 @@ function buildBar(entry, game) {
   bar.className = `entry-bar type-${entry.type}`;
   if (entry.tentative) bar.classList.add('tentative');
   // 지난 일정은 흐리게 — 진행 중인 일정이 먼저 눈에 들어와야 한다
-  if (D.parse(entry.end) < gameToday(game)) bar.classList.add('is-ended');
+  if (isEnded(entry, game)) bar.classList.add('is-ended');
 
   bar.style.left  = x + 'px';
   bar.style.width = w + 'px';
@@ -1015,7 +1136,7 @@ function buildBar(entry, game) {
       const end   = D.parse(entry.end);
       const dur   = D.diffDays(start, end);
 
-      const status = entryStatus(start, end, game);
+      const status = entryStatus(entry, game);
       const icon = status.cls === 'status-ended' ? '⏹' : status.cls === 'status-upcoming' ? '🔜' : '▶';
       const statusText = `<div class="tooltip-duration"${status.cls === 'status-active' ? ' style="color:#66bb6a"' : ''}>${icon} ${esc(status.label)}</div>`;
 
@@ -1158,7 +1279,7 @@ function openDetail(game) {
     const end = D.parse(entry.end);
     const dur = D.diffDays(start, end);
 
-    const status = entryStatus(start, end, game);
+    const status = entryStatus(entry, game);
 
     // 타입 구분선
     if (entry.type !== lastType) {
@@ -1192,7 +1313,7 @@ function openDetail(game) {
     `;
     content.appendChild(item);
 
-    if (!firstCurrent && end >= gameToday(game)) firstCurrent = item;
+    if (!firstCurrent && !isEnded(entry, game)) firstCurrent = item;
   });
 
   // 시작일 오름차순이라 과거 항목이 위에 쌓인다.
@@ -1229,7 +1350,7 @@ function openEntryModal(game, entry) {
 
   const start = D.parse(entry.start);
   const end   = D.parse(entry.end);
-  const status = entryStatus(start, end, game);
+  const status = entryStatus(entry, game);
   const typeLabel = entry.type === 'banner'
     ? t('legendBanner', '뽑기 배너') : t('legendEvent', '이벤트');
 
@@ -1503,20 +1624,24 @@ function setupDetailPanel() {
   }
 
   /* ── 엔트리 상태 계산 ── */
-  function entryStatus(start, end, game) {
+  function entryStatus(entry, game) {
     const now = gameToday(game);
-    const endDiff = D.diffDays(now, end);
-    const startDiff = D.diffDays(now, start);
-    if (endDiff < 0) {
+    const endMs = entryEndMs(entry, game);
+    if (Date.now() >= endMs) {
+      const ago = D.diffDays(kstDate(endMs - 1), gameToday(null));
       return { cls: 'status-ended',
-        label: t('statusEndedFmt', '종료 ({n}일 전)').replace('{n}', Math.abs(endDiff)) };
+        label: ago > 0 ? t('statusEndedFmt', '종료 ({n}일 전)').replace('{n}', ago) : t('listEnded', '종료') };
     }
+    const startDiff = D.diffDays(now, D.parse(entry.start));
     if (startDiff > 0) {
       return { cls: 'status-upcoming',
         label: t('statusUpcomingFmt', '{n}일 후 시작').replace('{n}', startDiff) };
     }
+    const left = Math.floor((endMs - Date.now()) / 86400000);
     return { cls: 'status-active',
-      label: t('statusOngoingFmt', '진행중 · {n}일 남음').replace('{n}', endDiff) };
+      label: left > 0
+        ? t('statusOngoingFmt', '진행중 · {n}일 남음').replace('{n}', left)
+        : t('statusLastDay', '진행중 · 오늘 마감') };
   }
 
   function fmtDuration(days) {
@@ -1555,7 +1680,7 @@ function setupDetailPanel() {
         const s = D.parse(entry.start);
         const e = D.parse(entry.end);
         if (e <= startDate || s >= rangeEnd) return; // 표시 범위 밖 제외
-        items.push({ game, entry, s, e });
+        items.push({ game, entry, s, e, endMs: entryEndMs(entry, game) });
       });
     });
 
@@ -1572,13 +1697,14 @@ function setupDetailPanel() {
       return;
     }
 
+    const now = Date.now();
     const groups = [
       { key: 'ongoing',  title: t('listOngoing', '진행중'),
-        items: items.filter(it => it.s <= gameToday(it.game) && it.e >= gameToday(it.game)).sort((a, b) => a.e - b.e) },
+        items: items.filter(it => it.s <= gameToday(it.game) && it.endMs > now).sort((a, b) => a.endMs - b.endMs) },
       { key: 'upcoming', title: t('listUpcoming', '예정'),
-        items: items.filter(it => it.s > gameToday(it.game)).sort((a, b) => a.s - b.s) },
+        items: items.filter(it => it.s > gameToday(it.game) && it.endMs > now).sort((a, b) => a.s - b.s) },
       { key: 'ended',    title: t('listEnded', '종료'),
-        items: items.filter(it => it.e < gameToday(it.game)).sort((a, b) => b.e - a.e) },
+        items: items.filter(it => it.endMs <= now).sort((a, b) => b.endMs - a.endMs) },
     ];
 
     groups.forEach(group => {
@@ -1615,7 +1741,16 @@ function setupDetailPanel() {
   /* ── 리스트 항목 한 줄 ── */
   function buildListEntry(game, entry, s, e) {
     const dur = D.diffDays(s, e);
-    const status = entryStatus(s, e, game);
+    const status = entryStatus(entry, game);
+    let countdown = '';
+    if (status.cls === 'status-active') {
+      const endMs = entryEndMs(entry, game);
+      const left = endMs - Date.now();
+      countdown = `<span class="list-countdown${left < 86400000 ? ' soon' : ''}" data-end="${endMs}"` +
+        ` title="${esc(t('tooltipEnd', '종료:'))} ${esc(fmtKstTime(endMs))}">⏳ ${esc(fmtCountdown(left))}</span>`;
+      // 남은 시간은 카운트다운이 보여주므로 뱃지는 상태만 남긴다
+      status.label = t('listOngoing', '진행중');
+    }
 
     const iconHtml = game.iconUrl
       ? `<img class="chip-icon-img" src="${esc(game.iconUrl)}" alt="" onerror="this.style.display='none'">`
@@ -1640,6 +1775,7 @@ function setupDetailPanel() {
       <div class="detail-entry-dates">
         <span class="detail-date-range">${D.fmtShort(s)} → ${D.fmtShort(e)}</span>
         <span class="detail-date-dur">${esc(fmtDuration(dur))}${entry.version ? ` · v${esc(entry.version)}` : ''}</span>
+        ${countdown}
       </div>
       <div class="detail-entry-status ${status.cls}">${esc(status.label)}</div>
     `;
@@ -1658,9 +1794,10 @@ function setupDetailPanel() {
   };
 
   function renderDeadlineGroups(container, items) {
+    const now = Date.now();
     const live = items
-      .filter(it => it.e >= gameToday(it.game))
-      .sort((a, b) => (a.e - b.e) || (a.s - b.s));
+      .filter(it => it.endMs > now)
+      .sort((a, b) => (a.endMs - b.endMs) || (a.s - b.s));
 
     if (live.length === 0) {
       const empty = document.createElement('div');
@@ -1673,19 +1810,22 @@ function setupDetailPanel() {
     const wd = WEEKDAYS[curLang()] || WEEKDAYS.ko;
     let body = null;
     let lastKey = null;
-    live.forEach(({ game, entry, s, e }) => {
-      const key = e.getTime();
+    const kstToday = gameToday(null);
+    live.forEach(({ game, entry, s, e, endMs }) => {
+      // 실제 마감 순간의 KST 날짜로 묶는다. 헤더 시계와 같은 달력을 쓰므로
+      // 초기화 전 새벽(게임 기준으론 아직 전날)에 끝나는 일정도 날짜가 어긋나지 않는다.
+      const day = kstDate(endMs - 1);
+      const key = day.getTime();
       if (key !== lastKey) {
         lastKey = key;
-        // 같은 종료일 묶음은 첫 항목 게임의 하루 기준으로 D-day를 센다
-        const n = D.diffDays(gameToday(game), e);
+        const n = D.diffDays(kstToday, day);
         const when = n === 0 ? t('deadlineToday', '오늘 종료')
           : n === 1 ? t('deadlineTomorrow', '내일 종료')
           : `D-${n}`;
         const head = document.createElement('div');
         head.className = `list-section-title deadline-head${n <= 1 ? ' deadline-soon' : ''}`;
         head.innerHTML =
-          `<span>${D.fmtShort(e)} (${esc(wd[e.getDay()])})</span>` +
+          `<span>${D.fmtShort(day)} (${esc(wd[day.getDay()])})</span>` +
           `<span class="deadline-when">${esc(when)}</span>`;
         container.appendChild(head);
         body = document.createElement('div');
@@ -1742,7 +1882,7 @@ function setupDetailPanel() {
       if (!activeIds.has(game.id)) return;
       visibleEntries(game).forEach(entry => {
         const end = D.parse(entry.end);
-        if (end < gameToday(game)) return; // 종료된 일정은 제외
+        if (isEnded(entry, game)) return; // 종료된 일정은 제외
         const start = D.parse(entry.start);
         const gName = gameName(game);
         const descParts = [];

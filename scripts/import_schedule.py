@@ -42,7 +42,7 @@ REQUIRED_GAME_FIELDS = ("id", "name", "color", "icon")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 # 필드 순서 — 기존 games.json 스타일을 유지한다
-ENTRY_FIELD_ORDER = ["type", "title", "subtitle", "rarity", "start", "end",
+ENTRY_FIELD_ORDER = ["type", "title", "subtitle", "rarity", "start", "end", "endAt",
                      "version", "tentative", "source", "_auto"]
 GAME_FIELD_ORDER = ["id", "name", "fullName", "color", "icon", "developer",
                     "enabled", "iconUrl", "bgUrl", "entries", "nameKo", "nameEn"]
@@ -102,6 +102,9 @@ def validate_entries(entries: list, default_source: str) -> list:
         else:
             e.pop("subtitle", None)
         e.setdefault("version", "")
+        # 파서가 종료 시각을 못 구하면 None 을 넣는다. null 로 남기지 않는다.
+        if not e.get("endAt"):
+            e.pop("endAt", None)
         if not e.get("tentative"):
             e.pop("tentative", None)
         if default_source and not e.get("source"):

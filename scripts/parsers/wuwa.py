@@ -60,8 +60,8 @@ def _extract(payload: str, key: str) -> dict | None:
     return None
 
 
-def _to_kst(value: str, is_cst: bool, is_end: bool):
-    """CST 기준 시각이면 KST로 옮긴 뒤 날짜만 취한다."""
+def _kst_str(value: str, is_cst: bool) -> str:
+    """CST 기준 시각이면 KST로 옮긴 'YYYY-MM-DD HH:MM:SS' 문자열."""
     value = (value or "").strip()
     if is_cst and value:
         try:
@@ -69,7 +69,21 @@ def _to_kst(value: str, is_cst: bool, is_end: bool):
             value = dt.strftime("%Y-%m-%d %H:%M:%S")
         except ValueError:
             pass
-    return wiki_datetime(value, is_end=is_end)
+    return value
+
+
+def _to_kst(value: str, is_cst: bool, is_end: bool):
+    """CST 기준 시각이면 KST로 옮긴 뒤 날짜만 취한다."""
+    return wiki_datetime(_kst_str(value, is_cst), is_end=is_end)
+
+
+def _end_at(value: str, is_cst: bool) -> str | None:
+    """정확한 종료 시각(KST, ISO 8601). 시각이 없는 값이면 None."""
+    try:
+        dt = datetime.strptime(_kst_str(value, is_cst), "%Y-%m-%d %H:%M:%S")
+    except ValueError:
+        return None
+    return dt.isoformat(timespec="seconds") + "+09:00"
 
 
 def _entries(items: list, etype: str) -> list[dict]:
@@ -102,6 +116,9 @@ def _entries(items: list, etype: str) -> list[dict]:
             "source":    "wuwatracker.com",
             "_auto":     True,
         }
+        end_at = _end_at(it.get("endDate"), is_cst)
+        if end_at:
+            entry["endAt"] = end_at
         if etype == "banner":
             entry["rarity"] = 5
         # 표지 이미지(coverImgSrc)는 Referer가 붙으면 403이라 브라우저에서 못 띄운다.
