@@ -232,7 +232,9 @@ const Timeline = (() => {
       if (expired) renderListView();
     };
     tick();
-    setInterval(tick, 1000);
+    // 숨겨진 탭에서는 그리지 않는다. 다시 보일 때 한 번에 따라잡는다(날짜 넘어감 포함).
+    setInterval(() => { if (!document.hidden) tick(); }, 1000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(); });
   }
 
   /* ── 날짜 → X픽셀 (ruler-dates 기준) ── */
