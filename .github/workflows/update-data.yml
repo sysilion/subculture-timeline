@@ -20,19 +20,19 @@ jobs:
       SYNC_PROXY: ${{ secrets.SYNC_PROXY }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: scripts/requirements.txt
 
       - name: Set up Node.js (paimon.moe JS 파싱용)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '20'
 
@@ -73,7 +73,7 @@ jobs:
         if: |
           steps.tskey.outputs.kind == 'oauth' || steps.tskey.outputs.kind == 'authkey'
         continue-on-error: true
-        uses: tailscale/github-action@d1b6cd204f8dceda5b3eaad7f1f767be390056cd # v4.2.0
+        uses: tailscale/github-action@99a8333667fff04fdd6cffb46dfd409f8329a7bf # v4.3.0
         with:
           oauth-secret: ${{ steps.tskey.outputs.kind == 'oauth' && secrets.TS_OAUTH_SECRET || '' }}
           authkey: ${{ steps.tskey.outputs.kind == 'oauth' && '' || secrets.TS_OAUTH_SECRET }}
@@ -98,7 +98,7 @@ jobs:
 
       - name: Commit if changed
         id: auto-commit
-        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5.2.0
+        uses: stefanzweifel/git-auto-commit-action@d0b01107b5db882071f96de5dd4b54961ea93f4c # v7.2.1
         with:
           commit_message: "chore: auto-update banner/event schedule and redeem codes"
           file_pattern: "data/games.json data/codes.json"
