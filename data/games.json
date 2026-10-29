@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-28",
+    "lastUpdated": "2026-10-29",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-28"
+    "autoUpdated": "2026-10-29"
   },
   "games": [
     {
@@ -2323,16 +2323,6 @@
         },
         {
           "type": "event",
-          "title": "Bountiful Crescendo",
-          "start": "2026-07-23",
-          "end": "2026-07-30",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "In Search of Lost Jade",
           "start": "2026-07-30",
           "end": "2026-08-13",
@@ -3725,17 +3715,6 @@
         },
         {
           "type": "event",
-          "title": "Fortune Connect-and-Win",
-          "subtitle": "Celebration",
-          "start": "2026-07-16",
-          "end": "2026-07-30",
-          "version": "",
-          "tentative": false,
-          "source": "endfield.wiki.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Tribute of Companionship",
           "subtitle": "Celebration",
           "start": "2026-07-16",
@@ -4159,7 +4138,7 @@
           "title": "Yuanyuan's Blazing Stoves",
           "subtitle": "Fun & Games",
           "start": "2026-10-15",
-          "end": "2026-11-25",
+          "end": "2026-11-24",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
@@ -4203,6 +4182,17 @@
           "title": "Carly's Verdant Anthology",
           "subtitle": "Camera",
           "start": "2026-10-22",
+          "end": "2026-11-04",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Contingency Readiness",
+          "subtitle": "Limited-Time",
+          "start": "2026-10-28",
           "end": "2026-11-04",
           "version": "",
           "tentative": false,
@@ -5701,7 +5691,31 @@
         },
         {
           "type": "banner",
+          "title": "Hikari, Nozomi, Saori (Swimsuit) +3",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-10-27",
+          "end": "2026-11-02",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
           "title": "Kanna (Swimsuit), Chiaki, Satsuki +2",
+          "subtitle": "Pickup",
+          "rarity": 3,
+          "start": "2026-11-03",
+          "end": "2026-11-09",
+          "version": "",
+          "tentative": false,
+          "source": "bluearchive.wiki",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Ako (Dress), Satsuki, Chiaki +2",
           "subtitle": "Pickup",
           "rarity": 3,
           "start": "2026-11-03",
@@ -13592,6 +13606,32 @@
           "image": "https://uma.moe/assets/timeline-images/events/legend-race/1402.webp",
           "link": "https://umapyoi.net/news/1402?lang=jp",
           "description": "픽업: Mayano Top Gun (Wedding), Sweep Tosho (Original)"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-02-26",
+          "end": "2027-03-11",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1381.webp",
+          "link": "https://umapyoi.net/news/1381?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "League of Heroes",
+          "start": "2027-02-26",
+          "end": "2027-03-03",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "league of heroes",
+          "image": "https://uma.moe/assets/timeline-images/events/league-of-heroes/1409.webp",
+          "link": "https://umapyoi.net/news/1409?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
