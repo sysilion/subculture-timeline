@@ -281,12 +281,7 @@ const Timeline = (() => {
     startDate = D.addDays(today, -CFG.pastDays);
     totalDays = CFG.pastDays + CFG.futureDays + 1;
 
-    // 마지막 업데이트 표시
-    const luEl = document.getElementById('last-updated');
-    if (luEl && data.meta) {
-      const prefix = t('dataUpdated', '데이터 기준:');   // 번역 파일이 없으면 키가 그대로 찍힌다
-      luEl.textContent = `${prefix} ${data.meta.lastUpdated}`;
-    }
+    renderLastUpdated();
 
     // 코드 목록은 타임라인과 별개 파일이다. 실패해도 나머지는 그대로 그린다.
     await loadCodes();
@@ -334,11 +329,21 @@ const Timeline = (() => {
 
     // 언어 전환 시 렌더 텍스트 갱신 (행 레이블·오늘선·리스트 뷰)
     document.addEventListener('tl-langchange', () => {
+      renderLastUpdated();
       buildFilters();   // 칩 이름도 언어를 따라간다
       restoreFilters();
       renderGames();   // 리스트 뷰는 renderGames → applySearch가 다시 그린다
       renderTodayLine();
     });
+  }
+
+  /* ── 마지막 업데이트 표시 — 언어를 바꾸면 접두어도 따라 바뀐다 ── */
+  function renderLastUpdated() {
+    const luEl = document.getElementById('last-updated');
+    if (luEl && data && data.meta) {
+      const prefix = t('dataUpdated', '데이터 기준:');   // 번역 파일이 없으면 키가 그대로 찍힌다
+      luEl.textContent = `${prefix} ${data.meta.lastUpdated}`;
+    }
   }
 
   /* ── 해시의 hide= 필터를 1회 적용 후 localStorage에 반영 ── */
@@ -348,6 +353,7 @@ const Timeline = (() => {
       const active = !hashHiddenGames.has(chip.dataset.gameId);
       chip.classList.toggle('active', active);
       chip.classList.toggle('inactive', !active);
+      chip.setAttribute('aria-pressed', String(active));
     });
     saveFilters();
     hashHiddenGames = null;
@@ -480,8 +486,8 @@ const Timeline = (() => {
 
   /* ── 필터 (게임 on/off) ── */
 function buildFilters() {
-  const bar = document.getElementById('filter-bar');
-  // 필터 라벨 유지, 칩만 초기화
+  // 칩은 전용 컨테이너에 담는다 — 검색창·일괄 버튼과 섞이면 순서가 흐트러진다
+  const bar = document.getElementById('chip-list') || document.getElementById('filter-bar');
   const existing = bar.querySelectorAll('.game-chip');
   existing.forEach(el => el.remove());
 
@@ -489,6 +495,8 @@ function buildFilters() {
     const chip = document.createElement('button');
     chip.className = 'game-chip active';
     chip.dataset.gameId = game.id;
+    chip.type = 'button';
+    chip.setAttribute('aria-pressed', 'true');
     chip.style.setProperty('--chip-color', game.color);
 
     const iconHtml = game.iconUrl
@@ -544,6 +552,7 @@ function setAllGames(active) {
   document.querySelectorAll('.game-chip').forEach(chip => {
     chip.classList.toggle('active', active);
     chip.classList.toggle('inactive', !active);
+    chip.setAttribute('aria-pressed', String(active));
     const section = document.querySelector(`.game-section[data-id="${chip.dataset.gameId}"]`);
     if (section) section.classList.toggle('hidden', !active);
   });
@@ -563,6 +572,7 @@ function setupBulkFilters() {
     const isActive = chip.classList.contains('active');
     chip.classList.toggle('active', !isActive);
     chip.classList.toggle('inactive', isActive);
+    chip.setAttribute('aria-pressed', String(!isActive));
     section.classList.toggle('hidden', isActive);
     saveFilters();
     updateHash();
@@ -573,28 +583,17 @@ function showToast(message) {
   const toast = document.createElement('div');
   toast.className = 'toast-notification';
   toast.textContent = message;
-  toast.style.position = 'fixed';
-  toast.style.bottom = '20px';
-  toast.style.right = '20px';
-  toast.style.background = 'var(--surface2)';
-  toast.style.color = 'var(--text)';
-  toast.style.padding = '10px 16px';
-  toast.style.borderRadius = '4px';
-  toast.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)';
-  toast.style.zIndex = '1000';
-  toast.style.fontSize = '12px';
-  toast.style.opacity = '0';
-  toast.style.transition = 'opacity 0.3s';
+  toast.setAttribute('role', 'status');
   document.body.appendChild(toast);
 
   // 애니메이션 트리거
   setTimeout(() => {
-    toast.style.opacity = '1';
+    toast.classList.add('show');
   }, 10);
 
   // 3초 후 제거
   setTimeout(() => {
-    toast.style.opacity = '0';
+    toast.classList.remove('show');
     setTimeout(() => {
       toast.remove();
     }, 300);
@@ -624,6 +623,7 @@ function saveFilters() {
         const active = state[id];
         chip.classList.toggle('active', active);
         chip.classList.toggle('inactive', !active);
+        chip.setAttribute('aria-pressed', String(active));
         const section = document.querySelector(`.game-section[data-id="${id}"]`);
         if (section) section.classList.toggle('hidden', !active);
       }
@@ -651,6 +651,9 @@ function saveFilters() {
       gameRowsEl.appendChild(gridContainer);
     }
     gridContainer.innerHTML = '';
+    // 주말 음영은 CSS 반복 그라디언트로 그린다. 첫 토요일의 x만 넘기면 된다.
+    const firstSat = (6 - startDate.getDay() + 7) % 7;
+    gridContainer.style.setProperty('--weekend-x', (CFG.labelW + firstSat * CFG.dayPx) + 'px');
 
     const seenMonths = new Set();
 
@@ -741,7 +744,11 @@ function saveFilters() {
 
     // 겹치는 일정을 레인으로 나누고, 그 결과로 행·라벨 높이를 정한다
     rows.forEach(r => {
-      r.lanes = packLanes(r.items);
+      // 접힌 상태에서는 앞쪽 4레인만 보인다. 시작일 순으로 채운 레인을 그대로 두면
+      // 지난 일정이 보이는 자리를 차지하고 진행 중인 일정이 '더 보기' 뒤로 숨는다.
+      // 끝나지 않은 일정이 있는 레인을 앞으로 올린다 (sort는 안정 정렬).
+      const live = lane => lane.some(e => !isEnded(e, game)) ? 0 : 1;
+      r.lanes = packLanes(r.items).sort((a, b) => live(a) - live(b));
       r.key = `${game.id}:${r.kind}`;
       r.expanded = expandedRows.has(r.key);
       r.hiddenLanes = r.expanded ? 0 : Math.max(0, r.lanes.length - MAX_VISIBLE_LANES);
@@ -1140,7 +1147,7 @@ function buildBar(entry, game) {
 
       const status = entryStatus(entry, game);
       const icon = status.cls === 'status-ended' ? '⏹' : status.cls === 'status-upcoming' ? '🔜' : '▶';
-      const statusText = `<div class="tooltip-duration"${status.cls === 'status-active' ? ' style="color:#66bb6a"' : ''}>${icon} ${esc(status.label)}</div>`;
+      const statusText = `<div class="tooltip-status ${status.cls}">${icon} ${esc(status.label)}</div>`;
 
       const html = `
         <div class="tooltip-inner">
@@ -1246,7 +1253,7 @@ function openDetail(game) {
   const content = document.getElementById('detail-panel-content');
 
   const iconHtml = game.iconUrl
-    ? `<img src="${esc(game.iconUrl)}" alt="${esc(game.name)}" style="width:20px;height:20px;border-radius:4px;object-fit:contain;">`
+    ? `<img src="${esc(game.iconUrl)}" alt="" class="game-icon game-icon-lg">`
     : esc(game.icon || '');
   titleEl.innerHTML = `<span class="detail-modal-icon">${iconHtml}</span>${esc(gameFullName(game))}`;
 
@@ -1587,9 +1594,11 @@ function setupDetailPanel() {
     const fromEl = isList ? timelineEl : listEl;
     const toEl   = isList ? listEl : timelineEl;
 
-    document.getElementById('gantt-view').classList.toggle('active', view === 'gantt');
-    document.getElementById('list-view').classList.toggle('active', view === 'list');
-    document.getElementById('deadline-view').classList.toggle('active', view === 'deadline');
+    ['gantt', 'list', 'deadline'].forEach(v => {
+      const btn = document.getElementById(`${v}-view`);
+      btn.classList.toggle('active', view === v);
+      btn.setAttribute('aria-pressed', String(view === v));
+    });
     updateHash();
 
     // 리스트 ↔ 마감순은 같은 컨테이너라 페이드 없이 다시 그린다
@@ -2017,7 +2026,7 @@ function setupDetailPanel() {
     wrap.className = 'codes-game';
 
     const iconHtml = game.iconUrl
-      ? `<img src="${esc(game.iconUrl)}" alt="" style="width:18px;height:18px;border-radius:4px;object-fit:contain;">`
+      ? `<img src="${esc(game.iconUrl)}" alt="" class="game-icon">`
       : esc(game.icon || '');
     const redeem = safeUrl(info.redeemUrl)
       ? `<a class="codes-redeem" href="${esc(info.redeemUrl)}" target="_blank" rel="noopener">${esc(t('codesRedeemLink', '공식 교환 페이지'))} ↗</a>`

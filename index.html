@@ -20,10 +20,9 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <meta name="theme-color" content="#12141c" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0b0d13" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -32,30 +31,49 @@
 
   <!-- ── 헤더 ── -->
   <header id="header">
-    <h1>
-      🎮 <span data-i18n="siteTitle">서브컬쳐 게임 타임라인</span>
-      <span data-i18n="siteSubtitle">뽑기 배너 · 이벤트 · 버전 일정 통합</span>
+    <h1 class="brand">
+      <img class="brand-mark" src="assets/favicon.svg" alt="" width="28" height="28" />
+      <span class="brand-text">
+        <span class="brand-title" data-i18n="siteTitle">서브컬쳐 게임 타임라인</span>
+        <span class="brand-sub" data-i18n="siteSubtitle">뽑기 배너 · 이벤트 · 버전 일정 통합</span>
+      </span>
     </h1>
 
-    <!-- 범례 -->
-    <div id="legend">
-      <div class="legend-item">
-        <div class="legend-dot type-banner"></div><span data-i18n="legendBanner">뽑기 배너</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-dot type-event"></div><span data-i18n="legendEvent">이벤트</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-dot tentative"></div><span data-i18n="legendTentative">미확정</span>
-      </div>
-      <div class="legend-item" style="margin-left:4px;">
-        <div style="width:2px;height:14px;background:#f44336;border-radius:1px;"></div>
-        <span style="margin-left:4px;" data-i18n="legendToday">오늘</span>
-      </div>
+    <div class="header-status">
+      <div id="now-clock" title="KST (UTC+9)"></div>
+      <div id="last-updated">로딩 중...</div>
+    </div>
+
+    <!-- 언어 전환 -->
+    <div id="lang-switcher" class="segmented" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="ko">한국어</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <!-- ── 보기 도구 모음 ── -->
+  <div id="toolbar">
+    <div id="view-toggle" class="segmented" role="group" aria-label="View">
+      <button id="gantt-view" class="view-btn active" aria-label="간트 차트 뷰" aria-pressed="true" title="간트 차트">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="6" x2="13" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="11" y2="18"/>
+        </svg>
+      </button>
+      <button id="list-view" class="view-btn" aria-label="리스트 뷰" aria-pressed="false" title="리스트">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/>
+          <circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/>
+        </svg>
+      </button>
+      <button id="deadline-view" class="view-btn" aria-label="마감순 뷰" aria-pressed="false" title="게임 구분 없이 종료일이 가까운 순으로 보기">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="13" r="8"/><polyline points="12 9 12 13 15 15"/><line x1="9" y1="2" x2="15" y2="2"/>
+        </svg>
+      </button>
     </div>
 
     <!-- 날짜 범위 -->
-    <div id="range-controls">
+    <div id="range-controls" class="control">
       <label for="range-select" data-i18n="rangeLabel">표시 범위:</label>
       <select id="range-select">
         <option value="14,45">-14일 ~ +45일</option>
@@ -66,7 +84,7 @@
     </div>
 
     <!-- 행 높이 -->
-    <div id="density-controls">
+    <div id="density-controls" class="control">
       <label for="density-select" data-i18n="densityLabel">행 높이:</label>
       <select id="density-select">
         <option value="compact" data-i18n="densityCompact">촘촘</option>
@@ -75,57 +93,52 @@
       </select>
     </div>
 
-    <!-- 언어 전환 -->
-    <div id="lang-switcher">
-      <button class="lang-btn active" data-lang="ko">한국어</button>
-      <button class="lang-btn" data-lang="en">EN</button>
+    <!-- 범례 — 바와 같은 어법: 채움=배너, 윤곽선=이벤트, 점선=미확정 -->
+    <div id="legend">
+      <div class="legend-item"><span class="legend-dot type-banner"></span><span data-i18n="legendBanner">뽑기 배너</span></div>
+      <div class="legend-item"><span class="legend-dot type-event"></span><span data-i18n="legendEvent">이벤트</span></div>
+      <div class="legend-item"><span class="legend-dot tentative"></span><span data-i18n="legendTentative">미확정</span></div>
+      <div class="legend-item"><span class="legend-today"></span><span data-i18n="legendToday">오늘</span></div>
     </div>
 
-    <div id="now-clock" title="KST (UTC+9)"></div>
-    <div id="last-updated">로딩 중...</div>
-  </header>
-
-  <!-- ── 게임 필터 및 검색 ── -->
-  <div id="filter-bar">
-    <span class="filter-label" data-i18n="filterLabel">게임 표시:</span>
-    <button id="filter-all" class="filter-bulk-btn" data-i18n="showAll">전체</button>
-    <button id="filter-none" class="filter-bulk-btn" data-i18n="hideAll">해제</button>
-    <div id="search-container">
-      <input type="text" id="game-search" placeholder="게임 검색..." data-i18n-placeholder="searchPlaceholder" aria-label="게임 검색">
-      <button id="clear-search" aria-label="검색 초기화">&times;</button>
+    <div class="toolbar-actions">
+      <button id="today-btn" class="btn btn-today">
+        <span class="btn-dot" aria-hidden="true"></span><span data-i18n="todayBtn">오늘</span>
+      </button>
+      <button id="ics-btn" class="btn" title="표시 중인 게임의 예정/진행중 일정을 캘린더 파일로 저장">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/>
+        </svg>
+        <span data-i18n="icsBtn">.ics</span>
+      </button>
+      <button id="codes-btn" class="btn btn-accent" title="게임별 리딤 코드 목록 보기">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="8" width="18" height="13" rx="2"/><line x1="12" y1="8" x2="12" y2="21"/><line x1="3" y1="13" x2="21" y2="13"/>
+          <path d="M12 8c-1.5-3-5-4-5.5-1.8C6 8 9 8 12 8zM12 8c1.5-3 5-4 5.5-1.8C18 8 15 8 12 8z"/>
+        </svg>
+        <span data-i18n="codesBtn">리딤 코드</span>
+      </button>
     </div>
   </div>
 
-  <!-- ── 타임라인 및 뷰 전환 버튼 ── -->
-  <div id="timeline-wrapper">
-    <div id="view-toggle">
-      <button id="gantt-view" class="view-btn active" aria-label="간트 차트 뷰로 전환 (활성화됨)">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="2" stroke-width="2"/>
-          <line x1="7" y1="3" x2="7" y2="21" stroke-width="2"/>
-          <line x1="12" y1="3" x2="12" y2="21" stroke-width="2"/>
-          <line x1="17" y1="3" x2="17" y2="21" stroke-width="2"/>
-        </svg>
-      </button>
-      <button id="list-view" class="view-btn" aria-label="리스트 뷰로 전환">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6" stroke-width="2"/>
-          <line x1="3" y1="12" x2="21" y2="12" stroke-width="2"/>
-          <line x1="3" y1="18" x2="21" y2="18" stroke-width="2"/>
-        </svg>
-      </button>
-      <button id="deadline-view" class="view-btn" aria-label="마감순 뷰로 전환" title="게임 구분 없이 종료일이 가까운 순으로 보기">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <circle cx="12" cy="13" r="8" stroke-width="2"/>
-          <line x1="12" y1="13" x2="12" y2="9" stroke-width="2"/>
-          <line x1="12" y1="13" x2="15" y2="15" stroke-width="2"/>
-          <line x1="9" y1="2" x2="15" y2="2" stroke-width="2"/>
-        </svg>
-      </button>
-      <button id="today-btn" data-i18n="todayBtn">오늘</button>
-      <button id="ics-btn" data-i18n="icsBtn" title="표시 중인 게임의 예정/진행중 일정을 캘린더 파일로 저장">📅 .ics</button>
-      <button id="codes-btn" data-i18n="codesBtn" title="게임별 리딤 코드 목록 보기">🎁 리딤 코드</button>
+  <!-- ── 게임 필터 및 검색 ── -->
+  <div id="filter-bar">
+    <div id="search-container">
+      <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/>
+      </svg>
+      <input type="text" id="game-search" placeholder="게임 검색..." data-i18n-placeholder="searchPlaceholder" aria-label="게임 검색">
+      <button id="clear-search" aria-label="검색 초기화">&times;</button>
     </div>
+    <div class="filter-bulk">
+      <button id="filter-all" class="filter-bulk-btn" data-i18n="showAll">전체</button>
+      <button id="filter-none" class="filter-bulk-btn" data-i18n="hideAll">해제</button>
+    </div>
+    <div id="chip-list" role="group" aria-label="게임 표시"></div>
+  </div>
+
+  <!-- ── 타임라인 ── -->
+  <div id="timeline-wrapper">
     <!-- 로딩 스켈레톤 (데이터 로드 중 표시) -->
     <div id="skeleton-container">
       <div class="skeleton-row" style="--sk-left:0;width:100px;height:28px;border-radius:6px"></div>
@@ -154,17 +167,14 @@
 
   <!-- ── 푸터 ── -->
   <footer id="footer">
-    <div>
-      <span data-i18n="footerNote">배너 일정은 공식 발표 또는 커뮤니티 추적 기준이며, 미확정(⚠) 일정은 변동될 수 있습니다.</span>
-      |
-      <a href="https://paimon.moe/timeline" target="_blank" rel="noopener noreferrer">paimon.moe</a> ·
-      <a href="https://wuwatracker.com/ko/timeline" target="_blank" rel="noopener noreferrer">wuwatracker</a> ·
-      <a href="https://zzz.rng.moe/en/timeline" target="_blank" rel="noopener noreferrer">zzz.rng.moe</a> ·
+    <span class="footer-note" data-i18n="footerNote">배너 일정은 공식 발표 또는 커뮤니티 추적 기준이며, 미확정(⚠) 일정은 변동될 수 있습니다.</span>
+    <nav class="footer-links" aria-label="참고 사이트">
+      <a href="https://paimon.moe/timeline" target="_blank" rel="noopener noreferrer">paimon.moe</a>
+      <a href="https://wuwatracker.com/ko/timeline" target="_blank" rel="noopener noreferrer">wuwatracker</a>
+      <a href="https://zzz.rng.moe/en/timeline" target="_blank" rel="noopener noreferrer">zzz.rng.moe</a>
       <a href="https://www.subgamecals.com/" target="_blank" rel="noopener noreferrer">subgamecals</a>
-    </div>
-    <div>
-      <span data-i18n="footerDataSource">데이터 수정:</span> <code>data/games.json</code>
-    </div>
+      <a href="https://github.com/sysilion/subculture-timeline" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
   </footer>
 
 </div>
@@ -182,7 +192,7 @@
 <div id="codes-panel" class="detail-panel codes-panel" role="dialog" aria-modal="true" aria-labelledby="codes-panel-title">
   <div class="detail-panel-header">
     <div class="detail-panel-title" id="codes-panel-title">
-      🎁 <span data-i18n="codesTitle">리딤 코드</span>
+      <span data-i18n="codesTitle">리딤 코드</span>
       <span id="codes-updated" class="codes-updated"></span>
     </div>
     <button class="detail-panel-close" id="codes-panel-close" aria-label="닫기">&times;</button>
@@ -195,7 +205,7 @@
 <div id="detail-panel" class="detail-panel" role="dialog" aria-modal="true" aria-label="게임 상세">
   <div class="detail-panel-header">
     <div class="detail-panel-title"></div>
-    <button class="detail-panel-close" id="detail-panel-close">&times;</button>
+    <button class="detail-panel-close" id="detail-panel-close" aria-label="닫기">&times;</button>
   </div>
   <div class="detail-panel-content" id="detail-panel-content"></div>
 </div>
