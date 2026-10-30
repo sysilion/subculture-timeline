@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-29",
+    "lastUpdated": "2026-10-30",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-29"
+    "autoUpdated": "2026-10-30"
   },
   "games": [
     {
@@ -460,16 +460,6 @@
           "title": "수련의 방·무한 시련",
           "start": "2026-06-30",
           "end": "2026-08-11",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "현실 속 환상극",
-          "start": "2026-06-30",
-          "end": "2026-07-31",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -3448,6 +3438,17 @@
         },
         {
           "type": "event",
+          "title": "시유 방어전",
+          "start": "2026-10-30",
+          "end": "2026-11-13",
+          "endAt": "2026-11-13T04:59:59+09:00",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "절름발이 까마귀 행방록",
           "start": "2026-11-11",
           "end": "2026-11-30",
@@ -5974,16 +5975,6 @@
           "title": "Event",
           "start": "2026-06-30",
           "end": "2026-09-22",
-          "version": "",
-          "tentative": false,
-          "source": "nikke.gg",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "July Mission Pass",
-          "start": "2026-07-01",
-          "end": "2026-07-31",
           "version": "",
           "tentative": false,
           "source": "nikke.gg",
