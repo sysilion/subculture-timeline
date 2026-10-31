@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-30",
+    "lastUpdated": "2026-10-31",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-10-30"
+    "autoUpdated": "2026-10-31"
   },
   "games": [
     {
@@ -1426,6 +1426,84 @@
           "end": "2026-11-10",
           "endAt": "2026-11-10T23:00:00+09:00",
           "version": "4.6",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "에이언즈★아하",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-11-11",
+          "end": "2026-12-22",
+          "endAt": "2026-12-22T23:00:00+09:00",
+          "version": "4.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "은랑 LV.999",
+          "subtitle": "은랑 LV.999, 스파키, 효광",
+          "rarity": 5,
+          "start": "2026-11-11",
+          "end": "2026-12-02",
+          "endAt": "2026-12-02T19:59:00+09:00",
+          "version": "4.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "「아하」가 처음 울리는 순간",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-11-11",
+          "end": "2026-12-22",
+          "endAt": "2026-12-22T23:00:00+09:00",
+          "version": "4.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "갤럭시 시티에 오신 것을 환영합니다",
+          "subtitle": "갤럭시 시티에 오신 것을 환영합니다, 눈부신 파키의 세상",
+          "rarity": 5,
+          "start": "2026-11-11",
+          "end": "2026-12-02",
+          "endAt": "2026-12-02T19:59:00+09:00",
+          "version": "4.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "아케론",
+          "subtitle": "아케론, 단항•음월, 경원",
+          "rarity": 5,
+          "start": "2026-12-02",
+          "end": "2026-12-22",
+          "endAt": "2026-12-22T23:00:00+09:00",
+          "version": "4.7",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "흘러가는 강가를 따라",
+          "subtitle": "흘러가는 강가를 따라, 태양보다 밝게 빛나는 것",
+          "rarity": 5,
+          "start": "2026-12-02",
+          "end": "2026-12-22",
+          "endAt": "2026-12-22T23:00:00+09:00",
+          "version": "4.7",
           "tentative": false,
           "source": "api.ennead.cc",
           "_auto": true
@@ -3133,6 +3211,19 @@
           "type": "banner",
           "title": "천재의 수행원",
           "subtitle": "",
+          "rarity": 5,
+          "start": "2026-11-11",
+          "end": "2026-12-01",
+          "endAt": "2026-12-01T15:59:59+09:00",
+          "version": "3.3",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "세베리안",
+          "subtitle": "세베리안, 노르마",
           "rarity": 5,
           "start": "2026-11-11",
           "end": "2026-12-01",

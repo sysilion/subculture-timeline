@@ -1,36 +1,22 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-30",
+    "lastUpdated": "2026-10-31",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
         {
-          "code": "PhotoTime",
-          "reward": "100 primogems and 50k mora",
+          "code": "GENSHINGIFT",
+          "reward": "50 primogems and three hero's wit (this code works periodically)",
           "source": "pockettactics.com",
-          "added": "2026-10-24",
+          "added": "2026-10-31",
           "_auto": true
         },
         {
           "code": "PJ2KEBRAYSRM",
           "reward": "원석 x60, 모험가의 경험 x5",
           "source": "arca.live",
-          "added": "2026-10-24",
-          "_auto": true
-        },
-        {
-          "code": "HourofRuin",
-          "reward": "100 primogems and ten mystic enhancement ore",
-          "source": "pockettactics.com",
-          "added": "2026-10-24",
-          "_auto": true
-        },
-        {
-          "code": "ExpertMitya",
-          "reward": "100 primogems and five hero's wit",
-          "source": "pockettactics.com",
           "added": "2026-10-24",
           "_auto": true
         },
@@ -102,6 +88,30 @@
     },
     "starrail": {
       "codes": [
+        {
+          "code": "NEVERGONNAMAKE",
+          "reward": "Stellar Jade x100, Traveler's Guide x5",
+          "source": "arca.live",
+          "added": "2026-10-31",
+          "_auto": true,
+          "expires": "2026-11-01"
+        },
+        {
+          "code": "NEVERGONNAGIVE",
+          "reward": "Stellar Jade x100, Credit x50000",
+          "source": "arca.live",
+          "added": "2026-10-31",
+          "_auto": true,
+          "expires": "2026-11-01"
+        },
+        {
+          "code": "AHABLESSYOU",
+          "reward": "Stellar Jade x100, Refined Aether x4",
+          "source": "arca.live",
+          "added": "2026-10-31",
+          "_auto": true,
+          "expires": "2026-11-01"
+        },
         {
           "code": "SSK9MC6HJWC7",
           "reward": "성옥*30",
@@ -490,6 +500,13 @@
     },
     "nikke": {
       "codes": [
+        {
+          "code": "MEMORIESWITHYOU",
+          "reward": "",
+          "source": "arca.live",
+          "added": "2026-10-31",
+          "_auto": true
+        },
         {
           "code": "TOTHEFRONTLINE",
           "reward": "",
