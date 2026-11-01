@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-31",
+    "lastUpdated": "2026-11-01",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -90,7 +90,7 @@
       "codes": [
         {
           "code": "NEVERGONNAMAKE",
-          "reward": "Stellar Jade x100, Traveler's Guide x5",
+          "reward": "100 stellar jade and five traveler's guides",
           "source": "arca.live",
           "added": "2026-10-31",
           "_auto": true,
@@ -98,7 +98,7 @@
         },
         {
           "code": "NEVERGONNAGIVE",
-          "reward": "Stellar Jade x100, Credit x50000",
+          "reward": "100 stellar jade and 50k credits",
           "source": "arca.live",
           "added": "2026-10-31",
           "_auto": true,
@@ -106,7 +106,7 @@
         },
         {
           "code": "AHABLESSYOU",
-          "reward": "Stellar Jade x100, Refined Aether x4",
+          "reward": "100 stellar jade and four refined aether",
           "source": "arca.live",
           "added": "2026-10-31",
           "_auto": true,
