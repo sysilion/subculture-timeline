@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-01",
+    "lastUpdated": "2026-11-02",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -88,30 +88,6 @@
     },
     "starrail": {
       "codes": [
-        {
-          "code": "NEVERGONNAMAKE",
-          "reward": "100 stellar jade and five traveler's guides",
-          "source": "arca.live",
-          "added": "2026-10-31",
-          "_auto": true,
-          "expires": "2026-11-01"
-        },
-        {
-          "code": "NEVERGONNAGIVE",
-          "reward": "100 stellar jade and 50k credits",
-          "source": "arca.live",
-          "added": "2026-10-31",
-          "_auto": true,
-          "expires": "2026-11-01"
-        },
-        {
-          "code": "AHABLESSYOU",
-          "reward": "100 stellar jade and four refined aether",
-          "source": "arca.live",
-          "added": "2026-10-31",
-          "_auto": true,
-          "expires": "2026-11-01"
-        },
         {
           "code": "SSK9MC6HJWC7",
           "reward": "성옥*30",
@@ -500,6 +476,13 @@
     },
     "nikke": {
       "codes": [
+        {
+          "code": "TOMONICHIJOUE",
+          "reward": "",
+          "source": "arca.live",
+          "added": "2026-11-02",
+          "_auto": true
+        },
         {
           "code": "MEMORIESWITHYOU",
           "reward": "",
@@ -1030,8 +1013,15 @@
     "trickcal": {
       "codes": [
         {
+          "code": "BOLLOWEEN",
+          "reward": "◈",
+          "source": "arca.live",
+          "added": "2026-11-02",
+          "_auto": true
+        },
+        {
           "code": "TRICKCALCOM",
-          "reward": "시온 포스터, 사도 모집 티켓 10개",
+          "reward": "◈",
           "source": "arca.live",
           "added": "2026-10-22",
           "_auto": true
