@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-03",
+    "lastUpdated": "2026-11-04",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -98,14 +98,14 @@
         {
           "code": "DSLSPNBREASP",
           "reward": "50 stellar jade and 10k credits",
-          "source": "pockettactics.com",
+          "source": "hoyo-codes.seria.moe",
           "added": "2026-10-22",
           "_auto": true
         },
         {
           "code": "PEARLAPPRAISE",
           "reward": "three traveler's guides and two cold jokes",
-          "source": "pockettactics.com",
+          "source": "hoyo-codes.seria.moe",
           "added": "2026-09-29",
           "_auto": true
         },
@@ -126,7 +126,7 @@
         {
           "code": "OMEGA",
           "reward": "60 stellar jade and one fuel",
-          "source": "pockettactics.com",
+          "source": "hoyo-codes.seria.moe",
           "added": "",
           "_auto": true
         },
@@ -147,21 +147,21 @@
         {
           "code": "CREATIONNYMPH",
           "reward": "60 stellar jade and one fuel",
-          "source": "pockettactics.com",
+          "source": "hoyo-codes.seria.moe",
           "added": "",
           "_auto": true
         },
         {
           "code": "5S6ZHRWTDNJB",
           "reward": "60 stellar jade",
-          "source": "pockettactics.com",
+          "source": "hoyo-codes.seria.moe",
           "added": "",
           "_auto": true
         },
         {
           "code": "4TKSX77Y58QK",
-          "reward": "30 stellar jade, three traveler's guides, five condensed aether, four lost gold fragments, and 20k credits",
-          "source": "pockettactics.com",
+          "reward": "30 stellar jade, three traveler’s guides, five condensed aether, four lost gold fragments, and 20k credits",
+          "source": "hoyo-codes.seria.moe",
           "added": "",
           "_auto": true
         }
@@ -193,13 +193,6 @@
           "reward": "폴리크롬*20",
           "source": "arca.live",
           "added": "2026-10-26",
-          "_auto": true
-        },
-        {
-          "code": "SUNBRINGER",
-          "reward": "폴리크롬*30",
-          "source": "arca.live",
-          "added": "2026-10-23",
           "_auto": true
         },
         {

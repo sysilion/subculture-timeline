@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-03",
+    "lastUpdated": "2026-11-04",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-03"
+    "autoUpdated": "2026-11-04"
   },
   "games": [
     {
@@ -407,6 +407,45 @@
           "version": "7.1",
           "tentative": false,
           "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원",
+          "subtitle": "미탸",
+          "rarity": 5,
+          "start": "2026-11-04",
+          "end": "2026-11-24",
+          "endAt": "2026-11-24T18:59:00+09:00",
+          "version": "7.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원 2",
+          "subtitle": "푸리나",
+          "rarity": 5,
+          "start": "2026-11-04",
+          "end": "2026-11-24",
+          "endAt": "2026-11-24T18:59:00+09:00",
+          "version": "7.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "무기 기원",
+          "subtitle": "별빛 계시, 고요히 샘솟는 빛",
+          "rarity": 5,
+          "start": "2026-11-04",
+          "end": "2026-11-24",
+          "endAt": "2026-11-24T18:59:00+09:00",
+          "version": "7.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -1153,6 +1192,28 @@
           "tentative": false,
           "source": "api.ennead.cc",
           "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "티바트 방어전·하늘의 심판",
+          "start": "2026-11-04",
+          "end": "2026-12-16",
+          "endAt": "2026-12-16T08:00:00+09:00",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "수련의 방·무한 시련",
+          "start": "2026-11-04",
+          "end": "2026-12-16",
+          "endAt": "2026-12-16T08:00:00+09:00",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
         }
       ],
       "iconUrl": "https://genshin.hoyoverse.com/favicon.ico",
@@ -1217,45 +1278,11 @@
         },
         {
           "type": "banner",
-          "title": "Himeko - Nova Banner (Ver. 4.4 Phase 1)",
-          "start": "2026-07-14",
-          "end": "2026-08-05",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "스파키",
-          "subtitle": "스파키, 단항•등황, 에버나이트",
-          "rarity": 5,
-          "start": "2026-07-15",
-          "end": "2026-08-05",
-          "version": "4.4",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "히메코•노바",
           "subtitle": "",
           "rarity": 5,
           "start": "2026-07-15",
           "end": "2026-08-25",
-          "version": "4.4",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "눈부신 파키의 세상",
-          "subtitle": "눈부신 파키의 세상, 끝없는 산과 강을 거치더라도",
-          "rarity": 5,
-          "start": "2026-07-15",
-          "end": "2026-08-05",
           "version": "4.4",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -9364,6 +9391,35 @@
           "rarity": 3
         },
         {
+          "type": "banner",
+          "title": "Katsuragi Ace",
+          "start": "2027-03-04",
+          "end": "2027-03-14",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30178.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30178",
+          "description": "픽업: Katsuragi Ace",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Twin Turbo + 1 more",
+          "start": "2027-03-04",
+          "end": "2027-03-14",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30179.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30179",
+          "rarity": 3
+        },
+        {
           "type": "event",
           "title": "1.5-Year Anniversary Celebration Missions, Part 1",
           "start": "2026-07-15",
@@ -11299,6 +11355,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1090.webp",
           "link": "https://umapyoi.net/news/1090?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Bonus Star Piece rewards in Career!",
+          "start": "2026-11-04",
+          "end": "2026-11-17",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1090.webp",
+          "link": "https://umapyoi.net/en/news/1090"
         },
         {
           "type": "event",
@@ -15195,6 +15264,19 @@
           "image": "https://uma.moe/assets/timeline-images/events/legend-race/1402.webp",
           "link": "https://umapyoi.net/news/1402?lang=jp",
           "description": "픽업: Mayano Top Gun (Wedding), Sweep Tosho (Original)"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-03-04",
+          "end": "2027-03-17",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1381.webp",
+          "link": "https://umapyoi.net/news/1381?lang=jp"
         }
       ],
       "nameKo": "우마무스메",
