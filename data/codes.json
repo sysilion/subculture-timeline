@@ -1,11 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-04",
+    "lastUpdated": "2026-11-05",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
+        {
+          "code": "MIJIQ23V2437",
+          "reward": "1만 모라, 모험가의 경험 10개, 정제용 광물 5개, 생선 볶음면 5개, 절운고추 치킨 5개",
+          "source": "arca.live",
+          "added": "2026-11-05",
+          "_auto": true
+        },
+        {
+          "code": "KEEPUPWITHMITYA",
+          "reward": "Guide to Charity ×3 · \"Energy-Replenishing Meal\" ×3 · Kristallfold ×3",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-11-05",
+          "_auto": true
+        },
+        {
+          "code": "CDOF4X83H7X2",
+          "reward": "Mora ×10000 · Adventurer's Experience ×10 · Fine Enhancement Ore ×5 · Stir-Fried Fish Noodles ×5 · Jueyun Chili Chicken ×5",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-11-05",
+          "_auto": true
+        },
         {
           "code": "GENSHINGIFT",
           "reward": "50 primogems and three hero's wit (this code works periodically)",
@@ -1037,104 +1058,6 @@
     },
     "aniimo": {
       "codes": [
-        {
-          "code": "aniimazingfroyo",
-          "reward": "20 glimmer (US servers only)",
-          "source": "pockettactics.com",
-          "added": "2026-10-10",
-          "_auto": true
-        },
-        {
-          "code": "anywhereaniimo",
-          "reward": "three growth flowers and 10k credits",
-          "source": "pockettactics.com",
-          "added": "2026-10-03",
-          "_auto": true
-        },
-        {
-          "code": "anythinganiimo",
-          "reward": "three growth flowers and 10k credits",
-          "source": "pockettactics.com",
-          "added": "2026-10-03",
-          "_auto": true
-        },
-        {
-          "code": "aniimonow",
-          "reward": "three growth flowers and 10k credits",
-          "source": "pockettactics.com",
-          "added": "2026-10-03",
-          "_auto": true
-        },
-        {
-          "code": "aniimotogether",
-          "reward": "three growth flowers and 10k credits",
-          "source": "pockettactics.com",
-          "added": "2026-09-26",
-          "_auto": true
-        },
-        {
-          "code": "aniimoidyll",
-          "reward": "five aniipod and 10k credits",
-          "source": "pockettactics.com",
-          "added": "2026-09-26",
-          "_auto": true
-        },
-        {
-          "code": "aniimofreetoplay",
-          "reward": "50 glimmer, five aniipod pro, and five growth flowers",
-          "source": "pockettactics.com",
-          "added": "2026-09-26",
-          "_auto": true
-        },
-        {
-          "code": "twinewithaniimo",
-          "reward": "50 glimmer, five aniipod pro, and five growth flowers",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "anyoneaniimo",
-          "reward": "five aniipod and 10k credits",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "aniimowelcome",
-          "reward": "50 glimmer, five aniipod pro, and five growth flowers",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "aniimoparty",
-          "reward": "50 glimmer, five aniipod pro, and five growth flowers",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "aniimoopenworld",
-          "reward": "five aniipod and 10k credits",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "aniimolaunch2026",
-          "reward": "five aniipod and 10k credits",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "aniimobonus",
-          "reward": "50 glimmer",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
         {
           "code": "Aniimo2026",
           "reward": "휘석 20",
