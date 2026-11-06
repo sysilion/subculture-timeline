@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-05",
+    "lastUpdated": "2026-11-06",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-05"
+    "autoUpdated": "2026-11-06"
   },
   "games": [
     {
@@ -3538,6 +3538,17 @@
         },
         {
           "type": "event",
+          "title": "위험한 강습전",
+          "start": "2026-11-06",
+          "end": "2026-11-20",
+          "endAt": "2026-11-20T04:59:59+09:00",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "절름발이 까마귀 행방록",
           "start": "2026-11-11",
           "end": "2026-11-30",
@@ -4618,6 +4629,110 @@
           "rarity": 5
         },
         {
+          "type": "banner",
+          "title": "Android Dreams: Elyms Banner",
+          "start": "2026-11-11",
+          "end": "2026-12-02",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/drip-marketing/drip-elyms.webp",
+          "description": "Elyms opens Version 1.5 as the Phase 1 headliner: a Cosmos buffer whose Ultimate gives the whole team ATK and Follow-up Attack DMG, then keeps hitting from the bench. Her signature arc is Echoes on Hold.",
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Before the Dawn: Shinku Rerun",
+          "start": "2026-11-11",
+          "end": "2026-12-02",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/drip-marketing/drip-shinku.jpg",
+          "description": "First rerun of Shinku's Before the Dawn board, alongside Elyms in Phase 1 of Version 1.5. Both are Cosmos, so they share Remora teams with Akane Rin.",
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Echo Special: Arc Banner",
+          "start": "2026-11-11",
+          "end": "2026-12-02",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "description": "The Arc Research Program for Echoes on Hold, Elyms's signature arc, alongside her Android Dreams board.",
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Resolve Special: Arc Banner",
+          "start": "2026-11-11",
+          "end": "2026-12-02",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "description": "Blushing Mirage, Shinku's signature arc, returns with her Before the Dawn rerun.",
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Offline Equations: Exe Banner",
+          "start": "2026-12-02",
+          "end": "2026-12-23",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/drip-marketing/drip-exe.webp",
+          "description": "Exe headlines the second half of Version 1.5: the Chaos S-rank Captain of ETD-6. His signature arc is Dotted Horizon.",
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Forsaken Path: Chaos Rerun",
+          "start": "2026-12-02",
+          "end": "2026-12-23",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/drip-marketing/drip-chaos.jpg",
+          "description": "Rerun of Chaos's Forsaken Path board, alongside Exe in Phase 2 of Version 1.5.",
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Encryption Special: Arc Banner",
+          "start": "2026-12-02",
+          "end": "2026-12-23",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "description": "The Arc Research Program for Dotted Horizon, Exe's signature arc, alongside his Offline Equations board.",
+          "rarity": 5
+        },
+        {
+          "type": "banner",
+          "title": "Pursuit Special: Arc Banner",
+          "start": "2026-12-02",
+          "end": "2026-12-23",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "description": "What's Desired, Chaos's signature arc, returns with his Forsaken Path rerun.",
+          "rarity": 5
+        },
+        {
           "type": "event",
           "title": "Nocturne Special",
           "subtitle": "야상곡 스페셜 이벤트",
@@ -5183,6 +5298,18 @@
           "_auto": true,
           "image": "https://www.ntebuild.com/images/events/beyond_the_rails.webp",
           "description": "The third Beyond the Rails rotation on the Version 1.4 calendar, running past the end of the version. The calendar cuts its name off after \"Glinting Ci\"; \"Glinting Circle\" follows the pattern of the two before it."
+        },
+        {
+          "type": "event",
+          "title": "Version 1.5 Update",
+          "start": "2026-11-11",
+          "end": "2026-11-11",
+          "version": "",
+          "tentative": false,
+          "source": "ntebuild.com",
+          "_auto": true,
+          "image": "https://www.ntebuild.com/images/articles/official-launch.webp",
+          "description": "Version 1.5, 'Once Upon a Glitched Call': new S-rank characters Elyms and Exe, the main episode Meet Me in the Data Stream, the Anomaly Pilgrimage boss Amber Broodmother, and the Iron Ogre and Prototype Land Overlord 001 vehicles."
         }
       ],
       "iconUrl": "https://nte.perfectworld.com/public/images/icon.png",
@@ -7303,6 +7430,35 @@
           "subtitle": "standard pickup",
           "image": "https://uma.moe/assets/images/support/banner/2023_30143.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30143",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Rice Shower + 1 more",
+          "start": "2026-11-06",
+          "end": "2026-11-15",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/character/banner/2023_30144.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=char#30144",
+          "description": "픽업: Rice Shower, Haru Urara",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Taiki Shuttle + 1 more",
+          "start": "2026-11-06",
+          "end": "2026-11-15",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30145.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30145",
           "rarity": 3
         },
         {
@@ -11860,7 +12016,7 @@
           "start": "2026-11-19",
           "end": "2026-11-25",
           "version": "",
-          "tentative": true,
+          "tentative": false,
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
@@ -12091,6 +12247,19 @@
         {
           "type": "event",
           "title": "G1 Celebration Missions: February Stakes",
+          "start": "2026-11-25",
+          "end": "2026-12-01",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/278.webp",
+          "link": "https://umapyoi.net/news/1142?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "G1 Celebration Missions: February Stakes",
           "start": "2026-11-26",
           "end": "2026-12-02",
           "version": "",
@@ -12139,6 +12308,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1142.webp",
           "link": "https://umapyoi.net/news/1142?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2026-11-26",
+          "end": "2026-12-09",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1144.webp",
+          "link": "https://umapyoi.net/news/1144?lang=jp"
         },
         {
           "type": "event",
@@ -12841,6 +13023,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1177.webp",
           "link": "https://umapyoi.net/news/1177?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "White Day Campaign",
+          "start": "2026-12-15",
+          "end": "2026-12-28",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1211.webp",
+          "link": "https://umapyoi.net/news/1211?lang=jp"
         },
         {
           "type": "event",
@@ -14351,8 +14546,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1227.webp",
-          "link": "https://umapyoi.net/news/1227?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1281.webp",
+          "link": "https://umapyoi.net/news/1281?lang=jp"
         },
         {
           "type": "event",
@@ -14429,8 +14624,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1281.webp",
-          "link": "https://umapyoi.net/news/1281?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1282.webp",
+          "link": "https://umapyoi.net/news/1282?lang=jp"
         },
         {
           "type": "event",
@@ -14614,6 +14809,19 @@
           "image": "https://uma.moe/assets/timeline-images/events/legend-race/1287.webp",
           "link": "https://umapyoi.net/news/1287?lang=jp",
           "description": "픽업: Yaeno Muteki (Original), Tokai Teio (Anime Collab)"
+        },
+        {
+          "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 2: Japanese Oaks",
+          "start": "2027-01-26",
+          "end": "2027-02-01",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/312.webp",
+          "link": "https://umapyoi.net/news/1279?lang=jp"
         },
         {
           "type": "event",
@@ -15009,6 +15217,19 @@
         },
         {
           "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-02-09",
+          "end": "2027-02-22",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1331.webp",
+          "link": "https://umapyoi.net/news/1331?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Spring G1 Celebration Missions, Part 2: Takarazuka Kinen",
           "start": "2027-02-11",
           "end": "2027-02-17",
@@ -15167,6 +15388,19 @@
         {
           "type": "event",
           "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-02-23",
+          "end": "2027-03-08",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1332.webp",
+          "link": "https://umapyoi.net/news/1332?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
           "start": "2027-02-24",
           "end": "2027-03-09",
           "version": "",
@@ -15258,6 +15492,19 @@
         },
         {
           "type": "event",
+          "title": "G1 Celebration Missions: Japan Dirt Derby",
+          "start": "2027-03-02",
+          "end": "2027-03-08",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/361.webp",
+          "link": "https://umapyoi.net/news/1379?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Campaign to add \"Training Reward\" piece",
           "start": "2027-03-04",
           "end": "2027-03-17",
@@ -15268,6 +15515,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1381.webp",
           "link": "https://umapyoi.net/news/1381?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "League of Heroes",
+          "start": "2027-03-06",
+          "end": "2027-03-11",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "league of heroes",
+          "image": "https://uma.moe/assets/timeline-images/events/league-of-heroes/1409.webp",
+          "link": "https://umapyoi.net/news/1409?lang=jp"
         }
       ],
       "nameKo": "우마무스메",

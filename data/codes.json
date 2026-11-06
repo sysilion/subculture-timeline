@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-05",
+    "lastUpdated": "2026-11-06",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -22,8 +22,8 @@
         },
         {
           "code": "CDOF4X83H7X2",
-          "reward": "Mora ×10000 · Adventurer's Experience ×10 · Fine Enhancement Ore ×5 · Stir-Fried Fish Noodles ×5 · Jueyun Chili Chicken ×5",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "1만 모라, 모험가의 경험 10개, 정제용 광물 5개, 생선 볶음면 5개, 절운고추 치킨 5개",
+          "source": "arca.live",
           "added": "2026-11-05",
           "_auto": true
         },
@@ -42,13 +42,6 @@
           "_auto": true
         },
         {
-          "code": "OKTCV81F9H8D",
-          "reward": "1만 모라, 모험가의 경험 10개, 정제용 광물 5개, 생선 볶음면 5개, 절운고추 치킨 5개",
-          "source": "arca.live",
-          "added": "2026-10-15",
-          "_auto": true
-        },
-        {
           "code": "NEEIJB764CA3",
           "reward": "Primogem ×60",
           "source": "hoyo-codes.seria.moe",
@@ -57,8 +50,8 @@
         },
         {
           "code": "6LS3F3LS5K87",
-          "reward": "원석 x20, 구현의 수정x160",
-          "source": "arca.live",
+          "reward": "20 primogems and 60 geodes of replication",
+          "source": "pockettactics.com",
           "added": "2026-10-03",
           "_auto": true
         },
@@ -71,8 +64,8 @@
         },
         {
           "code": "OPERACOLLAB",
-          "reward": "원석 x30, 2만 모라, 영웅의 경험 x2, 정제용 마법광물 x5,",
-          "source": "arca.live",
+          "reward": "30 primogems, two hero's wit, and 20k mora",
+          "source": "pockettactics.com",
           "added": "2026-09-30",
           "_auto": true
         },
@@ -81,13 +74,6 @@
           "reward": "자애, 인내, 영광의 가르침(2성)",
           "source": "arca.live",
           "added": "2026-09-26",
-          "_auto": true
-        },
-        {
-          "code": "DATG5HG1PL89",
-          "reward": "3만 모라, 모험가의 경험 10개, 정제용 광물 5개, 생선 볶음면 5개, 절운고추 치킨 5개",
-          "source": "arca.live",
-          "added": "2026-09-25",
           "_auto": true
         },
         {
@@ -341,6 +327,14 @@
     },
     "mongil": {
       "codes": [
+        {
+          "code": "MAKEANDDESTROY",
+          "reward": "열쇠 * 150 프리미엄 연어 퓨레 * 10 약속의 나침반 * 3",
+          "source": "arca.live",
+          "added": "2026-11-06",
+          "_auto": true,
+          "expires": "2026-11-11"
+        },
         {
           "code": "PLAYMONGIL",
           "reward": "몬스터링 1종 (슬라링)",
