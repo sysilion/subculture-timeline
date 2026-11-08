@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-07",
+    "lastUpdated": "2026-11-08",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-07"
+    "autoUpdated": "2026-11-08"
   },
   "games": [
     {
@@ -576,16 +576,6 @@
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "지맥의 격류",
-          "start": "2026-08-02",
-          "end": "2026-08-09",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -3857,26 +3847,6 @@
         },
         {
           "type": "event",
-          "title": "Gaze North to the Rift Sign-In (Version 1.4)",
-          "start": "2026-07-16",
-          "end": "2026-08-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Period:",
-          "start": "2026-07-16",
-          "end": "2026-08-09",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Bedazzled Issue (Ver. 1.4 Phase 2) 08/09/2026 - TBD",
           "start": "2026-07-16",
           "end": "2027-01-12",
@@ -6498,64 +6468,6 @@
           "end": "2026-07-31",
           "tentative": true,
           "source": "gamerant.com"
-        },
-        {
-          "type": "banner",
-          "title": "Smart Falcon",
-          "start": "2026-07-23",
-          "end": "2026-08-09",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/character/banner/2022_30110.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30110",
-          "description": "픽업: Smart Falcon",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
-          "title": "Light Hello + 2 more",
-          "start": "2026-07-23",
-          "end": "2026-08-09",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/support/banner/2022_30111.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30111",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
-          "title": "Winning Ticket + 1 more",
-          "start": "2026-07-28",
-          "end": "2026-08-09",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/character/banner/2022_30112.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30112",
-          "description": "픽업: Winning Ticket, Narita Taishin",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
-          "title": "Tokai Teio + 1 more",
-          "start": "2026-07-28",
-          "end": "2026-08-09",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/support/banner/2022_30113.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30113",
-          "rarity": 3
         },
         {
           "type": "banner",
@@ -9654,19 +9566,6 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/images/campaign/218.webp",
           "link": "https://umapyoi.net/news/902?lang=jp"
-        },
-        {
-          "type": "event",
-          "title": "Wings of Iron: Hazy Tales",
-          "start": "2026-07-28",
-          "end": "2026-08-09",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "story event",
-          "image": "https://uma.moe/assets/images/story/08_wings_of_iron_banner.webp",
-          "link": "https://umapyoi.net/en/news/915"
         },
         {
           "type": "event",
