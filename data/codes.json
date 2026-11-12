@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-11",
+    "lastUpdated": "2026-11-12",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -81,6 +81,13 @@
     },
     "starrail": {
       "codes": [
+        {
+          "code": "AEONAHA",
+          "reward": "",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-11-12",
+          "_auto": true
+        },
         {
           "code": "SSK9MC6HJWC7",
           "reward": "성옥*30",
@@ -268,80 +275,30 @@
     "nte": {
       "codes": [
         {
-          "code": "WONDERLOGGIFT",
-          "reward": "30 annulith, three senior hunter guides, and 20k fons",
+          "code": "INVALIDNUMBER",
+          "reward": "100 annulith, five rising hunter guides, five light dye, 4k beetle coins",
           "source": "pockettactics.com",
-          "added": "2026-10-08",
+          "added": "2026-11-12",
           "_auto": true
         },
         {
-          "code": "BLACKBIRDHERE",
-          "reward": "an exclusive avatar frame",
+          "code": "HIOLDFRIEND",
+          "reward": "100 annulith, five senior hunter guides, five colorless dye, 6k beetle coins",
           "source": "pockettactics.com",
-          "added": "2026-10-08",
+          "added": "2026-11-12",
           "_auto": true
         },
         {
-          "code": "BLACKBIRDINNTE",
-          "reward": "20 heterogeneous units, 30k beetle coins, and 10k fons",
+          "code": "EXENORESPONSE",
+          "reward": "100 annulith, two elite hunter guides, two chaotic dye, and 12k beetle coins",
           "source": "pockettactics.com",
-          "added": "2026-10-01",
-          "_auto": true
-        },
-        {
-          "code": "ZANKOU0819",
-          "reward": "30 annulith, 50k fons, and 30k beetle coins",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "NTENENE",
-          "reward": "10k fons, ten dynamiK, and ten clicky fries",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "NTEMusou",
-          "reward": "10k fons and 10k beetle coins",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "NTEKokushi",
-          "reward": "30k fons and 30k beetle coins",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "NTEGIFT",
-          "reward": "50 annulith, five rising hunter guides, and five light dye",
-          "source": "pockettactics.com",
-          "added": "",
-          "_auto": true
-        },
-        {
-          "code": "COMEBACK",
-          "reward": "one fabricated die",
-          "source": "pockettactics.com",
-          "added": "",
+          "added": "2026-11-12",
           "_auto": true
         }
       ]
     },
     "mongil": {
       "codes": [
-        {
-          "code": "MAKEANDDESTROY",
-          "reward": "열쇠 * 150 프리미엄 연어 퓨레 * 10 약속의 나침반 * 3",
-          "source": "arca.live",
-          "added": "2026-11-06",
-          "_auto": true,
-          "expires": "2026-11-11"
-        },
         {
           "code": "PLAYMONGIL",
           "reward": "몬스터링 1종 (슬라링)",
@@ -369,14 +326,6 @@
           "source": "arca.live",
           "added": "2026-10-22",
           "_auto": true
-        },
-        {
-          "code": "HAPPYHALF1014",
-          "reward": "운명의 나침반 * 3 기억의 나침반 * 3 약속의 나침반 * 3 특별한 황금빛 승급의 돌 * 1",
-          "source": "arca.live",
-          "added": "2026-10-22",
-          "_auto": true,
-          "expires": "2026-11-11"
         },
         {
           "code": "REGINULAUPDATE",

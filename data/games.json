@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-11",
+    "lastUpdated": "2026-11-12",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-11"
+    "autoUpdated": "2026-11-12"
   },
   "games": [
     {
@@ -2705,16 +2705,6 @@
         },
         {
           "type": "event",
-          "title": "In Search of Lost Jade",
-          "start": "2026-07-30",
-          "end": "2026-08-13",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Virtual Crisis: Quadrant Trials",
           "start": "2026-07-30",
           "end": "2026-08-19",
@@ -3716,6 +3706,19 @@
           "type": "banner",
           "title": "세베리안",
           "subtitle": "세베리안, 노르마",
+          "rarity": 5,
+          "start": "2026-11-11",
+          "end": "2026-12-01",
+          "endAt": "2026-12-01T15:59:59+09:00",
+          "version": "3.3",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "손에 잡힌 악",
+          "subtitle": "손에 잡힌 악, 천재의 수행원",
           "rarity": 5,
           "start": "2026-11-11",
           "end": "2026-12-01",
@@ -6823,16 +6826,6 @@
         },
         {
           "type": "banner",
-          "title": "Smart Falcon (Power SSR) Reruns",
-          "start": "2026-08-05",
-          "end": "2026-08-13",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "K.S. Miracle (Guts SR)",
           "start": "2026-08-12",
           "end": "2026-08-21",
@@ -9920,19 +9913,6 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Virgo Cup",
-          "start": "2026-08-06",
-          "end": "2026-08-13",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "champions meeting",
-          "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/global-936.webp",
-          "link": "https://umapyoi.net/en/news/936"
         },
         {
           "type": "event",
