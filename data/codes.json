@@ -1,11 +1,18 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-13",
+    "lastUpdated": "2026-11-14",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
+        {
+          "code": "QYJWFB784MFL",
+          "reward": "Primogem ×60 · Adventurer's Experience ×5",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-11-14",
+          "_auto": true
+        },
         {
           "code": "MIJIQ23V2437",
           "reward": "1만 모라, 모험가의 경험 10개, 정제용 광물 5개, 생선 볶음면 5개, 절운고추 치킨 5개",
@@ -177,27 +184,6 @@
     },
     "wuwa": {
       "codes": [
-        {
-          "code": "TRAINOFSOULS",
-          "reward": "100 astrite, three premium resonance potions, and two advanced revival inhalers",
-          "source": "pockettactics.com",
-          "added": "2026-11-07",
-          "_auto": true
-        },
-        {
-          "code": "SCHOOLLIFE",
-          "reward": "100 astrite, 20 premium tuners, and five advanced sealed tubes",
-          "source": "pockettactics.com",
-          "added": "2026-11-07",
-          "_auto": true
-        },
-        {
-          "code": "BLOOMINGFLOWERS",
-          "reward": "100 astrite, two premium enclosure tanks III, and 40k shell credits",
-          "source": "pockettactics.com",
-          "added": "2026-11-07",
-          "_auto": true
-        },
         {
           "code": "WUTHERINGGIFT",
           "reward": "two premium resonance potions, two medium revival inhalers, two medium energy bags, 10k shell credits, and 50 astrite",
