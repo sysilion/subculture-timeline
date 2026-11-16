@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-15",
+    "lastUpdated": "2026-11-16",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-15"
+    "autoUpdated": "2026-11-16"
   },
   "games": [
     {
@@ -1212,6 +1212,17 @@
         },
         {
           "type": "event",
+          "title": "연월 나선",
+          "start": "2026-11-16",
+          "end": "2026-12-16",
+          "endAt": "2026-12-16T04:59:59+09:00",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Imaginarium Theater",
           "start": "2026-12-01",
           "end": "2027-01-01",
@@ -1575,16 +1586,6 @@
           "end": "2026-07-14",
           "version": "4.3",
           "source": "sportskeeda.com"
-        },
-        {
-          "type": "event",
-          "title": "학원괴담",
-          "start": "2026-07-06",
-          "end": "2026-08-17",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
         },
         {
           "type": "event",
@@ -5261,16 +5262,6 @@
         },
         {
           "type": "event",
-          "title": "Fons Rush",
-          "start": "2026-08-10",
-          "end": "2026-08-17",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Waxing Circle — Beyond the Rails",
           "start": "2026-08-13",
           "end": "2026-08-27",
@@ -6013,30 +6004,6 @@
         },
         {
           "type": "banner",
-          "title": "Akane (School Uniform), Seia, Asuna (School Uniform) +1",
-          "subtitle": "Pickup",
-          "rarity": 3,
-          "start": "2026-08-04",
-          "end": "2026-08-17",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Toki (Bunny Girl), Asuna (School Uniform), Seia +1",
-          "subtitle": "Pickup",
-          "rarity": 3,
-          "start": "2026-08-04",
-          "end": "2026-08-17",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true
-        },
-        {
-          "type": "banner",
           "title": "Akane (School), Seia, Asuna (School), Toki (Bunny)",
           "start": "2026-08-11",
           "end": "2026-08-25",
@@ -6334,28 +6301,6 @@
           "tentative": false,
           "source": "bluearchive.wiki",
           "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Code: BOX - The Shadow Approaching Millennium",
-          "start": "2026-08-04",
-          "end": "2026-08-17",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true,
-          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_843_Jp.png"
-        },
-        {
-          "type": "event",
-          "title": "SCHALE Settlement Task with General Student Council",
-          "start": "2026-08-11",
-          "end": "2026-08-17",
-          "version": "",
-          "tentative": false,
-          "source": "bluearchive.wiki",
-          "_auto": true,
-          "image": "https://bluearchive.wiki/wiki/Special:FilePath/Event_Banner_Mini_60000_2_Jp.png"
         },
         {
           "type": "event",
@@ -15829,6 +15774,16 @@
           "title": "Daily Check-in",
           "start": "2026-08-20",
           "end": "2026-09-17",
+          "version": "",
+          "tentative": false,
+          "source": "limbuscompany.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "The Wedge in the Wake of Dawnbreak",
+          "start": "2026-11-12",
+          "end": "2026-11-26",
           "version": "",
           "tentative": false,
           "source": "limbuscompany.wiki.gg",
