@@ -1,11 +1,18 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-16",
+    "lastUpdated": "2026-11-17",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
+        {
+          "code": "ARCHONSANSWERS",
+          "reward": "원석 x40, 3만 모라, 영웅의 경험 x3",
+          "source": "arca.live",
+          "added": "2026-11-17",
+          "_auto": true
+        },
         {
           "code": "QYJWFB784MFL",
           "reward": "Primogem ×60 · Adventurer's Experience ×5",
@@ -90,14 +97,14 @@
       "codes": [
         {
           "code": "NS4DU8AAGXBP",
-          "reward": "",
+          "reward": "50 stellar jade and 10k credits",
           "source": "hoyo-codes.seria.moe",
           "added": "2026-11-13",
           "_auto": true
         },
         {
           "code": "AEONAHA",
-          "reward": "",
+          "reward": "two aeon balloons and three traveler's guides",
           "source": "hoyo-codes.seria.moe",
           "added": "2026-11-12",
           "_auto": true
@@ -107,20 +114,6 @@
           "reward": "성옥*30",
           "source": "arca.live",
           "added": "2026-10-22",
-          "_auto": true
-        },
-        {
-          "code": "DSLSPNBREASP",
-          "reward": "50 stellar jade and 10k credits",
-          "source": "pockettactics.com",
-          "added": "2026-10-22",
-          "_auto": true
-        },
-        {
-          "code": "PEARLAPPRAISE",
-          "reward": "three traveler's guides and two cold jokes",
-          "source": "pockettactics.com",
-          "added": "2026-09-29",
           "_auto": true
         },
         {
