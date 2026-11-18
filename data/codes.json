@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-17",
+    "lastUpdated": "2026-11-18",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -57,16 +57,9 @@
         },
         {
           "code": "NEEIJB764CA3",
-          "reward": "Primogem ×60",
-          "source": "hoyo-codes.seria.moe",
+          "reward": "60 primogems and five adventurer's experience",
+          "source": "pockettactics.com",
           "added": "2026-10-05",
-          "_auto": true
-        },
-        {
-          "code": "NEEI8A8341OW",
-          "reward": "",
-          "source": "hoyo-codes.seria.moe",
-          "added": "2026-10-01",
           "_auto": true
         },
         {
@@ -426,6 +419,13 @@
     },
     "nikke": {
       "codes": [
+        {
+          "code": "NIKKENOWAND4EVER",
+          "reward": "",
+          "source": "arca.live",
+          "added": "2026-11-18",
+          "_auto": true
+        },
         {
           "code": "NIKKE4thYongsan",
           "reward": "",
