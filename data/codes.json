@@ -1,11 +1,18 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-18",
+    "lastUpdated": "2026-11-20",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
     "genshin": {
       "codes": [
+        {
+          "code": "POYMANSXF877",
+          "reward": "원석 x20, 구현의 수정x160",
+          "source": "arca.live",
+          "added": "2026-11-20",
+          "_auto": true
+        },
         {
           "code": "ARCHONSANSWERS",
           "reward": "원석 x40, 3만 모라, 영웅의 경험 x3",
@@ -64,22 +71,15 @@
         },
         {
           "code": "PNKZ3WLNN8G6",
-          "reward": "자애, 인내, 영광의 가르침(2성)",
-          "source": "arca.live",
+          "reward": "five teachings of charity, five teachings of fortitude, and five teachings of glory",
+          "source": "pockettactics.com",
           "added": "2026-09-26",
           "_auto": true
         },
         {
-          "code": "EPIC2026",
-          "reward": "원석 x60, 2만 모라, 영웅의 경험 x5",
-          "source": "arca.live",
-          "added": "2026-09-24",
-          "_auto": true
-        },
-        {
           "code": "Y6JYMKV6JKSL",
-          "reward": "원석 x60, 모험가의 경험 x5",
-          "source": "arca.live",
+          "reward": "60 primogems and five adventurer's experience",
+          "source": "pockettactics.com",
           "added": "",
           "_auto": true
         }
