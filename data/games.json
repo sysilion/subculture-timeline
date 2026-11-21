@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-20",
+    "lastUpdated": "2026-11-21",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-20"
+    "autoUpdated": "2026-11-21"
   },
   "games": [
     {
@@ -1227,6 +1227,17 @@
           "start": "2026-11-20",
           "end": "2026-11-30",
           "endAt": "2026-11-30T04:59:59+09:00",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "격투 모드: 빠른 기책",
+          "start": "2026-11-21",
+          "end": "2026-12-07",
+          "endAt": "2026-12-07T04:59:59+09:00",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -3602,6 +3613,32 @@
           "end": "2026-12-01",
           "endAt": "2026-12-01T15:59:59+09:00",
           "version": "3.3",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "태양을 가져온 자",
+          "subtitle": "태양을 가져온 자, 로빈",
+          "rarity": 5,
+          "start": "2026-12-02",
+          "end": "2027-01-12",
+          "endAt": "2027-01-12T15:59:59+09:00",
+          "version": "3.4",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "배너",
+          "subtitle": "",
+          "rarity": 5,
+          "start": "2026-12-02",
+          "end": "2027-01-12",
+          "endAt": "2027-01-12T15:59:59+09:00",
+          "version": "3.4",
           "tentative": false,
           "source": "api.ennead.cc",
           "_auto": true
@@ -9682,19 +9719,6 @@
         },
         {
           "type": "event",
-          "title": "Trainer Skills Test",
-          "start": "2026-08-13",
-          "end": "2026-08-22",
-          "version": "",
-          "tentative": true,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "trainer skills test",
-          "image": "https://uma.moe/assets/timeline-images/events/trainer-skills-test/955.webp",
-          "link": "https://umapyoi.net/news/955?lang=jp"
-        },
-        {
-          "type": "event",
           "title": "Fall G1 Celebration Missions, Part 1: Sprinters Stakes",
           "start": "2026-08-13",
           "end": "2026-09-08",
@@ -12177,6 +12201,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/images/campaign/278.webp",
           "link": "https://umapyoi.net/news/1142?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "2nd Anniversary Celebration Missions, Part 1",
+          "start": "2026-11-22",
+          "end": "2027-01-06",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1182.webp",
+          "link": "https://umapyoi.net/news/1182?lang=jp"
         },
         {
           "type": "event",

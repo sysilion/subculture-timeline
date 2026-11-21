@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-20",
+    "lastUpdated": "2026-11-21",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -35,13 +35,6 @@
           "_auto": true
         },
         {
-          "code": "KeepUpWithMitya",
-          "reward": "three guides to charity, three energy-replenishing meals, and three kristallfolds",
-          "source": "pockettactics.com",
-          "added": "2026-11-05",
-          "_auto": true
-        },
-        {
           "code": "CDOF4X83H7X2",
           "reward": "1만 모라, 모험가의 경험 10개, 정제용 광물 5개, 생선 볶음면 5개, 절운고추 치킨 5개",
           "source": "arca.live",
@@ -60,27 +53,6 @@
           "reward": "원석 x60, 모험가의 경험 x5",
           "source": "arca.live",
           "added": "2026-10-24",
-          "_auto": true
-        },
-        {
-          "code": "NEEIJB764CA3",
-          "reward": "60 primogems and five adventurer's experience",
-          "source": "pockettactics.com",
-          "added": "2026-10-05",
-          "_auto": true
-        },
-        {
-          "code": "PNKZ3WLNN8G6",
-          "reward": "five teachings of charity, five teachings of fortitude, and five teachings of glory",
-          "source": "pockettactics.com",
-          "added": "2026-09-26",
-          "_auto": true
-        },
-        {
-          "code": "Y6JYMKV6JKSL",
-          "reward": "60 primogems and five adventurer's experience",
-          "source": "pockettactics.com",
-          "added": "",
           "_auto": true
         }
       ],
@@ -181,6 +153,28 @@
     },
     "zzz": {
       "codes": [
+        {
+          "code": "ZZZHSRCOLLAB",
+          "reward": "폴리크롬*50",
+          "source": "arca.live",
+          "added": "2026-11-21",
+          "_auto": true
+        },
+        {
+          "code": "ZZZ34SUNBRINGER",
+          "reward": "폴리크롬*60",
+          "source": "arca.live",
+          "added": "2026-11-21",
+          "_auto": true
+        },
+        {
+          "code": "SUNCHASER",
+          "reward": "폴리크롬*300",
+          "source": "arca.live",
+          "added": "2026-11-21",
+          "_auto": true,
+          "expires": "2026-11-22"
+        },
         {
           "code": "LEVELUP33",
           "reward": "폴리크롬*20",
