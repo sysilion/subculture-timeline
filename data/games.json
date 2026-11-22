@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-21",
+    "lastUpdated": "2026-11-22",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-21"
+    "autoUpdated": "2026-11-22"
   },
   "games": [
     {
@@ -476,16 +476,6 @@
           "version": "",
           "tentative": false,
           "source": "paimon.moe",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "초행자 지원·설원 탐험",
-          "start": "2026-08-10",
-          "end": "2026-08-23",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -4687,6 +4677,17 @@
           "title": "Sanity Supply",
           "subtitle": "Limited-Time",
           "start": "2026-11-17",
+          "end": "2026-11-24",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Shroomy Gathering",
+          "subtitle": "Sign-In",
+          "start": "2026-11-21",
           "end": "2026-11-24",
           "version": "",
           "tentative": false,

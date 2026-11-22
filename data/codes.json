@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-21",
+    "lastUpdated": "2026-11-22",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -153,6 +153,27 @@
     },
     "zzz": {
       "codes": [
+        {
+          "code": "LEVELUP34",
+          "reward": "Polychrome ×20 · Denny ×2,222",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-11-22",
+          "_auto": true
+        },
+        {
+          "code": "INKSHIFT34",
+          "reward": "Polychrome ×20 · Denny ×2,222",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-11-22",
+          "_auto": true
+        },
+        {
+          "code": "HOLLOWRUN34",
+          "reward": "Polychrome ×20 · Denny ×2,222",
+          "source": "hoyo-codes.seria.moe",
+          "added": "2026-11-22",
+          "_auto": true
+        },
         {
           "code": "ZZZHSRCOLLAB",
           "reward": "폴리크롬*50",
