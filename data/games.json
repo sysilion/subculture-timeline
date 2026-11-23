@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-22",
+    "lastUpdated": "2026-11-23",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-22"
+    "autoUpdated": "2026-11-23"
   },
   "games": [
     {
@@ -490,32 +490,12 @@
         },
         {
           "type": "event",
-          "title": "초행자 지원·설원 탐험",
-          "start": "2026-08-11",
-          "end": "2026-08-24",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "수련의 방·묘수풀이",
           "start": "2026-08-12",
           "end": "2026-09-23",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Mutual Aid in Bloom: Into the Frostlands",
-          "start": "2026-08-12",
-          "end": "2026-08-24",
-          "version": "",
-          "tentative": false,
-          "source": "paimon.moe",
           "_auto": true
         },
         {
@@ -1674,16 +1654,6 @@
           "title": "허구 비즈니스",
           "start": "2026-08-03",
           "end": "2026-09-14",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "꽃 피는 정원",
-          "start": "2026-08-14",
-          "end": "2026-08-24",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -3684,16 +3654,6 @@
         },
         {
           "type": "event",
-          "title": "찰칵! 스포트라이트 대결!",
-          "start": "2026-08-07",
-          "end": "2026-08-24",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "위험한 강습전",
           "start": "2026-08-14",
           "end": "2026-08-28",
@@ -4133,6 +4093,30 @@
           "rarity": 6,
           "start": "2026-11-05",
           "end": "2026-11-24",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Anvil, Backpack, Plus A Pot o'Honey",
+          "subtitle": "Kay",
+          "rarity": 6,
+          "start": "2026-11-25",
+          "end": "2026-12-22",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "To Every Wish Adrift",
+          "subtitle": "",
+          "rarity": 6,
+          "start": "2026-11-25",
+          "end": "2026-12-15",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
@@ -4689,6 +4673,28 @@
           "subtitle": "Sign-In",
           "start": "2026-11-21",
           "end": "2026-11-24",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Season of Scattering",
+          "subtitle": "Echoes of War",
+          "start": "2026-11-25",
+          "end": "2026-12-14",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "Season of Wariness",
+          "subtitle": "Echoes of War",
+          "start": "2026-12-16",
+          "end": "2027-01-06",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
