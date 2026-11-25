@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-24",
+    "lastUpdated": "2026-11-25",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-24"
+    "autoUpdated": "2026-11-25"
   },
   "games": [
     {
@@ -410,6 +410,58 @@
           "version": "7.2",
           "tentative": false,
           "source": "paimon.moe",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원",
+          "subtitle": "자백",
+          "rarity": 5,
+          "start": "2026-11-24",
+          "end": "2026-12-15",
+          "endAt": "2026-12-15T15:59:59+09:00",
+          "version": "7.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "캐릭터 기원 2",
+          "subtitle": "린네아",
+          "rarity": 5,
+          "start": "2026-11-24",
+          "end": "2026-12-15",
+          "endAt": "2026-12-15T15:59:59+09:00",
+          "version": "7.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "무기 기원",
+          "subtitle": "신월의 달빛, 서리 맺힌 금빛 가지",
+          "rarity": 5,
+          "start": "2026-11-24",
+          "end": "2026-12-15",
+          "endAt": "2026-12-15T15:59:59+09:00",
+          "version": "7.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "묶음 기원/귀환 기원",
+          "subtitle": "바레사, 차스카, 실로닌",
+          "rarity": 5,
+          "start": "2026-11-24",
+          "end": "2026-12-15",
+          "endAt": "2026-12-15T15:59:59+09:00",
+          "version": "7.2",
+          "tentative": false,
+          "source": "api.ennead.cc",
           "_auto": true
         },
         {
@@ -1533,39 +1585,9 @@
         },
         {
           "type": "event",
-          "title": "반부패 「전문가」",
-          "start": "2026-07-13",
-          "end": "2026-08-26",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "속세의 두루마리",
-          "start": "2026-07-15",
-          "end": "2026-08-26",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "창날과 기사",
           "start": "2026-07-20",
           "end": "2026-08-31",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "환조: 성배전쟁",
-          "start": "2026-07-24",
-          "end": "2026-08-26",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -4049,6 +4071,18 @@
           "rarity": 6,
           "start": "2026-11-25",
           "end": "2026-12-15",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "banner",
+          "title": "Precious Scarlet",
+          "subtitle": "",
+          "rarity": 6,
+          "start": "2026-12-16",
+          "end": "2027-01-06",
           "version": "",
           "tentative": false,
           "source": "endfield.wiki.gg",
@@ -8085,6 +8119,20 @@
         {
           "type": "banner",
           "title": "Mejiro Ramonu + 7 more",
+          "start": "2026-12-02",
+          "end": "2026-12-25",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "standard pickup",
+          "image": "https://uma.moe/assets/images/support/banner/2023_30151.webp",
+          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30151",
+          "rarity": 3
+        },
+        {
+          "type": "banner",
+          "title": "Mejiro Ramonu + 9 more",
           "start": "2026-12-02",
           "end": "2026-12-25",
           "version": "",
@@ -12715,6 +12763,19 @@
         },
         {
           "type": "event",
+          "title": "Bonus Star Piece rewards in Career!",
+          "start": "2026-11-24",
+          "end": "2026-12-07",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1143.webp",
+          "link": "https://umapyoi.net/en/news/1143"
+        },
+        {
+          "type": "event",
           "title": "Valentine's Day Campaign",
           "start": "2026-11-25",
           "end": "2026-12-08",
@@ -12738,6 +12799,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/images/campaign/278.webp",
           "link": "https://umapyoi.net/en/news/1142"
+        },
+        {
+          "type": "event",
+          "title": "Valentine's Day celebration now available!",
+          "start": "2026-11-25",
+          "end": "2026-12-08",
+          "version": "",
+          "tentative": false,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1177.webp",
+          "link": "https://umapyoi.net/en/news/1177"
         },
         {
           "type": "event",
@@ -12881,6 +12955,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1142.webp",
           "link": "https://umapyoi.net/news/1142?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2026-11-27",
+          "end": "2026-12-10",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1144.webp",
+          "link": "https://umapyoi.net/news/1144?lang=jp"
         },
         {
           "type": "event",
@@ -13893,8 +13980,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1226.webp",
-          "link": "https://umapyoi.net/news/1226?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1225.webp",
+          "link": "https://umapyoi.net/news/1225?lang=jp"
         },
         {
           "type": "event",
@@ -14090,6 +14177,19 @@
           "subtitle": "champions meeting",
           "image": "https://uma.moe/assets/timeline-images/events/champions-meeting/1271.webp",
           "link": "https://umapyoi.net/news/1271?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 1: Oka Sho",
+          "start": "2026-12-28",
+          "end": "2027-01-03",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/306.webp",
+          "link": "https://umapyoi.net/news/1224?lang=jp"
         },
         {
           "type": "event",
@@ -14512,6 +14612,19 @@
         {
           "type": "event",
           "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-01-06",
+          "end": "2027-01-19",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1228.webp",
+          "link": "https://umapyoi.net/news/1228?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
           "start": "2027-01-07",
           "end": "2027-01-20",
           "version": "",
@@ -14864,6 +14977,19 @@
         },
         {
           "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 2: Tenno Sho (Spring)",
+          "start": "2027-01-12",
+          "end": "2027-01-18",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1279.webp",
+          "link": "https://umapyoi.net/news/1279?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Campaign to celebrate the release of the Google Play Games (beta) version",
           "start": "2027-01-13",
           "end": "2027-01-26",
@@ -15145,8 +15271,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1282.webp",
-          "link": "https://umapyoi.net/news/1282?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1281.webp",
+          "link": "https://umapyoi.net/news/1281?lang=jp"
         },
         {
           "type": "event",
@@ -15210,8 +15336,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1283.webp",
-          "link": "https://umapyoi.net/news/1283?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1282.webp",
+          "link": "https://umapyoi.net/news/1282?lang=jp"
         },
         {
           "type": "event",
@@ -15420,6 +15546,19 @@
           "subtitle": "trainer skills test",
           "image": "https://uma.moe/assets/timeline-images/events/trainer-skills-test/1289.webp",
           "link": "https://umapyoi.net/news/1289?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "Spring G1 Celebration Missions, Part 2: Japanese Oaks",
+          "start": "2027-01-25",
+          "end": "2027-01-31",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/312.webp",
+          "link": "https://umapyoi.net/news/1279?lang=jp"
         },
         {
           "type": "event",
@@ -15894,6 +16033,19 @@
         },
         {
           "type": "event",
+          "title": "Campaign to add \"Training Reward\" piece",
+          "start": "2027-02-07",
+          "end": "2027-02-20",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1331.webp",
+          "link": "https://umapyoi.net/news/1331?lang=jp"
+        },
+        {
+          "type": "event",
           "title": "Spring G1 Celebration Missions, Part 2: Victoria Mile",
           "start": "2027-02-08",
           "end": "2027-02-14",
@@ -16137,8 +16289,8 @@
           "source": "uma.moe",
           "_auto": true,
           "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/1380.webp",
-          "link": "https://umapyoi.net/news/1380?lang=jp"
+          "image": "https://uma.moe/assets/timeline-images/events/campaign/1332.webp",
+          "link": "https://umapyoi.net/news/1332?lang=jp"
         },
         {
           "type": "event",
@@ -16297,6 +16449,19 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/1381.webp",
           "link": "https://umapyoi.net/news/1381?lang=jp"
+        },
+        {
+          "type": "event",
+          "title": "G1 Celebration Missions: Japan Dirt Derby",
+          "start": "2027-03-01",
+          "end": "2027-03-07",
+          "version": "",
+          "tentative": true,
+          "source": "uma.moe",
+          "_auto": true,
+          "subtitle": "campaign",
+          "image": "https://uma.moe/assets/images/campaign/361.webp",
+          "link": "https://umapyoi.net/news/1379?lang=jp"
         },
         {
           "type": "event",
