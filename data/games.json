@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-25",
+    "lastUpdated": "2026-11-26",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-25"
+    "autoUpdated": "2026-11-26"
   },
   "games": [
     {
@@ -4138,29 +4138,9 @@
         },
         {
           "type": "event",
-          "title": "North Yearns The Rift Vigile (Ver. 1.4 Phase 1) 07/16/2026 - 08/06/2026",
-          "start": "2026-08-06",
-          "end": "2026-08-27",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "Military Grade Issue (Ver. 1.4 Phase 1) 07/16/2026 - TBD",
           "start": "2026-08-06",
           "end": "2027-02-02",
-          "version": "",
-          "tentative": false,
-          "source": "game8.co",
-          "_auto": true
-        },
-        {
-          "type": "event",
-          "title": "Good Morning From Your Dawnstar (Ver. 1.4 Phase 2)",
-          "start": "2026-08-06",
-          "end": "2026-08-27",
           "version": "",
           "tentative": false,
           "source": "game8.co",
@@ -5145,18 +5125,6 @@
           "end": "2026-07-08",
           "version": "1.1",
           "source": "ntebuild.com"
-        },
-        {
-          "type": "event",
-          "title": "Waxing Circle — Beyond the Rails",
-          "start": "2026-08-13",
-          "end": "2026-08-27",
-          "version": "",
-          "tentative": false,
-          "source": "ntebuild.com",
-          "_auto": true,
-          "image": "https://www.ntebuild.com/images/events/beyond_the_rails.webp",
-          "description": "The third Version 1.2 rotation of the permanent Beyond the Rails anomaly mode, closing out the update."
         },
         {
           "type": "event",
@@ -10158,19 +10126,6 @@
           "subtitle": "campaign",
           "image": "https://uma.moe/assets/timeline-images/events/campaign/902.webp",
           "link": "https://umapyoi.net/en/news/902"
-        },
-        {
-          "type": "event",
-          "title": "1.5-Year Anniversary Celebration Part 3 now available!",
-          "start": "2026-07-15",
-          "end": "2026-08-27",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/917.webp",
-          "link": "https://umapyoi.net/en/news/917"
         },
         {
           "type": "event",
