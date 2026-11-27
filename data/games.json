@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-26",
+    "lastUpdated": "2026-11-27",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-26"
+    "autoUpdated": "2026-11-27"
   },
   "games": [
     {
@@ -1258,6 +1258,17 @@
           "type": "event",
           "title": "격투 모드: 빠른 기책",
           "start": "2026-11-21",
+          "end": "2026-12-07",
+          "endAt": "2026-12-07T04:59:59+09:00",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "투지 포착",
+          "start": "2026-11-27",
           "end": "2026-12-07",
           "endAt": "2026-12-07T04:59:59+09:00",
           "version": "",
@@ -3608,16 +3619,6 @@
         },
         {
           "type": "event",
-          "title": "위험한 강습전",
-          "start": "2026-08-14",
-          "end": "2026-08-28",
-          "version": "",
-          "tentative": false,
-          "source": "api.ennead.cc",
-          "_auto": true
-        },
-        {
-          "type": "event",
           "title": "바삭바삭 요리 플랜",
           "start": "2026-08-19",
           "end": "2026-09-07",
@@ -3903,6 +3904,17 @@
           "start": "2026-11-20",
           "end": "2026-12-02",
           "endAt": "2026-12-02T04:59:59+09:00",
+          "version": "",
+          "tentative": false,
+          "source": "api.ennead.cc",
+          "_auto": true
+        },
+        {
+          "type": "event",
+          "title": "시유 방어전",
+          "start": "2026-11-27",
+          "end": "2026-12-11",
+          "endAt": "2026-12-11T04:59:59+09:00",
           "version": "",
           "tentative": false,
           "source": "api.ennead.cc",
@@ -10100,45 +10112,6 @@
           "image": "https://uma.moe/assets/images/support/banner/2023_30185.webp",
           "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2023&type=sup#30185",
           "rarity": 3
-        },
-        {
-          "type": "event",
-          "title": "1.5-Year Anniversary Celebration Missions, Part 1",
-          "start": "2026-07-15",
-          "end": "2026-08-28",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/887.webp",
-          "link": "https://umapyoi.net/en/news/887"
-        },
-        {
-          "type": "event",
-          "title": "1.5-Year Anniversary Celebration Missions, Part 2",
-          "start": "2026-07-15",
-          "end": "2026-08-28",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "campaign",
-          "image": "https://uma.moe/assets/timeline-images/events/campaign/902.webp",
-          "link": "https://umapyoi.net/en/news/902"
-        },
-        {
-          "type": "event",
-          "title": "1.5-Year Anniversary Celebration Missions, Part 2",
-          "start": "2026-07-23",
-          "end": "2026-08-28",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "campaign",
-          "image": "https://uma.moe/assets/images/campaign/218.webp",
-          "link": "https://umapyoi.net/news/902?lang=jp"
         },
         {
           "type": "event",

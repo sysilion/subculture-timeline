@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-26",
+    "lastUpdated": "2026-11-27",
     "note": "리딤 코드는 지역·계정 조건에 따라 사용할 수 없을 수 있습니다."
   },
   "games": {
@@ -998,13 +998,6 @@
     },
     "trickcal": {
       "codes": [
-        {
-          "code": "11DUDUGIFT11",
-          "reward": "◈",
-          "source": "arca.live",
-          "added": "2026-11-13",
-          "_auto": true
-        },
         {
           "code": "TRICKCALCOM",
           "reward": "◈",
