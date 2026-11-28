@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-27",
+    "lastUpdated": "2026-11-28",
     "note": "배너/이벤트 날짜는 UTC+9(KST) 기준. 미확정 일정은 'tentative': true 표시. 출처는 각 항목 source 필드 참조.",
-    "autoUpdated": "2026-11-27"
+    "autoUpdated": "2026-11-28"
   },
   "games": [
     {
@@ -4682,6 +4682,17 @@
         },
         {
           "type": "event",
+          "title": "Roaming Wilderpaw",
+          "subtitle": "Sign-In",
+          "start": "2026-11-25",
+          "end": "2027-01-06",
+          "version": "",
+          "tentative": false,
+          "source": "endfield.wiki.gg",
+          "_auto": true
+        },
+        {
+          "type": "event",
           "title": "Season of Wariness",
           "subtitle": "Echoes of War",
           "start": "2026-12-16",
@@ -6706,35 +6717,6 @@
           "tentative": false,
           "source": "game8.co",
           "_auto": true
-        },
-        {
-          "type": "banner",
-          "title": "Agnes Digital + 1 more",
-          "start": "2026-08-19",
-          "end": "2026-08-29",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/character/banner/2022_30118.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=char#30118",
-          "description": "픽업: Agnes Digital, Meisho Doto",
-          "rarity": 3
-        },
-        {
-          "type": "banner",
-          "title": "Mejiro Palmer + 1 more",
-          "start": "2026-08-19",
-          "end": "2026-08-29",
-          "version": "",
-          "tentative": false,
-          "source": "uma.moe",
-          "_auto": true,
-          "subtitle": "standard pickup",
-          "image": "https://uma.moe/assets/images/support/banner/2022_30119.webp",
-          "link": "https://gametora.com/umamusume/gacha/history?server=ja&year=2022&type=sup#30119",
-          "rarity": 3
         },
         {
           "type": "banner",
